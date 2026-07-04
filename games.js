@@ -3,7 +3,7 @@ const games = [
   name: "Diwa777",
   bonus: "₹100 Bonus",
   redeem: "Min ₹100",
-  image: "diwa777.png"
+  image: "images/diwa777.png",
   link: "https://sharediwa7773.top?pid=518390785&channel=2010002&pkg=com.diwa777wh.com"
 },
 {
