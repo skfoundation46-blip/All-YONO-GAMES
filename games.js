@@ -31,7 +31,7 @@ const games = [
   name: "Hi Rummy",
   bonus: "₹100 Bonus",
   redeem: "Min ₹100",
-  image: "images/hirummy.png",
+  image: "images/HiRummy.png",
   link: "https://joinhirummy.cc/?code=RX3HPNUFL1W&t=1783045895"
 },
 {
