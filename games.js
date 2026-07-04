@@ -24,7 +24,7 @@ const games = [
   name: "Hindi777",
   bonus: "₹100 Bonus",
   redeem: "Min ₹100",
-  image: "images/hindi777.png",
+  image: "images/Hindi777.png",
   link: "https://www.hindi777agent5.com/?code=7LFCL9PJ516&t=1783045793"
 },
 {
