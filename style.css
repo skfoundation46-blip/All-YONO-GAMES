@@ -632,3 +632,372 @@ body{
 overflow-x:hidden;
 
 }
+/* ===========================
+   YONO GAMES - STYLE.CSS
+   PART 1
+=========================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#0f172a;
+color:#ffffff;
+line-height:1.7;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+/* HEADER */
+
+.header{
+position:sticky;
+top:0;
+z-index:999;
+background:#111827;
+box-shadow:0 4px 15px rgba(0,0,0,.35);
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:28px;
+font-weight:800;
+color:#00ff66;
+}
+
+.menu{
+display:flex;
+gap:20px;
+}
+
+.menu a{
+color:#fff;
+font-weight:600;
+transition:.3s;
+}
+
+.menu a:hover{
+color:#00ff66;
+}
+
+/* HERO */
+
+.hero{
+max-width:1200px;
+margin:30px auto;
+padding:60px 20px;
+text-align:center;
+background:linear-gradient(135deg,#1e293b,#0f172a);
+border-radius:20px;
+}
+
+.hero h1{
+font-size:42px;
+margin-bottom:15px;
+color:#00ff66;
+}
+
+.hero p{
+max-width:700px;
+margin:0 auto 30px;
+color:#d1d5db;
+font-size:17px;
+}
+
+/* DOWNLOAD BUTTON */
+
+.download-btn{
+display:inline-block;
+padding:14px 30px;
+background:linear-gradient(135deg,#00c853,#00ff66);
+color:#fff;
+font-size:18px;
+font-weight:700;
+border-radius:50px;
+box-shadow:0 0 18px rgba(0,255,100,.5);
+animation:pulse 1.5s infinite;
+transition:.3s;
+}
+
+.download-btn:hover{
+transform:translateY(-3px);
+}
+
+@keyframes pulse{
+0%{
+transform:scale(1);
+box-shadow:0 0 15px rgba(0,255,100,.4);
+}
+50%{
+transform:scale(1.08);
+box-shadow:0 0 28px rgba(0,255,100,.8);
+}
+100%{
+transform:scale(1);
+box-shadow:0 0 15px rgba(0,255,100,.4);
+}
+}
+/* ===========================
+   PART 2
+   GAME CARDS + ABOUT + SEARCH
+=========================== */
+
+.games-section{
+max-width:1200px;
+margin:40px auto;
+padding:20px;
+}
+
+.games-section h2{
+text-align:center;
+font-size:34px;
+color:#00ff66;
+margin-bottom:30px;
+}
+
+.game-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.game-card{
+background:#1e293b;
+border-radius:18px;
+padding:20px;
+text-align:center;
+transition:.3s;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.game-card:hover{
+transform:translateY(-8px);
+box-shadow:0 12px 25px rgba(0,255,100,.25);
+}
+
+.game-card img{
+width:90px;
+height:90px;
+margin:auto;
+border-radius:20px;
+margin-bottom:15px;
+object-fit:cover;
+}
+
+.game-card h3{
+font-size:22px;
+margin-bottom:8px;
+color:#fff;
+}
+
+.game-card p{
+color:#cbd5e1;
+font-size:15px;
+margin-bottom:18px;
+}
+
+.play-btn{
+display:inline-block;
+padding:10px 24px;
+background:#00c853;
+color:#fff;
+font-weight:700;
+border-radius:30px;
+transition:.3s;
+}
+
+.play-btn:hover{
+background:#00a844;
+}
+
+/* ABOUT */
+
+.about{
+max-width:1200px;
+margin:40px auto;
+padding:35px 20px;
+background:#1e293b;
+border-radius:20px;
+}
+
+.about h2{
+text-align:center;
+color:#00ff66;
+margin-bottom:20px;
+font-size:30px;
+}
+
+.about p{
+font-size:16px;
+line-height:1.9;
+color:#d1d5db;
+text-align:justify;
+}
+
+/* SEARCH */
+
+.search-section{
+max-width:800px;
+margin:40px auto;
+text-align:center;
+padding:20px;
+}
+
+.search-section h2{
+color:#00ff66;
+margin-bottom:20px;
+}
+
+#searchBox{
+width:100%;
+padding:16px 20px;
+border:none;
+outline:none;
+border-radius:50px;
+font-size:16px;
+background:#1e293b;
+color:#fff;
+border:2px solid #00ff66;
+}
+
+#searchBox::placeholder{
+color:#94a3b8;
+}
+/* ==========================
+   FOOTER
+========================== */
+
+.footer{
+background:#111827;
+padding:40px 20px;
+text-align:center;
+margin-top:50px;
+}
+
+.footer h3{
+color:#00ff66;
+font-size:28px;
+margin-bottom:10px;
+}
+
+.footer p{
+color:#cbd5e1;
+font-size:15px;
+margin:8px 0;
+}
+
+/* ==========================
+   HOVER EFFECTS
+========================== */
+
+.game-card:hover img{
+transform:scale(1.08);
+transition:.3s;
+}
+
+.game-card img{
+transition:.3s;
+}
+
+.game-card:hover .play-btn{
+background:#00ff66;
+color:#000;
+}
+
+/* ==========================
+   SCROLLBAR
+========================== */
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-track{
+background:#0f172a;
+}
+
+::-webkit-scrollbar-thumb{
+background:#00ff66;
+border-radius:20px;
+}
+
+/* ==========================
+   MOBILE RESPONSIVE
+========================== */
+
+@media (max-width:768px){
+
+.container{
+flex-direction:column;
+}
+
+.menu{
+margin-top:12px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero h1{
+font-size:30px;
+}
+
+.hero p{
+font-size:15px;
+}
+
+.game-grid{
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+
+.download-btn,
+.play-btn{
+width:100%;
+text-align:center;
+}
+
+}
+
+@media (max-width:480px){
+
+.game-grid{
+grid-template-columns:1fr;
+}
+
+.hero{
+padding:35px 15px;
+}
+
+.hero h1{
+font-size:24px;
+}
+
+.logo{
+font-size:22px;
+}
+
+}
