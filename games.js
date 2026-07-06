@@ -340,13 +340,23 @@ const games = [
 games.forEach(game => {
   container.innerHTML += `
     <div class="game-card">
+
       <img src="${game.image}" alt="${game.name}">
+
       <h3>${game.name}</h3>
+
+      <div class="rating">
+        ⭐⭐⭐⭐⭐
+      </div>
+
       <p class="bonus">${game.bonus}</p>
+
       <p class="redeem">${game.redeem}</p>
+
       <a href="${game.link}" class="download-btn" target="_blank">
-        Download Now
+        ⬇ Download Now
       </a>
+
     </div>
   `;
 });
