@@ -7,13 +7,12 @@ bonus:"₹100 Bonus",
 redeem:"Min ₹100",
 page:"games/diwa777.html"
 },
-
-{
-name:"Game Rummy",
-image:"images/gamerummy.png",
-bonus:"₹100 Bonus",
-redeem:"Min ₹100",
-page:"games/gamerummy.html"
+  {
+  name:"Gogo Rummy",
+  image:"images/gogorummy.png",
+  bonus:"₹100 Bonus",
+  redeem:"Min ₹100",
+  page:"games/gogorummy.html"
 },
 
 {
