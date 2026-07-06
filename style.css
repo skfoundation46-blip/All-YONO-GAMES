@@ -559,3 +559,25 @@ width:100%;
 }
 
 }
+/* ===== FINAL MOBILE FIX ===== */
+
+@media screen and (max-width:768px){
+
+.games{
+display:grid !important;
+grid-template-columns:1fr 1fr !important;
+gap:14px !important;
+padding:14px !important;
+}
+
+.game-card{
+width:100% !important;
+min-width:0 !important;
+}
+
+.game-card img{
+width:100% !important;
+height:auto !important;
+}
+
+}
