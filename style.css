@@ -581,5 +581,19 @@ font-size:18px;
 }
 
 }
+.hero-logo{
+    width:120px;
+    height:120px;
+    object-fit:contain;
+    display:block;
+    margin:20px auto;
+    border-radius:20px;
+}
+
+.game-hero img{
+    width:120px;
+    height:120px;
+    object-fit:contain;
+}
 
 /* END */
