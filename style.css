@@ -1,12 +1,12 @@
 /* =========================
    YONO GAMES PREMIUM CSS
+   PART 1
 ========================= */
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
 }
 
 html{
@@ -14,133 +14,95 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#08111f;
+font-family:'Poppins',sans-serif;
+background:#0b1220;
 color:#fff;
-overflow-x:hidden;
 }
 
 /* HEADER */
 
 .header{
+background:#111827;
+padding:18px;
 position:sticky;
 top:0;
 z-index:999;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 18px;
-background:rgba(10,18,32,.95);
-backdrop-filter:blur(12px);
-border-bottom:1px solid rgba(255,255,255,.08);
+box-shadow:0 5px 20px rgba(0,0,0,.35);
 }
 
 .logo{
-font-size:26px;
-font-weight:800;
+font-size:34px;
+font-weight:700;
+text-align:center;
 color:#00e676;
-letter-spacing:1px;
-}
-
-/* SEARCH */
-
-.search-box{
-margin:15px;
-position:relative;
-}
-
-.search-box i{
-position:absolute;
-left:18px;
-top:50%;
-transform:translateY(-50%);
-color:#94a3b8;
+margin-bottom:18px;
 }
 
 .search-box input{
 width:100%;
-padding:14px 18px 14px 48px;
+padding:16px 20px;
 border:none;
-border-radius:30px;
-background:#162235;
-color:#fff;
-font-size:15px;
 outline:none;
-transition:.3s;
+border-radius:14px;
+background:#1f2937;
+color:#fff;
+font-size:16px;
 }
 
-.search-box input:focus{
-box-shadow:0 0 15px rgba(0,230,118,.35);
+.search-box input::placeholder{
+color:#8f96a3;
 }
 
 /* HERO */
 
 .hero{
-padding:15px;
-}
-
-.slider{
-position:relative;
-overflow:hidden;
+margin:18px;
+padding:35px 20px;
+text-align:center;
 border-radius:22px;
+background:linear-gradient(135deg,#121826,#1c2435);
+box-shadow:0 15px 35px rgba(0,0,0,.35);
 }
 
-.slide{
-display:none;
-position:relative;
+.hero-badge{
+display:inline-block;
+background:#00e676;
+color:#111;
+padding:6px 18px;
+border-radius:50px;
+font-size:13px;
+font-weight:700;
+margin-bottom:15px;
 }
 
-.slide.active{
-display:block;
-animation:fade .5s;
+.hero h1{
+font-size:34px;
+line-height:1.3;
+font-weight:700;
+margin-bottom:12px;
 }
 
-.slide img{
-width:100%;
-height:220px;
-object-fit:cover;
-display:block;
-border-radius:22px;
-}
-
-.hero-text{
-position:absolute;
-left:25px;
-bottom:25px;
-z-index:2;
-}
-
-.hero-text h1{
-font-size:32px;
-font-weight:800;
-line-height:1.2;
-}
-
-.hero-text p{
-margin-top:8px;
+.hero p{
 font-size:15px;
-color:#e5e7eb;
+color:#bfc7d5;
+line-height:1.7;
+margin-bottom:25px;
 }
 
 .play-btn{
 display:inline-block;
-margin-top:18px;
-padding:12px 26px;
-background:#00d84f;
-color:#fff;
-text-decoration:none;
+padding:15px 35px;
+background:#00e676;
+color:#111;
 font-weight:700;
-border-radius:30px;
+text-decoration:none;
+border-radius:50px;
 transition:.3s;
 }
 
 .play-btn:hover{
-background:#00b341;
-transform:translateY(-2px);
-}
-
-@keyframes fade{
-from{opacity:0;}
-to{opacity:1;}
+transform:translateY(-4px);
+box-shadow:0 10px 25px rgba(0,230,118,.35);
 }
 /* =========================
    CATEGORY
@@ -161,19 +123,19 @@ display:none;
 .cat{
 flex:0 0 auto;
 padding:10px 18px;
+background:#1f2937;
 border-radius:30px;
-background:#162235;
-color:#fff;
-font-size:13px;
+font-size:14px;
 font-weight:600;
+color:#fff;
 cursor:pointer;
 transition:.3s;
 }
 
 .cat:hover,
 .cat.active{
-background:#00d84f;
-color:#fff;
+background:#00e676;
+color:#111;
 }
 
 /* =========================
@@ -181,22 +143,81 @@ color:#fff;
 ========================= */
 
 .section-title{
+padding:10px 15px 20px;
 text-align:center;
-padding:10px 20px 20px;
 }
 
 .section-title h2{
 font-size:28px;
 font-weight:700;
-color:#fff;
+margin-bottom:8px;
 }
 
 .section-title p{
-margin-top:6px;
-font-size:14px;
-color:#94a3b8;
+font-size:15px;
+color:#9ca3af;
 }
 
+/* =========================
+   SLIDER
+========================= */
+
+.slider{
+position:relative;
+overflow:hidden;
+border-radius:20px;
+margin:15px;
+}
+
+.slide{
+display:none;
+}
+
+.slide.active{
+display:block;
+animation:fade .5s ease;
+}
+
+.slide img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:20px;
+display:block;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:scale(.98);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+.slider-dots{
+display:flex;
+justify-content:center;
+gap:8px;
+margin-top:12px;
+}
+
+.dot{
+width:10px;
+height:10px;
+background:#6b7280;
+border-radius:50%;
+cursor:pointer;
+transition:.3s;
+}
+
+.dot.active{
+background:#00e676;
+width:26px;
+border-radius:20px;
+}
 /* =========================
    GAME GRID
 ========================= */
@@ -208,7 +229,8 @@ gap:15px;
 padding:15px;
 }
 
-@media (min-width:768px){
+/* Desktop */
+@media(min-width:768px){
 .games{
 grid-template-columns:repeat(4,1fr);
 }
@@ -220,34 +242,17 @@ grid-template-columns:repeat(4,1fr);
 
 .game-card{
 position:relative;
-background:#162235;
+background:#182437;
 border-radius:18px;
 overflow:hidden;
-transition:.35s;
-box-shadow:0 10px 25px rgba(0,0,0,.35);
+box-shadow:0 8px 20px rgba(0,0,0,.35);
+transition:.3s;
 }
 
 .game-card:hover{
 transform:translateY(-6px);
-box-shadow:0 18px 35px rgba(0,230,118,.25);
+box-shadow:0 15px 35px rgba(0,230,118,.30);
 }
-
-/* Ribbon */
-
-.ribbon{
-position:absolute;
-top:10px;
-left:-32px;
-background:#ff3b30;
-color:#fff;
-padding:5px 38px;
-font-size:10px;
-font-weight:700;
-transform:rotate(-45deg);
-z-index:5;
-}
-
-/* Image */
 
 .game-card img{
 width:100%;
@@ -256,41 +261,46 @@ object-fit:cover;
 display:block;
 }
 
-/* Title */
-
-.game-card h3{
-font-size:14px;
+.ribbon{
+position:absolute;
+top:10px;
+left:-35px;
+background:#ff3b30;
+color:#fff;
+padding:5px 40px;
+font-size:10px;
 font-weight:700;
-padding:10px 8px 5px;
-text-align:center;
+transform:rotate(-45deg);
+z-index:5;
 }
 
-/* Rating */
+.game-card h3{
+font-size:16px;
+font-weight:700;
+text-align:center;
+padding:10px 8px 5px;
+}
 
 .rating{
 text-align:center;
 color:#FFD700;
-font-size:12px;
-margin-bottom:4px;
+font-size:13px;
+margin-bottom:5px;
 }
-
-/* Downloads */
 
 .downloads{
 text-align:center;
-font-size:11px;
-color:#cbd5e1;
+font-size:12px;
+color:#bfc8d5;
 margin-bottom:8px;
 }
-
-/* Badges */
 
 .badges{
 display:flex;
 justify-content:center;
 gap:6px;
 flex-wrap:wrap;
-padding:0 8px 8px;
+margin-bottom:10px;
 }
 
 .badge{
@@ -300,38 +310,33 @@ font-size:10px;
 font-weight:700;
 }
 
-.badge.trust{
+.trust{
 background:#00c853;
 color:#fff;
 }
 
-.badge.bonus{
+.bonus{
 background:#ff9800;
 color:#fff;
 }
 
-/* Redeem */
-
 .redeem{
 text-align:center;
-font-size:11px;
+font-size:12px;
 color:#cbd5e1;
-margin-bottom:10px;
+margin-bottom:12px;
 }
-
-/* Download Button */
 
 .download-btn{
 display:block;
 margin:10px;
-padding:10px;
+padding:12px;
+background:linear-gradient(135deg,#00e676,#00c853);
+color:#fff;
 text-align:center;
 text-decoration:none;
-font-size:12px;
 font-weight:700;
-color:#fff;
-background:linear-gradient(135deg,#00e676,#00b248);
-border-radius:30px;
+border-radius:12px;
 transition:.3s;
 }
 
@@ -339,7 +344,7 @@ transition:.3s;
 transform:scale(1.05);
 }
 /* =========================
-   WHY CHOOSE US
+   FEATURES
 ========================= */
 
 .features{
@@ -349,8 +354,8 @@ padding:40px 15px;
 .features h2{
 text-align:center;
 font-size:28px;
-font-weight:700;
 margin-bottom:25px;
+font-weight:700;
 }
 
 .feature-grid{
@@ -360,21 +365,21 @@ gap:15px;
 }
 
 .feature-card{
-background:#162235;
-padding:20px;
+background:#182437;
 border-radius:18px;
+padding:20px;
 text-align:center;
 transition:.3s;
-box-shadow:0 10px 20px rgba(0,0,0,.25);
+box-shadow:0 8px 20px rgba(0,0,0,.30);
 }
 
 .feature-card:hover{
-transform:translateY(-6px);
+transform:translateY(-5px);
 }
 
 .feature-card .icon{
 font-size:40px;
-margin-bottom:10px;
+margin-bottom:12px;
 }
 
 .feature-card h3{
@@ -383,8 +388,8 @@ margin-bottom:8px;
 }
 
 .feature-card p{
-font-size:13px;
-color:#b8c4d6;
+font-size:14px;
+color:#bfc8d5;
 line-height:1.6;
 }
 
@@ -393,15 +398,15 @@ line-height:1.6;
 ========================= */
 
 .footer{
-background:#101b2d;
-padding:40px 20px;
-text-align:center;
 margin-top:40px;
+background:#101827;
+padding:35px 20px;
+text-align:center;
 }
 
 .footer-logo{
 font-size:28px;
-font-weight:800;
+font-weight:700;
 color:#00e676;
 margin-bottom:10px;
 }
@@ -416,7 +421,7 @@ display:flex;
 justify-content:center;
 gap:12px;
 flex-wrap:wrap;
-margin-bottom:25px;
+margin-bottom:20px;
 }
 
 .telegram-btn,
@@ -424,9 +429,8 @@ margin-bottom:25px;
 padding:12px 22px;
 border-radius:30px;
 text-decoration:none;
-color:#fff;
 font-weight:700;
-transition:.3s;
+color:#fff;
 }
 
 .telegram-btn{
@@ -437,21 +441,16 @@ background:#229ED9;
 background:#25D366;
 }
 
-.telegram-btn:hover,
-.whatsapp-btn:hover{
-transform:scale(1.05);
-}
-
 .footer-links{
 display:flex;
 justify-content:center;
 gap:15px;
 flex-wrap:wrap;
-margin-bottom:20px;
+margin:20px 0;
 }
 
 .footer-links a{
-color:#cbd5e1;
+color:#bfc8d5;
 text-decoration:none;
 font-size:14px;
 }
@@ -461,6 +460,7 @@ color:#00e676;
 }
 
 .copyright{
+margin-top:15px;
 font-size:13px;
 color:#94a3b8;
 }
@@ -471,90 +471,89 @@ color:#94a3b8;
 
 #topBtn{
 position:fixed;
-right:18px;
-bottom:18px;
+right:20px;
+bottom:20px;
 width:50px;
 height:50px;
 border:none;
 border-radius:50%;
-background:#00d84f;
+background:#00e676;
 color:#fff;
-font-size:18px;
+font-size:20px;
 cursor:pointer;
-box-shadow:0 10px 20px rgba(0,230,118,.35);
+display:none;
+box-shadow:0 10px 25px rgba(0,230,118,.35);
 }
 
 /* =========================
-   MOBILE RESPONSIVE
+   MOBILE
 ========================= */
 
 @media(max-width:768px){
 
-.games{
-grid-template-columns:repeat(4,1fr);
-gap:8px;
-padding:8px;
+.logo{
+font-size:24px;
 }
 
-.game-card img{
-height:85px;
+.hero{
+margin:12px;
+padding:25px 15px;
+}
+
+.hero h1{
+font-size:28px;
+}
+
+.hero p{
+font-size:14px;
+}
+
+.games{
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+padding:12px;
 }
 
 .game-card h3{
-font-size:10px;
-padding:5px;
+font-size:14px;
 }
 
-.rating{
-font-size:9px;
-}
-
-.downloads{
-font-size:8px;
-}
-
-.badge{
-font-size:8px;
-padding:3px 5px;
-}
-
-.redeem{
-font-size:8px;
+.game-card img{
+height:140px;
 }
 
 .download-btn{
-font-size:9px;
-padding:7px;
-margin:6px;
+font-size:13px;
+padding:10px;
 }
 
 .feature-grid{
 grid-template-columns:1fr;
 }
 
-.hero-text h1{
-font-size:22px;
-}
-
-.hero-text p{
-font-size:12px;
-}
-
-.play-btn{
-padding:10px 20px;
-font-size:13px;
-}
-
-.logo{
-font-size:20px;
-}
-
-.section-title h2{
-font-size:22px;
-}
-
 .features h2{
 font-size:22px;
+}
+
+.footer-logo{
+font-size:24px;
+}
+
+.social-buttons{
+flex-direction:column;
+}
+
+.telegram-btn,
+.whatsapp-btn{
+width:100%;
+}
+
+}
+
+@media(min-width:769px){
+
+.games{
+grid-template-columns:repeat(4,1fr);
 }
 
 }
