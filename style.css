@@ -548,36 +548,29 @@ flex-direction:column;
 width:100%;
 }
 
-}
-
-@media(min-width:769px){
-
-.games{
-    display:grid !important;
-    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
-}
-}
-
-}
-/* ===== FINAL MOBILE FIX ===== */
-
+}/* Mobile */
 @media screen and (max-width:768px){
 
 .games{
-display:grid !important;
-grid-template-columns:1fr 1fr !important;
-gap:14px !important;
-padding:14px !important;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+    padding:14px;
 }
 
 .game-card{
-width:100% !important;
-min-width:0 !important;
+    width:100%;
 }
 
-.game-card img{
-width:100% !important;
-height:auto !important;
+}
+
+/* Tablet & Desktop */
+@media screen and (min-width:769px){
+
+.games{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
 }
 
 }
