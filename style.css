@@ -236,3 +236,155 @@ font-size:13px;
 }
 
 }
+/* ===== ABOUT SECTION ===== */
+
+.about{
+padding:50px 20px;
+}
+
+.about h2{
+text-align:center;
+font-size:28px;
+margin-bottom:25px;
+color:#22c55e;
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.about-card{
+background:#162033;
+padding:25px;
+border-radius:20px;
+text-align:center;
+border:1px solid rgba(255,255,255,.08);
+transition:.3s;
+}
+
+.about-card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 30px rgba(34,197,94,.25);
+}
+
+.about-card span{
+font-size:45px;
+display:block;
+margin-bottom:15px;
+}
+
+.about-card h3{
+margin-bottom:10px;
+font-size:20px;
+}
+
+.about-card p{
+color:#cbd5e1;
+line-height:1.6;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+margin-top:50px;
+padding:40px 20px;
+background:#111827;
+text-align:center;
+border-top:1px solid rgba(255,255,255,.08);
+}
+
+.footer-logo{
+font-size:30px;
+font-weight:700;
+color:#22c55e;
+margin-bottom:10px;
+}
+
+.footer-text{
+color:#94a3b8;
+margin-bottom:20px;
+}
+
+.footer-buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+margin-bottom:20px;
+}
+
+.telegram-btn,
+.whatsapp-btn{
+padding:12px 22px;
+border-radius:10px;
+text-decoration:none;
+font-weight:600;
+color:#fff;
+transition:.3s;
+}
+
+.telegram-btn{
+background:#229ED9;
+}
+
+.whatsapp-btn{
+background:#25D366;
+}
+
+.telegram-btn:hover,
+.whatsapp-btn:hover{
+transform:scale(1.05);
+}
+
+.copyright{
+font-size:14px;
+color:#64748b;
+}
+
+/* ===== BACK TO TOP ===== */
+
+#topBtn{
+position:fixed;
+bottom:20px;
+right:20px;
+width:50px;
+height:50px;
+border:none;
+border-radius:50%;
+background:#22c55e;
+color:#fff;
+font-size:22px;
+cursor:pointer;
+display:none;
+box-shadow:0 5px 20px rgba(0,0,0,.4);
+transition:.3s;
+}
+
+#topBtn:hover{
+transform:scale(1.1);
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+
+.about-grid{
+grid-template-columns:1fr;
+}
+
+.footer-buttons{
+flex-direction:column;
+}
+
+.telegram-btn,
+.whatsapp-btn{
+width:100%;
+}
+
+.footer-logo{
+font-size:24px;
+}
+
+}
