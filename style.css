@@ -390,6 +390,8 @@ opacity:1;
 transform:translateY(0);
 
 }
+
+}
 /*==================================
  ABOUT SECTION
 ==================================*/
@@ -602,5 +604,4 @@ grid-template-columns:repeat(4,1fr);
 grid-template-columns:repeat(4,1fr);
 }
 
-   }
 }
