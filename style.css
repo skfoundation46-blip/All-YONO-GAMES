@@ -225,3 +225,144 @@ margin-bottom:10px;
 color:#ddd;
 line-height:1.7;
 }
+/* ==========================
+   PART 3
+   FAQ • FOOTER • RELATED • MOBILE
+========================== */
+
+/* FAQ */
+
+.faq-item{
+    background:#1d2d47;
+    border-left:4px solid #00ff66;
+    padding:18px;
+    margin-bottom:15px;
+    border-radius:15px;
+}
+
+.faq-item h3{
+    color:#00ff66;
+    margin-bottom:10px;
+    font-size:18px;
+}
+
+.faq-item p{
+    color:#ddd;
+    line-height:1.8;
+}
+
+/* RELATED GAMES */
+
+.related-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:18px;
+    margin-top:20px;
+}
+
+.related-card{
+    background:#20314d;
+    padding:15px;
+    border-radius:18px;
+    text-align:center;
+    transition:.3s;
+}
+
+.related-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,255,100,.30);
+}
+
+.related-card img{
+    width:90px;
+    height:90px;
+    margin:auto;
+    border-radius:18px;
+    object-fit:cover;
+    margin-bottom:12px;
+}
+
+.related-card h4{
+    color:#fff;
+    font-size:17px;
+}
+
+/* FOOTER */
+
+.footer{
+    background:#111827;
+    padding:40px 20px;
+    text-align:center;
+    margin-top:40px;
+}
+
+.footer h3{
+    color:#00ff66;
+    margin-bottom:10px;
+}
+
+.footer p{
+    color:#ccc;
+    margin:8px 0;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.header{
+padding:14px;
+}
+
+.logo{
+font-size:22px;
+}
+
+.game-hero{
+padding:25px 15px;
+}
+
+.hero-logo{
+width:95px;
+height:95px;
+}
+
+.game-hero h1{
+font-size:28px;
+}
+
+.hero-badges{
+gap:8px;
+}
+
+.badge{
+font-size:12px;
+padding:8px 12px;
+}
+
+.download-btn{
+font-size:16px;
+padding:13px 24px;
+}
+
+.feature-grid,
+.related-grid,
+.step-box{
+grid-template-columns:1fr;
+}
+
+.info-table th,
+.info-table td{
+display:block;
+width:100%;
+}
+
+.info-table th{
+border-bottom:none;
+}
+
+section{
+padding:20px;
+}
+
+}
