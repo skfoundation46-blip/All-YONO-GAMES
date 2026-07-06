@@ -200,11 +200,37 @@ header{
 
 /* Downloads */
 
-.downloads{
-    color:#cbd5e1;
-    font-size:15px;
-    margin:10px 0;
+.download-btn{
+    display:inline-block;
+    background:linear-gradient(90deg,#00c853,#00e676);
+    color:#fff;
+    font-size:20px;
+    font-weight:700;
+    padding:18px 45px;
+    border-radius:50px;
+    text-decoration:none;
+    box-shadow:0 8px 25px rgba(0,200,83,.45);
+    transition:all .3s ease;
+    animation:pulse 1.5s infinite;
 }
+
+.download-btn:hover{
+    transform:scale(1.08);
+    box-shadow:0 12px 30px rgba(0,200,83,.6);
+}
+
+@keyframes pulse{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.05);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+
 
 /* Bonus */
 
