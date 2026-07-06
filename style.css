@@ -238,27 +238,63 @@ box-shadow:0 5px 15px rgba(0,0,0,.3);
 
 /* ===== MOBILE ===== */
 
-@media(max-width:768px){
+@media (max-width:768px){
 
-.logo{
-font-size:22px;
+.games{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+padding:12px;
+}
+
+.game-card{
+border-radius:15px;
+}
+
+.game-card img{
+height:120px;
+}
+
+.game-card h3{
+font-size:16px;
+padding:10px 5px;
+}
+
+.bonus{
+font-size:12px;
+padding:6px 10px;
+}
+
+.redeem{
+font-size:12px;
+margin-bottom:8px;
+}
+
+.download-btn{
+font-size:14px;
+padding:10px;
+margin:10px;
+}
+
+.hero{
+padding:25px 15px;
 }
 
 .hero h1{
 font-size:24px;
 }
 
-.games{
-grid-template-columns:1fr;
-padding:15px;
+.hero p{
+font-size:14px;
 }
 
-.game-card img{
-height:180px;
+.logo{
+font-size:24px;
 }
 
-.about-box{
-grid-template-columns:1fr;
+.search input{
+padding:12px;
+font-size:15px;
 }
 
 }
