@@ -366,3 +366,269 @@ padding:20px;
 }
 
 }
+/* ==========================
+   PART 4
+   PREMIUM EFFECTS
+========================== */
+
+/* Smooth Card Animation */
+
+.feature-card,
+.related-card,
+.step,
+.faq-item{
+transition:all .35s ease;
+}
+
+.feature-card:hover,
+.related-card:hover,
+.step:hover,
+.faq-item:hover{
+transform:translateY(-6px);
+box-shadow:0 15px 35px rgba(0,255,100,.20);
+}
+
+/* Premium Scrollbar */
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-track{
+background:#0f172a;
+}
+
+::-webkit-scrollbar-thumb{
+background:#00d95f;
+border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+background:#00ff66;
+}
+
+/* Selection */
+
+::selection{
+background:#00ff66;
+color:#000;
+}
+
+/* Image Hover */
+
+.hero-logo,
+.related-card img{
+transition:.35s;
+}
+
+.hero-logo:hover,
+.related-card img:hover{
+transform:scale(1.08);
+}
+
+/* Sticky Download Button */
+
+.sticky-download{
+
+position:fixed;
+
+bottom:18px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+z-index:999;
+
+}
+
+.sticky-download .download-btn{
+
+animation:pulse 1.4s infinite;
+
+box-shadow:0 0 30px rgba(0,255,100,.6);
+
+}
+
+/* Fade Animation */
+
+@keyframes fadeUp{
+
+0%{
+opacity:0;
+transform:translateY(25px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+section{
+
+animation:fadeUp .5s ease;
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.sticky-download{
+
+width:90%;
+
+}
+
+.sticky-download .download-btn{
+
+display:block;
+
+width:100%;
+
+text-align:center;
+
+}
+
+}
+/* ==========================
+   PART 5
+   FINAL PREMIUM CSS
+========================== */
+
+/* Glass Effect */
+
+.game-hero,
+section,
+.feature-card,
+.related-card,
+.step,
+.faq-item{
+
+backdrop-filter:blur(10px);
+
+-webkit-backdrop-filter:blur(10px);
+
+}
+
+/* Border */
+
+.game-hero,
+section{
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+/* Heading Gradient */
+
+h1,
+h2{
+
+background:linear-gradient(90deg,#00ff66,#7CFFB2);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+/* Table */
+
+.info-table tr:hover{
+
+background:#263954;
+
+transition:.3s;
+
+}
+
+/* Links */
+
+a{
+
+transition:.3s;
+
+}
+
+a:hover{
+
+opacity:.95;
+
+}
+
+/* Button Shine */
+
+.download-btn{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.download-btn::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-120%;
+
+width:60%;
+
+height:100%;
+
+background:rgba(255,255,255,.25);
+
+transform:skewX(-25deg);
+
+animation:shine 2.8s infinite;
+
+}
+
+@keyframes shine{
+
+0%{
+
+left:-120%;
+
+}
+
+100%{
+
+left:140%;
+
+}
+
+}
+
+/* Footer */
+
+.footer{
+
+border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+/* Hero */
+
+.hero-logo{
+
+background:#fff;
+
+padding:8px;
+
+}
+
+/* Smooth */
+
+body{
+
+overflow-x:hidden;
+
+}
