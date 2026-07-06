@@ -98,31 +98,40 @@ font-weight:600;
 color:#fff;
 }
 
-/* DOWNLOAD BUTTON */
-
-.download-btn{
-display:inline-block;
-margin-top:20px;
-padding:18px 45px;
-background:linear-gradient(90deg,#00c853,#00ff66);
-color:#fff;
-font-size:20px;
-font-weight:700;
-text-decoration:none;
-border-radius:50px;
-box-shadow:0 8px 25px rgba(0,255,102,.45);
-transition:.3s;
-animation:pulse 1.5s infinite;
-}
-
-.download-btn:hover{
-transform:scale(1.05);
-}
-
 @keyframes pulse{
 0%{transform:scale(1);}
 50%{transform:scale(1.05);}
 100%{transform:scale(1);}
+}.download-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    width:auto;
+    min-width:240px;
+    max-width:280px;
+
+    padding:16px 30px;
+    margin:25px auto;
+
+    background:linear-gradient(135deg,#00c853,#00e676);
+    color:#fff;
+    font-size:18px;
+    font-weight:700;
+    text-decoration:none;
+
+    border-radius:16px;
+    border:2px solid rgba(255,255,255,.15);
+
+    box-shadow:0 8px 20px rgba(0,255,120,.35);
+
+    transition:.3s;
+}
+
+.download-btn:hover{
+    transform:translateY(-4px) scale(1.03);
+    box-shadow:0 12px 30px rgba(0,255,120,.45);
 }
 
 /* SECTION */
