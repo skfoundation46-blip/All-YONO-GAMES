@@ -19,81 +19,66 @@ overflow-x:hidden;
 position:sticky;
 top:0;
 z-index:1000;
-display:flex;
-flex-direction:column;
-gap:12px;
+background:#111827;
 padding:15px;
-background:rgba(15,23,42,.9);
-backdrop-filter:blur(15px);
-border-bottom:1px solid rgba(255,255,255,.08);
+box-shadow:0 5px 20px rgba(0,0,0,.3);
 }
 
 .logo{
+text-align:center;
 font-size:28px;
 font-weight:700;
-text-align:center;
 color:#22c55e;
-letter-spacing:1px;
+margin-bottom:12px;
 }
 
 .search-box input{
 width:100%;
-padding:14px 18px;
+padding:14px;
 border:none;
+border-radius:12px;
 outline:none;
-border-radius:14px;
 font-size:16px;
-background:#1e293b;
+background:#1f2937;
 color:#fff;
-}
-
-.search-box input::placeholder{
-color:#94a3b8;
 }
 
 /* ===== HERO ===== */
 
-.banner{
+.hero{
 padding:35px 20px;
-background:linear-gradient(135deg,#16a34a,#15803d,#065f46);
 text-align:center;
+background:linear-gradient(135deg,#16a34a,#15803d);
 border-radius:0 0 25px 25px;
 }
 
-.banner h1{
-font-size:34px;
-font-weight:700;
+.hero h1{
+font-size:32px;
 margin-bottom:10px;
 }
 
-.banner p{
+.hero p{
 font-size:15px;
-opacity:.95;
 margin-bottom:20px;
 }
 
 .play-btn{
 display:inline-block;
-padding:14px 28px;
+padding:14px 30px;
 background:#fff;
 color:#15803d;
-font-weight:700;
+font-weight:bold;
 text-decoration:none;
 border-radius:40px;
-transition:.3s;
-}
-
-.play-btn:hover{
-transform:scale(1.05);
 }
 
 /* ===== CATEGORY ===== */
 
 .category{
 display:flex;
-overflow:auto;
-gap:12px;
-padding:18px;
+gap:10px;
+overflow-x:auto;
+padding:15px;
 }
 
 .category::-webkit-scrollbar{
@@ -101,17 +86,17 @@ display:none;
 }
 
 .cat{
-flex:none;
-padding:10px 18px;
+background:#1f2937;
+padding:10px 16px;
 border-radius:30px;
-background:#1e293b;
+white-space:nowrap;
 font-size:14px;
 font-weight:600;
-white-space:nowrap;
 }
 
 .title{
-padding:0 18px;
+padding:0 20px;
+margin-top:10px;
 margin-bottom:15px;
 }
 
@@ -119,24 +104,29 @@ margin-bottom:15px;
 font-size:26px;
 color:#22c55e;
 }
+
+.title p{
+color:#94a3b8;
+margin-top:5px;
+}
 /* ===== PREMIUM GAME GRID ===== */
 
 .games{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
 padding:20px;
 }
 
 /* ===== GAME CARD ===== */
 
 .game-card{
-background:#162033;
-border:1px solid rgba(255,255,255,.08);
-border-radius:20px;
+background:#1e293b;
+border-radius:18px;
 overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,.35);
-transition:.35s;
+box-shadow:0 8px 20px rgba(0,0,0,.35);
+transition:all .3s ease;
+text-align:center;
 }
 
 .game-card:hover{
@@ -146,93 +136,82 @@ box-shadow:0 15px 35px rgba(34,197,94,.35);
 
 .game-card img{
 width:100%;
-height:220px;
+height:180px;
 object-fit:cover;
 display:block;
 }
 
 .game-card h3{
-padding:15px 15px 5px;
-font-size:20px;
-font-weight:700;
+font-size:18px;
+padding:12px 8px 5px;
 color:#fff;
 }
 
 .bonus{
 display:inline-block;
-margin:10px 15px;
-padding:7px 14px;
 background:#22c55e;
 color:#fff;
-border-radius:30px;
+padding:6px 12px;
+border-radius:20px;
 font-size:13px;
 font-weight:600;
+margin:8px 0;
 }
 
 .redeem{
-padding:0 15px;
-font-size:14px;
+font-size:13px;
 color:#cbd5e1;
-margin-bottom:15px;
+margin-bottom:12px;
 }
 
 .download-btn{
 display:block;
-margin:15px;
-padding:14px;
-text-align:center;
-text-decoration:none;
+margin:12px;
+padding:12px;
 background:linear-gradient(135deg,#22c55e,#16a34a);
 color:#fff;
-font-size:16px;
+text-decoration:none;
 font-weight:700;
-border-radius:12px;
+border-radius:10px;
 transition:.3s;
 }
 
 .download-btn:hover{
-transform:scale(1.03);
 background:linear-gradient(135deg,#16a34a,#15803d);
 }
 
 /* ===== MOBILE ===== */
 
-@media(max-width:768px){
+@media (max-width:768px){
 
 .games{
-grid-template-columns:repeat(2,1fr);
-gap:12px;
-padding:12px;
-}
-
-.game-card{
-border-radius:15px;
+grid-template-columns:repeat(4,1fr);
+gap:8px;
+padding:8px;
 }
 
 .game-card img{
-height:140px;
+height:85px;
 }
 
 .game-card h3{
-font-size:14px;
-padding:10px 8px 5px;
+font-size:10px;
+padding:6px 3px;
 }
 
 .bonus{
-font-size:11px;
-margin:8px;
-padding:5px 8px;
+font-size:9px;
+padding:3px 5px;
 }
 
 .redeem{
-font-size:11px;
-padding:0 8px;
+font-size:9px;
 }
 
 .download-btn{
-margin:8px;
-padding:10px;
-font-size:13px;
+font-size:9px;
+padding:6px;
+margin:6px;
 }
 
 }
@@ -245,8 +224,8 @@ padding:50px 20px;
 .about h2{
 text-align:center;
 font-size:28px;
-margin-bottom:25px;
 color:#22c55e;
+margin-bottom:25px;
 }
 
 .about-grid{
@@ -256,21 +235,20 @@ gap:20px;
 }
 
 .about-card{
-background:#162033;
+background:#1e293b;
 padding:25px;
-border-radius:20px;
+border-radius:18px;
 text-align:center;
-border:1px solid rgba(255,255,255,.08);
+box-shadow:0 5px 15px rgba(0,0,0,.25);
 transition:.3s;
 }
 
 .about-card:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 30px rgba(34,197,94,.25);
+transform:translateY(-5px);
 }
 
 .about-card span{
-font-size:45px;
+font-size:42px;
 display:block;
 margin-bottom:15px;
 }
@@ -288,11 +266,10 @@ line-height:1.6;
 /* ===== FOOTER ===== */
 
 footer{
-margin-top:50px;
-padding:40px 20px;
 background:#111827;
+padding:35px 20px;
 text-align:center;
-border-top:1px solid rgba(255,255,255,.08);
+margin-top:40px;
 }
 
 .footer-logo{
@@ -303,7 +280,7 @@ margin-bottom:10px;
 }
 
 .footer-text{
-color:#94a3b8;
+color:#cbd5e1;
 margin-bottom:20px;
 }
 
@@ -317,12 +294,12 @@ margin-bottom:20px;
 
 .telegram-btn,
 .whatsapp-btn{
-padding:12px 22px;
+display:inline-block;
+padding:12px 20px;
 border-radius:10px;
+color:#fff;
 text-decoration:none;
 font-weight:600;
-color:#fff;
-transition:.3s;
 }
 
 .telegram-btn{
@@ -333,14 +310,9 @@ background:#229ED9;
 background:#25D366;
 }
 
-.telegram-btn:hover,
-.whatsapp-btn:hover{
-transform:scale(1.05);
-}
-
 .copyright{
 font-size:14px;
-color:#64748b;
+color:#94a3b8;
 }
 
 /* ===== BACK TO TOP ===== */
@@ -358,7 +330,7 @@ color:#fff;
 font-size:22px;
 cursor:pointer;
 display:none;
-box-shadow:0 5px 20px rgba(0,0,0,.4);
+box-shadow:0 5px 15px rgba(0,0,0,.35);
 transition:.3s;
 }
 
@@ -366,7 +338,7 @@ transition:.3s;
 transform:scale(1.1);
 }
 
-/* ===== MOBILE ===== */
+/* ===== MOBILE FOOTER ===== */
 
 @media(max-width:768px){
 
@@ -385,44 +357,6 @@ width:100%;
 
 .footer-logo{
 font-size:24px;
-}
-
-}
-/* ===== SLIDER ===== */
-
-.slider{
-width:100%;
-height:220px;
-overflow:hidden;
-position:relative;
-margin:20px 0;
-border-radius:20px;
-}
-
-.slide{
-position:absolute;
-width:100%;
-height:100%;
-opacity:0;
-transition:opacity .8s ease;
-}
-
-.slide.active{
-opacity:1;
-}
-
-.slide img{
-width:100%;
-height:100%;
-object-fit:cover;
-display:block;
-}
-
-@media(max-width:768px){
-
-.slider{
-height:170px;
-border-radius:15px;
 }
 
 }
