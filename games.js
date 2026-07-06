@@ -1,114 +1,203 @@
 const games = [
 
 {
-name:"Diwa777",
-image:"images/diwa777.png",
-bonus:"₹100 Bonus",
-redeem:"Min ₹100",
-page:"games/diwa777.html"
-},
-  {
-  name:"Gogo Rummy",
-  image:"images/gogorummy.png",
-  bonus:"₹100 Bonus",
-  redeem:"Min ₹100",
-  page:"games/gogorummy.html"
+name: "Game Rummy",
+image: "images/gamerummy.png",
+bonus: "₹100 Bonus",
+category: "Rummy",
+page: "games/gamerummy.html"
 },
 
 {
-name:"Go Spin",
-image:"images/gospin.png",
-bonus:"₹100 Bonus",
-redeem:"Min ₹100",
-page:"games/gospin.html"
+name: "Gogo Rummy",
+image: "images/gospin.png",
+bonus: "₹100 Bonus",
+category: "Rummy",
+page: "games/gogorummy.html"
 },
 
 {
-name:"Hindi777",
-image:"images/hindi777.png",
-bonus:"₹100 Bonus",
-redeem:"Min ₹100",
-page:"games/hindi777.html"
+name: "Go Spin",
+image: "images/gospin.png",
+bonus: "₹88 Bonus",
+category: "Casino",
+page: "games/gospin.html"
 },
 
 {
-name:"Hi Rummy",
-image:"images/hirummy.png",
-bonus:"₹100 Bonus",
-redeem:"Min ₹100",
-page:"games/hirummy.html"
+name: "91 Club",
+image: "images/91club.png",
+bonus: "₹200 Bonus",
+category: "Color Prediction",
+page: "games/91club.html"
 },
 
 {
-name:"IND Club",
-image:"images/indclub.png",
-bonus:"₹100 Bonus",
-redeem:"Min ₹100",
-page:"games/indclub.html"
+name: "Diwa777",
+image: "images/diwa777.png",
+bonus: "₹150 Bonus",
+category: "Casino",
+page: "games/diwa777.html"
 },
 
 {
-name:"IND Slots",
-image:"images/indslots.png",
-bonus:"₹100 Bonus",
-redeem:"Min ₹100",
-page:"games/indslots.html"
+name: "Tiranga",
+image: "images/tiranga.png",
+bonus: "₹501 Bonus",
+category: "Color Prediction",
+page: "games/tiranga.html"
 },
 
 {
-name:"91 Club",
-image:"images/91club.png",
-bonus:"₹100 Bonus",
-redeem:"Min ₹100",
-page:"games/91club.html"
+name: "Ind Club",
+image: "images/indclub.png",
+bonus: "₹100 Bonus",
+category: "Color Prediction",
+page: "games/indclub.html"
 },
 
 {
-name:"55 Club",
-image:"images/55club.png",
-bonus:"₹100 Bonus",
-redeem:"Min ₹100",
-page:"games/55club.html"
+name: "Raja Games",
+image: "images/rajagames.png",
+bonus: "₹88 Bonus",
+category: "Casino",
+page: "games/rajagames.html"
 },
 
 {
-name:"82 Lottery",
-image:"images/82lottery.png",
-bonus:"₹100 Bonus",
-redeem:"Min ₹100",
-page:"games/82lottery.html"
-}
+name: "AA Game",
+image: "images/aagame.png",
+bonus: "₹50 Bonus",
+category: "Game",
+page: "games/aagame.html"
+},
+
+{
+name: "Big Mumbai",
+image: "images/bigmumbai.png",
+bonus: "₹100 Bonus",
+category: "Color Prediction",
+page: "games/bigmumbai.html"
+},
 
 ];
+const gameGrid = document.querySelector(".game-grid");
 
-const gameContainer=document.getElementById("games");
+function renderGames(list){
 
-games.forEach(game=>{
+gameGrid.innerHTML = "";
 
-gameContainer.innerHTML+=`
+list.forEach(game=>{
 
-<div class="game-card">
+gameGrid.innerHTML += `
 
-<a href="${game.page}" style="text-decoration:none;color:inherit;">
+<a href="${game.page}" class="game-card">
 
 <img src="${game.image}" alt="${game.name}">
 
 <h3>${game.name}</h3>
 
-<div class="rating">⭐⭐⭐⭐⭐</div>
+<p>${game.category}</p>
 
-<div class="downloads">10M+ Downloads</div>
-
-<div class="redeem">${game.redeem}</div>
-
-<button class="download-btn">
-Download Now
-</button>
+<span class="play-btn">${game.bonus}</span>
 
 </a>
 
-</div>
-
 `;
+
+});
+
+}
+
+renderGames(games);
+
+/* SEARCH */
+
+const searchBox = document.getElementById("searchBox");
+
+if(searchBox){
+
+searchBox.addEventListener("input",function(){
+
+const keyword=this.value.toLowerCase();
+
+const filtered=games.filter(game=>
+
+game.name.toLowerCase().includes(keyword) ||
+
+game.category.toLowerCase().includes(keyword)
+
+);
+
+renderGames(filtered);
+
+});
+
+}
+/* ==========================
+   CATEGORY FILTER
+========================== */
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+
+filterButtons.forEach(button=>{
+
+button.addEventListener("click",()=>{
+
+const category=button.dataset.category;
+
+if(category==="All"){
+
+renderGames(games);
+
+}else{
+
+const filteredGames=games.filter(game=>game.category===category);
+
+renderGames(filteredGames);
+
+}
+
+});
+
+});
+
+/* ==========================
+   TRENDING GAMES
+========================== */
+
+function renderTrending(){
+
+const cards=document.querySelectorAll(".game-card");
+
+cards.forEach((card,index)=>{
+
+if(index<3){
+
+const badge=document.createElement("div");
+
+badge.className="trending-badge";
+
+badge.innerHTML="🔥 Trending";
+
+card.appendChild(badge);
+
+}
+
+});
+
+}
+
+renderTrending();
+
+/* ==========================
+   PAGE LOADED
+========================== */
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+renderGames(games);
+
+renderTrending();
 
 });
