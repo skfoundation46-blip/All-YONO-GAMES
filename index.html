@@ -1,37 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>All Yono Games - Download APK</title>
+<title>All Yono Games APK Download</title>
 
-<meta name="description" content="Download All Yono Games APK with Welcome Bonus and Fast Withdrawal.">
+<meta name="description" content="Download All Yono Games APK with Welcome Bonus & Fast Withdraw">
 
 <link rel="stylesheet" href="style.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 
 <body>
 
-<header>
+<!-- Header -->
+
+<header class="header">
 
 <div class="logo">
 
-🎮 ALL YONO GAMES
+<i class="fas fa-gamepad"></i>
+
+<h2>ALL YONO GAMES</h2>
 
 </div>
 
 </header>
 
+<!-- Banner -->
+
+<section class="hero">
+
+<h1>Download All Yono Games</h1>
+
+<p>Welcome Bonus ₹50 - ₹110</p>
+
+</section>
+
+<!-- Search -->
 
 <section class="search-section">
 
@@ -48,305 +67,177 @@ placeholder="Search Games...">
 
 </section>
 
+<!-- Popular Games -->
 
-<section class="games-area">
+<section class="games-section">
+
+<h2 class="section-title">
+
+🔥 Popular Games
+
+</h2>
 
 <div id="gamesContainer">
 
-<!-- Games Auto Load Here -->
+<!-- games.js દ્વારા તમામ ગેમ અહીં આવશે -->
+
+</div>
+
+</section>
+<!-- Banner Slider -->
+
+<section class="banner-section">
+
+<div class="banner-slider">
+
+<div class="slide active">
+<img src="images/banner1.jpg" alt="Banner 1">
+</div>
+
+<div class="slide">
+<img src="images/banner2.jpg" alt="Banner 2">
+</div>
+
+<div class="slide">
+<img src="images/banner3.jpg" alt="Banner 3">
+</div>
 
 </div>
 
 </section>
 
+<!-- Why Choose Us -->
 
-<button id="scrollTop">
+<section class="features">
 
-<i class="fas fa-arrow-up"></i>
+<h2 class="section-title">Why Choose Us?</h2>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+<i class="fas fa-bolt"></i>
+<h3>Fast Download</h3>
+<p>High-speed APK Download.</p>
+</div>
+
+<div class="feature-card">
+<i class="fas fa-gift"></i>
+<h3>Welcome Bonus</h3>
+<p>₹50 - ₹110 Bonus Available.</p>
+</div>
+
+<div class="feature-card">
+<i class="fas fa-shield-alt"></i>
+<h3>100% Safe</h3>
+<p>Verified Download Links.</p>
+</div>
+
+<div class="feature-card">
+<i class="fas fa-wallet"></i>
+<h3>Fast Withdraw</h3>
+<p>Minimum Withdraw ₹100.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Trending Games -->
+
+<section class="trending-section">
+
+<h2 class="section-title">🔥 Trending Games</h2>
+
+<div id="trendingGames">
+
+<!-- Trending Games JS દ્વારા આવશે -->
+
+</div>
+
+</section>
+
+<!-- FAQ -->
+
+<section class="faq-section">
+
+<h2 class="section-title">Frequently Asked Questions</h2>
+
+<div class="faq-item">
+<h3>How to Download?</h3>
+<p>Click on the Download button and install the APK.</p>
+</div>
+
+<div class="faq-item">
+<h3>Registration Free?</h3>
+<p>Yes, Registration is 100% Free.</p>
+</div>
+
+<div class="faq-item">
+<h3>Minimum Withdraw?</h3>
+<p>Minimum Withdrawal Starts From ₹100.</p>
+</div>
+
+</section>
+<!-- Footer -->
+
+<footer class="footer">
+
+    <div class="footer-logo">
+        <i class="fas fa-gamepad"></i>
+        <h2>ALL YONO GAMES</h2>
+    </div>
+
+    <p>
+        Download the latest Yono Games APK with welcome bonus,
+        fast withdrawal and secure download links.
+    </p>
+
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <p class="copyright">
+        © 2026 ALL YONO GAMES. All Rights Reserved.
+    </p>
+
+</footer>
+
+<!-- Telegram Button -->
+
+<a href="https://t.me/+4GqtEx1EywhiNTQ1"
+   class="telegram-btn"
+   target="_blank">
+
+    <i class="fab fa-telegram-plane"></i>
+
+</a>
+
+<!-- Scroll To Top -->
+
+<button id="scrollTopBtn">
+
+    <i class="fas fa-arrow-up"></i>
 
 </button>
 
-<script src="games.js"></script>
+<!-- Loader -->
 
+<div id="loader">
+
+    <div class="loader-circle"></div>
+
+    <p>Loading Games...</p>
+
+</div>
+
+<!-- JavaScript -->
+
+<script src="games.js"></script>
 <script src="script.js"></script>
 
 </body>
 </html>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-background:#111827;
-color:#fff;
-}
-
-header{
-position:sticky;
-top:0;
-background:#1f2937;
-padding:15px;
-text-align:center;
-box-shadow:0 2px 10px rgba(0,0,0,.3);
-z-index:100;
-}
-
-.logo{
-font-size:22px;
-font-weight:700;
-color:#00e676;
-}
-
-.search-section{
-padding:15px;
-}
-
-.search-box{
-display:flex;
-align-items:center;
-background:#1f2937;
-border-radius:12px;
-padding:12px;
-}
-
-.search-box i{
-color:#00e676;
-margin-right:10px;
-}
-
-.search-box input{
-width:100%;
-border:none;
-outline:none;
-background:none;
-color:#fff;
-font-size:16px;
-}
-
-.games-area{
-padding:15px;
-}
-
-#gamesContainer{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:15px;
-}
-
-.game-card{
-background:#1f2937;
-border-radius:15px;
-overflow:hidden;
-transition:.3s;
-box-shadow:0 4px 15px rgba(0,0,0,.4);
-}
-
-.game-card:hover{
-transform:translateY(-5px);
-}
-
-.game-card img{
-width:100%;
-height:140px;
-object-fit:cover;
-}
-
-.game-content{
-padding:12px;
-}
-
-.game-title{
-font-size:16px;
-font-weight:600;
-margin-bottom:8px;
-}
-
-.rating{
-color:#ffc107;
-font-size:14px;
-margin-bottom:5px;
-}
-
-.downloads{
-font-size:13px;
-color:#ccc;
-margin-bottom:8px;
-}
-
-.bonus{
-background:#00c853;
-padding:6px;
-border-radius:8px;
-text-align:center;
-font-size:13px;
-font-weight:600;
-margin-bottom:8px;
-}
-
-.withdraw{
-font-size:13px;
-margin-bottom:10px;
-color:#fff;
-}
-
-.download-btn{
-display:block;
-width:100%;
-padding:10px;
-text-align:center;
-background:#00e676;
-color:#111;
-font-weight:700;
-text-decoration:none;
-border-radius:10px;
-}
-
-.download-btn:hover{
-background:#00c853;
-}
-
-#scrollTop{
-position:fixed;
-bottom:20px;
-right:20px;
-width:45px;
-height:45px;
-border:none;
-border-radius:50%;
-background:#00e676;
-color:#111;
-font-size:18px;
-cursor:pointer;
-display:none;
-box-shadow:0 4px 10px rgba(0,0,0,.4);
-}
-
-@media(max-width:480px){
-
-#gamesContainer{
-grid-template-columns:1fr;
-}
-
-.game-card img{
-height:180px;
-}
-
-.logo{
-font-size:20px;
-}
-
-}
-<!-- ==========================
-     GAMES SECTION
-========================== -->
-
-<section class="games-section">
-
-<div class="section-title">
-
-<h2>🔥 Popular Games</h2>
-
-<p>
-Choose your favorite game and download instantly.
-</p>
-
-</div>
-
-<div id="gamesContainer">
-
-<!-- Games.js દ્વારા બધી Games અહીં આવશે -->
-
-</div>
-
-</section>
-
-
-<!-- ==========================
-     FEATURES SECTION
-========================== -->
-
-<section class="features">
-
-<div class="section-title">
-
-<h2>Why Choose Us?</h2>
-
-<p>Trusted Platform for APK Downloads</p>
-
-</div>
-
-<div class="feature-grid">
-
-<div class="feature-box">
-
-<h3>⚡ Fast Download</h3>
-
-<p>High-speed APK downloads without waiting.</p>
-
-</div>
-
-<div class="feature-box">
-
-<h3>🎁 Welcome Bonus</h3>
-
-<p>Every game offers exciting welcome bonuses.</p>
-
-</div>
-
-<div class="feature-box">
-
-<h3>🔒 Safe & Secure</h3>
-
-<p>Verified download links and secure platform.</p>
-
-</div>
-
-<div class="feature-box">
-
-<h3>💰 Instant Withdrawal</h3>
-
-<p>Minimum withdrawal starts from ₹100.</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ==========================
-     FAQ SECTION
-========================== -->
-
-<section class="faq-section">
-
-<h2>Frequently Asked Questions</h2>
-
-<div class="faq-item">
-
-<h3>How do I download a game?</h3>
-
-<p>Click the Download APK button to open the game page and install the application.</p>
-
-</div>
-
-<div class="faq-item">
-
-<h3>Is registration free?</h3>
-
-<p>Yes, creating an account is completely free.</p>
-
-</div>
-
-<div class="faq-item">
-
-<h3>What is the minimum withdrawal?</h3>
-
-<p>Minimum withdrawal starts from ₹100 depending on the game.</p>
-
-</div>
-
-</section>
