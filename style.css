@@ -1,7 +1,7 @@
-/* ==========================
+/* ===================================
    ALL YONO GAMES
-   MOBILE FIRST CSS
-========================== */
+   MOBILE PREMIUM CSS
+=================================== */
 
 *{
 margin:0;
@@ -17,20 +17,17 @@ body{
 
 font-family:'Poppins',sans-serif;
 
-background:#070b18;
+background:#050816;
 
-color:#fff;
+color:#ffffff;
 
 overflow-x:hidden;
 
 }
 
-
 /* Animated Background */
 
-body::before{
-
-content:"";
+.bg{
 
 position:fixed;
 
@@ -42,44 +39,37 @@ width:100%;
 
 height:100%;
 
+z-index:-1;
+
 background:
 
-radial-gradient(circle at 20% 20%,#00f5ff22,transparent 40%),
+radial-gradient(circle at top left,#00d9ff30,transparent 35%),
 
-radial-gradient(circle at 80% 30%,#00ff9522,transparent 40%),
+radial-gradient(circle at bottom right,#00ff8830,transparent 35%),
 
-radial-gradient(circle at 50% 90%,#00d9ff22,transparent 45%);
+linear-gradient(180deg,#050816,#091426,#050816);
 
-animation:bgmove 12s linear infinite;
-
-z-index:-2;
+animation:bgMove 10s infinite alternate;
 
 }
 
-@keyframes bgmove{
+@keyframes bgMove{
 
 0%{
 
-transform:translateY(0);
-
-}
-
-50%{
-
-transform:translateY(-40px);
+transform:scale(1);
 
 }
 
 100%{
 
-transform:translateY(0);
+transform:scale(1.08);
 
 }
 
 }
 
-
-/* Header */
+/* HEADER */
 
 .header{
 
@@ -87,19 +77,19 @@ position:sticky;
 
 top:0;
 
-z-index:999;
+padding:15px;
 
-background:rgba(15,20,35,.82);
+background:rgba(8,12,28,.85);
 
-backdrop-filter:blur(20px);
-
-padding:16px;
+backdrop-filter:blur(15px);
 
 border-bottom:1px solid rgba(255,255,255,.08);
 
+z-index:999;
+
 }
 
-.logo{
+.logo-box{
 
 display:flex;
 
@@ -109,32 +99,33 @@ gap:12px;
 
 }
 
-.logo img{
+.logo-box img{
 
-width:42px;
+width:48px;
 
-height:42px;
+height:48px;
 
-border-radius:10px;
+border-radius:12px;
 
 }
 
-.logo h2{
+.logo-box h2{
 
-font-size:28px;
+font-size:22px;
 
 font-weight:800;
 
-color:#08f7fe;
-
-text-shadow:
-
-0 0 12px #08f7fe,
-
-0 0 24px #08f7fe;
+color:#00e5ff;
 
 }
 
+.logo-box p{
+
+font-size:12px;
+
+color:#cbd5e1;
+
+}
 
 /* HERO */
 
@@ -146,7 +137,7 @@ text-align:center;
 
 }
 
-.top-badge{
+.hero-badge{
 
 display:inline-block;
 
@@ -154,550 +145,381 @@ padding:8px 18px;
 
 border-radius:30px;
 
-background:#111a30;
+background:#0e223d;
 
-color:#00ffd5;
-
-font-size:13px;
-
-margin-bottom:20px;
-
-}
-
-.hero h1{
-
-font-size:44px;
-
-font-weight:900;
-
-line-height:1.1;
-
-margin-bottom:15px;
-
-text-shadow:
-
-0 0 15px cyan;
-
-}
-
-.hero p{
-
-font-size:17px;
-
-line-height:1.8;
-
-color:#d7d7d7;
-
-margin-bottom:25px;
-
-}
-/* ===========================
-   HERO BUTTONS
-=========================== */
-
-.hero-buttons{
-display:flex;
-flex-direction:column;
-gap:15px;
-margin-top:10px;
-}
-
-.btn{
-display:flex;
-align-items:center;
-justify-content:center;
-width:100%;
-height:55px;
-border-radius:18px;
-font-size:17px;
-font-weight:700;
-text-decoration:none;
-transition:.3s;
-}
-
-.btn.primary{
-background:linear-gradient(90deg,#00e5ff,#00ff88);
-color:#07111f;
-box-shadow:0 0 25px rgba(0,229,255,.45);
-}
-
-.btn.primary:hover{
-transform:translateY(-3px);
-}
-
-.btn.secondary{
-background:#229ED9;
-color:#fff;
-position:relative;
-overflow:hidden;
-}
-
-.btn.secondary::before{
-content:"";
-position:absolute;
-inset:-2px;
-border-radius:18px;
-background:linear-gradient(
-90deg,
-#00e5ff,
-#00ff88,
-#00e5ff);
-background-size:300%;
-animation:telegramGlow 3s linear infinite;
-z-index:-1;
-}
-
-@keyframes telegramGlow{
-
-0%{
-background-position:0%;
-}
-
-100%{
-background-position:300%;
-}
-
-}
-
-/* ===========================
-   HERO STATS
-=========================== */
-
-.hero-stats{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:12px;
-margin-top:30px;
-}
-
-.glass-box{
-
-background:rgba(255,255,255,.08);
-
-backdrop-filter:blur(20px);
-
-border:1px solid rgba(255,255,255,.10);
-
-border-radius:18px;
-
-padding:18px 10px;
-
-text-align:center;
-
-}
-
-.glass-box h2{
-
-font-size:24px;
-
-color:#00ff88;
-
-margin-bottom:6px;
-
-}
-
-.glass-box p{
+color:#00ffb3;
 
 font-size:13px;
 
-color:#d1d5db;
-
-}
-
-/* ===========================
-   SEARCH
-=========================== */
-
-.search-section{
-
-padding:25px 20px;
-
-}
-
-.section-title{
-
-font-size:24px;
-
 font-weight:700;
-
-text-align:center;
 
 margin-bottom:18px;
 
 }
 
-.search-box{
+.hero h1{
 
-background:rgba(255,255,255,.08);
+font-size:34px;
 
-border-radius:18px;
+font-weight:800;
 
-padding:8px;
+line-height:1.2;
 
-backdrop-filter:blur(18px);
+margin-bottom:15px;
 
-border:1px solid rgba(255,255,255,.10);
+text-shadow:0 0 12px #00e5ff;
 
 }
 
-.search-box input{
+.hero p{
+
+font-size:15px;
+
+line-height:1.7;
+
+color:#d1d5db;
+
+margin-bottom:25px;
+
+}
+/* =========================
+   HERO BUTTON
+========================= */
+
+.hero-btn{
+
+display:block;
 
 width:100%;
 
-height:50px;
+padding:16px;
+
+margin-top:15px;
+
+border-radius:18px;
+
+background:linear-gradient(135deg,#00e5ff,#00ff88);
+
+color:#081120;
+
+font-size:17px;
+
+font-weight:700;
+
+text-align:center;
+
+text-decoration:none;
+
+box-shadow:0 0 20px rgba(0,229,255,.5);
+
+transition:.3s;
+
+}
+
+.hero-btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 0 35px rgba(0,229,255,.8);
+
+}
+
+
+/* =========================
+   SEARCH AREA
+========================= */
+
+.search-area{
+
+padding:20px;
+
+}
+
+.search-area h2{
+
+font-size:22px;
+
+margin-bottom:15px;
+
+text-align:center;
+
+}
+
+.search-area input{
+
+width:100%;
+
+padding:16px;
 
 border:none;
 
 outline:none;
 
-background:transparent;
+border-radius:18px;
+
+background:rgba(255,255,255,.08);
 
 color:#fff;
 
 font-size:16px;
 
-padding:0 15px;
+border:1px solid rgba(255,255,255,.12);
+
+backdrop-filter:blur(15px);
 
 }
 
-.search-box input::placeholder{
+.search-area input::placeholder{
 
-color:#9ca3af;
+color:#bfc8d8;
 
 }
 
-/* ===========================
-   TELEGRAM BANNER
-=========================== */
 
-.telegram-banner{
+/* =========================
+   TELEGRAM BUTTON
+========================= */
 
-display:flex;
+.telegram-btn{
 
-justify-content:center;
-
-align-items:center;
+display:block;
 
 margin-top:18px;
 
-height:55px;
+padding:15px;
 
-border-radius:18px;
+text-align:center;
 
 text-decoration:none;
 
 font-weight:700;
 
-color:#fff;
+font-size:16px;
+
+border-radius:18px;
 
 background:#229ED9;
 
-box-shadow:0 0 25px rgba(34,158,217,.45);
+color:#fff;
 
-animation:pulse 2s infinite;
+box-shadow:0 0 20px rgba(34,158,217,.6);
+
+animation:telegramGlow 2.5s infinite;
 
 }
 
-@keyframes pulse{
+@keyframes telegramGlow{
 
-0%,100%{
+0%{
+
 transform:scale(1);
+
 }
 
 50%{
+
 transform:scale(1.03);
-}
 
 }
-/* ===========================
-   GAMES SECTION
-=========================== */
 
-.games-section{
-padding:25px 15px 40px;
+100%{
+
+transform:scale(1);
+
 }
 
-.section-subtitle{
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title{
+
+font-size:26px;
+
+font-weight:800;
+
 text-align:center;
-font-size:14px;
-color:#b8c2d1;
-margin-top:-8px;
-margin-bottom:20px;
+
+margin:28px 0 18px;
+
+color:#ffffff;
+
+text-shadow:0 0 10px #00e5ff;
+
 }
+/* =========================
+   GAMES GRID
+========================= */
 
 .games-grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:15px;
+gap:14px;
+padding:18px;
 }
-
-/* ===========================
-   GAME CARD
-=========================== */
 
 .game-card{
 position:relative;
 background:rgba(255,255,255,.08);
 backdrop-filter:blur(20px);
-border:1px solid rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.10);
 border-radius:22px;
-padding:15px;
+padding:16px;
 text-align:center;
 overflow:hidden;
-transition:.35s;
+transition:.3s;
 }
 
 .game-card:hover{
 transform:translateY(-5px);
-box-shadow:0 0 25px rgba(0,229,255,.35);
+box-shadow:0 10px 30px rgba(0,229,255,.35);
 }
 
-.game-card img{
+.game-logo{
 width:75px;
 height:75px;
-object-fit:contain;
-margin:8px auto 12px;
+border-radius:18px;
+object-fit:cover;
+margin:10px auto;
 display:block;
+box-shadow:0 0 20px rgba(0,229,255,.35);
 }
 
 .game-card h3{
 font-size:17px;
+margin:10px 0;
 font-weight:700;
-margin-bottom:10px;
-color:#fff;
 }
 
-.game-card p{
-font-size:13px;
-color:#d1d5db;
-margin:4px 0;
+.game-info{
+display:flex;
+justify-content:space-between;
+font-size:12px;
+margin:6px 0;
+color:#d7d7d7;
 }
-
-/* ===========================
-   HOT / NEW BADGE
-=========================== */
 
 .badge{
 position:absolute;
 top:10px;
-right:10px;
-padding:4px 10px;
-font-size:11px;
-font-weight:700;
+left:10px;
+padding:5px 10px;
 border-radius:20px;
+font-size:10px;
+font-weight:700;
 color:#fff;
 }
 
-.hot{
+.badge.hot{
 background:#ff3b30;
 }
 
-.new{
+.badge.new{
 background:#00c853;
 }
 
-/* ===========================
-   DOWNLOAD BUTTON
-=========================== */
-
-.card-btn{
+.download-btn{
 display:block;
+width:100%;
 margin-top:14px;
 padding:12px;
 border-radius:14px;
-text-decoration:none;
-font-size:14px;
+background:linear-gradient(135deg,#00ff88,#00c853);
+color:#fff;
+font-size:15px;
 font-weight:700;
-color:#07111f;
-background:linear-gradient(90deg,#00e5ff,#00ff88);
-box-shadow:0 0 15px rgba(0,229,255,.35);
+text-decoration:none;
 transition:.3s;
 }
 
-.card-btn:hover{
-transform:scale(1.04);
+.download-btn:hover{
+transform:scale(1.05);
+box-shadow:0 0 18px rgba(0,255,136,.5);
 }
 
-/* ===========================
-   BONUS CHIP
-=========================== */
-
-.bonus{
-display:inline-block;
-margin-top:5px;
-padding:5px 10px;
-border-radius:20px;
-background:rgba(255,193,7,.15);
-color:#ffd54f;
-font-size:12px;
-font-weight:600;
-}
-
-/* ===========================
-   WITHDRAW CHIP
-=========================== */
-
-.withdraw{
-display:inline-block;
-margin-top:6px;
-padding:5px 10px;
-border-radius:20px;
-background:rgba(0,255,136,.12);
-color:#00ff88;
-font-size:12px;
-font-weight:600;
-}
-/* ===========================
+/* =========================
    FOOTER
-=========================== */
+========================= */
 
 .footer{
-padding:35px 20px;
-margin-top:30px;
+padding:30px 20px;
+margin-top:35px;
 text-align:center;
-background:rgba(255,255,255,.05);
-backdrop-filter:blur(20px);
+background:#081120;
 border-top:1px solid rgba(255,255,255,.08);
 }
 
-.footer h3{
+.footer h2{
 font-size:22px;
-font-weight:700;
 color:#00e5ff;
-margin-bottom:12px;
+margin-bottom:10px;
 }
 
 .footer p{
 font-size:14px;
-color:#b8c2d1;
-line-height:1.7;
-margin-bottom:20px;
+color:#cbd5e1;
+margin-bottom:15px;
 }
 
 .footer-links{
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
-gap:12px;
+gap:14px;
 margin-bottom:20px;
 }
 
 .footer-links a{
-text-decoration:none;
 color:#fff;
-padding:10px 16px;
-border-radius:12px;
-background:rgba(255,255,255,.08);
-transition:.3s;
+text-decoration:none;
+font-size:14px;
 }
 
-.footer-links a:hover{
-background:#00e5ff;
-color:#07111f;
+.telegram-footer{
+display:inline-block;
+padding:12px 24px;
+background:#229ED9;
+color:#fff;
+text-decoration:none;
+font-weight:700;
+border-radius:14px;
+margin-bottom:15px;
 }
 
 .copyright{
-font-size:13px;
+font-size:12px;
 color:#94a3b8;
-margin-top:20px;
 }
 
-/* ===========================
-   SCROLLBAR
-=========================== */
-
-::-webkit-scrollbar{
-width:5px;
-}
-
-::-webkit-scrollbar-thumb{
-background:#00e5ff;
-border-radius:20px;
-}
-
-/* ===========================
-   MOBILE RESPONSIVE
-=========================== */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width:480px){
-
-.logo h2{
-font-size:20px;
-}
 
 .hero h1{
 font-size:30px;
 }
 
-.hero p{
-font-size:15px;
-}
-
-.hero-stats{
-grid-template-columns:repeat(3,1fr);
-gap:8px;
-}
-
-.glass-box{
-padding:14px 8px;
-}
-
-.glass-box h2{
-font-size:20px;
-}
-
 .games-grid{
 grid-template-columns:repeat(2,1fr);
 gap:12px;
+padding:12px;
 }
 
 .game-card{
 padding:12px;
 }
 
-.game-card img{
-width:70px;
-height:70px;
+.game-logo{
+width:65px;
+height:65px;
 }
 
-.game-card h3{
-font-size:15px;
-}
-
-.card-btn{
-font-size:13px;
+.download-btn{
+font-size:14px;
 padding:10px;
 }
-
-.footer-links{
-flex-direction:column;
-}
-
-}
-
-/* ===========================
-   ANIMATIONS
-=========================== */
-
-@keyframes fadeUp{
-
-from{
-opacity:0;
-transform:translateY(25px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
-}
-
-.hero,
-.search-section,
-.games-section,
-.footer{
-
-animation:fadeUp .8s ease;
 
 }
