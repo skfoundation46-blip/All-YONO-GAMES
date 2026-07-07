@@ -70,8 +70,8 @@ redeem:"Min ₹100",
 image:"images/inrrummy.png",
 page:"games/inrrummy.html",
 link:"https://inrrummysvip2.net/?code=JMQKAVX7KWE&t=1783046109"
-},
-
+}
+   ,
 {
 name:"Jaiho Arcade",
 bonus:"₹100 Bonus",
@@ -152,15 +152,16 @@ image:"images/mahagames.png",
 page:"games/mahagames.html",
 link:"https://on-mahagames.com/?code=J24LM8HUX75&t=1783046672"
 },
-   {
+
+{
 name:"MBM Bet",
 bonus:"₹100 Bonus",
 redeem:"Min ₹100",
 image:"images/mbmbet.png",
 page:"games/mbmbet.html",
 link:"https://www.mbmbet28.com/?code=UPH8J9BHY9Q&t=1783046724"
-},
-
+}
+   ,
 {
 name:"789 Jackpots",
 bonus:"₹100 Bonus",
@@ -249,8 +250,8 @@ redeem:"Min ₹100",
 image:"images/yesspin.png",
 page:"games/yesspin.html",
 link:"https://www.yesspinnow.com/?code=47TP7UQQ1PZ&t=1783047472"
-},
-
+}
+   ,
 {
 name:"Top Rummy",
 bonus:"₹100 Bonus",
@@ -304,7 +305,8 @@ image:"images/slotsspin.png",
 page:"games/slotsspin.html",
 link:"https://slotsspinl.com/?code=XJBM7Y8QQQH&t=1783047986"
 },
-   {
+
+{
 name:"Share477",
 bonus:"₹100 Bonus",
 redeem:"Min ₹100",
@@ -422,15 +424,16 @@ link:"https://sharediwaslots3.vip?pid=450275843&channel=2030101&pkg=com.diwaslot
 }
 
 ];
-
 const container = document.getElementById("games");
 
 games.forEach(game => {
 
 container.innerHTML += `
-<a href="${game.page}" class="game-card">
+<div class="game-card">
 
-<img src="${game.image}" alt="${game.name}">
+<a href="${game.page}" class="game-link">
+
+<img src="${game.image}" alt="${game.name}" class="game-image">
 
 <h3>${game.name}</h3>
 
@@ -439,6 +442,12 @@ container.innerHTML += `
 <p class="redeem">${game.redeem}</p>
 
 </a>
+
+<a href="${game.page}" class="download-btn">
+View Details
+</a>
+
+</div>
 `;
 
 });
