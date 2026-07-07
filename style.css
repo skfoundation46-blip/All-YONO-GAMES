@@ -1,7 +1,7 @@
-/* ===================================
-   ALL YONO GAMES
-   MOBILE PREMIUM CSS
-=================================== */
+/*==================================
+ YONO GAMES PREMIUM CSS
+ PART 1
+==================================*/
 
 *{
 margin:0;
@@ -14,533 +14,594 @@ scroll-behavior:smooth;
 }
 
 body{
-
 font-family:'Poppins',sans-serif;
-
-background:#050816;
-
-color:#ffffff;
-
+background:#0b1220;
+color:#fff;
 overflow-x:hidden;
-
 }
 
-/* Animated Background */
+/* Scrollbar */
 
-.bg{
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-height:100%;
-
-z-index:-1;
-
-background:
-
-radial-gradient(circle at top left,#00d9ff30,transparent 35%),
-
-radial-gradient(circle at bottom right,#00ff8830,transparent 35%),
-
-linear-gradient(180deg,#050816,#091426,#050816);
-
-animation:bgMove 10s infinite alternate;
-
+::-webkit-scrollbar{
+width:8px;
 }
 
-@keyframes bgMove{
-
-0%{
-
-transform:scale(1);
-
-}
-
-100%{
-
-transform:scale(1.08);
-
-}
-
+::-webkit-scrollbar-thumb{
+background:#00d84f;
+border-radius:20px;
 }
 
 /* HEADER */
 
 .header{
-
 position:sticky;
-
 top:0;
-
-padding:15px;
-
-background:rgba(8,12,28,.85);
-
-backdrop-filter:blur(15px);
-
-border-bottom:1px solid rgba(255,255,255,.08);
-
 z-index:999;
-
+background:rgba(15,23,42,.95);
+backdrop-filter:blur(15px);
+padding:15px 20px;
+box-shadow:0 5px 20px rgba(0,0,0,.35);
 }
 
-.logo-box{
-
-display:flex;
-
-align-items:center;
-
-gap:12px;
-
+.logo{
+font-size:30px;
+font-weight:700;
+text-align:center;
+color:#00ff66;
+letter-spacing:1px;
+margin-bottom:15px;
 }
 
-.logo-box img{
-
-width:48px;
-
-height:48px;
-
-border-radius:12px;
-
+.search-box{
+width:100%;
 }
 
-.logo-box h2{
-
-font-size:22px;
-
-font-weight:800;
-
-color:#00e5ff;
-
+.search-box input{
+width:100%;
+height:52px;
+padding:0 18px;
+border:none;
+outline:none;
+border-radius:14px;
+background:#162235;
+color:#fff;
+font-size:15px;
 }
 
-.logo-box p{
+.search-box input::placeholder{
+color:#9ca3af;
+}
 
-font-size:12px;
+/* SLIDER */
 
-color:#cbd5e1;
+.slider{
+width:100%;
+padding:15px;
+}
+
+.slides{
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+.slide{
+display:none;
+}
+
+.slide.active{
+display:block;
+animation:fade .5s;
+}
+
+.slide img{
+width:100%;
+height:220px;
+object-fit:cover;
+display:block;
+}
+
+@keyframes fade{
+
+from{
+opacity:.3;
+transform:scale(.97);
+}
+
+to{
+opacity:1;
+transform:scale(1);
+}
 
 }
 
 /* HERO */
 
 .hero{
-
-padding:35px 18px;
-
+margin:15px;
+padding:30px;
+border-radius:22px;
+background:linear-gradient(135deg,#182437,#0d1525);
 text-align:center;
-
-}
-
-.hero-badge{
-
-display:inline-block;
-
-padding:8px 18px;
-
-border-radius:30px;
-
-background:#0e223d;
-
-color:#00ffb3;
-
-font-size:13px;
-
-font-weight:700;
-
-margin-bottom:18px;
-
+box-shadow:0 12px 30px rgba(0,0,0,.35);
 }
 
 .hero h1{
-
 font-size:34px;
-
-font-weight:800;
-
-line-height:1.2;
-
-margin-bottom:15px;
-
-text-shadow:0 0 12px #00e5ff;
-
+font-weight:700;
+margin-bottom:12px;
 }
 
 .hero p{
-
 font-size:15px;
-
-line-height:1.7;
-
-color:#d1d5db;
-
-margin-bottom:25px;
-
+color:#cbd5e1;
+line-height:1.8;
+margin-bottom:20px;
 }
-/* =========================
-   HERO BUTTON
-========================= */
 
-.hero-btn{
-
-display:block;
-
-width:100%;
-
-padding:16px;
-
-margin-top:15px;
-
-border-radius:18px;
-
-background:linear-gradient(135deg,#00e5ff,#00ff88);
-
-color:#081120;
-
-font-size:17px;
-
+.play-btn{
+display:inline-block;
+padding:14px 35px;
+border-radius:50px;
+background:linear-gradient(135deg,#00ff66,#00c853);
+color:#fff;
+font-size:16px;
 font-weight:700;
-
-text-align:center;
-
 text-decoration:none;
-
-box-shadow:0 0 20px rgba(0,229,255,.5);
-
 transition:.3s;
-
 }
 
-.hero-btn:hover{
-
+.play-btn:hover{
 transform:translateY(-3px);
-
-box-shadow:0 0 35px rgba(0,229,255,.8);
-
+box-shadow:0 12px 25px rgba(0,255,102,.35);
 }
+/*==================================
+ CATEGORY
+==================================*/
 
-
-/* =========================
-   SEARCH AREA
-========================= */
-
-.search-area{
-
-padding:20px;
-
-}
-
-.search-area h2{
-
-font-size:22px;
-
-margin-bottom:15px;
-
-text-align:center;
-
-}
-
-.search-area input{
-
-width:100%;
-
-padding:16px;
-
-border:none;
-
-outline:none;
-
-border-radius:18px;
-
-background:rgba(255,255,255,.08);
-
-color:#fff;
-
-font-size:16px;
-
-border:1px solid rgba(255,255,255,.12);
-
-backdrop-filter:blur(15px);
-
-}
-
-.search-area input::placeholder{
-
-color:#bfc8d8;
-
-}
-
-
-/* =========================
-   TELEGRAM BUTTON
-========================= */
-
-.telegram-btn{
-
-display:block;
-
-margin-top:18px;
-
+.category{
+display:flex;
+gap:12px;
 padding:15px;
+overflow-x:auto;
+scrollbar-width:none;
+}
 
-text-align:center;
+.category::-webkit-scrollbar{
+display:none;
+}
 
-text-decoration:none;
-
-font-weight:700;
-
-font-size:16px;
-
-border-radius:18px;
-
-background:#229ED9;
-
+.cat{
+flex:0 0 auto;
+padding:10px 18px;
+border-radius:30px;
+background:#162235;
 color:#fff;
-
-box-shadow:0 0 20px rgba(34,158,217,.6);
-
-animation:telegramGlow 2.5s infinite;
-
+font-size:14px;
+font-weight:600;
+transition:.3s;
+cursor:pointer;
+border:1px solid rgba(255,255,255,.08);
 }
 
-@keyframes telegramGlow{
-
-0%{
-
-transform:scale(1);
-
+.cat:hover{
+background:#00d84f;
+color:#fff;
+transform:translateY(-3px);
 }
 
-50%{
+/*==================================
+ SECTION TITLE
+==================================*/
 
-transform:scale(1.03);
-
-}
-
-100%{
-
-transform:scale(1);
-
-}
-
-
-/* =========================
-   SECTION TITLE
-========================= */
-
-.section-title{
-
-font-size:26px;
-
-font-weight:800;
-
+.title{
+padding:15px;
 text-align:center;
-
-margin:28px 0 18px;
-
-color:#ffffff;
-
-text-shadow:0 0 10px #00e5ff;
-
 }
-/* =========================
-   GAMES GRID
-========================= */
 
-.games-grid{
+.title h2{
+font-size:30px;
+font-weight:700;
+margin-bottom:8px;
+}
+
+.title p{
+color:#9ca3af;
+font-size:15px;
+}
+
+/*==================================
+ GAMES GRID
+==================================*/
+
+.games{
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:14px;
-padding:18px;
+gap:16px;
+padding:16px;
 }
+
+@media(min-width:768px){
+
+.games{
+grid-template-columns:repeat(4,1fr);
+}
+
+}
+
+/*==================================
+ GAME CARD
+==================================*/
 
 .game-card{
 position:relative;
-background:rgba(255,255,255,.08);
-backdrop-filter:blur(20px);
-border:1px solid rgba(255,255,255,.10);
+background:#162235;
 border-radius:22px;
-padding:16px;
-text-align:center;
 overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.35);
 transition:.3s;
+border:1px solid rgba(255,255,255,.05);
 }
 
 .game-card:hover{
-transform:translateY(-5px);
-box-shadow:0 10px 30px rgba(0,229,255,.35);
+transform:translateY(-6px);
+box-shadow:0 18px 35px rgba(0,216,79,.25);
 }
 
-.game-logo{
-width:75px;
-height:75px;
-border-radius:18px;
+.game-card img{
+width:100%;
+height:170px;
 object-fit:cover;
-margin:10px auto;
 display:block;
-box-shadow:0 0 20px rgba(0,229,255,.35);
+}
+
+.ribbon{
+position:absolute;
+top:12px;
+left:-38px;
+width:140px;
+padding:6px 0;
+background:#ff3b30;
+color:#fff;
+text-align:center;
+font-size:11px;
+font-weight:700;
+transform:rotate(-45deg);
+z-index:2;
 }
 
 .game-card h3{
-font-size:17px;
-margin:10px 0;
+font-size:18px;
+font-weight:700;
+text-align:center;
+padding:12px 8px 6px;
+}
+/*==================================
+ CARD DETAILS
+==================================*/
+
+.trusted{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:6px;
+margin:10px auto 5px;
+padding:6px 14px;
+background:#0f2d1d;
+border:1px solid #00ff88;
+border-radius:30px;
+color:#00ff88;
+font-size:13px;
 font-weight:700;
 }
 
-.game-info{
+.trusted::before{
+content:"✔";
 display:flex;
-justify-content:space-between;
+align-items:center;
+justify-content:center;
+width:18px;
+height:18px;
+background:#00d84f;
+color:#fff;
+border-radius:50%;
 font-size:12px;
-margin:6px 0;
-color:#d7d7d7;
+font-weight:bold;
+}
+
+.rating{
+text-align:center;
+margin-top:8px;
+font-size:16px;
+color:#FFD700;
+}
+
+.downloads{
+text-align:center;
+margin-top:6px;
+font-size:13px;
+color:#9ca3af;
+}
+
+.badges{
+display:flex;
+justify-content:center;
+gap:8px;
+flex-wrap:wrap;
+margin:12px 10px;
 }
 
 .badge{
-position:absolute;
-top:10px;
-left:10px;
-padding:5px 10px;
-border-radius:20px;
-font-size:10px;
+padding:6px 12px;
+border-radius:30px;
+font-size:11px;
 font-weight:700;
+}
+
+.badge-bonus{
+background:#00d84f;
 color:#fff;
 }
 
-.badge.hot{
-background:#ff3b30;
+.badge-hot{
+background:#ff5722;
+color:#fff;
 }
 
-.badge.new{
-background:#00c853;
+.redeem{
+text-align:center;
+font-size:14px;
+color:#d1d5db;
+margin-bottom:12px;
 }
 
 .download-btn{
 display:block;
-width:100%;
-margin-top:14px;
-padding:12px;
-border-radius:14px;
-background:linear-gradient(135deg,#00ff88,#00c853);
-color:#fff;
+margin:12px;
+padding:13px;
+text-align:center;
+text-decoration:none;
 font-size:15px;
 font-weight:700;
-text-decoration:none;
+color:#fff;
+border-radius:14px;
+background:linear-gradient(135deg,#00ff66,#00c853);
 transition:.3s;
 }
 
 .download-btn:hover{
-transform:scale(1.05);
-box-shadow:0 0 18px rgba(0,255,136,.5);
+transform:translateY(-3px);
+box-shadow:0 12px 25px rgba(0,255,102,.35);
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* Animation */
 
-.footer{
-padding:30px 20px;
-margin-top:35px;
+.game-card{
+opacity:0;
+transform:translateY(30px);
+animation:cardFade .6s forwards;
+}
+
+@keyframes cardFade{
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+/*==================================
+ ABOUT SECTION
+==================================*/
+
+.about{
+padding:50px 16px;
+}
+
+.about h2{
 text-align:center;
-background:#081120;
-border-top:1px solid rgba(255,255,255,.08);
+font-size:30px;
+font-weight:700;
+margin-bottom:30px;
 }
 
-.footer h2{
-font-size:22px;
-color:#00e5ff;
+.about-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+}
+
+.about-card{
+background:#162235;
+border-radius:20px;
+padding:22px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+transition:.3s;
+}
+
+.about-card:hover{
+transform:translateY(-6px);
+box-shadow:0 15px 35px rgba(0,216,79,.25);
+}
+
+.about-card span{
+font-size:42px;
+display:block;
+margin-bottom:12px;
+}
+
+.about-card h3{
+font-size:18px;
 margin-bottom:10px;
 }
 
-.footer p{
+.about-card p{
 font-size:14px;
-color:#cbd5e1;
-margin-bottom:15px;
+color:#b6c2d1;
+line-height:1.6;
 }
 
-.footer-links{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:14px;
+/*==================================
+ FOOTER
+==================================*/
+
+footer{
+margin-top:40px;
+padding:35px 20px;
+background:#111827;
+text-align:center;
+border-top:1px solid rgba(255,255,255,.08);
+}
+
+.footer-logo{
+font-size:30px;
+font-weight:700;
+color:#00ff66;
+margin-bottom:10px;
+}
+
+.footer-text{
+color:#94a3b8;
 margin-bottom:20px;
 }
 
-.footer-links a{
-color:#fff;
-text-decoration:none;
-font-size:14px;
+.footer-buttons{
+display:flex;
+justify-content:center;
+gap:12px;
+flex-wrap:wrap;
+margin-bottom:20px;
 }
 
-.telegram-footer{
+.telegram-btn,
+.whatsapp-btn{
 display:inline-block;
-padding:12px 24px;
-background:#229ED9;
-color:#fff;
+padding:12px 22px;
+border-radius:50px;
 text-decoration:none;
 font-weight:700;
-border-radius:14px;
-margin-bottom:15px;
+color:#fff;
+transition:.3s;
+}
+
+.telegram-btn{
+background:#229ED9;
+}
+
+.whatsapp-btn{
+background:#25D366;
+}
+
+.telegram-btn:hover,
+.whatsapp-btn:hover{
+transform:scale(1.05);
 }
 
 .copyright{
-font-size:12px;
+font-size:13px;
 color:#94a3b8;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/*==================================
+ TOP BUTTON
+==================================*/
 
-@media (max-width:480px){
+#topBtn{
+position:fixed;
+bottom:20px;
+right:20px;
+width:52px;
+height:52px;
+border:none;
+border-radius:50%;
+background:#00d84f;
+color:#fff;
+font-size:22px;
+cursor:pointer;
+display:none;
+box-shadow:0 10px 25px rgba(0,216,79,.35);
+z-index:999;
+}
+
+/*==================================
+ MOBILE RESPONSIVE
+==================================*/
+
+@media(max-width:768px){
+
+.logo{
+font-size:24px;
+}
+
+.hero{
+padding:22px;
+}
 
 .hero h1{
-font-size:30px;
+font-size:28px;
 }
 
-.games-grid{
+.hero p{
+font-size:14px;
+}
+
+.games{
 grid-template-columns:repeat(2,1fr);
-gap:12px;
-padding:12px;
+gap:14px;
 }
 
-.game-card{
-padding:12px;
+.game-card img{
+height:140px;
 }
 
-.game-logo{
-width:65px;
-height:65px;
+.game-card h3{
+font-size:15px;
+}
+
+.rating{
+font-size:14px;
+}
+
+.downloads,
+.redeem{
+font-size:12px;
 }
 
 .download-btn{
 font-size:14px;
-padding:10px;
+padding:12px;
+}
+
+.about-grid{
+grid-template-columns:1fr;
+}
+
+.footer-buttons{
+flex-direction:column;
+}
+
+.telegram-btn,
+.whatsapp-btn{
+width:100%;
 }
 
 }
-/* Touch Effect */
 
-.game-card{
-transition:.3s ease;
+/*==================================
+ DESKTOP
+==================================*/
+
+@media(min-width:769px){
+
+.games{
+grid-template-columns:repeat(4,1fr);
 }
 
-.download-btn{
-transition:.3s ease;
+.about-grid{
+grid-template-columns:repeat(4,1fr);
 }
 
-.download-btn:active{
-transform:scale(.95);
-}
-
-.telegram-btn:active{
-transform:scale(.95);
-}
-
-.hero-btn:active{
-transform:scale(.95);
 }
