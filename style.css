@@ -1,59 +1,57 @@
-/* TELEGRAM BUTTON */
-
 .telegram-box{
-display:flex;
-justify-content:center;
-margin:30px 0;
+    display:flex;
+    justify-content:center;
+    margin-top:20px;
 }
 
 .telegram-btn{
-position:relative;
-display:inline-flex;
-align-items:center;
-justify-content:center;
-padding:16px 35px;
-border-radius:60px;
-text-decoration:none;
-background:#111827;
-color:#fff;
-font-size:18px;
-font-weight:700;
-overflow:hidden;
-animation:float 2.5s ease-in-out infinite;
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:16px 35px;
+    border-radius:50px;
+    color:#fff;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:700;
+    background:#111827;
+    overflow:hidden;
+    animation:float 2.5s ease-in-out infinite;
 }
 
 .telegram-btn span{
-position:relative;
-z-index:2;
+    position:relative;
+    z-index:2;
 }
 
 .telegram-btn::before{
-content:"";
-position:absolute;
-inset:-3px;
-border-radius:60px;
-background:linear-gradient(90deg,#00e5ff,#00ff88,#00e5ff,#00ff88);
-background-size:300% 300%;
-animation:borderMove 3s linear infinite;
+    content:"";
+    position:absolute;
+    inset:-3px;
+    border-radius:50px;
+    background:linear-gradient(90deg,#00e5ff,#00ff88,#ff00ff,#00e5ff);
+    background-size:300% 300%;
+    animation:rotateBorder 3s linear infinite;
 }
 
 .telegram-btn::after{
-content:"";
-position:absolute;
-inset:3px;
-background:#111827;
-border-radius:56px;
-z-index:1;
+    content:"";
+    position:absolute;
+    inset:3px;
+    background:#111827;
+    border-radius:46px;
+    z-index:1;
 }
 
-@keyframes borderMove{
-0%{background-position:0% 50%;}
-100%{background-position:300% 50%;}
+@keyframes rotateBorder{
+    0%{background-position:0% 50%;}
+    100%{background-position:300% 50%;}
 }
 
 @keyframes float{
-0%,100%{transform:translateY(0);}
-50%{transform:translateY(-8px);}
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-6px);}
 }
 
 /* GAMES */
