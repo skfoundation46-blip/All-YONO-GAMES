@@ -1,89 +1,144 @@
-// ===== SEARCH =====
-
+const gamesContainer = document.getElementById("gamesContainer");
 const searchInput = document.getElementById("searchInput");
 
-searchInput.addEventListener("keyup", function () {
+function displayGames(list){
 
-const value = this.value.toLowerCase();
+gamesContainer.innerHTML="";
 
-const cards = document.querySelectorAll(".game-card");
+list.forEach(game=>{
 
-cards.forEach(card => {
+gamesContainer.innerHTML+=`
 
-const title = card.querySelector("h3").textContent.toLowerCase();
+<div class="game-card">
 
-if(title.includes(value)){
-card.style.display="block";
+<div class="game-image">
+
+<img src="${game.image}" alt="${game.name}">
+
+<div class="trending-badge">HOT</div>
+
+</div>
+
+<div class="game-content">
+
+<h3 class="game-title">${game.name}</h3>
+
+<div class="rating">
+
+⭐⭐⭐⭐⭐
+
+<span>${game.rating}</span>
+
+</div>
+
+<div class="download-count">
+
+📥 ${game.downloads} Downloads
+
+</div>
+
+<div class="bonus-box">
+
+🎁 Welcome Bonus ${game.bonus}
+
+</div>
+
+<div class="withdraw-box">
+
+🏦 Min Withdraw ${game.withdraw}
+
+</div>
+
+<a href="${game.page}" class="download-btn">
+
+Download APK
+
+</a>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+}
+
+displayGames(games);
+
+searchInput.addEventListener("keyup",()=>{
+
+const value=searchInput.value.toLowerCase();
+
+const result=games.filter(game=>
+
+game.name.toLowerCase().includes(value)
+
+);
+
+displayGames(result);
+
+});
+/* ==========================
+   SCROLL TO TOP
+========================== */
+
+const scrollBtn = document.getElementById("scrollTop");
+
+window.addEventListener("scroll", () => {
+
+if(window.scrollY > 300){
+
+scrollBtn.style.display = "flex";
+
 }else{
-card.style.display="none";
+
+scrollBtn.style.display = "none";
+
 }
 
 });
 
-});
-
-// ===== BACK TO TOP =====
-
-const topBtn = document.getElementById("topBtn");
-
-window.addEventListener("scroll",()=>{
-
-if(window.scrollY>300){
-topBtn.style.display="block";
-}else{
-topBtn.style.display="none";
-}
-
-});
-
-topBtn.addEventListener("click",()=>{
+scrollBtn.addEventListener("click", () => {
 
 window.scrollTo({
+
 top:0,
+
 behavior:"smooth"
-});
 
 });
 
-// ===== CARD ANIMATION =====
+});
 
-const observer = new IntersectionObserver(entries=>{
 
-entries.forEach(entry=>{
+/* ==========================
+   PAGE LOADER
+========================== */
 
-if(entry.isIntersecting){
+window.addEventListener("load", () => {
 
-entry.target.style.opacity="1";
-entry.target.style.transform="translateY(0)";
+const loader = document.getElementById("loader");
+
+if(loader){
+
+setTimeout(() => {
+
+loader.style.opacity = "0";
+
+loader.style.visibility = "hidden";
+
+},800);
 
 }
 
 });
 
-});
 
-document.querySelectorAll(".game-card").forEach(card=>{
-
-card.style.opacity="0";
-card.style.transform="translateY(40px)";
-card.style.transition="0.5s";
-
-observer.observe(card);
-
-});
-
-// ===== IMAGE ERROR =====
-
-document.querySelectorAll(".game-card img").forEach(img=>{
-
-img.onerror=function(){
-
-this.src="images/default.png";
-
-};
-
-});
-// ===== AUTO BANNER SLIDER =====
+/* ==========================
+   AUTO IMAGE SLIDER
+========================== */
 
 const slides = document.querySelectorAll(".slide");
 
@@ -105,16 +160,70 @@ function nextSlide(){
 
 currentSlide++;
 
-if(currentSlide>=slides.length){
+if(currentSlide >= slides.length){
 
-currentSlide=0;
-
-}
-
-showSlide(currentSlide);
+currentSlide = 0;
 
 }
 
 showSlide(currentSlide);
+
+}
+
+if(slides.length > 0){
+
+showSlide(0);
 
 setInterval(nextSlide,3000);
+
+}
+
+
+/* ==========================
+   ACTIVE MENU
+========================== */
+
+const navLinks = document.querySelectorAll("nav a");
+
+navLinks.forEach(link=>{
+
+link.addEventListener("click",function(){
+
+navLinks.forEach(item=>{
+
+item.classList.remove("active");
+
+});
+
+this.classList.add("active");
+
+});
+
+});
+
+
+/* ==========================
+   CARD FADE ANIMATION
+========================== */
+
+const cards=document.querySelectorAll(".game-card");
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("fade-in");
+
+}
+
+});
+
+});
+
+cards.forEach(card=>{
+
+observer.observe(card);
+
+});
