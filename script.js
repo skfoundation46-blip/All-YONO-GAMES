@@ -1,332 +1,144 @@
-const gamesContainer = document.getElementById("gamesContainer");
+// Search Games
+
 const searchInput = document.getElementById("searchInput");
 
-function displayGames(list){
+if (searchInput) {
+    searchInput.addEventListener("keyup", function () {
 
-gamesContainer.innerHTML="";
+        const value = this.value.toLowerCase();
 
-list.forEach(game=>{
+        const cards = document.querySelectorAll(".game-card");
 
-gamesContainer.innerHTML+=`
+        cards.forEach(card => {
 
-<div class="game-card">
+            const title = card.querySelector("h3").innerText.toLowerCase();
 
-<div class="game-image">
+            if (title.includes(value)) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
 
-<img src="${game.image}" alt="${game.name}">
+        });
 
-<div class="trending-badge">HOT</div>
+    });
+}
 
-</div>
+// Scroll To Top Button
 
-<div class="game-content">
+const scrollBtn = document.getElementById("scrollTopBtn");
 
-<h3 class="game-title">${game.name}</h3>
+window.addEventListener("scroll", function () {
 
-<div class="rating">
+    if (window.scrollY > 300) {
 
-⭐⭐⭐⭐⭐
+        scrollBtn.style.display = "flex";
 
-<span>${game.rating}</span>
+    } else {
 
-</div>
+        scrollBtn.style.display = "none";
 
-<div class="download-count">
-
-📥 ${game.downloads} Downloads
-
-</div>
-
-<div class="bonus-box">
-
-🎁 Welcome Bonus ${game.bonus}
-
-</div>
-
-<div class="withdraw-box">
-
-🏦 Min Withdraw ${game.withdraw}
-
-</div>
-
-<a href="${game.page}" class="download-btn">
-
-Download APK
-
-</a>
-
-</div>
-
-</div>
-
-`;
+    }
 
 });
+
+scrollBtn.addEventListener("click", function () {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+});
+// ===============================
+// Display Games
+// ===============================
+
+const gamesContainer = document.getElementById("gamesContainer");
+
+if (gamesContainer && typeof games !== "undefined") {
+
+    games.forEach(game => {
+
+        gamesContainer.innerHTML += `
+
+        <div class="game-card">
+
+            <img src="${game.image}" alt="${game.name}">
+
+            <div class="game-info">
+
+                <h3>${game.name}</h3>
+
+                <p>⭐ ${game.rating}</p>
+
+                <p>🎁 Welcome Bonus: ${game.bonus}</p>
+
+                <p>💰 Withdraw: ${game.withdraw}</p>
+
+                <a href="${game.downloadUrl}" target="_blank" class="download-btn">
+                    Download
+                </a>
+
+            </div>
+
+        </div>
+
+        `;
+
+    });
 
 }
 
-displayGames(games);
+// ===============================
+// Loader
+// ===============================
 
-searchInput.addEventListener("keyup",()=>{
+window.addEventListener("load", function () {
 
-const value=searchInput.value.toLowerCase();
+    const loader = document.getElementById("loader");
 
-const result=games.filter(game=>
+    if (loader) {
 
-game.name.toLowerCase().includes(value)
+        loader.style.display = "none";
 
-);
-
-displayGames(result);
-
-});
-/* ==========================
-   SCROLL TO TOP
-========================== */
-
-const scrollBtn = document.getElementById("scrollTop");
-
-window.addEventListener("scroll", () => {
-
-if(window.scrollY > 300){
-
-scrollBtn.style.display = "flex";
-
-}else{
-
-scrollBtn.style.display = "none";
-
-}
+    }
 
 });
 
-scrollBtn.addEventListener("click", () => {
+// ===============================
+// Banner Slider
+// ===============================
 
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-});
-
-
-/* ==========================
-   PAGE LOADER
-========================== */
-
-window.addEventListener("load", () => {
-
-const loader = document.getElementById("loader");
-
-if(loader){
-
-setTimeout(() => {
-
-loader.style.opacity = "0";
-
-loader.style.visibility = "hidden";
-
-},800);
-
-}
-
-});
-
-
-/* ==========================
-   AUTO IMAGE SLIDER
-========================== */
+let slideIndex = 0;
 
 const slides = document.querySelectorAll(".slide");
 
-let currentSlide = 0;
+function showSlides() {
 
-function showSlide(index){
+    if (slides.length === 0) return;
 
-slides.forEach((slide)=>{
+    slides.forEach(slide => {
 
-slide.classList.remove("active");
+        slide.style.display = "none";
 
-});
-
-slides[index].classList.add("active");
-
-}
-
-function nextSlide(){
-
-currentSlide++;
-
-if(currentSlide >= slides.length){
-
-currentSlide = 0;
-
-}
-
-showSlide(currentSlide);
-
-}
-
-if(slides.length > 0){
-
-showSlide(0);
-
-setInterval(nextSlide,3000);
-
-}
-
-
-/* ==========================
-   ACTIVE MENU
-========================== */
-
-const navLinks = document.querySelectorAll("nav a");
-
-navLinks.forEach(link=>{
-
-link.addEventListener("click",function(){
-
-navLinks.forEach(item=>{
-
-item.classList.remove("active");
-
-});
-
-this.classList.add("active");
-
-});
-
-});
-
-
-/* ==========================
-   CARD FADE ANIMATION
-========================== */
-
-const cards=document.querySelectorAll(".game-card");
-
-const observer=new IntersectionObserver((entries)=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("fade-in");
-
-}
-
-});
-
-});
-
-cards.forEach(card=>{
-
-observer.observe(card);
-
-});
-/* ==========================
-   LAZY LOAD IMAGES
-========================== */
-
-const lazyImages = document.querySelectorAll("img");
-
-const imageObserver = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const img = entry.target;
-
-      if (img.dataset.src) {
-        img.src = img.dataset.src;
-        img.removeAttribute("data-src");
-      }
-
-      observer.unobserve(img);
-    }
-  });
-});
-
-lazyImages.forEach(img => {
-  imageObserver.observe(img);
-});
-
-
-/* ==========================
-   SHARE GAME
-========================== */
-
-function shareGame(title, url) {
-  if (navigator.share) {
-    navigator.share({
-      title: title,
-      text: "Download this Game",
-      url: url
     });
-  } else {
-    navigator.clipboard.writeText(url);
-    alert("Game Link Copied");
-  }
+
+    slideIndex++;
+
+    if (slideIndex > slides.length) {
+
+        slideIndex = 1;
+
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+
+    setTimeout(showSlides, 3000);
+
 }
 
-
-/* ==========================
-   COPY LINK
-========================== */
-
-function copyLink(url) {
-  navigator.clipboard.writeText(url);
-  alert("Download Link Copied");
-}
-
-
-/* ==========================
-   FEATURED GAMES
-========================== */
-
-const featuredGames = games.filter(game => game.featured);
-console.log(featuredGames);
-
-
-/* ==========================
-   TRENDING GAMES
-========================== */
-
-const trendingGames = games.filter(game => game.trending);
-console.log(trendingGames);
-
-
-/* ==========================
-   LATEST GAMES
-========================== */
-
-const latestGames = games.filter(game => game.latest);
-console.log(latestGames);
-
-
-/* ==========================
-   RANDOM BONUS COLOR
-========================== */
-
-document.querySelectorAll(".bonus-box").forEach(box => {
-
-const colors = [
-"#00c853",
-"#ff9800",
-"#2196f3",
-"#9c27b0",
-"#e91e63"
-];
-
-box.style.background =
-colors[Math.floor(Math.random() * colors.length)];
-
-});
-
-
-/* ==========================
-   PAGE READY
-========================== */
-
-console.log("All Games Loaded Successfully");
+showSlides();
