@@ -227,3 +227,106 @@ cards.forEach(card=>{
 observer.observe(card);
 
 });
+/* ==========================
+   LAZY LOAD IMAGES
+========================== */
+
+const lazyImages = document.querySelectorAll("img");
+
+const imageObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const img = entry.target;
+
+      if (img.dataset.src) {
+        img.src = img.dataset.src;
+        img.removeAttribute("data-src");
+      }
+
+      observer.unobserve(img);
+    }
+  });
+});
+
+lazyImages.forEach(img => {
+  imageObserver.observe(img);
+});
+
+
+/* ==========================
+   SHARE GAME
+========================== */
+
+function shareGame(title, url) {
+  if (navigator.share) {
+    navigator.share({
+      title: title,
+      text: "Download this Game",
+      url: url
+    });
+  } else {
+    navigator.clipboard.writeText(url);
+    alert("Game Link Copied");
+  }
+}
+
+
+/* ==========================
+   COPY LINK
+========================== */
+
+function copyLink(url) {
+  navigator.clipboard.writeText(url);
+  alert("Download Link Copied");
+}
+
+
+/* ==========================
+   FEATURED GAMES
+========================== */
+
+const featuredGames = games.filter(game => game.featured);
+console.log(featuredGames);
+
+
+/* ==========================
+   TRENDING GAMES
+========================== */
+
+const trendingGames = games.filter(game => game.trending);
+console.log(trendingGames);
+
+
+/* ==========================
+   LATEST GAMES
+========================== */
+
+const latestGames = games.filter(game => game.latest);
+console.log(latestGames);
+
+
+/* ==========================
+   RANDOM BONUS COLOR
+========================== */
+
+document.querySelectorAll(".bonus-box").forEach(box => {
+
+const colors = [
+"#00c853",
+"#ff9800",
+"#2196f3",
+"#9c27b0",
+"#e91e63"
+];
+
+box.style.background =
+colors[Math.floor(Math.random() * colors.length)];
+
+});
+
+
+/* ==========================
+   PAGE READY
+========================== */
+
+console.log("All Games Loaded Successfully");
