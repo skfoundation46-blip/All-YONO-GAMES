@@ -1,7 +1,7 @@
-/* ===========================
+/* ==========================
    ALL YONO GAMES
-   PREMIUM STYLE
-=========================== */
+   MOBILE FIRST CSS
+========================== */
 
 *{
 margin:0;
@@ -17,19 +17,20 @@ body{
 
 font-family:'Poppins',sans-serif;
 
-background:#070b16;
+background:#070b18;
 
-color:#ffffff;
+color:#fff;
 
 overflow-x:hidden;
 
 }
 
-/* ===========================
-   Animated Background
-=========================== */
 
-.background{
+/* Animated Background */
+
+body::before{
+
+content:"";
 
 position:fixed;
 
@@ -41,93 +42,44 @@ width:100%;
 
 height:100%;
 
-z-index:-1;
+background:
 
-overflow:hidden;
+radial-gradient(circle at 20% 20%,#00f5ff22,transparent 40%),
 
-background:linear-gradient(135deg,#081120,#111827,#0f172a);
+radial-gradient(circle at 80% 30%,#00ff9522,transparent 40%),
 
-}
+radial-gradient(circle at 50% 90%,#00d9ff22,transparent 45%);
 
-.blur{
+animation:bgmove 12s linear infinite;
 
-position:absolute;
-
-border-radius:50%;
-
-filter:blur(90px);
-
-opacity:.45;
-
-animation:float 14s ease-in-out infinite;
+z-index:-2;
 
 }
 
-.one{
+@keyframes bgmove{
 
-width:280px;
+0%{
 
-height:280px;
-
-background:#00e5ff;
-
-top:5%;
-
-left:5%;
-
-}
-
-.two{
-
-width:340px;
-
-height:340px;
-
-background:#00ff99;
-
-bottom:10%;
-
-right:8%;
-
-animation-delay:2s;
-
-}
-
-.three{
-
-width:240px;
-
-height:240px;
-
-background:#7c3aed;
-
-top:45%;
-
-left:40%;
-
-animation-delay:4s;
-
-}
-
-@keyframes float{
-
-0%,100%{
-
-transform:translate(0,0);
+transform:translateY(0);
 
 }
 
 50%{
 
-transform:translate(40px,-30px);
+transform:translateY(-40px);
+
+}
+
+100%{
+
+transform:translateY(0);
 
 }
 
 }
 
-/* ===========================
-   Header
-=========================== */
+
+/* Header */
 
 .header{
 
@@ -135,316 +87,353 @@ position:sticky;
 
 top:0;
 
-display:flex;
+z-index:999;
 
-justify-content:space-between;
-
-align-items:center;
-
-padding:18px 8%;
-
-background:rgba(255,255,255,.08);
+background:rgba(15,20,35,.82);
 
 backdrop-filter:blur(20px);
 
-border-bottom:1px solid rgba(255,255,255,.10);
+padding:16px;
 
-z-index:1000;
+border-bottom:1px solid rgba(255,255,255,.08);
 
 }
 
 .logo{
 
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+}
+
+.logo img{
+
+width:42px;
+
+height:42px;
+
+border-radius:10px;
+
+}
+
+.logo h2{
+
 font-size:28px;
 
 font-weight:800;
 
-color:#00e5ff;
+color:#08f7fe;
 
-text-decoration:none;
+text-shadow:
 
-letter-spacing:1px;
+0 0 12px #08f7fe,
 
-}
-
-nav{
-
-display:flex;
-
-gap:25px;
+0 0 24px #08f7fe;
 
 }
 
-nav a{
 
-color:#fff;
-
-text-decoration:none;
-
-font-weight:600;
-
-transition:.3s;
-
-}
-
-nav a:hover{
-
-color:#00ff99;
-
-}
-/* ===========================
-   HERO SECTION
-=========================== */
+/* HERO */
 
 .hero{
-min-height:90vh;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:80px 20px;
+
+padding:35px 18px;
+
 text-align:center;
+
 }
 
-.hero h1{
-font-size:58px;
-font-weight:800;
-color:#fff;
-margin:20px 0;
-text-shadow:0 0 25px #00e5ff;
-}
+.top-badge{
 
-.hero p{
-max-width:700px;
-margin:auto;
-font-size:18px;
-line-height:1.8;
-color:#cbd5e1;
-}
-
-.badge{
 display:inline-block;
-padding:10px 20px;
-background:rgba(0,229,255,.15);
-border:1px solid rgba(0,229,255,.4);
-border-radius:50px;
-color:#00e5ff;
-font-weight:700;
-}
 
-.hero-buttons{
-margin-top:35px;
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-}
+padding:8px 18px;
 
-/* BUTTON */
+border-radius:30px;
 
-.explore-btn,
-.telegram-btn{
+background:#111a30;
 
-display:inline-flex;
-align-items:center;
-justify-content:center;
+color:#00ffd5;
 
-padding:15px 35px;
-
-border-radius:50px;
-
-font-size:17px;
-
-font-weight:700;
-
-text-decoration:none;
-
-transition:.35s;
-
-}
-
-.explore-btn{
-
-background:#00e5ff;
-
-color:#081120;
-
-box-shadow:0 0 25px #00e5ff;
-
-}
-
-.explore-btn:hover{
-
-transform:translateY(-4px);
-
-box-shadow:0 0 40px #00e5ff;
-
-}
-
-.telegram-btn{
-
-background:#229ED9;
-
-color:#fff;
-
-position:relative;
-
-overflow:hidden;
-
-box-shadow:0 0 20px #229ED9;
-
-}
-
-.telegram-btn::before{
-
-content:"";
-
-position:absolute;
-
-inset:-3px;
-
-border-radius:50px;
-
-background:linear-gradient(
-90deg,
-#00e5ff,
-#00ff88,
-#00e5ff);
-
-background-size:300%;
-
-animation:borderGlow 3s linear infinite;
-
-z-index:-1;
-
-}
-
-.telegram-btn:hover{
-
-transform:scale(1.05);
-
-}
-
-@keyframes borderGlow{
-
-0%{background-position:0%;}
-
-100%{background-position:300%;}
-
-}
-
-/* STATS */
-
-.stats{
-
-margin-top:50px;
-
-display:flex;
-
-justify-content:center;
-
-gap:25px;
-
-flex-wrap:wrap;
-
-}
-
-.stats div{
-
-background:rgba(255,255,255,.08);
-
-backdrop-filter:blur(15px);
-
-padding:20px 35px;
-
-border-radius:18px;
-
-border:1px solid rgba(255,255,255,.10);
-
-}
-
-.stats h2{
-
-font-size:34px;
-
-color:#00ff99;
-
-}
-
-.stats span{
-
-color:#cbd5e1;
-
-}
-
-/* SEARCH */
-
-.search-section{
-
-padding:60px 20px;
-
-text-align:center;
-
-}
-
-.search-section h2{
-
-font-size:32px;
+font-size:13px;
 
 margin-bottom:20px;
 
 }
 
-#searchInput{
+.hero h1{
 
-width:100%;
+font-size:44px;
 
-max-width:700px;
+font-weight:900;
 
-padding:18px 25px;
+line-height:1.1;
+
+margin-bottom:15px;
+
+text-shadow:
+
+0 0 15px cyan;
+
+}
+
+.hero p{
 
 font-size:17px;
 
-border:none;
+line-height:1.8;
 
-outline:none;
+color:#d7d7d7;
 
-border-radius:50px;
+margin-bottom:25px;
+
+}
+/* ===========================
+   HERO BUTTONS
+=========================== */
+
+.hero-buttons{
+display:flex;
+flex-direction:column;
+gap:15px;
+margin-top:10px;
+}
+
+.btn{
+display:flex;
+align-items:center;
+justify-content:center;
+width:100%;
+height:55px;
+border-radius:18px;
+font-size:17px;
+font-weight:700;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn.primary{
+background:linear-gradient(90deg,#00e5ff,#00ff88);
+color:#07111f;
+box-shadow:0 0 25px rgba(0,229,255,.45);
+}
+
+.btn.primary:hover{
+transform:translateY(-3px);
+}
+
+.btn.secondary{
+background:#229ED9;
+color:#fff;
+position:relative;
+overflow:hidden;
+}
+
+.btn.secondary::before{
+content:"";
+position:absolute;
+inset:-2px;
+border-radius:18px;
+background:linear-gradient(
+90deg,
+#00e5ff,
+#00ff88,
+#00e5ff);
+background-size:300%;
+animation:telegramGlow 3s linear infinite;
+z-index:-1;
+}
+
+@keyframes telegramGlow{
+
+0%{
+background-position:0%;
+}
+
+100%{
+background-position:300%;
+}
+
+}
+
+/* ===========================
+   HERO STATS
+=========================== */
+
+.hero-stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+margin-top:30px;
+}
+
+.glass-box{
 
 background:rgba(255,255,255,.08);
 
 backdrop-filter:blur(20px);
 
-color:#fff;
+border:1px solid rgba(255,255,255,.10);
 
-border:1px solid rgba(255,255,255,.15);
+border-radius:18px;
+
+padding:18px 10px;
+
+text-align:center;
 
 }
 
-#searchInput::placeholder{
+.glass-box h2{
 
-color:#94a3b8;
+font-size:24px;
+
+color:#00ff88;
+
+margin-bottom:6px;
+
+}
+
+.glass-box p{
+
+font-size:13px;
+
+color:#d1d5db;
+
+}
+
+/* ===========================
+   SEARCH
+=========================== */
+
+.search-section{
+
+padding:25px 20px;
+
+}
+
+.section-title{
+
+font-size:24px;
+
+font-weight:700;
+
+text-align:center;
+
+margin-bottom:18px;
+
+}
+
+.search-box{
+
+background:rgba(255,255,255,.08);
+
+border-radius:18px;
+
+padding:8px;
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.10);
+
+}
+
+.search-box input{
+
+width:100%;
+
+height:50px;
+
+border:none;
+
+outline:none;
+
+background:transparent;
+
+color:#fff;
+
+font-size:16px;
+
+padding:0 15px;
+
+}
+
+.search-box input::placeholder{
+
+color:#9ca3af;
+
+}
+
+/* ===========================
+   TELEGRAM BANNER
+=========================== */
+
+.telegram-banner{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+margin-top:18px;
+
+height:55px;
+
+border-radius:18px;
+
+text-decoration:none;
+
+font-weight:700;
+
+color:#fff;
+
+background:#229ED9;
+
+box-shadow:0 0 25px rgba(34,158,217,.45);
+
+animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+0%,100%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.03);
+}
 
 }
 /* ===========================
-   GAME GRID
+   GAMES SECTION
 =========================== */
 
-.section-title{
-text-align:center;
-font-size:34px;
-font-weight:700;
-margin:50px 0 30px;
-color:#fff;
+.games-section{
+padding:25px 15px 40px;
 }
 
-.game-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-padding:0 20px 60px;
-max-width:1400px;
-margin:auto;
+.section-subtitle{
+text-align:center;
+font-size:14px;
+color:#b8c2d1;
+margin-top:-8px;
+margin-bottom:20px;
 }
+
+.games-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+
+/* ===========================
+   GAME CARD
+=========================== */
 
 .game-card{
 position:relative;
@@ -452,52 +441,50 @@ background:rgba(255,255,255,.08);
 backdrop-filter:blur(20px);
 border:1px solid rgba(255,255,255,.12);
 border-radius:22px;
-padding:20px;
+padding:15px;
 text-align:center;
-transition:.35s;
 overflow:hidden;
+transition:.35s;
 }
 
 .game-card:hover{
-transform:translateY(-8px);
-box-shadow:0 0 35px rgba(0,229,255,.35);
-border-color:#00e5ff;
+transform:translateY(-5px);
+box-shadow:0 0 25px rgba(0,229,255,.35);
 }
 
 .game-card img{
-width:95px;
-height:95px;
+width:75px;
+height:75px;
 object-fit:contain;
-margin-bottom:15px;
-transition:.35s;
-}
-
-.game-card:hover img{
-transform:scale(1.08);
+margin:8px auto 12px;
+display:block;
 }
 
 .game-card h3{
-font-size:22px;
-margin-bottom:15px;
-}
-
-.game-info{
-display:flex;
-flex-direction:column;
-gap:8px;
-font-size:15px;
-color:#d1d5db;
-margin-bottom:18px;
-}
-
-.game-badge{
-position:absolute;
-top:12px;
-right:12px;
-padding:5px 12px;
-border-radius:20px;
-font-size:12px;
+font-size:17px;
 font-weight:700;
+margin-bottom:10px;
+color:#fff;
+}
+
+.game-card p{
+font-size:13px;
+color:#d1d5db;
+margin:4px 0;
+}
+
+/* ===========================
+   HOT / NEW BADGE
+=========================== */
+
+.badge{
+position:absolute;
+top:10px;
+right:10px;
+padding:4px 10px;
+font-size:11px;
+font-weight:700;
+border-radius:20px;
 color:#fff;
 }
 
@@ -509,174 +496,208 @@ background:#ff3b30;
 background:#00c853;
 }
 
-.details-btn{
+/* ===========================
+   DOWNLOAD BUTTON
+=========================== */
+
+.card-btn{
 display:block;
-width:100%;
-padding:14px;
-background:linear-gradient(90deg,#00e5ff,#00ff88);
-color:#081120;
-font-weight:700;
+margin-top:14px;
+padding:12px;
+border-radius:14px;
 text-decoration:none;
-border-radius:12px;
+font-size:14px;
+font-weight:700;
+color:#07111f;
+background:linear-gradient(90deg,#00e5ff,#00ff88);
+box-shadow:0 0 15px rgba(0,229,255,.35);
 transition:.3s;
 }
 
-.details-btn:hover{
-transform:scale(1.03);
+.card-btn:hover{
+transform:scale(1.04);
 }
 
 /* ===========================
-   WHY / FAQ / ABOUT
+   BONUS CHIP
 =========================== */
 
-.why,
-.faq,
-.about{
-max-width:1100px;
-margin:70px auto;
-padding:0 20px;
+.bonus{
+display:inline-block;
+margin-top:5px;
+padding:5px 10px;
+border-radius:20px;
+background:rgba(255,193,7,.15);
+color:#ffd54f;
+font-size:12px;
+font-weight:600;
 }
 
-.why-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-margin-top:25px;
-}
+/* ===========================
+   WITHDRAW CHIP
+=========================== */
 
-.why-grid div,
-.faq-item{
-background:rgba(255,255,255,.08);
-padding:20px;
-border-radius:18px;
-border:1px solid rgba(255,255,255,.12);
+.withdraw{
+display:inline-block;
+margin-top:6px;
+padding:5px 10px;
+border-radius:20px;
+background:rgba(0,255,136,.12);
+color:#00ff88;
+font-size:12px;
+font-weight:600;
 }
-
-.faq-item{
-margin-bottom:20px;
-}
-
 /* ===========================
    FOOTER
 =========================== */
 
 .footer{
-margin-top:70px;
-padding:40px 20px;
+padding:35px 20px;
+margin-top:30px;
 text-align:center;
-background:#081120;
-border-top:1px solid rgba(255,255,255,.1);
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(20px);
+border-top:1px solid rgba(255,255,255,.08);
+}
+
+.footer h3{
+font-size:22px;
+font-weight:700;
+color:#00e5ff;
+margin-bottom:12px;
+}
+
+.footer p{
+font-size:14px;
+color:#b8c2d1;
+line-height:1.7;
+margin-bottom:20px;
 }
 
 .footer-links{
 display:flex;
 justify-content:center;
-gap:20px;
 flex-wrap:wrap;
-margin:20px 0;
+gap:12px;
+margin-bottom:20px;
 }
 
 .footer-links a{
-color:#cbd5e1;
 text-decoration:none;
+color:#fff;
+padding:10px 16px;
+border-radius:12px;
+background:rgba(255,255,255,.08);
+transition:.3s;
 }
 
 .footer-links a:hover{
-color:#00e5ff;
-}
-
-.telegram-footer a{
-display:inline-block;
-margin-top:15px;
-padding:14px 28px;
-background:#229ED9;
-color:#fff;
-text-decoration:none;
-border-radius:40px;
-font-weight:700;
+background:#00e5ff;
+color:#07111f;
 }
 
 .copyright{
-margin-top:25px;
-font-size:14px;
+font-size:13px;
 color:#94a3b8;
+margin-top:20px;
 }
 
 /* ===========================
-   MOBILE
+   SCROLLBAR
 =========================== */
 
-@media(max-width:768px){
-
-.header{
-flex-direction:column;
-gap:15px;
-padding:15px;
+::-webkit-scrollbar{
+width:5px;
 }
 
-nav{
-flex-wrap:wrap;
-justify-content:center;
+::-webkit-scrollbar-thumb{
+background:#00e5ff;
+border-radius:20px;
 }
 
-.hero h1{
-font-size:38px;
-}
+/* ===========================
+   MOBILE RESPONSIVE
+=========================== */
 
-.hero p{
-font-size:16px;
-}
+@media (max-width:480px){
 
-.stats{
-gap:15px;
-}
-
-.stats div{
-padding:16px 20px;
-}
-
-.game-grid{
-grid-template-columns:repeat(2,1fr);
-gap:15px;
-}
-
-.game-card{
-padding:15px;
-}
-
-.game-card h3{
-font-size:18px;
-}
-
-.section-title{
-font-size:28px;
-}
-
-}
-
-@media(max-width:480px){
-
-.game-grid{
-grid-template-columns:1fr 1fr;
-}
-
-.logo{
-font-size:22px;
+.logo h2{
+font-size:20px;
 }
 
 .hero h1{
 font-size:30px;
 }
 
-.hero-buttons{
-flex-direction:column;
-align-items:center;
+.hero p{
+font-size:15px;
 }
 
-.explore-btn,
-.telegram-btn{
-width:100%;
-max-width:280px;
+.hero-stats{
+grid-template-columns:repeat(3,1fr);
+gap:8px;
 }
+
+.glass-box{
+padding:14px 8px;
+}
+
+.glass-box h2{
+font-size:20px;
+}
+
+.games-grid{
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+}
+
+.game-card{
+padding:12px;
+}
+
+.game-card img{
+width:70px;
+height:70px;
+}
+
+.game-card h3{
+font-size:15px;
+}
+
+.card-btn{
+font-size:13px;
+padding:10px;
+}
+
+.footer-links{
+flex-direction:column;
+}
+
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(25px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.hero,
+.search-section,
+.games-section,
+.footer{
+
+animation:fadeUp .8s ease;
 
 }
