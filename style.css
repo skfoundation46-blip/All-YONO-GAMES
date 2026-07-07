@@ -1,6 +1,6 @@
-/* ==========================
+/* ===========================
    RESET
-========================== */
+=========================== */
 
 *{
     margin:0;
@@ -8,267 +8,215 @@
     box-sizing:border-box;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
 body{
     font-family:'Poppins',sans-serif;
-    background:#0d1117;
-    color:#ffffff;
-    overflow-x:hidden;
+    background:#f5f7fb;
+    color:#222;
 }
 
-
-/* ==========================
-   LINKS
-========================== */
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-img{
-    max-width:100%;
-    display:block;
-}
-
-ul{
-    list-style:none;
-}
-
-
-/* ==========================
-   CONTAINER
-========================== */
-
-.container{
-    width:95%;
-    max-width:1300px;
-    margin:auto;
-}
-
-
-/* ==========================
+/* ===========================
    HEADER
-========================== */
+=========================== */
 
 .header{
+    background:#0d6efd;
+    color:#fff;
+    padding:15px;
+    text-align:center;
     position:sticky;
     top:0;
-    left:0;
-    width:100%;
-    background:#161b22;
     z-index:999;
-    box-shadow:0 3px 10px rgba(0,0,0,.35);
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
 }
-
-.header .container{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 0;
-}
-
-
-/* ==========================
-   LOGO
-========================== */
 
 .logo{
     display:flex;
+    justify-content:center;
     align-items:center;
     gap:10px;
 }
 
-.logo img{
-    width:45px;
-    height:45px;
-    border-radius:10px;
+.logo i{
+    font-size:28px;
 }
 
 .logo h2{
-    font-size:22px;
-    color:#00e676;
+    font-size:24px;
     font-weight:700;
 }
 
-
-/* ==========================
-   NAVIGATION
-========================== */
-
-nav{
-    display:flex;
-    gap:20px;
-}
-
-nav a{
-    color:#fff;
-    font-size:15px;
-    font-weight:500;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:#00e676;
-}
-
-
-/* ==========================
-   MOBILE MENU BUTTON
-========================== */
-
-.menu-btn{
-    display:none;
-    font-size:26px;
-    color:#fff;
-    cursor:pointer;
-}
-
-
-/* ==========================
-   SECTION
-========================== */
-
-section{
-    padding:25px 15px;
-}
-
-
-/* ==========================
-   SECTION TITLE
-========================== */
-
-.section-title{
-    text-align:center;
-    margin-bottom:20px;
-}
-
-.section-title h2{
-    font-size:28px;
-    color:#00e676;
-    margin-bottom:10px;
-}
-
-.section-title p{
-    color:#cfcfcf;
-    font-size:15px;
-}
-/* ==========================
-   HERO SECTION
-========================== */
+/* ===========================
+   HERO
+=========================== */
 
 .hero{
-    width:100%;
-    padding:40px 20px;
+    background:linear-gradient(135deg,#0d6efd,#00b894);
+    color:#fff;
     text-align:center;
-    background:linear-gradient(135deg,#0d1117,#161b22,#1f2937);
-}
-
-.hero-content{
-    max-width:900px;
-    margin:auto;
+    padding:30px 15px;
 }
 
 .hero h1{
-    font-size:36px;
-    color:#00e676;
-    margin-bottom:15px;
-    font-weight:700;
+    font-size:30px;
+    margin-bottom:8px;
 }
 
 .hero p{
-    font-size:17px;
-    color:#d8d8d8;
-    line-height:1.8;
-    margin-bottom:25px;
-}
-
-.hero-btn{
-    display:inline-block;
-    background:#00e676;
-    color:#111;
-    padding:14px 30px;
-    border-radius:12px;
     font-size:16px;
-    font-weight:600;
-    transition:.3s;
 }
 
-.hero-btn:hover{
-    background:#00c853;
-    transform:translateY(-3px);
-}
-
-
-/* ==========================
-   HERO BADGE
-========================== */
-
-.hero-badge{
-    display:inline-block;
-    margin-top:20px;
-    background:#1f2937;
-    color:#00e676;
-    padding:10px 18px;
-    border-radius:50px;
-    font-size:14px;
-    font-weight:600;
-}
-
-
-/* ==========================
-   SEARCH SECTION
-========================== */
+/* ===========================
+   SEARCH
+=========================== */
 
 .search-section{
-    padding:20px;
+    padding:15px;
 }
 
 .search-box{
-    max-width:650px;
-    margin:auto;
-    background:#1f2937;
-    border-radius:50px;
     display:flex;
     align-items:center;
-    padding:14px 20px;
-    box-shadow:0 5px 15px rgba(0,0,0,.3);
+    background:#fff;
+    border-radius:12px;
+    padding:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
 }
 
 .search-box i{
-    color:#00e676;
-    font-size:18px;
-    margin-right:12px;
+    color:#888;
+    margin-right:10px;
 }
 
 .search-box input{
-    width:100%;
     border:none;
     outline:none;
-    background:transparent;
-    color:#fff;
+    width:100%;
     font-size:16px;
 }
+/* ===========================
+   SECTION TITLE
+=========================== */
 
-.search-box input::placeholder{
-    color:#aaa;
+.section-title{
+    text-align:center;
+    font-size:24px;
+    font-weight:700;
+    margin:20px 0;
+    color:#222;
 }
 
+/* ===========================
+   GAMES SECTION
+=========================== */
 
-/* ==========================
-   PREMIUM SLIDER
-========================== */
+.games-section{
+    padding:15px;
+}
 
-.slider{
-    width:95%;
-    max-width:1200px;
-    margin:20px auto;
-    position:relative;
+#gamesContainer{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+/* ===========================
+   GAME CARD
+=========================== */
+
+.game-card{
+    background:#fff;
+    border-radius:15px;
     overflow:hidden;
-    border-radius:18px;
+    box-shadow:0 4px 12px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.game-card:hover{
+    transform:translateY(-5px);
+}
+
+.game-card img{
+    width:100%;
+    height:150px;
+    object-fit:cover;
+    display:block;
+}
+
+.game-info{
+    padding:12px;
+}
+
+.game-info h3{
+    font-size:17px;
+    margin-bottom:8px;
+    color:#222;
+}
+
+.game-info p{
+    font-size:14px;
+    margin-bottom:6px;
+    color:#555;
+}
+
+/* ===========================
+   DOWNLOAD BUTTON
+=========================== */
+
+.download-btn{
+    display:block;
+    width:100%;
+    text-align:center;
+    background:#28a745;
+    color:#fff;
+    text-decoration:none;
+    padding:12px;
+    border-radius:10px;
+    font-size:15px;
+    font-weight:600;
+    margin-top:10px;
+    transition:.3s;
+}
+
+.download-btn:hover{
+    background:#218838;
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:768px){
+
+    #gamesContainer{
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+    }
+
+    .game-card img{
+        height:130px;
+    }
+
+    .game-info h3{
+        font-size:15px;
+    }
+
+    .download-btn{
+        font-size:14px;
+        padding:10px;
+    }
+
+}/* ===========================
+   BANNER
+=========================== */
+
+.banner-section{
+    padding:15px;
+}
+
+.banner-slider{
+    width:100%;
+    overflow:hidden;
+    border-radius:15px;
 }
 
 .slide{
@@ -281,578 +229,180 @@ section{
 
 .slide img{
     width:100%;
-    height:230px;
-    object-fit:cover;
-    border-radius:18px;
-}
-
-
-/* ==========================
-   SLIDER DOTS
-========================== */
-
-.slider-dots{
-    display:flex;
-    justify-content:center;
-    gap:10px;
-    margin-top:15px;
-}
-
-.slider-dots span{
-    width:12px;
-    height:12px;
-    border-radius:50%;
-    background:#555;
-    cursor:pointer;
-}
-
-.slider-dots span.active{
-    background:#00e676;
-}
-
-
-/* ==========================
-   SLIDER BUTTONS
-========================== */
-
-.slider-btn{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    width:42px;
-    height:42px;
-    border:none;
-    border-radius:50%;
-    background:rgba(0,0,0,.5);
-    color:#fff;
-    cursor:pointer;
-    font-size:18px;
-    transition:.3s;
-}
-
-.slider-btn:hover{
-    background:#00e676;
-    color:#111;
-}
-
-.prev{
-    left:15px;
-}
-
-.next{
-    right:15px;
-}
-/* ==========================
-   GAMES SECTION
-========================== */
-
-.games-section{
-    padding:25px 15px;
-}
-
-#gamesContainer{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
-    gap:18px;
-}
-
-
-/* ==========================
-   GAME CARD
-========================== */
-
-.game-card{
-    background:#161b22;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:0 8px 20px rgba(0,0,0,.35);
-    transition:all .35s ease;
-    position:relative;
-    border:1px solid rgba(255,255,255,.05);
-}
-
-.game-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 15px 30px rgba(0,0,0,.45);
-}
-
-
-/* ==========================
-   GAME IMAGE
-========================== */
-
-.game-image{
-    width:100%;
     height:180px;
-    overflow:hidden;
-}
-
-.game-image img{
-    width:100%;
-    height:100%;
     object-fit:cover;
-    transition:.4s;
+    border-radius:15px;
 }
 
-.game-card:hover .game-image img{
-    transform:scale(1.08);
-}
-
-
-/* ==========================
-   TRENDING BADGE
-========================== */
-
-.trending-badge{
-    position:absolute;
-    top:10px;
-    left:10px;
-    background:#ff9800;
-    color:#fff;
-    padding:5px 12px;
-    border-radius:30px;
-    font-size:12px;
-    font-weight:600;
-}
-
-
-/* ==========================
-   VERIFIED BADGE
-========================== */
-
-.verify-badge{
-    position:absolute;
-    top:10px;
-    right:10px;
-    background:#00c853;
-    color:#fff;
-    width:30px;
-    height:30px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:14px;
-}
-
-
-/* ==========================
-   GAME CONTENT
-========================== */
-
-.game-content{
-    padding:16px;
-}
-
-.game-title{
-    font-size:18px;
-    font-weight:700;
-    margin-bottom:8px;
-    color:#fff;
-}
-
-
-/* ==========================
-   RATING
-========================== */
-
-.rating{
-    display:flex;
-    align-items:center;
-    gap:6px;
-    color:#ffc107;
-    font-size:14px;
-    margin-bottom:8px;
-}
-
-.rating span{
-    color:#fff;
-}
-
-
-/* ==========================
-   DOWNLOAD COUNT
-========================== */
-
-.download-count{
-    color:#cfcfcf;
-    font-size:13px;
-    margin-bottom:12px;
-}
-
-
-/* ==========================
-   BONUS BOX
-========================== */
-
-.bonus-box{
-    background:#00c853;
-    color:#fff;
-    text-align:center;
-    padding:10px;
-    border-radius:10px;
-    font-weight:700;
-    font-size:15px;
-    margin-bottom:10px;
-}
-
-
-/* ==========================
-   WITHDRAW BOX
-========================== */
-
-.withdraw-box{
-    background:#1f2937;
-    color:#fff;
-    text-align:center;
-    padding:9px;
-    border-radius:10px;
-    margin-bottom:15px;
-    font-size:14px;
-}
-
-
-/* ==========================
-   DOWNLOAD BUTTON
-========================== */
-
-.download-btn{
-    display:block;
-    width:100%;
-    text-align:center;
-    background:#00e676;
-    color:#111;
-    padding:12px;
-    border-radius:12px;
-    font-size:16px;
-    font-weight:700;
-    transition:.3s;
-}
-
-.download-btn:hover{
-    background:#00c853;
-    transform:scale(1.03);
-}
-
-
-/* ==========================
-   NEW TAG
-========================== */
-
-.new-tag{
-    position:absolute;
-    bottom:195px;
-    left:10px;
-    background:#e91e63;
-    color:#fff;
-    padding:4px 10px;
-    border-radius:20px;
-    font-size:11px;
-    font-weight:600;
-}
-/* ===================================
-   BONUS SECTION
-=================================== */
-
-.bonus-section{
-    padding:40px 15px;
-}
-
-.bonus-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-}
-
-.bonus-card{
-    background:#161b22;
-    border-radius:16px;
-    padding:20px;
-    text-align:center;
-    transition:.35s;
-    border:1px solid rgba(255,255,255,.05);
-    box-shadow:0 10px 20px rgba(0,0,0,.35);
-}
-
-.bonus-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 15px 30px rgba(0,230,118,.25);
-}
-
-.bonus-card h3{
-    color:#00e676;
-    font-size:24px;
-    margin-bottom:10px;
-}
-
-.bonus-card p{
-    color:#d7d7d7;
-    font-size:14px;
-    line-height:1.7;
-}
-
-
-/* ===================================
+/* ===========================
    FEATURES
-=================================== */
+=========================== */
 
 .features{
-    padding:45px 15px;
+    padding:20px 15px;
 }
 
 .feature-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
 }
 
-.feature-box{
-    background:#161b22;
-    padding:20px;
+.feature-card{
+    background:#fff;
+    padding:18px;
     border-radius:15px;
     text-align:center;
-    transition:.35s;
-    border:1px solid rgba(255,255,255,.05);
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
 }
 
-.feature-box:hover{
-    transform:translateY(-8px);
-    box-shadow:0 15px 25px rgba(0,230,118,.18);
-}
-
-.feature-box h3{
-    color:#00e676;
-    font-size:20px;
+.feature-card i{
+    font-size:30px;
+    color:#0d6efd;
     margin-bottom:10px;
 }
 
-.feature-box p{
-    color:#d0d0d0;
+.feature-card h3{
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+.feature-card p{
     font-size:14px;
-    line-height:1.7;
+    color:#666;
 }
 
-
-/* ===================================
-   POPULAR SECTION
-=================================== */
-
-.popular-games,
-.latest-games,
-.trending{
-    padding:40px 15px;
-}
-
-.popular-grid,
-.latest-grid,
-.games-slider{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
-    gap:18px;
-}
-
-
-/* ===================================
-   HOVER EFFECT
-=================================== */
-
-.game-card::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(
-        180deg,
-        transparent,
-        rgba(0,230,118,.08)
-    );
-    opacity:0;
-    transition:.35s;
-}
-
-.game-card:hover::before{
-    opacity:1;
-}
-
-
-/* ===================================
-   GLOW EFFECT
-=================================== */
-
-.download-btn{
-    box-shadow:0 0 15px rgba(0,230,118,.25);
-}
-
-.download-btn:hover{
-    box-shadow:0 0 25px rgba(0,230,118,.55);
-}
-
-
-/* ===================================
-   CARD ANIMATION
-=================================== */
-
-.game-card{
-    animation:fadeUp .5s ease;
-}
-
-@keyframes fadeUp{
-
-0%{
-opacity:0;
-transform:translateY(30px);
-}
-
-100%{
-opacity:1;
-transform:translateY(0);
-}
-
-}
-
-
-/* ===================================
-   PULSE BONUS
-=================================== */
-
-.bonus-box{
-
-animation:pulse 2s infinite;
-
-}
-
-@keyframes pulse{
-
-0%{
-
-transform:scale(1);
-
-}
-
-50%{
-
-transform:scale(1.04);
-
-}
-
-100%{
-
-transform:scale(1);
-
-}
-
-}
-
-
-/* ===================================
-   DOWNLOAD ICON
-=================================== */
-
-.download-btn i{
-
-margin-right:8px;
-
-}
-
-
-/* ===================================
-   SHADOW
-=================================== */
-
-.game-card{
-
-box-shadow:
-0 5px 15px rgba(0,0,0,.30),
-0 0 8px rgba(0,230,118,.05);
-
-}
-/* ===================================
-   FAQ SECTION
-=================================== */
+/* ===========================
+   FAQ
+=========================== */
 
 .faq-section{
-    padding:50px 20px;
-}
-
-.faq-section h2{
-    text-align:center;
-    font-size:30px;
-    color:#00e676;
-    margin-bottom:30px;
+    padding:20px 15px;
 }
 
 .faq-item{
-    background:#161b22;
-    border-radius:15px;
-    padding:18px;
-    margin-bottom:18px;
-    border:1px solid rgba(255,255,255,.05);
-    transition:.3s;
-}
-
-.faq-item:hover{
-    border-color:#00e676;
-    transform:translateY(-4px);
+    background:#fff;
+    padding:15px;
+    border-radius:12px;
+    margin-bottom:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
 
 .faq-item h3{
-    color:#fff;
-    font-size:18px;
-    margin-bottom:10px;
+    font-size:17px;
+    margin-bottom:8px;
 }
 
 .faq-item p{
-    color:#cfcfcf;
-    font-size:15px;
-    line-height:1.8;
+    font-size:14px;
+    color:#666;
 }
 
+/* ===========================
+   MOBILE
+=========================== */
 
-/* ===================================
+@media(max-width:768px){
+
+    .feature-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .slide img{
+        height:150px;
+    }
+
+}
+/* ===========================
    FOOTER
-=================================== */
+=========================== */
 
-footer{
+.footer{
     background:#111827;
-    padding:50px 20px;
-    margin-top:50px;
+    color:#fff;
     text-align:center;
-    border-top:1px solid rgba(255,255,255,.05);
+    padding:30px 20px;
+    margin-top:30px;
 }
 
 .footer-logo{
-    font-size:28px;
-    color:#00e676;
-    font-weight:700;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
     margin-bottom:15px;
 }
 
-footer p{
-    color:#aaa;
-    margin-bottom:20px;
+.footer-logo i{
+    font-size:30px;
+    color:#ffc107;
+}
+
+.footer-logo h2{
+    font-size:24px;
+}
+
+.footer p{
+    color:#d1d5db;
+    line-height:1.7;
+    margin:10px 0;
 }
 
 .footer-links{
     display:flex;
     justify-content:center;
-    gap:20px;
     flex-wrap:wrap;
+    gap:15px;
+    margin:20px 0;
 }
 
 .footer-links a{
-    color:#fff;
-    transition:.3s;
+    color:#ffffff;
+    text-decoration:none;
+    font-size:15px;
 }
 
 .footer-links a:hover{
-    color:#00e676;
+    color:#ffc107;
 }
 
+.copyright{
+    margin-top:15px;
+    font-size:14px;
+    color:#9ca3af;
+}
 
-/* ===================================
+/* ===========================
+   TELEGRAM BUTTON
+=========================== */
+
+.telegram-btn{
+    position:fixed;
+    right:20px;
+    bottom:90px;
+    width:55px;
+    height:55px;
+    background:#229ED9;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    text-decoration:none;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+    z-index:999;
+}
+
+.telegram-btn:hover{
+    transform:scale(1.08);
+}
+
+/* ===========================
    SCROLL TO TOP
-=================================== */
+=========================== */
 
-#scrollTop{
+#scrollTopBtn{
     position:fixed;
     right:20px;
     bottom:20px;
@@ -860,727 +410,205 @@ footer p{
     height:50px;
     border:none;
     border-radius:50%;
-    background:#00e676;
-    color:#111;
+    background:#28a745;
+    color:#fff;
     font-size:20px;
     cursor:pointer;
     display:none;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
     z-index:999;
-    transition:.3s;
-    box-shadow:0 5px 20px rgba(0,230,118,.35);
 }
 
-#scrollTop:hover{
-    transform:translateY(-5px);
+#scrollTopBtn:hover{
+    background:#218838;
 }
 
+/* ===========================
+   LOADER
+=========================== */
 
-/* ===================================
-   CUSTOM SCROLLBAR
-=================================== */
+#loader{
+    position:fixed;
+    inset:0;
+    background:#ffffff;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.loader-circle{
+    width:60px;
+    height:60px;
+    border:6px solid #e5e7eb;
+    border-top:6px solid #0d6efd;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+    margin-bottom:15px;
+}
+
+@keyframes spin{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:768px){
+
+    .footer{
+        padding:25px 15px;
+    }
+
+    .footer-logo h2{
+        font-size:20px;
+    }
+
+    .telegram-btn{
+        width:50px;
+        height:50px;
+        font-size:24px;
+    }
+
+    #scrollTopBtn{
+        width:45px;
+        height:45px;
+    }
+
+}
+/* ===========================
+   PREMIUM GAME CARD EFFECTS
+=========================== */
+
+.game-card{
+    position:relative;
+    overflow:hidden;
+}
+
+.game-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+    transition:.6s;
+}
+
+.game-card:hover::before{
+    left:100%;
+}
+
+.game-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 25px rgba(0,0,0,.18);
+}
+
+/* ===========================
+   BONUS BADGE
+=========================== */
+
+.bonus-badge{
+    display:inline-block;
+    background:#ff9800;
+    color:#fff;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+/* ===========================
+   RATING
+=========================== */
+
+.rating{
+    color:#ffb400;
+    font-size:15px;
+    font-weight:600;
+}
+
+/* ===========================
+   DOWNLOAD BUTTON EFFECT
+=========================== */
+
+.download-btn{
+    transition:all .3s ease;
+}
+
+.download-btn:hover{
+    transform:scale(1.05);
+}
+
+/* ===========================
+   SCROLL BAR
+=========================== */
 
 ::-webkit-scrollbar{
     width:8px;
 }
 
 ::-webkit-scrollbar-track{
-    background:#111827;
+    background:#f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb{
-    background:#00e676;
+    background:#0d6efd;
     border-radius:10px;
 }
 
 ::-webkit-scrollbar-thumb:hover{
-    background:#00c853;
+    background:#0056d2;
 }
 
-
-/* ===================================
-   LOADER
-=================================== */
-
-#loader{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:#0d1117;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    z-index:9999;
-}
-
-.loader-circle{
-    width:70px;
-    height:70px;
-    border:6px solid #1f2937;
-    border-top:6px solid #00e676;
-    border-radius:50%;
-    animation:spin 1s linear infinite;
-}
-
-#loader p{
-    color:#fff;
-    margin-top:20px;
-    font-size:18px;
-}
-
-@keyframes spin{
-
-100%{
-transform:rotate(360deg);
-}
-
-}
-
-
-/* ===================================
-   FADE ANIMATION
-=================================== */
-
-.fade-in{
-    animation:fade .8s ease;
-}
-
-@keyframes fade{
-
-0%{
-opacity:0;
-}
-
-100%{
-opacity:1;
-}
-
-}
-
-
-/* ===================================
-   SCALE ANIMATION
-=================================== */
-
-.scale-up{
-    animation:scaleup .4s ease;
-}
-
-@keyframes scaleup{
-
-0%{
-transform:scale(.9);
-opacity:0;
-}
-
-100%{
-transform:scale(1);
-opacity:1;
-}
-
-}
-/* ===================================
-   TABLET RESPONSIVE
-=================================== */
-
-@media (max-width:1024px){
-
-.header .container{
-padding:15px;
-}
-
-.hero h1{
-font-size:32px;
-}
-
-.hero p{
-font-size:16px;
-}
-
-.games-section{
-padding:20px;
-}
-
-#gamesContainer{
-grid-template-columns:repeat(3,1fr);
-gap:18px;
-}
-
-.game-image{
-height:170px;
-}
-
-.section-title h2{
-font-size:28px;
-}
-
-}
-
-
-/* ===================================
-   MOBILE RESPONSIVE
-=================================== */
+/* ===========================
+   MOBILE OPTIMIZATION
+=========================== */
 
 @media (max-width:768px){
 
-.header{
-
-padding:12px 15px;
-
-}
-
-.header .container{
-
-flex-direction:column;
-
-gap:15px;
-
-}
-
-.logo{
-
-justify-content:center;
-
-}
-
-.logo img{
-
-width:42px;
-height:42px;
-
-}
-
-.logo h2{
-
-font-size:20px;
-
-}
-
-nav{
-
-width:100%;
-
-justify-content:center;
-
-flex-wrap:wrap;
-
-gap:12px;
-
-}
-
-nav a{
-
-font-size:14px;
-
-}
-
-.hero{
-
-padding:30px 15px;
-
-}
-
-.hero h1{
-
-font-size:26px;
-
-line-height:1.4;
-
-}
-
-.hero p{
-
-font-size:15px;
-
-line-height:1.8;
-
-}
-
-.hero-btn{
-
-padding:12px 25px;
-
-font-size:15px;
-
-}
-
-.search-box{
-
-padding:12px 15px;
-
-}
-
-.search-box input{
-
-font-size:15px;
-
-}
-
-#gamesContainer{
-
-grid-template-columns:repeat(2,1fr);
-
-gap:15px;
-
-}
-
-.game-image{
-
-height:150px;
-
-}
-
-.game-title{
-
-font-size:16px;
-
-}
-
-.download-btn{
-
-font-size:15px;
-
-padding:11px;
-
-}
-
-.section-title h2{
-
-font-size:24px;
-
-}
-
-.section-title p{
-
-font-size:14px;
-
-}
-
-.footer-links{
-
-gap:12px;
-
-}
-
-}
-
-
-/* ===================================
-   SMALL MOBILE
-=================================== */
-
-@media (max-width:480px){
-
-body{
-
-font-size:14px;
-
-}
-
-.header{
-
-padding:10px;
-
-}
-
-.logo h2{
-
-font-size:18px;
-
-}
-
-.hero{
-
-padding:25px 12px;
-
-}
-
-.hero h1{
-
-font-size:22px;
-
-}
-
-.hero p{
-
-font-size:14px;
-
-}
-
-.search-section{
-
-padding:15px 10px;
-
-}
-
-.search-box{
-
-border-radius:12px;
-
-padding:10px 12px;
-
-}
-
-.search-box input{
-
-font-size:14px;
-
-}
-
-#gamesContainer{
-
-grid-template-columns:1fr;
-
-gap:15px;
-
-}
-
-.game-card{
-
-border-radius:15px;
-
-}
-
-.game-image{
-
-height:200px;
-
-}
-
-.game-content{
-
-padding:15px;
-
-}
-
-.game-title{
-
-font-size:18px;
-
-}
-
-.rating{
-
-font-size:14px;
-
-}
-
-.download-count{
-
-font-size:13px;
-
-}
-
-.bonus-box{
-
-font-size:15px;
-
-padding:10px;
-
-}
-
-.withdraw-box{
-
-font-size:14px;
-
-}
-
-.download-btn{
-
-font-size:16px;
-
-padding:12px;
-
-}
-
-.section-title h2{
-
-font-size:22px;
-
-}
-
-footer{
-
-padding:35px 15px;
-
-}
-
-.footer-logo{
-
-font-size:22px;
-
-}
-
-.footer-links{
-
-flex-direction:column;
-
-gap:10px;
-
-}
-
-#scrollTop{
-
-width:45px;
-
-height:45px;
-
-font-size:18px;
-
-right:15px;
-
-bottom:15px;
-
-}
-
-}
-
-
-/* ===================================
-   EXTRA SMALL DEVICES
-=================================== */
-
-@media (max-width:360px){
-
-.hero h1{
-
-font-size:20px;
-
-}
-
-.logo h2{
-
-font-size:16px;
-
-}
-
-.game-image{
-
-height:180px;
-
-}
-
-.download-btn{
-
-font-size:15px;
-
-}
-
-}
-/* ===================================
-   CSS VARIABLES
-=================================== */
-
-:root{
-
---bg:#0d1117;
---card:#161b22;
---green:#00e676;
---green-dark:#00c853;
---white:#ffffff;
---gray:#cfcfcf;
---shadow:0 10px 25px rgba(0,0,0,.35);
-
-}
-
-
-/* ===================================
-   GLASS EFFECT
-=================================== */
-
-.glass{
-
-background:rgba(255,255,255,.05);
-
-backdrop-filter:blur(10px);
-
--webkit-backdrop-filter:blur(10px);
-
-border:1px solid rgba(255,255,255,.08);
-
-border-radius:16px;
-
-}
-
-
-/* ===================================
-   COMMON BUTTON
-=================================== */
-
-.btn{
-
-display:inline-flex;
-
-align-items:center;
-
-justify-content:center;
-
-gap:8px;
-
-padding:12px 25px;
-
-border-radius:12px;
-
-font-weight:600;
-
-transition:.3s;
-
-cursor:pointer;
-
-border:none;
-
-}
-
-.btn-primary{
-
-background:var(--green);
-
-color:#111;
-
-}
-
-.btn-primary:hover{
-
-background:var(--green-dark);
-
-transform:translateY(-3px);
-
-}
-
-
-/* ===================================
-   CARD SHADOW
-=================================== */
-
-.shadow{
-
-box-shadow:var(--shadow);
-
-}
-
-
-/* ===================================
-   HOVER EFFECT
-=================================== */
-
-.hover-up{
-
-transition:.35s;
-
-}
-
-.hover-up:hover{
-
-transform:translateY(-8px);
-
-}
-
-
-/* ===================================
-   TEXT COLORS
-=================================== */
-
-.text-green{
-
-color:var(--green);
-
-}
-
-.text-center{
-
-text-align:center;
-
-}
-
-.mt-20{
-
-margin-top:20px;
-
-}
-
-.mb-20{
-
-margin-bottom:20px;
-
-}
-
-.p-20{
-
-padding:20px;
-
-}
-
-
-/* ===================================
-   IMAGE EFFECT
-=================================== */
-
-img{
-
-transition:.35s;
-
-}
-
-img:hover{
-
-transform:scale(1.03);
-
-}
-
-
-/* ===================================
-   SELECTION
-=================================== */
-
-::selection{
-
-background:var(--green);
-
-color:#111;
-
-}
-
-
-/* ===================================
-   REMOVE TAP HIGHLIGHT
-=================================== */
-
-*{
-
--webkit-tap-highlight-color:transparent;
-
-}
-
-
-/* ===================================
-   FOCUS
-=================================== */
-
-button:focus,
-input:focus,
-a:focus{
-
-outline:none;
-
-}
-
-
-/* ===================================
-   SMOOTH TRANSITION
-=================================== */
-
-*{
-
-transition:
-background .25s,
-color .25s,
-border .25s;
-
-}
-
-
-/* ===================================
-   END OF FILE
-=================================== */
+    body{
+        font-size:14px;
+    }
+
+    .hero h1{
+        font-size:24px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .section-title{
+        font-size:20px;
+    }
+
+    .game-card img{
+        height:140px;
+    }
+
+    .game-info{
+        padding:10px;
+    }
+
+    .download-btn{
+        padding:10px;
+        font-size:14px;
+    }
+}
+
+/* ===========================
+   END
+=========================== */
