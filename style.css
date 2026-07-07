@@ -523,3 +523,24 @@ padding:10px;
 }
 
 }
+/* Touch Effect */
+
+.game-card{
+transition:.3s ease;
+}
+
+.download-btn{
+transition:.3s ease;
+}
+
+.download-btn:active{
+transform:scale(.95);
+}
+
+.telegram-btn:active{
+transform:scale(.95);
+}
+
+.hero-btn:active{
+transform:scale(.95);
+}
