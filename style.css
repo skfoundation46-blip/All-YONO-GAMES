@@ -1,197 +1,178 @@
-/* 3 Games Per Row */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0f172a;
+color:#fff;
+padding-bottom:80px;
+}
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px;
+background:#131c2e;
+}
+
+.logo-box{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo{
+width:60px;
+height:60px;
+border-radius:12px;
+}
+
+.logo-box h1{
+font-size:30px;
+font-weight:700;
+}
+
+.logo-box p{
+font-size:15px;
+color:#ccc;
+}
+
+.social{
+display:flex;
+gap:10px;
+}
+
+.social a{
+width:48px;
+height:48px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+font-size:24px;
+color:#fff;
+text-decoration:none;
+}
+
+.social a:first-child{
+background:#229ED9;
+}
+
+.social a:last-child{
+background:#25D366;
+}
+
+.search-box{
+display:flex;
+padding:15px;
+gap:10px;
+}
+
+.search-box input{
+flex:1;
+height:55px;
+border:none;
+border-radius:12px;
+padding:0 15px;
+font-size:18px;
+background:#1d293d;
+color:#fff;
+}
+
+.search-box button{
+width:60px;
+border:none;
+border-radius:12px;
+background:#00c853;
+color:#fff;
+font-size:22px;
+}
+
+.title{
+font-size:32px;
+font-weight:700;
+padding:10px 15px;
+}
+
+.top3{
+display:flex;
+justify-content:center;
+gap:10px;
+padding:10px 15px;
+}
+
 .games-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:10px;
-    padding:10px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+padding:10px 15px;
 }
 
 .game-card{
-    background:#fff;
-    border-radius:10px;
-    overflow:hidden;
-    text-align:center;
-    box-shadow:0 2px 8px rgba(0,0,0,.15);
+background:#1d293d;
+border-radius:12px;
+overflow:hidden;
 }
 
 .game-card img{
-    width:100%;
-    height:90px;
-    object-fit:cover;
+width:100%;
+aspect-ratio:1/1;
+object-fit:cover;
+display:block;
 }
 
 .game-info{
-    padding:8px;
+padding:8px;
+text-align:center;
 }
 
 .game-info h3{
-    font-size:13px;
-    margin:5px 0;
+font-size:14px;
+margin-bottom:5px;
 }
 
 .game-info p{
-    font-size:11px;
-    color:#666;
+font-size:11px;
+margin:3px 0;
+color:#ddd;
 }
 
 .download-btn{
-    display:block;
-    background:#16a34a;
-    color:#fff;
-    padding:8px;
-    font-size:12px;
-    border-radius:6px;
-    margin-top:6px;
-    text-decoration:none;
+display:block;
+background:#00c853;
+color:#fff;
+text-decoration:none;
+padding:10px;
+margin-top:8px;
+border-radius:10px;
+font-weight:700;
 }
 
-/* Mobile */
-@media(max-width:768px){
-    .games-grid{
-        grid-template-columns:repeat(3,1fr);
-    }
-
-    .game-card img{
-        height:80px;
-    }
-}
-/* ===========================
-   TOP 3 DOWNLOAD BUTTON
-=========================== */
-
-.rank-card .download-btn{
-    display:block;
-    width:100%;
-    margin-top:10px;
-    padding:10px 0;
-    background:#00c853;
-    color:#fff;
-    text-decoration:none;
-    font-size:13px;
-    font-weight:700;
-    border-radius:10px;
-    transition:.3s;
+.bottom-nav{
+position:fixed;
+left:0;
+bottom:0;
+width:100%;
+background:#131c2e;
+display:flex;
+justify-content:space-around;
+padding:10px 0;
 }
 
-.rank-card .download-btn:hover{
-    background:#00a844;
-    transform:translateY(-2px);
+.bottom-nav a{
+color:#fff;
+text-decoration:none;
+display:flex;
+flex-direction:column;
+align-items:center;
+font-size:13px;
 }
 
-/* Glow Effect */
-.rank1{
-    box-shadow:0 0 20px rgba(255,193,7,.7);
-}
-
-.rank2{
-    box-shadow:0 0 20px rgba(156,39,176,.6);
-}
-
-.rank3{
-    box-shadow:0 0 20px rgba(205,127,50,.6);
-}
-
-/* Hover Animation */
-.rank-card:hover{
-    transform:translateY(-6px);
-}
-
-.rank1:hover{
-    transform:scale(1.08) translateY(-6px);
-}
-
-/* Mobile */
-@media (max-width:768px){
-
-.rank-card .download-btn{
-    padding:8px 0;
-    font-size:12px;
-}
-
-.rank-card{
-    border-radius:15px;
-}
-
-}
-/* ===========================
-   GOLDEN PODIUM EFFECT
-=========================== */
-
-.rank-card::before{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:0;
-    width:100%;
-    height:45px;
-    background:rgba(255,255,255,.12);
-    border-radius:18px 18px 0 0;
-}
-
-.rank1{
-    margin-bottom:28px;
-    z-index:3;
-}
-
-.rank2{
-    margin-bottom:12px;
-    z-index:2;
-}
-
-.rank3{
-    margin-bottom:6px;
-    z-index:1;
-}
-
-.rank1::after,
-.rank2::after,
-.rank3::after{
-    position:absolute;
-    left:50%;
-    transform:translateX(-50%);
-    bottom:-40px;
-    width:80%;
-    height:40px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:20px;
-    font-weight:700;
-    color:#fff;
-    border-radius:0 0 14px 14px;
-}
-
-.rank1::after{
-    content:"1";
-    background:#f4b400;
-}
-
-.rank2::after{
-    content:"2";
-    background:#8e44ad;
-}
-
-.rank3::after{
-    content:"3";
-    background:#8d5524;
-}
-
-.top3{
-    padding-bottom:55px;
-}
-
-@media(max-width:768px){
-
-.rank1::after,
-.rank2::after,
-.rank3::after{
-    height:34px;
-    bottom:-34px;
-    font-size:18px;
-}
-
-.top3{
-    padding-bottom:45px;
-}
-
+.bottom-nav i{
+font-size:22px;
+margin-bottom:5px;
 }
