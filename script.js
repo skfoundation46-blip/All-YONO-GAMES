@@ -1,67 +1,15 @@
-// Search Games
 
-const searchInput = document.getElementById("searchInput");
-
-if (searchInput) {
-    searchInput.addEventListener("keyup", function () {
-
-        const value = this.value.toLowerCase();
-
-        const cards = document.querySelectorAll(".game-card");
-
-        cards.forEach(card => {
-
-            const title = card.querySelector("h3").innerText.toLowerCase();
-
-            if (title.includes(value)) {
-                card.style.display = "block";
-            } else {
-                card.style.display = "none";
-            }
-
-        });
-
-    });
-}
-
-// Scroll To Top Button
-
-const scrollBtn = document.getElementById("scrollTopBtn");
-
-window.addEventListener("scroll", function () {
-
-    if (window.scrollY > 300) {
-
-        scrollBtn.style.display = "flex";
-
-    } else {
-
-        scrollBtn.style.display = "none";
-
-    }
-
-});
-
-scrollBtn.addEventListener("click", function () {
-
-    window.scrollTo({
-
-        top: 0,
-
-        behavior: "smooth"
-
-    });
-
-});
-// ===============================
-// Display Games
-// ===============================
+// ==============================
+// DISPLAY ALL GAMES
+// ==============================
 
 const gamesContainer = document.getElementById("gamesContainer");
 
-if (gamesContainer && typeof games !== "undefined") {
+function displayGames(list){
 
-    games.forEach(game => {
+    gamesContainer.innerHTML = "";
+
+    list.forEach(game=>{
 
         gamesContainer.innerHTML += `
 
@@ -75,12 +23,14 @@ if (gamesContainer && typeof games !== "undefined") {
 
                 <p>⭐ ${game.rating}</p>
 
-                <p>🎁 Welcome Bonus: ${game.bonus}</p>
+                <p>🎁 ${game.bonus}</p>
 
-                <p>💰 Withdraw: ${game.withdraw}</p>
+                <p>💸 Withdraw ${game.withdraw}</p>
 
-                <a href="${game.downloadUrl}" target="_blank" class="download-btn">
+                <a href="${game.download}" target="_blank" class="download-btn">
+
                     Download
+
                 </a>
 
             </div>
@@ -93,52 +43,75 @@ if (gamesContainer && typeof games !== "undefined") {
 
 }
 
-// ===============================
-// Loader
-// ===============================
+displayGames(games);
 
-window.addEventListener("load", function () {
 
-    const loader = document.getElementById("loader");
+// ==============================
+// SEARCH
+// ==============================
 
-    if (loader) {
+const searchInput = document.getElementById("searchInput");
 
-        loader.style.display = "none";
+searchInput.addEventListener("keyup",function(){
 
-    }
+const keyword=this.value.toLowerCase();
+
+const result=games.filter(game=>
+
+game.name.toLowerCase().includes(keyword)
+
+);
+
+displayGames(result);
 
 });
 
-// ===============================
-// Banner Slider
-// ===============================
 
-let slideIndex = 0;
+// ==============================
+// SCROLL BUTTON
+// ==============================
 
-const slides = document.querySelectorAll(".slide");
+const scrollBtn=document.getElementById("scrollTopBtn");
 
-function showSlides() {
+window.addEventListener("scroll",()=>{
 
-    if (slides.length === 0) return;
+if(window.scrollY>300){
 
-    slides.forEach(slide => {
+scrollBtn.style.display="block";
 
-        slide.style.display = "none";
+}else{
 
-    });
-
-    slideIndex++;
-
-    if (slideIndex > slides.length) {
-
-        slideIndex = 1;
-
-    }
-
-    slides[slideIndex - 1].style.display = "block";
-
-    setTimeout(showSlides, 3000);
+scrollBtn.style.display="none";
 
 }
 
-showSlides();
+});
+
+scrollBtn.onclick=()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+
+// ==============================
+// LOADER
+// ==============================
+
+window.onload=function(){
+
+const loader=document.getElementById("loader");
+
+if(loader){
+
+loader.style.display="none";
+
+}
+
+};
