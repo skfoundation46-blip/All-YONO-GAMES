@@ -33,6 +33,30 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
 </head>
 
 <body>
+     <script src="games.js"></script>
+<script src="script.js"></script>
+     <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Download બટન પર ક્લિક થાય ત્યારે game page ખોલો
+    document.body.addEventListener("click", function(e){
+
+        const btn = e.target.closest(".download-btn");
+
+        if(!btn) return;
+
+        e.preventDefault();
+
+        const link = btn.getAttribute("data-link");
+
+        if(link){
+            window.location.href = link;
+        }
+
+    });
+
+});
+                          </script>
 
 <!-- Loader -->
 
