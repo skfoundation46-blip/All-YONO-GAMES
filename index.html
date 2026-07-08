@@ -4,59 +4,24 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>YONO Games - Download Latest YONO Apps</title>
+<title>YONO GAMES | All Games In One Place</title>
 
-<meta name="description" content="Download Latest YONO Games APK, Daily Bonus, Instant Withdraw, Trusted Gaming Platform.">
-
-<meta name="keywords" content="YONO Games,YONO APK,Rummy,Teen Patti,Slots,Casino,Go Spin,Hindi777">
-
-<meta name="author" content="YONO Games">
-
-<meta name="robots" content="index,follow">
-
-<link rel="icon" href="images/favicon.png">
+<meta name="description" content="Download All YONO Games, Rummy Games, Casino Games and Latest Bonus Offers">
 
 <link rel="stylesheet" href="style.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
 
 <body>
-     <script src="games.js"></script>
-<script src="script.js"></script>
-     <script>
-document.addEventListener("DOMContentLoaded", function () {
-
-    // Download બટન પર ક્લિક થાય ત્યારે game page ખોલો
-    document.body.addEventListener("click", function(e){
-
-        const btn = e.target.closest(".download-btn");
-
-        if(!btn) return;
-
-        e.preventDefault();
-
-        const link = btn.getAttribute("data-link");
-
-        if(link){
-            window.location.href = link;
-        }
-
-    });
-
-});
-                          </script>
 
 <!-- Loader -->
 
@@ -72,37 +37,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <header class="header">
 
-<div class="logo">
+<div class="logo-box">
 
-<i class="fa-solid fa-gamepad"></i>
+<img src="images/logo.png" class="logo">
 
 <div>
 
 <h1>YONO GAMES</h1>
 
-<span>Best Gaming Platform</span>
+<p>All Games In One Place</p>
 
 </div>
 
 </div>
 
-<div class="header-right">
+<div class="social-box">
 
-<a href="https://t.me/+4GqtEx1EywhiNTQ1"
-
-target="_blank"
-
-class="telegram-btn">
+<a href="https://t.me/+i1ZDx7rzMMc4ZmZl" target="_blank" class="telegram">
 
 <i class="fab fa-telegram-plane"></i>
 
 </a>
 
-<a href="#"
+<a href="https://whatsapp.com/channel/0029Vb6ncxAEQIaoxcCLVo1Z" target="_blank" class="whatsapp">
 
-class="menu-btn">
-
-<i class="fas fa-bars"></i>
+<i class="fab fa-whatsapp"></i>
 
 </a>
 
@@ -112,251 +71,172 @@ class="menu-btn">
 
 <!-- Search -->
 
-<section class="search-section">
-
 <div class="search-box">
 
-<i class="fas fa-search"></i>
-
-<input
-
-type="text"
+<input type="text"
 
 id="searchInput"
 
-placeholder="Search Your Favorite Game...">
+placeholder="Search your favorite games...">
+
+<button>
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+</button>
+
+</div>
+
+<!-- Top 3 Games -->
+
+<section class="top-games">
+
+<h2>🏆 Top 3 Games</h2>
+
+<div class="top3" id="top3Games">
+
+<!-- JS -->
 
 </div>
 
 </section>
-<!-- =========================
-     TOP 3 GAMES PODIUM
-========================= -->
 
-<section class="top3-section">
+<!-- Popular Games -->
 
-    <div class="section-title">
-        <h2>🏆 Top 3 Games</h2>
-        <p>Most Popular YONO Games</p>
-    </div>
+<section class="popular">
 
-    <div class="podium">
+<h2>🔥 Popular Games</h2>
 
-        <!-- No.2 -->
-        <div class="podium-card second">
+<div id="gamesContainer" class="games-grid">
 
-            <div class="crown silver">🥈</div>
+<!-- JS -->
 
-            <img src="images/Hindi777.png" alt="Hindi777">
+</div>
 
-            <h3>Hindi777</h3>
+</section>
+<!-- Features -->
 
-            <span class="bonus">₹100 Bonus</span>
+<section class="features">
 
-            <a href="games/hindi777.html" class="download-btn">
-                Download
-            </a>
+<div class="feature-card">
+<i class="fa-solid fa-shield-halved"></i>
+<h3>100% Safe</h3>
+<p>Secure & Trusted</p>
+</div>
 
-        </div>
+<div class="feature-card">
+<i class="fa-solid fa-gift"></i>
+<h3>High Bonus</h3>
+<p>₹50 - ₹110 Welcome Bonus</p>
+</div>
 
-        <!-- No.1 -->
-        <div class="podium-card first">
+<div class="feature-card">
+<i class="fa-solid fa-bolt"></i>
+<h3>Fast Download</h3>
+<p>High Speed APK</p>
+</div>
 
-            <div class="crown gold">👑</div>
-
-            <img src="images/gospin.png" alt="Go Spin">
-
-            <h3>Go Spin</h3>
-
-            <span class="bonus">₹100 Bonus</span>
-
-            <a href="games/gospin.html" class="download-btn">
-                Download
-            </a>
-
-        </div>
-
-        <!-- No.3 -->
-        <div class="podium-card third">
-
-            <div class="crown bronze">🥉</div>
-
-            <img src="images/HiRummy.png" alt="Hi Rummy">
-
-            <h3>Hi Rummy</h3>
-
-            <span class="bonus">₹80 Bonus</span>
-
-            <a href="games/hirummy.html" class="download-btn">
-                Download
-            </a>
-
-        </div>
-
-    </div>
+<div class="feature-card">
+<i class="fa-solid fa-building-columns"></i>
+<h3>Fast Withdraw</h3>
+<p>Within 2 Minutes</p>
+</div>
 
 </section>
 
-<!-- =========================
-     JOIN COMMUNITY
-========================= -->
+<!-- Join Section -->
 
 <section class="join-section">
 
-    <a href="https://t.me/+4GqtEx1EywhiNTQ1"
-       target="_blank"
-       class="join telegram">
+<a href="https://t.me/+i1ZDx7rzMMc4ZmZl" target="_blank" class="join-card telegram-card">
 
-        <i class="fab fa-telegram"></i>
+<i class="fab fa-telegram-plane"></i>
 
-        <div>
-            <h3>Join Telegram</h3>
-            <span>Daily New Games</span>
-        </div>
+<div>
 
-    </a>
+<h3>Join Telegram Channel</h3>
 
-    <a href="https://chat.whatsapp.com/"
-       target="_blank"
-       class="join whatsapp">
+<p>Latest Games & Bonus Updates</p>
 
-        <i class="fab fa-whatsapp"></i>
+</div>
 
-        <div>
-            <h3>Join WhatsApp</h3>
-            <span>Latest Updates</span>
-        </div>
+</a>
 
-    </a>
+<a href="https://whatsapp.com/channel/0029Vb6ncxAEQIaoxcCLVo1Z" target="_blank" class="join-card whatsapp-card">
 
-</section>
+<i class="fab fa-whatsapp"></i>
 
-<!-- =========================
-     POPULAR GAMES
-========================= -->
+<div>
 
-<section class="games-section">
+<h3>Join WhatsApp Channel</h3>
 
-    <div class="section-title">
+<p>Daily New Game Links</p>
 
-        <h2>🔥 Popular Games</h2>
+</div>
 
-        <p>Download All YONO Games</p>
-
-    </div>
-
-    <div id="gamesContainer"></div>
-
-</section>
-<!-- =========================
-     WHY CHOOSE US
-========================= -->
-
-<section class="features-section">
-
-    <div class="section-title">
-        <h2>✨ Why Choose Us?</h2>
-        <p>Trusted Platform For YONO Games</p>
-    </div>
-
-    <div class="features-grid">
-
-        <div class="feature-card">
-            <i class="fas fa-bolt"></i>
-            <h3>Fast Download</h3>
-            <p>High speed APK download.</p>
-        </div>
-
-        <div class="feature-card">
-            <i class="fas fa-gift"></i>
-            <h3>Welcome Bonus</h3>
-            <p>₹50 - ₹110 Bonus.</p>
-        </div>
-
-        <div class="feature-card">
-            <i class="fas fa-shield-alt"></i>
-            <h3>100% Safe</h3>
-            <p>Verified Game Links.</p>
-        </div>
-
-        <div class="feature-card">
-            <i class="fas fa-wallet"></i>
-            <h3>Fast Withdraw</h3>
-            <p>Quick withdrawal support.</p>
-        </div>
-
-        <div class="feature-card">
-            <i class="fas fa-star"></i>
-            <h3>Top Rated</h3>
-            <p>Best YONO Games Collection.</p>
-        </div>
-
-        <div class="feature-card">
-            <i class="fas fa-headset"></i>
-            <h3>24×7 Support</h3>
-            <p>Telegram & WhatsApp Help.</p>
-        </div>
-
-    </div>
+</a>
 
 </section>
 
-<!-- =========================
-     TELEGRAM BANNER
-========================= -->
+<!-- FAQ -->
 
-<section class="community-banner telegram-banner">
+<section class="faq">
 
-    <div class="banner-content">
+<h2>❓ Frequently Asked Questions</h2>
 
-        <i class="fab fa-telegram-plane"></i>
+<div class="faq-item">
+<h3>How to download games?</h3>
+<p>Click the Download button and install APK.</p>
+</div>
 
-        <div>
+<div class="faq-item">
+<h3>Is Bonus Real?</h3>
+<p>Bonus depends on the official game offer.</p>
+</div>
 
-            <h2>Join Telegram Channel</h2>
-
-            <p>Daily New Games & Bonus Updates</p>
-
-        </div>
-
-        <a href="https://t.me/+i1ZDx7rzMMc4ZmZl"
-           target="_blank"
-           class="banner-btn">
-
-            Join Now
-
-        </a>
-
-    </div>
+<div class="faq-item">
+<h3>How to Withdraw?</h3>
+<p>Complete KYC and use the Withdraw option.</p>
+</div>
 
 </section>
 
-<!-- =========================
-     WHATSAPP BANNER
-========================= -->
+<!-- Scroll Top -->
 
-<section class="community-banner whatsapp-banner">
+<button id="scrollTopBtn">
 
-    <div class="banner-content">
+<i class="fa-solid fa-arrow-up"></i>
 
-        <i class="fab fa-whatsapp"></i>
+</button>
 
-        <div>
+<!-- Bottom Navigation -->
 
-            <h2>Join WhatsApp Channel</h2>
+<nav class="bottom-nav">
 
-            <p>Latest Games & Offers</p>
+<a href="#">
+<i class="fa-solid fa-house"></i>
+<span>Home</span>
+</a>
 
-        </div>
+<a href="#">
+<i class="fa-solid fa-gamepad"></i>
+<span>Games</span>
+</a>
 
-        <a href="https://whatsapp.com/channel/0029Vb6ncxAEQIaoxcCLVo1Z"
-           target="_blank"
-           class="banner-btn">
+<a href="https://t.me/+i1ZDx7rzMMc4ZmZl" target="_blank">
+<i class="fab fa-telegram-plane"></i>
+<span>Telegram</span>
+</a>
 
-            Join Now
+<a href="https://whatsapp.com/channel/0029Vb6ncxAEQIaoxcCLVo1Z" target="_blank">
+<i class="fab fa-whatsapp"></i>
+<span>WhatsApp</span>
+</a>
 
-        </a>
+</nav>
 
-    </div>
+<script src="games.js"></script>
+<script src="script.js"></script>
 
-</section>
+</body>
+</html>
