@@ -1,716 +1,197 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:'Poppins',sans-serif;
-    background:#0f172a;
-    color:#fff;
-    overflow-x:hidden;
-}
-
-a{
-    text-decoration:none;
-}
-
-img{
-    max-width:100%;
-    display:block;
-}
-
-/* Header */
-
-.header{
-    position:sticky;
-    top:0;
-    z-index:999;
-    background:#111827;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px;
-    box-shadow:0 2px 10px rgba(0,0,0,.4);
-}
-
-.logo-box{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.logo{
-    width:60px;
-    height:60px;
-    border-radius:15px;
-}
-
-.logo-box h1{
-    font-size:22px;
-}
-
-.logo-box p{
-    font-size:13px;
-    color:#d1d5db;
-}
-
-.social-box{
-    display:flex;
-    gap:10px;
-}
-
-.social-box a{
-    width:42px;
-    height:42px;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:#fff;
-    font-size:20px;
-}
-
-.telegram{
-    background:#229ED9;
-}
-
-.whatsapp{
-    background:#25D366;
-}
-
-/* Search */
-
-.search-box{
-    display:flex;
-    gap:10px;
-    padding:15px;
-}
-
-.search-box input{
-    flex:1;
-    padding:14px;
-    border:none;
-    border-radius:12px;
-    background:#1e293b;
-    color:#fff;
-    font-size:16px;
-}
-
-.search-box button{
-    width:55px;
-    border:none;
-    border-radius:12px;
-    background:#16a34a;
-    color:#fff;
-    font-size:18px;
-    cursor:pointer;
-}
-/* ==========================
-TOP 3 GAMES
-========================== */
-
-.top-games{
-    padding:20px 15px;
-}
-
-.top-games h2{
-    text-align:center;
-    margin-bottom:20px;
-    font-size:28px;
-}
-
-.top3{
-    display:flex;
-    justify-content:center;
-    align-items:flex-end;
-    gap:12px;
-}
-
-.rank-card{
-    flex:1;
-    background:#1e293b;
-    border-radius:20px;
-    padding:15px;
-    text-align:center;
-    box-shadow:0 10px 20px rgba(0,0,0,.35);
-    transition:.3s;
-}
-
-.rank-card:hover{
-    transform:translateY(-8px);
-}
-
-.rank-card img{
-    width:85px;
-    height:85px;
-    margin:auto;
-    border-radius:18px;
-}
-
-.rank-card h3{
-    margin:10px 0;
-    font-size:18px;
-}
-
-.rank-card p{
-    color:#d1d5db;
-    font-size:14px;
-}
-
-.rank1{
-    background:linear-gradient(180deg,#FFD700,#FF9800);
-    color:#111;
-}
-
-.rank2{
-    background:linear-gradient(180deg,#E5E7EB,#9CA3AF);
-    color:#111;
-}
-
-.rank3{
-    background:linear-gradient(180deg,#CD7F32,#8B4513);
-}
-
-/* ==========================
-GAME GRID
-========================== */
-
+/* 3 Games Per Row */
 .games-grid{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-    padding:15px;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    padding:10px;
 }
 
 .game-card{
-    background:#1e293b;
-    border-radius:18px;
+    background:#fff;
+    border-radius:10px;
     overflow:hidden;
-    box-shadow:0 8px 20px rgba(0,0,0,.30);
-    transition:.3s;
-}
-
-.game-card:hover{
-    transform:translateY(-6px);
+    text-align:center;
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
 }
 
 .game-card img{
     width:100%;
-    height:150px;
+    height:90px;
     object-fit:cover;
 }
 
 .game-info{
-    padding:12px;
-    text-align:center;
+    padding:8px;
 }
 
 .game-info h3{
-    font-size:18px;
-    margin-bottom:8px;
+    font-size:13px;
+    margin:5px 0;
 }
 
 .game-info p{
-    color:#d1d5db;
-    margin-bottom:6px;
-    font-size:14px;
+    font-size:11px;
+    color:#666;
 }
 
 .download-btn{
     display:block;
     background:#16a34a;
     color:#fff;
-    padding:12px;
-    border-radius:10px;
+    padding:8px;
+    font-size:12px;
+    border-radius:6px;
+    margin-top:6px;
+    text-decoration:none;
+}
+
+/* Mobile */
+@media(max-width:768px){
+    .games-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .game-card img{
+        height:80px;
+    }
+}
+/* ===========================
+   TOP 3 DOWNLOAD BUTTON
+=========================== */
+
+.rank-card .download-btn{
+    display:block;
+    width:100%;
     margin-top:10px;
-    font-weight:600;
-    transition:.3s;
-}
-
-.download-btn:hover{
-    background:#15803d;
-   }
-/* ==========================
-FEATURE SECTION
-========================== */
-
-.features{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-    padding:15px;
-}
-
-.feature-card{
-    background:#1e293b;
-    border-radius:18px;
-    padding:20px;
-    text-align:center;
-    box-shadow:0 8px 20px rgba(0,0,0,.30);
-    transition:.3s;
-}
-
-.feature-card:hover{
-    transform:translateY(-5px);
-    border:1px solid #22c55e;
-}
-
-.feature-card i{
-    font-size:38px;
-    color:#22c55e;
-    margin-bottom:12px;
-}
-
-.feature-card h3{
-    font-size:18px;
-    margin-bottom:8px;
-}
-
-.feature-card p{
-    color:#cbd5e1;
-    font-size:14px;
-}
-
-/* ==========================
-JOIN SECTION
-========================== */
-
-.join-section{
-    padding:15px;
-    display:grid;
-    gap:15px;
-}
-
-.join-card{
-    display:flex;
-    align-items:center;
-    gap:15px;
-    padding:18px;
-    border-radius:18px;
+    padding:10px 0;
+    background:#00c853;
     color:#fff;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:700;
+    border-radius:10px;
     transition:.3s;
 }
 
-.join-card i{
-    font-size:40px;
+.rank-card .download-btn:hover{
+    background:#00a844;
+    transform:translateY(-2px);
 }
 
-.join-card h3{
-    font-size:18px;
-    margin-bottom:5px;
+/* Glow Effect */
+.rank1{
+    box-shadow:0 0 20px rgba(255,193,7,.7);
 }
 
-.join-card p{
-    font-size:14px;
-    color:#e2e8f0;
+.rank2{
+    box-shadow:0 0 20px rgba(156,39,176,.6);
 }
 
-.telegram-card{
-    background:#229ED9;
+.rank3{
+    box-shadow:0 0 20px rgba(205,127,50,.6);
 }
 
-.whatsapp-card{
-    background:#25D366;
+/* Hover Animation */
+.rank-card:hover{
+    transform:translateY(-6px);
 }
 
-.join-card:hover{
-    transform:scale(1.02);
+.rank1:hover{
+    transform:scale(1.08) translateY(-6px);
 }
 
-/* ==========================
-RESPONSIVE
-========================== */
-
+/* Mobile */
 @media (max-width:768px){
 
-.games-grid{
-    grid-template-columns:repeat(2,1fr);
-}
-
-.features{
-    grid-template-columns:repeat(2,1fr);
-}
-
-.logo{
-    width:52px;
-    height:52px;
-}
-
-.logo-box h1{
-    font-size:20px;
-}
-
-.logo-box p{
+.rank-card .download-btn{
+    padding:8px 0;
     font-size:12px;
 }
 
-.game-card img{
-    height:130px;
-}
-
-.download-btn{
-    padding:10px;
-    font-size:14px;
-}
-
-}
-
-@media (max-width:480px){
-
-.games-grid{
-    gap:10px;
-}
-
-.feature-card{
-    padding:15px;
-}
-
-.feature-card i{
-    font-size:30px;
-}
-
-.feature-card h3{
-    font-size:16px;
-}
-
-.feature-card p{
-    font-size:13px;
-}
-
-.join-card{
-    padding:15px;
-}
-
-.join-card i{
-    font-size:32px;
-}
-
-}
-/* ==========================
-FAQ SECTION
-========================== */
-
-.faq{
-    padding:20px 15px;
-}
-
-.faq h2{
-    text-align:center;
-    margin-bottom:20px;
-    font-size:26px;
-}
-
-.faq-item{
-    background:#1e293b;
-    padding:18px;
+.rank-card{
     border-radius:15px;
-    margin-bottom:15px;
-    box-shadow:0 8px 20px rgba(0,0,0,.25);
 }
 
-.faq-item h3{
-    color:#ffffff;
-    margin-bottom:10px;
-    font-size:18px;
 }
+/* ===========================
+   GOLDEN PODIUM EFFECT
+=========================== */
 
-.faq-item p{
-    color:#cbd5e1;
-    line-height:1.7;
-}
-
-/* ==========================
-SCROLL TOP BUTTON
-========================== */
-
-#scrollTopBtn{
-    position:fixed;
-    right:20px;
-    bottom:90px;
-    width:50px;
-    height:50px;
-    border:none;
-    border-radius:50%;
-    background:#22c55e;
-    color:#fff;
-    font-size:20px;
-    cursor:pointer;
-    display:none;
-    z-index:999;
-    box-shadow:0 5px 15px rgba(0,0,0,.30);
-}
-
-/* ==========================
-BOTTOM NAVIGATION
-========================== */
-
-.bottom-nav{
-    position:fixed;
+.rank-card::before{
+    content:"";
+    position:absolute;
     left:0;
     bottom:0;
     width:100%;
-    height:70px;
-    background:#111827;
-    display:flex;
-    justify-content:space-around;
-    align-items:center;
-    border-top:1px solid #374151;
-    z-index:999;
-}
-
-.bottom-nav a{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    color:#ffffff;
-    text-decoration:none;
-    font-size:12px;
-}
-
-.bottom-nav a i{
-    font-size:22px;
-    margin-bottom:4px;
-}
-
-.bottom-nav a:hover{
-    color:#22c55e;
-}
-
-/* ==========================
-FOOTER
-========================== */
-
-footer{
-    margin-top:30px;
-    padding:30px 20px 100px;
-    text-align:center;
-    background:#111827;
-    border-top:2px solid #22c55e;
-}
-
-footer h2{
-    font-size:24px;
-    margin-bottom:10px;
-}
-
-footer p{
-    color:#cbd5e1;
-    line-height:1.8;
-    margin-bottom:15px;
-}
-
-footer a{
-    color:#22c55e;
-    text-decoration:none;
-}
-
-/* ==========================
-FLOATING BUTTONS
-========================== */
-
-.telegram-float,
-.whatsapp-float{
-    position:fixed;
-    right:20px;
-    width:55px;
-    height:55px;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:#fff;
-    font-size:24px;
-    text-decoration:none;
-    z-index:999;
-    box-shadow:0 8px 20px rgba(0,0,0,.35);
-}
-
-.telegram-float{
-    bottom:220px;
-    background:#229ED9;
-}
-
-.whatsapp-float{
-    bottom:155px;
-    background:#25D366;
-}
-
-.telegram-float:hover,
-.whatsapp-float:hover{
-    transform:scale(1.08);
-}
-/* ==========================
-LOADER
-========================== */
-
-#loader{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:#0f172a;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    z-index:99999;
-}
-
-.loader-circle{
-    width:60px;
-    height:60px;
-    border:6px solid rgba(255,255,255,.15);
-    border-top:6px solid #22c55e;
-    border-radius:50%;
-    animation:spin 1s linear infinite;
-}
-
-#loader p{
-    margin-top:15px;
-    color:#fff;
-    font-size:18px;
-    font-weight:600;
-}
-
-@keyframes spin{
-    from{
-        transform:rotate(0deg);
-    }
-    to{
-        transform:rotate(360deg);
-    }
-}
-
-/* ==========================
-ANIMATION
-========================== */
-
-.game-card,
-.rank-card,
-.feature-card,
-.faq-item,
-.join-card{
-    transition:.35s ease;
-}
-
-.game-card:hover,
-.rank-card:hover,
-.feature-card:hover,
-.faq-item:hover{
-    transform:translateY(-6px);
-    box-shadow:0 15px 35px rgba(34,197,94,.25);
-}
-
-.download-btn{
-    transition:.3s;
-}
-
-.download-btn:hover{
-    background:#15803d;
-    transform:scale(1.03);
-}
-
-/* ==========================
-CUSTOM SCROLLBAR
-========================== */
-
-::-webkit-scrollbar{
-    width:8px;
-}
-
-::-webkit-scrollbar-track{
-    background:#111827;
-}
-
-::-webkit-scrollbar-thumb{
-    background:#22c55e;
-    border-radius:20px;
-}
-
-::-webkit-scrollbar-thumb:hover{
-    background:#16a34a;
-}
-
-/* ==========================
-IMAGE EFFECT
-========================== */
-
-.game-card img,
-.rank-card img{
-    transition:.35s;
-}
-
-.game-card:hover img,
-.rank-card:hover img{
-    transform:scale(1.05);
-}
-
-/* ==========================
-MOBILE FIX
-========================== */
-
-@media(max-width:480px){
-
-.header{
-    padding:12px;
-}
-
-.logo{
-    width:45px;
     height:45px;
+    background:rgba(255,255,255,.12);
+    border-radius:18px 18px 0 0;
 }
 
-.logo-box h1{
-    font-size:18px;
+.rank1{
+    margin-bottom:28px;
+    z-index:3;
 }
 
-.logo-box p{
-    font-size:11px;
+.rank2{
+    margin-bottom:12px;
+    z-index:2;
 }
 
-.social-box a{
-    width:38px;
-    height:38px;
-    font-size:18px;
+.rank3{
+    margin-bottom:6px;
+    z-index:1;
 }
 
-.games-grid{
-    gap:10px;
-}
-
-.game-card img{
-    height:115px;
-}
-
-.game-info h3{
-    font-size:15px;
-}
-
-.game-info p{
-    font-size:12px;
-}
-
-.download-btn{
-    font-size:13px;
-    padding:10px;
-}
-
-.bottom-nav{
-    height:65px;
-}
-
-.bottom-nav a i{
+.rank1::after,
+.rank2::after,
+.rank3::after{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:-40px;
+    width:80%;
+    height:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     font-size:20px;
+    font-weight:700;
+    color:#fff;
+    border-radius:0 0 14px 14px;
 }
 
-.bottom-nav a span{
-    font-size:11px;
+.rank1::after{
+    content:"1";
+    background:#f4b400;
+}
+
+.rank2::after{
+    content:"2";
+    background:#8e44ad;
+}
+
+.rank3::after{
+    content:"3";
+    background:#8d5524;
+}
+
+.top3{
+    padding-bottom:55px;
+}
+
+@media(max-width:768px){
+
+.rank1::after,
+.rank2::after,
+.rank3::after{
+    height:34px;
+    bottom:-34px;
+    font-size:18px;
+}
+
+.top3{
+    padding-bottom:45px;
 }
 
 }
-
-/* ==========================
-END
-========================== */
