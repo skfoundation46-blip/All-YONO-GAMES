@@ -1,6 +1,6 @@
-/* =========================
+/* ==========================
    RESET
-========================= */
+========================== */
 
 *{
     margin:0;
@@ -8,585 +8,795 @@
     box-sizing:border-box;
 }
 
-body{
-    font-family:'Poppins',sans-serif;
-    background:#0f172a;
-    color:#fff;
-    overflow-x:hidden;
+html{
+    scroll-behavior:smooth;
 }
 
-/* =========================
-   HEADER
-========================= */
+body{
+
+    background:#0b1220;
+
+    color:#fff;
+
+    font-family:Poppins,sans-serif;
+
+    overflow-x:hidden;
+
+}
+
+/* ==========================
+HEADER
+========================== */
+
+header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+    background:#111827;
+
+    padding:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.45);
+
+}
 
 .header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:#111827;
-    padding:15px;
+
     display:flex;
+
+    align-items:center;
+
     justify-content:space-between;
-    align-items:center;
-    box-shadow:0 3px 10px rgba(0,0,0,.4);
+
 }
 
-.logo{
+.logo-area{
+
     display:flex;
+
     align-items:center;
+
     gap:12px;
+
 }
 
-.logo i{
-    font-size:34px;
-    color:#FFD700;
+.logo-area img{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:14px;
+
+    object-fit:cover;
+
 }
 
-.logo h1{
-    font-size:22px;
+.logo-text h1{
+
+    font-size:30px;
+
     font-weight:700;
+
+    color:#ffffff;
+
 }
 
-.logo p{
-    font-size:12px;
-    color:#bbb;
+.logo-text p{
+
+    color:#bcbcbc;
+
+    font-size:15px;
+
+    margin-top:4px;
+
 }
 
-.header-btns{
+/* Telegram + WhatsApp */
+
+.social{
+
     display:flex;
+
     gap:10px;
+
 }
 
-.telegram-btn,
-.whatsapp-btn{
-    width:42px;
-    height:42px;
+.social a{
+
+    width:45px;
+
+    height:45px;
+
     border-radius:50%;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
-    text-decoration:none;
+
     color:#fff;
-    font-size:20px;
+
+    text-decoration:none;
+
+    font-size:22px;
+
 }
 
-.telegram-btn{
+.telegram{
+
     background:#229ED9;
+
 }
 
-.whatsapp-btn{
+.whatsapp{
+
     background:#25D366;
+
 }
 
-/* =========================
-   SEARCH
-========================= */
-
-.search-section{
-    padding:15px;
-}
+/* ==========================
+SEARCH
+========================== */
 
 .search-box{
-    background:#1f2937;
-    border-radius:12px;
-    display:flex;
-    align-items:center;
-    padding:14px;
-}
 
-.search-box i{
-    color:#888;
-    margin-right:10px;
+    margin-top:18px;
+
+    display:flex;
+
+    gap:10px;
+
 }
 
 .search-box input{
-    width:100%;
-    background:none;
-    border:none;
-    outline:none;
-    color:#fff;
-    font-size:16px;
-}
-/* =========================
-   TOP 3 GAMES
-========================= */
 
-.top3-section{
-    padding:18px;
-}
-
-.top3-section h2{
-    text-align:center;
-    font-size:24px;
-    margin-bottom:20px;
-}
-
-.top3-container{
-    display:flex;
-    justify-content:center;
-    align-items:flex-end;
-    gap:10px;
-}
-
-.top-card{
     flex:1;
-    background:#1e293b;
-    border-radius:18px;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#1f2937;
+
+    color:#fff;
+
+    padding:0 18px;
+
+    font-size:17px;
+
+}
+
+.search-box button{
+
+    width:60px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#16a34a;
+
+    color:#fff;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+}
+/* ==========================
+TOP 3 GAMES
+========================== */
+
+.top3-title{
+
     text-align:center;
-    padding:15px 10px;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    margin:25px 0;
+
+}
+
+.top3{
+
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:center;
+
+    gap:12px;
+
+    padding:0 12px 25px;
+
+}
+
+.podium{
+
+    flex:1;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    padding:18px 12px;
+
     position:relative;
-    box-shadow:0 8px 20px rgba(0,0,0,.35);
-    transition:.3s;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.45);
+
 }
 
-.top-card:hover{
-    transform:translateY(-8px);
+.podium img{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:20px;
+
+    object-fit:cover;
+
+    margin-bottom:10px;
+
 }
 
-.top-card.first{
-    transform:scale(1.08);
-    background:linear-gradient(180deg,#FFD700,#F59E0B);
-    color:#111;
+.podium h3{
+
+    font-size:20px;
+
+    margin:8px 0;
+
 }
 
-.top-card.second{
-    background:linear-gradient(180deg,#94A3B8,#64748B);
-}
+.podium p{
 
-.top-card.third{
-    background:linear-gradient(180deg,#CD7F32,#8B5A2B);
+    font-size:15px;
+
+    color:#ddd;
+
+    margin:4px 0;
+
 }
 
 .rank{
+
     position:absolute;
-    top:-12px;
+
+    top:-15px;
+
     left:50%;
+
     transform:translateX(-50%);
-    width:34px;
-    height:34px;
+
+    width:42px;
+
+    height:42px;
+
     border-radius:50%;
+
     background:#fff;
+
     color:#111;
-    font-weight:700;
+
     display:flex;
-    justify-content:center;
+
     align-items:center;
-}
 
-.top-card img{
-    width:70px;
-    height:70px;
-    border-radius:18px;
-    margin:12px auto;
-    display:block;
-    object-fit:cover;
-    border:3px solid #fff;
-}
+    justify-content:center;
 
-.top-card h3{
-    font-size:16px;
-    margin:8px 0;
-}
+    font-size:20px;
 
-.top-card p{
-    font-size:13px;
-    margin-bottom:8px;
-}
-
-.bonus{
-    display:inline-block;
-    background:#16a34a;
-    color:#fff;
-    padding:5px 12px;
-    border-radius:20px;
-    font-size:12px;
-    font-weight:600;
-    margin:8px 0;
-}
-
-.play-btn{
-    display:block;
-    margin-top:10px;
-    background:#22c55e;
-    color:#fff;
-    text-decoration:none;
-    padding:10px;
-    border-radius:10px;
-    font-weight:600;
-}
-
-.play-btn:hover{
-    background:#16a34a;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:768px){
-
-.top3-container{
-    gap:8px;
-}
-
-.top-card{
-    padding:12px 8px;
-}
-
-.top-card img{
-    width:60px;
-    height:60px;
-}
-
-.top-card h3{
-    font-size:14px;
-}
-
-.play-btn{
-    font-size:13px;
-    padding:8px;
-}
+    font-weight:700;
 
 }
-/* =========================
-   POPULAR GAMES
-========================= */
 
-.games-section{
-    padding:18px;
+/* Gold */
+
+.first{
+
+    background:linear-gradient(180deg,#ffd54a,#ff9800);
+
+    min-height:290px;
+
 }
 
-.games-section h2{
-    text-align:center;
-    font-size:24px;
-    margin-bottom:18px;
+/* Silver */
+
+.second{
+
+    background:linear-gradient(180deg,#d9d9d9,#9ca3af);
+
+    min-height:250px;
+
 }
 
-#gamesContainer{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:12px;
-}
+/* Bronze */
 
-.game-card{
-    background:#1e293b;
-    border-radius:16px;
-    overflow:hidden;
-    box-shadow:0 6px 18px rgba(0,0,0,.35);
-    transition:.3s;
-}
+.third{
 
-.game-card:hover{
-    transform:translateY(-6px);
-}
+    background:linear-gradient(180deg,#d8892c,#8d5524);
 
-.game-card img{
-    width:100%;
-    aspect-ratio:1/1;
-    object-fit:cover;
-    display:block;
-}
+    min-height:250px;
 
-.game-info{
-    padding:10px;
-    text-align:center;
-}
-
-.game-info h3{
-    font-size:14px;
-    margin-bottom:6px;
-    color:#fff;
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
-}
-
-.game-info p{
-    font-size:12px;
-    color:#cbd5e1;
-    margin:3px 0;
 }
 
 .download-btn{
+
     display:block;
-    margin-top:8px;
-    background:#22c55e;
+
+    margin-top:12px;
+
+    background:#00d95f;
+
     color:#fff;
+
     text-decoration:none;
-    padding:8px;
-    border-radius:8px;
-    font-size:13px;
-    font-weight:600;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    font-weight:700;
+
+    transition:.3s;
+
 }
 
 .download-btn:hover{
-    background:#16a34a;
-}
 
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:768px){
-
-    #gamesContainer{
-        grid-template-columns:repeat(3,1fr);
-        gap:8px;
-    }
-
-    .game-card img{
-        aspect-ratio:1/1;
-    }
-
-    .game-info{
-        padding:8px;
-    }
-
-    .game-info h3{
-        font-size:12px;
-    }
-
-    .game-info p{
-        font-size:10px;
-    }
-
-    .download-btn{
-        font-size:11px;
-        padding:7px;
-    }
+    background:#00b84f;
 
 }
-/* =========================
-   FEATURES
-========================= */
 
-.features{
-    padding:20px 15px;
-}
+/* ==========================
+POPULAR GAMES
+========================== */
 
-.features h2{
-    text-align:center;
-    font-size:24px;
-    margin-bottom:8px;
-}
+.games{
 
-.sub-title{
-    text-align:center;
-    color:#94a3b8;
-    margin-bottom:20px;
-}
-
-.feature-grid{
     display:grid;
+
     grid-template-columns:repeat(2,1fr);
-    gap:12px;
+
+    gap:14px;
+
+    padding:15px;
+
+}
+
+.game-card{
+
+    background:#182233;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.35);
+
+}
+
+.game-card img{
+
+    width:100%;
+
+    height:145px;
+
+    object-fit:cover;
+
+}
+
+.game-info{
+
+    padding:12px;
+
+    text-align:center;
+
+}
+
+.game-info h4{
+
+    font-size:18px;
+
+    margin-bottom:8px;
+
+}
+
+.game-info p{
+
+    color:#d1d5db;
+
+    font-size:14px;
+
+    margin-bottom:6px;
+
+}
+
+.game-info .download-btn{
+
+    margin-top:10px;
+
+}
+/* ==========================
+FEATURES SECTION
+========================== */
+
+.features-section{
+
+    padding:25px 15px;
+
+}
+
+.features-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
 }
 
 .feature-card{
-    background:#1e293b;
-    border-radius:16px;
-    padding:18px;
+
+    background:#182233;
+
+    border-radius:18px;
+
+    padding:20px 15px;
+
     text-align:center;
-    box-shadow:0 6px 18px rgba(0,0,0,.35);
+
+    transition:.3s;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.30);
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-5px);
+
 }
 
 .feature-card i{
-    font-size:28px;
-    color:#22c55e;
-    margin-bottom:10px;
+
+    font-size:35px;
+
+    color:#00e676;
+
+    margin-bottom:12px;
+
 }
 
 .feature-card h3{
-    font-size:16px;
+
+    font-size:18px;
+
     margin-bottom:8px;
+
 }
 
 .feature-card p{
-    font-size:13px;
-    color:#cbd5e1;
-}
 
-/* =========================
-   JOIN CARDS
-========================= */
+    color:#cfcfcf;
 
-.telegram-banner,
-.whatsapp-banner{
-    padding:15px;
-}
-
-.telegram-content{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:15px;
-    background:#1e293b;
-    border-radius:18px;
-    padding:18px;
-}
-
-.telegram-banner .fab{
-    color:#229ED9;
-    font-size:38px;
-}
-
-.whatsapp-banner .fab{
-    color:#25D366;
-    font-size:38px;
-}
-
-.banner-btn{
-    background:#22c55e;
-    color:#fff;
-    text-decoration:none;
-    padding:10px 18px;
-    border-radius:10px;
-    font-weight:600;
-}
-
-/* =========================
-   FAQ
-========================= */
-
-.faq-section{
-    padding:20px 15px;
-}
-
-.faq-section h2{
-    text-align:center;
-    margin-bottom:20px;
-}
-
-.faq-box{
-    background:#1e293b;
-    padding:15px;
-    border-radius:14px;
-    margin-bottom:12px;
-}
-
-.faq-box h3{
-    font-size:16px;
-    margin-bottom:8px;
-}
-
-.faq-box p{
-    color:#cbd5e1;
     font-size:14px;
+
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* ==========================
+JOIN BANNER
+========================== */
+
+.join-section{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:15px;
+
+    padding:15px;
+
+}
+
+.join{
+
+    text-decoration:none;
+
+    color:#fff;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.35);
+
+}
+
+.join i{
+
+    font-size:38px;
+
+}
+
+.join h3{
+
+    font-size:18px;
+
+}
+
+.join span{
+
+    color:#e5e5e5;
+
+    font-size:13px;
+
+}
+
+.join.telegram{
+
+    background:#0f7ed8;
+
+}
+
+.join.whatsapp{
+
+    background:#16a34a;
+
+}
+
+/* ==========================
+RESPONSIVE
+========================== */
 
 @media(max-width:768px){
 
-.feature-grid{
-    grid-template-columns:repeat(2,1fr);
+.top3{
+
+gap:8px;
+
 }
 
-.telegram-content{
+.podium img{
+
+width:70px;
+
+height:70px;
+
+}
+
+.logo-area img{
+
+width:52px;
+
+height:52px;
+
+}
+
+.logo-text h1{
+
+font-size:24px;
+
+}
+
+.games{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:10px;
+
+padding:10px;
+
+}
+
+.game-card img{
+
+height:120px;
+
+}
+
+.join-section{
+
+grid-template-columns:1fr;
+
+}
+
+.features-grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+}
+
+/* ==========================
+ANIMATION
+========================== */
+
+.download-btn{
+
+transition:.3s;
+
+}
+
+.download-btn:hover{
+
+transform:scale(1.05);
+
+}
+
+.game-card{
+
+transition:.35s;
+
+}
+
+.game-card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 15px 30px rgba(0,0,0,.45);
+
+}
+
+.podium{
+
+transition:.35s;
+
+}
+
+.podium:hover{
+
+transform:translateY(-8px);
+
+}
+/* ==========================
+FAQ SECTION
+========================== */
+
+.faq-section{
+    padding:25px 15px;
+}
+
+.faq-container{
+    display:flex;
     flex-direction:column;
-    text-align:center;
+    gap:15px;
 }
 
-.banner-btn{
-    width:100%;
-    text-align:center;
+.faq-item{
+    background:#182233;
+    padding:18px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.30);
 }
 
+.faq-item h3{
+    font-size:18px;
+    margin-bottom:10px;
+    color:#ffffff;
 }
-/* =========================
-   FOOTER
-========================= */
+
+.faq-item p{
+    font-size:14px;
+    color:#d1d5db;
+    line-height:1.7;
+}
+
+/* ==========================
+FOOTER
+========================== */
 
 .footer{
     background:#111827;
-    padding:30px 20px;
+    padding:30px 20px 100px;
     text-align:center;
-    margin-top:30px;
-    border-top:2px solid #22c55e;
+    border-top:2px solid #16a34a;
 }
 
-.footer h2{
-    color:#22c55e;
-    margin-bottom:12px;
-    font-size:24px;
+.footer-logo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    margin-bottom:15px;
+}
+
+.footer-logo i{
+    font-size:32px;
+    color:#16a34a;
+}
+
+.footer-logo h2{
+    font-size:26px;
 }
 
 .footer p{
     color:#cbd5e1;
-    line-height:1.7;
-    font-size:14px;
+    line-height:1.8;
 }
 
 .footer-links{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-    gap:15px;
+    gap:18px;
     margin:20px 0;
 }
 
 .footer-links a{
     color:#ffffff;
     text-decoration:none;
-    font-size:14px;
-    transition:.3s;
+    font-weight:500;
 }
 
 .footer-links a:hover{
-    color:#22c55e;
+    color:#16a34a;
 }
 
-.copyright{
-    margin-top:15px;
-    color:#94a3b8;
-    font-size:13px;
-}
+/* ==========================
+FLOATING BUTTONS
+========================== */
 
-/* =========================
-   FLOATING BUTTONS
-========================= */
-
-.floating{
+.floating-btn{
     position:fixed;
+    right:18px;
     width:56px;
     height:56px;
     border-radius:50%;
     display:flex;
     justify-content:center;
     align-items:center;
+    text-decoration:none;
     color:#fff;
     font-size:24px;
-    text-decoration:none;
-    box-shadow:0 8px 18px rgba(0,0,0,.35);
     z-index:999;
+    box-shadow:0 10px 20px rgba(0,0,0,.35);
 }
 
-.telegram{
-    right:18px;
-    bottom:95px;
+.telegram-float{
+    bottom:170px;
     background:#229ED9;
 }
 
-.whatsapp{
-    right:18px;
-    bottom:165px;
+.whatsapp-float{
+    bottom:100px;
     background:#25D366;
 }
 
-.floating:hover{
+.floating-btn:hover{
     transform:scale(1.08);
 }
 
-/* =========================
-   SCROLL BUTTON
-========================= */
+/* ==========================
+SCROLL BUTTON
+========================== */
 
 #scrollTopBtn{
     position:fixed;
+    bottom:28px;
     right:18px;
-    bottom:25px;
     width:50px;
     height:50px;
     border:none;
@@ -596,81 +806,212 @@ body{
     cursor:pointer;
     display:none;
     font-size:20px;
-    box-shadow:0 8px 18px rgba(0,0,0,.35);
+    z-index:999;
 }
 
-/* =========================
-   LOADER
-========================= */
+#scrollTopBtn:hover{
+    transform:scale(1.08);
+}
+
+/* ==========================
+BOTTOM NAVIGATION
+========================== */
+
+.bottom-nav{
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    height:70px;
+    background:#111827;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    border-top:1px solid #374151;
+    z-index:999;
+}
+
+.bottom-nav a{
+    color:#ffffff;
+    text-decoration:none;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    font-size:12px;
+}
+
+.bottom-nav a i{
+    font-size:22px;
+    margin-bottom:4px;
+}
+
+.bottom-nav a.active{
+    color:#16a34a;
+}
+/* ==========================
+LOADER
+========================== */
 
 #loader{
     position:fixed;
-    inset:0;
-    background:#0f172a;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#0b1220;
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
-    flex-direction:column;
-    z-index:9999;
+    z-index:99999;
 }
 
 .loader-circle{
     width:60px;
     height:60px;
-    border:6px solid #334155;
-    border-top:6px solid #22c55e;
+    border:6px solid #2d3748;
+    border-top:6px solid #16a34a;
     border-radius:50%;
     animation:spin 1s linear infinite;
 }
 
+#loader p{
+    margin-top:15px;
+    color:#ffffff;
+    font-size:18px;
+    font-weight:600;
+}
+
 @keyframes spin{
-    from{transform:rotate(0deg);}
-    to{transform:rotate(360deg);}
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
 }
 
-/* =========================
-   SMOOTH SCROLL
-========================= */
+/* ==========================
+SECTION TITLE
+========================== */
 
-html{
-    scroll-behavior:smooth;
+.section-title{
+    text-align:center;
+    margin:30px 0 20px;
 }
 
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:768px){
-
-.footer{
-    padding:25px 15px;
+.section-title h2{
+    font-size:28px;
+    color:#ffffff;
+    margin-bottom:8px;
 }
 
-.footer h2{
+.section-title p{
+    color:#94a3b8;
+    font-size:15px;
+}
+
+/* ==========================
+CUSTOM SCROLLBAR
+========================== */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111827;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#16a34a;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#22c55e;
+}
+
+/* ==========================
+IMAGE EFFECT
+========================== */
+
+.game-card img,
+.podium img{
+    transition:.35s;
+}
+
+.game-card:hover img,
+.podium:hover img{
+    transform:scale(1.06);
+}
+
+/* ==========================
+CARD GLOW
+========================== */
+
+.game-card,
+.feature-card,
+.faq-item,
+.podium{
+    border:1px solid rgba(255,255,255,.06);
+}
+
+.game-card:hover,
+.feature-card:hover,
+.podium:hover{
+    border-color:#16a34a;
+}
+
+/* ==========================
+MOBILE
+========================== */
+
+@media(max-width:480px){
+
+.logo-text h1{
     font-size:20px;
 }
 
-.footer-links{
-    gap:10px;
+.logo-text p{
+    font-size:12px;
 }
 
-.floating{
-    width:50px;
-    height:50px;
-    font-size:22px;
+.top3-title{
+    font-size:24px;
 }
 
-.telegram{
-    bottom:85px;
+.podium{
+    padding:12px;
 }
 
-.whatsapp{
-    bottom:145px;
+.podium h3{
+    font-size:16px;
 }
 
-#scrollTopBtn{
-    width:46px;
-    height:46px;
+.game-info h4{
+    font-size:15px;
+}
+
+.download-btn{
+    padding:10px;
+    font-size:14px;
+}
+
+.bottom-nav{
+    height:65px;
+}
+
+.bottom-nav i{
+    font-size:20px;
+}
+
+.bottom-nav span{
+    font-size:11px;
 }
 
 }
+
+/* ==========================
+END
+========================== */
