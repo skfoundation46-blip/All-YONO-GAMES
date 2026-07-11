@@ -3,23 +3,38 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>All YONO GAMES NEW</title>
+
+<meta name="theme-color" content="#0f172a">
+
+<meta name="description" content="All YONO Games Download">
 
 <link rel="stylesheet" href="style.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 
 <body>
+
+<!-- Loader -->
+
+<div id="loader">
+
+<div class="loader-circle"></div>
+
+<p>Loading...</p>
+
+</div>
 
 <!-- Header -->
 
@@ -27,26 +42,30 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <div class="logo-box">
 
-<img src="images/logo.png" class="logo">
+<img src="images/logo.png" class="logo" alt="Logo">
 
 <div>
 
-<h1>YONO GAMES</h1>
+<h1>ALL YONO GAMES</h1>
 
-<p>All Games In One Place</p>
-
-</div>
+<p>Download All Games</p>
 
 </div>
 
-<div class="social">
+</div>
 
-<a href="https://t.me/+i1ZDx7rzMMc4ZmZl">
+<div class="social-box">
+
+<a href="https://t.me/+i1ZDx7rzMMc4ZmZl" target="_blank">
+
 <i class="fab fa-telegram"></i>
+
 </a>
 
-<a href="https://whatsapp.com/channel/0029Vb6ncxAEQIaoxcCLVo1Z">
+<a href="https://whatsapp.com/channel/0029Vb6ncxAEQIaoxcCLVo1Z" target="_blank">
+
 <i class="fab fa-whatsapp"></i>
+
 </a>
 
 </div>
@@ -55,7 +74,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <!-- Search -->
 
-<div class="search-box">
+<section class="search-section">
 
 <input
 type="text"
@@ -64,70 +83,197 @@ placeholder="Search Games...">
 
 <button>
 
-<i class="fa fa-search"></i>
+<i class="fa-solid fa-magnifying-glass"></i>
 
 </button>
 
-</div>
+</section>
+<!-- ==========================
+TOP 3 GAMES
+========================== -->
 
-<!-- TOP 3 -->
+<section class="top-section">
 
-<h2 class="title">
+<h2 class="section-title">
 🏆 Top 3 Games
 </h2>
 
-<div id="top3" class="top3"></div>
+<div id="top3" class="top3">
 
-<!-- ALL GAMES -->
+<!-- Top 3 Games script.js દ્વારા અહીં લોડ થશે -->
 
-<h2 class="title">
+</div>
+
+</section>
+
+<!-- ==========================
+POPULAR GAMES
+========================== -->
+
+<section class="games-section">
+
+<div class="section-header">
+
+<h2 class="section-title">
 🔥 Popular Games
 </h2>
 
-<div id="games" class="games-grid"></div>
+<span id="totalGames"></span>
 
-<!-- Bottom Menu -->
+</div>
 
-<nav class="bottom-nav">
+<div id="games" class="games-grid">
 
-<a href="index.html">
+<!-- તમામ Games અહીં script.js દ્વારા આવશે -->
 
-<i class="fa fa-home"></i>
+</div>
 
-<span>Home</span>
+</section>
 
-</a>
+<!-- ==========================
+JOIN COMMUNITY
+========================== -->
 
-<a href="#games">
+<section class="join-section">
 
-<i class="fa fa-gamepad"></i>
+<div class="join-card">
 
-<span>Games</span>
+<h2>📢 Join Our Community</h2>
 
-</a>
+<p>
+Latest YONO Games, Bonus Offers,
+APK Updates અને Daily Links માટે
+અમારી Telegram અને WhatsApp Channel Join કરો.
+</p>
 
-<a href="https://t.me/+i1ZDx7rzMMc4ZmZl">
+<div class="join-buttons">
+
+<a href="https://t.me/+i1ZDx7rzMMc4ZmZl"
+target="_blank"
+class="telegram-btn">
 
 <i class="fab fa-telegram"></i>
 
-<span>Telegram</span>
+Telegram
 
 </a>
 
-<a href="https://whatsapp.com/channel/0029Vb6ncxAEQIaoxcCLVo1Z">
+<a href="https://whatsapp.com/channel/0029Vb6ncxAEQIaoxcCLVo1Z"
+target="_blank"
+class="whatsapp-btn">
 
 <i class="fab fa-whatsapp"></i>
 
-<span>WhatsApp</span>
+WhatsApp
 
+</a>
+
+</div>
+
+</div>
+
+</section>
+<!-- ==========================
+BOTTOM NAVIGATION
+========================== -->
+
+<nav class="bottom-nav">
+
+<a href="index.html" class="active">
+<i class="fas fa-home"></i>
+<span>Home</span>
+</a>
+
+<a href="#top3">
+<i class="fas fa-trophy"></i>
+<span>Top 3</span>
+</a>
+
+<a href="#games">
+<i class="fas fa-gamepad"></i>
+<span>Games</span>
+</a>
+
+<a href="https://t.me/+i1ZDx7rzMMc4ZmZl" target="_blank">
+<i class="fab fa-telegram"></i>
+<span>Telegram</span>
+</a>
+
+<a href="https://whatsapp.com/channel/0029Vb6ncxAEQIaoxcCLVo1Z" target="_blank">
+<i class="fab fa-whatsapp"></i>
+<span>WhatsApp</span>
 </a>
 
 </nav>
 
+<!-- ==========================
+SCROLL TO TOP
+========================== -->
+
+<button id="scrollTopBtn" class="scroll-top">
+
+<i class="fas fa-arrow-up"></i>
+
+</button>
+
+<!-- ==========================
+FOOTER
+========================== -->
+
+<footer class="footer">
+
+<p>
+© 2026 All YONO GAMES NEW
+</p>
+
+<p>
+Made with ❤️ for Mobile Users
+</p>
+
+</footer>
+<!-- ==========================
+LOADER
+========================== -->
+
+<div id="loader">
+    <div class="loader-circle"></div>
+    <p>Loading Games...</p>
+</div>
+
+<!-- ==========================
+FLOATING BUTTONS
+========================== -->
+
+<a href="https://t.me/+i1ZDx7rzMMc4ZmZl"
+   class="telegram-float"
+   target="_blank">
+
+<i class="fab fa-telegram-plane"></i>
+
+</a>
+
+<a href="https://whatsapp.com/channel/0029Vb6ncxAEQIaoxcCLVo1Z"
+   class="whatsapp-float"
+   target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+<!-- ==========================
+JAVASCRIPT FILES
+========================== -->
+
 <script src="games.js"></script>
 
 <script src="script.js"></script>
+<!-- ==========================
+END OF PAGE
+========================== -->
+
+<script>
+console.log("All YONO GAMES NEW Loaded Successfully");
+</script>
 
 </body>
-
 </html>
