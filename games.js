@@ -1,469 +1,541 @@
+// ==========================================
+// ALL YONO GAMES NEW
+// games.js - Part 1
+// ==========================================
+
 const games = [
 
 {
-name:"Game Rummy",
-image:"images/gamerummy.png",
-page:"games/gamerummy.html",
-download:"https://gamerummyc.com/?code=Q6WD4YVGSKG&t=1783045708",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"5.0"
+    id:1,
+    name:"Game Rummy",
+    image:"images/gamerummy.png",
+    page:"gamerummy.html",
+    rating:"5.0",
+    bonus:"₹100 Bonus"
 },
 
 {
-name:"Go Spin",
-image:"images/gospin.png",
-page:"games/gospin.html",
-download:"https://www.gospin.bet/?code=498S6EMARN5&t=1783045757",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"5.0"
+    id:2,
+    name:"Go Spin",
+    image:"images/gospin.png",
+    page:"gospin.html",
+    rating:"5.0",
+    bonus:"₹100 Bonus"
 },
 
 {
-name:"Hindi777",
-image:"images/Hindi777.png",
-page:"games/hindi777.html",
-download:"https://www.hindi777agent5.com/?code=7LFCL9PJ516&t=1783045793",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:3,
+    name:"Hindi777",
+    image:"images/hindi777.png",
+    page:"hindi777.html",
+    rating:"5.0",
+    bonus:"₹100 Bonus"
 },
 
 {
-name:"Hi Rummy",
-image:"images/HiRummy.png",
-page:"games/hirummy.html",
-download:"https://joinhirummy.cc/?code=RX3HPNUFL1W&t=1783045895",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:4,
+    name:"Hi Rummy",
+    image:"images/hirummy.png",
+    page:"hirummy.html",
+    rating:"4.9",
+    bonus:"₹90 Bonus"
 },
 
 {
-name:"Ind Club",
-image:"images/indclub.png",
-page:"games/indclub.html",
-download:"https://indclub36.com/?code=34UGAHJAEGU&t=1783045944",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:5,
+    name:"Ind Club",
+    image:"images/indclub.png",
+    page:"indclub.html",
+    rating:"4.9",
+    bonus:"₹90 Bonus"
 },
 
 {
-name:"Ind Slots",
-image:"images/indslots.png",
-page:"games/indslots.html",
-download:"https://www.indslotsgame.com/?code=T2Q18VEZGLG&t=1783045984",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:6,
+    name:"Ind Slots",
+    image:"images/indslots.png",
+    page:"indslots.html",
+    rating:"4.9",
+    bonus:"₹90 Bonus"
 },
 
 {
-name:"MQM Bet",
-image:"images/mqmbet.png",
-page:"games/mqmbet.html",
-download:"https://6mqmshare.vip?pid=337905532&channel=2030000&pkg=com.mqmbet3001.app",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:7,
+    name:"MQM Bet",
+    image:"images/mqm.png",
+    page:"mqm.html",
+    rating:"4.8",
+    bonus:"₹100 Bonus"
 },
 
 {
-name:"INR Rummy",
-image:"images/inrrummy.png",
-page:"games/inrrummy.html",
-download:"https://inrrummysvip2.net/?code=JMQKAVX7KWE&t=1783046109",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
-},
-
-{
-name:"Jaiho Arcade",
-image:"images/jaihoarcade.png",
-page:"games/jaihoarcade.html",
-download:"https://www.jaihoarcade34.com/?code=AZDCZKW7BNV&t=1783046145",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
-},
-
-{
-name:"Jaiho Slots",
-image:"images/jaihoslots.png",
-page:"games/jaihoslots.html",
-download:"https://www.jaihoslots18.com/?code=EGP7RY4XTDY&t=1783046174",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:8,
+    name:"INR Rummy",
+    image:"images/inrrummy.png",
+    page:"inrrummy.html",
+    rating:"4.8",
+    bonus:"₹100 Bonus"
 },
   {
-name:"Jaiho Spin",
-image:"images/jaihospin.png",
-page:"games/jaihospin.html",
-download:"https://1jaihospinslot.com/?code=7TA6DT11LF3&t=1783046216",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:9,
+    name:"Jaiho Arcade",
+    image:"images/jaihoarcade.png",
+    page:"jaihoarcade.html",
+    rating:"4.8",
+    bonus:"₹100 Bonus"
 },
 
 {
-name:"Jaiho Win",
-image:"images/jaihowin.png",
-page:"games/jaihowin.html",
-download:"https://www.jaihowin16.com/?code=1XN5PLDRBGJ&t=1783046440",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:10,
+    name:"Jaiho Slots",
+    image:"images/jaihoslots.png",
+    page:"jaihoslots.html",
+    rating:"4.8",
+    bonus:"₹100 Bonus"
 },
 
 {
-name:"Jaiho777",
-image:"images/jaiho777.png",
-page:"games/jaiho777.html",
-download:"https://jaiho77792.com/?code=GC2PL1RSXZD&t=1783046484",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:11,
+    name:"Jaiho Spin",
+    image:"images/jaihospin.png",
+    page:"jaihospin.html",
+    rating:"4.8",
+    bonus:"₹100 Bonus"
 },
 
 {
-name:"91 Jaiho",
-image:"images/91jaiho.png",
-page:"games/91jaiho.html",
-download:"https://91jaihoapp.com/?code=C422BB6Y941&t=1783046532",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:12,
+    name:"Jaiho Win",
+    image:"images/jaihowin.png",
+    page:"jaihowin.html",
+    rating:"4.9",
+    bonus:"₹100 Bonus"
 },
 
 {
-name:"Joy Rummy",
-image:"images/joyrummy.png",
-page:"games/joyrummy.html",
-download:"https://www.joyrummylux.com/?code=J5KY29TE89Q&t=1783046573",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:13,
+    name:"Jaiho777",
+    image:"images/jaiho777.png",
+    page:"jaiho777.html",
+    rating:"4.9",
+    bonus:"₹120 Bonus"
 },
 
 {
-name:"Love Rummy",
-image:"images/loverummy.png",
-page:"games/loverummy.html",
-download:"https://www.loverummy1.com/?code=AFCJ9HGB44A&t=1783046624",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"5.0"
+    id:14,
+    name:"91 Jaiho",
+    image:"images/91jaiho.png",
+    page:"91jaiho.html",
+    rating:"4.8",
+    bonus:"₹100 Bonus"
 },
 
 {
-name:"Maha Games",
-image:"images/mahagames.png",
-page:"games/mahagames.html",
-download:"https://on-mahagames.com/?code=J24LM8HUX75&t=1783046672",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:15,
+    name:"Joy Rummy",
+    image:"images/joyrummy.png",
+    page:"joyrummy.html",
+    rating:"4.9",
+    bonus:"₹100 Bonus"
 },
 
 {
-name:"MBM Bet",
-image:"images/mbmbet.png",
-page:"games/mbmbet.html",
-download:"https://www.mbmbet28.com/?code=UPH8J9BHY9Q&t=1783046724",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
-},
-
-{
-name:"789 Jackpots",
-image:"images/789jackpots.png",
-page:"games/789jackpots.html",
-download:"https://join789jackpots1.com/?code=J7ZRKV1ELHS&t=1783046769",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
-},
-
-{
-name:"777 OK OK",
-image:"images/777okok.png",
-page:"games/777okok.html",
-download:"https://www.777okok.com/?code=H53V3D3M674&t=1783046815",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:16,
+    name:"Love Rummy",
+    image:"images/loverummy.png",
+    page:"loverummy.html",
+    rating:"5.0",
+    bonus:"₹150 Bonus"
 },
   {
-name:"567 Slots",
-image:"images/567slots.png",
-page:"games/567slots.html",
-download:"https://join567slots1.cc/?code=4NYYNGE217D&t=1783046875",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:17,
+    name:"Maha Games",
+    image:"images/mahagames.png",
+    page:"mahagames.html",
+    rating:"4.9",
+    bonus:"₹100 Bonus"
 },
 
 {
-name:"YONO777 Hub",
-image:"images/yono777hub.png",
-page:"games/yono777hub.html",
-download:"https://yono777hub.online/?code=F9MJTEWN4UX&t=1783047076",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:18,
+    name:"MBM Bet",
+    image:"images/mbmbet.png",
+    page:"mbmbet.html",
+    rating:"4.8",
+    bonus:"₹100 Bonus"
 },
 
 {
-name:"YONO VIP",
-image:"images/yonovip.png",
-page:"games/yonovip.html",
-download:"https://uonovipfast.com/?code=3CRW27JYQQ9&t=1783047147",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:19,
+    name:"789 Jackpots",
+    image:"images/789jackpots.png",
+    page:"789jackpots.html",
+    rating:"4.8",
+    bonus:"₹100 Bonus"
 },
 
 {
-name:"YONO Slots",
-image:"images/yonoslots.png",
-page:"games/yonoslots.html",
-download:"https://www.uonoslots.com/?code=59YKJDMVEZG&t=1783047209",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:20,
+    name:"777 OK OK",
+    image:"images/777okok.png",
+    page:"777okok.html",
+    rating:"4.8",
+    bonus:"₹100 Bonus"
 },
 
 {
-name:"YONO Rummy",
-image:"images/yonorummy.png",
-page:"games/yonorummy.html",
-download:"https://yonorummy047.com/?code=VIPYHS8XTPY&t=1783047280",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:21,
+    name:"567 Slots",
+    image:"images/567slots.png",
+    page:"567slots.html",
+    rating:"4.9",
+    bonus:"₹100 Bonus"
 },
 
 {
-name:"YONO Games",
-image:"images/yonogames.png",
-page:"games/yonogames.html",
-download:"https://youonogamespromocode.com/?code=TC4QC28JKLM&t=1783047332",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:22,
+    name:"YONO777 Hub",
+    image:"images/yono777hub.png",
+    page:"yono777hub.html",
+    rating:"5.0",
+    bonus:"₹150 Bonus"
 },
 
 {
-name:"YONO Official",
-image:"images/yonoofficial.png",
-page:"games/yonoofficial.html",
-download:"https://yonoofficial3.com/?code=GTSRBZZ32Z9&t=1783047379",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:23,
+    name:"UONO VIP",
+    image:"images/uonovip.png",
+    page:"uonovip.html",
+    rating:"4.8",
+    bonus:"₹100 Bonus"
 },
 
 {
-name:"Yes Spin",
-image:"images/yesspin.png",
-page:"games/yesspin.html",
-download:"https://www.yesspinnow.com/?code=47TP7UQQ1PZ&t=1783047472",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
-},
-
-{
-name:"Top Rummy",
-image:"images/toprummy.png",
-page:"games/toprummy.html",
-download:"https://www.toprummy.cc/?code=7K9LY1QFUJ5&t=1783047569",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
-},
-
-{
-name:"Spin101",
-image:"images/spin101.png",
-page:"games/spin101.html",
-download:"https://spin101-c.net/?code=3X2GPDXYBEN&t=1783047712",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:24,
+    name:"UONO Slots",
+    image:"images/uonoslots.png",
+    page:"uonoslots.html",
+    rating:"4.8",
+    bonus:"₹100 Bonus"
 },
   {
-name:"Spin777",
-image:"images/spin777.png",
-page:"games/spin777.html",
-download:"https://spin777dd.com/?code=7V9SH1ZGF27&t=1783047786",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:25,
+    name:"YONO Rummy",
+    image:"images/yonorummy.png",
+    page:"yonorummy.html",
+    rating:"4.9",
+    bonus:"₹100 Bonus"
 },
 
 {
-name:"Spin Winner",
-image:"images/spinwinner.png",
-page:"games/spinwinner.html",
-download:"https://spinwinner-g.com/?code=SDN6ZMNDX1U&t=1783047844",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:26,
+    name:"YONO Promo",
+    image:"images/yonopromo.png",
+    page:"yonopromo.html",
+    rating:"4.8",
+    bonus:"₹100 Bonus"
 },
 
 {
-name:"Safe Earn",
-image:"images/safeearn.png",
-page:"games/safeearn.html",
-download:"https://bkfadsegtgs.safelyearnmillionsbysharingonepersonaqfxzqyj8.com/?code=ADEV1QHDXSF&t=1783047900",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.8"
+    id:27,
+    name:"YONO Official",
+    image:"images/yonoofficial.png",
+    page:"yonoofficial.html",
+    rating:"5.0",
+    bonus:"₹150 Bonus"
 },
 
 {
-name:"Slots Spin",
-image:"images/slotsspin.png",
-page:"games/slotsspin.html",
-download:"https://slotsspinl.com/?code=XJBM7Y8QQQH&t=1783047986",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:28,
+    name:"Yes Spin",
+    image:"images/yesspin.png",
+    page:"yesspin.html",
+    rating:"4.9",
+    bonus:"₹100 Bonus"
 },
 
 {
-name:"Share477",
-image:"images/share477.png",
-page:"games/share477.html",
-download:"https://share477.com/?code=YAZKHB26CGT&t=1783048024",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:29,
+    name:"Top Rummy",
+    image:"images/toprummy.png",
+    page:"toprummy.html",
+    rating:"4.8",
+    bonus:"₹100 Bonus"
 },
 
 {
-name:"Rumble Rummy",
-image:"images/rumblerummy.png",
-page:"games/rumblerummy.html",
-download:"https://www.rumblerummy333.net/?code=UC0SU9FD5QX&t=1783048070",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:30,
+    name:"Spin101",
+    image:"images/spin101.png",
+    page:"spin101.html",
+    rating:"4.8",
+    bonus:"₹100 Bonus"
 },
 
 {
-name:"OK Rummy",
-image:"images/okrummy.png",
-page:"games/okrummy.html",
-download:"https://www.okrummy41.com/?code=H2GU19KMB2W&t=1783048126",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:31,
+    name:"Spin777",
+    image:"images/spin777.png",
+    page:"spin777.html",
+    rating:"4.9",
+    bonus:"₹120 Bonus"
 },
 
 {
-name:"Rummy77",
-image:"images/rummy77.png",
-page:"games/rummy77.html",
-download:"https://rummy77bonus.net/?code=F3VJQX8LLY7&t=1783048174",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:32,
+    name:"Spin Winner",
+    image:"images/spinwinner.png",
+    page:"spinwinner.html",
+    rating:"5.0",
+    bonus:"₹150 Bonus"
+},
+  {
+    id:33,
+    name:"Slots Spin",
+    image:"images/slotsspin.png",
+    page:"slotsspin.html",
+    rating:"4.9",
+    bonus:"₹100 Bonus"
 },
 
 {
-name:"Rummy888 VIP",
-image:"images/rummy888vip.png",
-page:"games/rummy888vip.html",
-download:"https://rummy888vip38.com/?code=TPUQEBHBDCU&t=1783048215",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:34,
+    name:"Share477",
+    image:"images/share477.png",
+    page:"share477.html",
+    rating:"4.8",
+    bonus:"₹100 Bonus"
 },
 
 {
-name:"Rum Ludo",
-image:"images/rumludo.png",
-page:"games/rumludo.html",
-download:"https://rummludo.com/?code=UWPWVG4MR7Y&t=1783048276",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:35,
+    name:"Rumble Rummy",
+    image:"images/rumblerummy.png",
+    page:"rumblerummy.html",
+    rating:"4.9",
+    bonus:"₹120 Bonus"
 },
 
 {
-name:"Rummy91",
-image:"images/rummy91.png",
-page:"games/rummy91.html",
-download:"https://www.rummy91r.bet/?code=CEELB9T658N&t=1783048317",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:36,
+    name:"OK Rummy",
+    image:"images/okrummy.png",
+    page:"okrummy.html",
+    rating:"4.8",
+    bonus:"₹100 Bonus"
 },
 
 {
-name:"Saga Slots",
-image:"images/sagaslots.png",
-page:"games/sagaslots.html",
-download:"https://www.sagaslots5.com/?code=41LV9QCX16B&t=1783048379",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:37,
+    name:"Rummy77 Bonus",
+    image:"images/rummy77bonus.png",
+    page:"rummy77bonus.html",
+    rating:"4.8",
+    bonus:"₹100 Bonus"
 },
 
 {
-name:"Teen Patti",
-image:"images/teenpatti.png",
-page:"games/teenpatti.html",
-download:"https://www.earntp.com/m/14043",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"5.0"
+    id:38,
+    name:"Rummy888 VIP",
+    image:"images/rummy888vip.png",
+    page:"rummy888vip.html",
+    rating:"5.0",
+    bonus:"₹150 Bonus"
 },
 
 {
-name:"Spin Gold",
-image:"images/spingold.png",
-page:"games/spingold.html",
-download:"https://spingold4.com/?code=HLTSA9JQW5H&t=1783048464",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:39,
+    name:"Rum Ludo",
+    image:"images/rumludo.png",
+    page:"rumludo.html",
+    rating:"4.8",
+    bonus:"₹100 Bonus"
 },
 
 {
-name:"77 Game",
-image:"images/77game.png",
-page:"games/77game.html",
-download:"https://77game.plus/?code=QGTT8ZS",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:40,
+    name:"Rummy91",
+    image:"images/rummy91.png",
+    page:"rummy91.html",
+    rating:"4.9",
+    bonus:"₹120 Bonus"
+},
+  {
+    id:41,
+    name:"Saga Slots",
+    image:"images/sagaslots.png",
+    page:"sagaslots.html",
+    rating:"4.9",
+    bonus:"₹100 Bonus"
 },
 
 {
-name:"Good Slots",
-image:"images/goodslots.png",
-page:"games/goodslots.html",
-download:"https://4sharegoodslots.vip?pid=531453132&channel=2030111&pkg=com.goodslots111.com",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:42,
+    name:"Earn TP",
+    image:"images/earntp.png",
+    page:"earntp.html",
+    rating:"4.8",
+    bonus:"₹100 Bonus"
 },
 
 {
-name:"Diwa Slots",
-image:"images/diwaslots.png",
-page:"games/diwaslots.html",
-download:"https://sharediwaslots3.vip?pid=450275843&channel=2030101&pkg=com.diwaslot101.app",
-bonus:"₹100",
-withdraw:"₹100",
-rating:"4.9"
+    id:43,
+    name:"Spin Gold",
+    image:"images/spingold.png",
+    page:"spingold.html",
+    rating:"4.9",
+    bonus:"₹120 Bonus"
+},
+
+{
+    id:44,
+    name:"77 Game",
+    image:"images/77game.png",
+    page:"77game.html",
+    rating:"5.0",
+    bonus:"₹150 Bonus"
+},
+
+{
+    id:45,
+    name:"Good Slots",
+    image:"images/goodslots.png",
+    page:"goodslots.html",
+    rating:"4.8",
+    bonus:"₹100 Bonus"
+},
+
+{
+    id:46,
+    name:"Diwa Slots",
+    image:"images/diwaslots.png",
+    page:"diwaslots.html",
+    rating:"4.8",
+    bonus:"₹100 Bonus"
+},
+
+{
+    id:47,
+    name:"777 Game",
+    image:"images/777game.png",
+    page:"777game.html",
+    rating:"4.9",
+    bonus:"₹120 Bonus"
+},
+
+{
+    id:48,
+    name:"Share Diwa",
+    image:"images/sharediwa.png",
+    page:"sharediwa.html",
+    rating:"4.8",
+    bonus:"₹100 Bonus"
+},
+  {
+    id:49,
+    name:"Lucky Slots",
+    image:"images/luckyslots.png",
+    page:"luckyslots.html",
+    rating:"4.9",
+    bonus:"₹100 Bonus"
+},
+
+{
+    id:50,
+    name:"Royal Rummy",
+    image:"images/royalrummy.png",
+    page:"royalrummy.html",
+    rating:"4.9",
+    bonus:"₹120 Bonus"
+},
+
+{
+    id:51,
+    name:"VIP Rummy",
+    image:"images/viprummy.png",
+    page:"viprummy.html",
+    rating:"5.0",
+    bonus:"₹150 Bonus"
+},
+
+{
+    id:52,
+    name:"Teen Patti Gold",
+    image:"images/teenpatti.png",
+    page:"teenpatti.html",
+    rating:"4.8",
+    bonus:"₹100 Bonus"
+},
+
+{
+    id:53,
+    name:"Rummy Master",
+    image:"images/rummymaster.png",
+    page:"rummymaster.html",
+    rating:"4.9",
+    bonus:"₹100 Bonus"
+},
+
+{
+    id:54,
+    name:"Spin Master",
+    image:"images/spinmaster.png",
+    page:"spinmaster.html",
+    rating:"4.8",
+    bonus:"₹100 Bonus"
+},
+
+{
+    id:55,
+    name:"Jackpot Win",
+    image:"images/jackpotwin.png",
+    page:"jackpotwin.html",
+    rating:"5.0",
+    bonus:"₹150 Bonus"
+},
+
+{
+    id:56,
+    name:"YONO Club",
+    image:"images/yonoclub.png",
+    page:"yonoclub.html",
+    rating:"4.9",
+    bonus:"₹120 Bonus"
+},
+  {
+    id:57,
+    name:"Mega Spin",
+    image:"images/megaspin.png",
+    page:"megaspin.html",
+    rating:"4.9",
+    bonus:"₹100 Bonus"
+},
+
+{
+    id:58,
+    name:"Fast Rummy",
+    image:"images/fastrummy.png",
+    page:"fastrummy.html",
+    rating:"4.8",
+    bonus:"₹100 Bonus"
+},
+
+{
+    id:59,
+    name:"Super Slots",
+    image:"images/superslots.png",
+    page:"superslots.html",
+    rating:"5.0",
+    bonus:"₹150 Bonus"
+},
+
+{
+    id:60,
+    name:"Bonus King",
+    image:"images/bonusking.png",
+    page:"bonusking.html",
+    rating:"5.0",
+    bonus:"₹200 Bonus"
 }
-  ];
+
+];
