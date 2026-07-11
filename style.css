@@ -1,0 +1,655 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0f172a;
+    color:#fff;
+    overflow-x:hidden;
+    padding-bottom:90px;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:#111827;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 15px;
+    box-shadow:0 2px 10px rgba(0,0,0,.35);
+}
+
+.logo-box{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo{
+    width:55px;
+    height:55px;
+    border-radius:14px;
+}
+
+.logo-box h1{
+    font-size:20px;
+    font-weight:700;
+}
+
+.logo-box p{
+    font-size:12px;
+    color:#cbd5e1;
+}
+
+.social-box{
+    display:flex;
+    gap:10px;
+}
+
+.social-box a{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:20px;
+}
+
+.social-box a:first-child{
+    background:#229ED9;
+}
+
+.social-box a:last-child{
+    background:#25D366;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-section{
+    display:flex;
+    gap:10px;
+    padding:15px;
+}
+
+.search-section input{
+    flex:1;
+    height:48px;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    background:#1e293b;
+    color:#fff;
+    padding:0 15px;
+    font-size:15px;
+}
+
+.search-section button{
+    width:50px;
+    border:none;
+    border-radius:12px;
+    background:#16a34a;
+    color:#fff;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.section-title{
+    padding:0 15px 15px;
+    font-size:22px;
+    font-weight:700;
+}
+/* =========================
+   TOP 3 GAMES
+========================= */
+
+.top-section{
+    padding:10px 15px 20px;
+}
+
+.top3{
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    gap:10px;
+}
+
+.rank-card{
+    flex:1;
+    max-width:120px;
+    border-radius:18px;
+    text-align:center;
+    padding:12px 8px;
+    position:relative;
+    overflow:hidden;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(0,0,0,.35);
+}
+
+.rank-card:hover{
+    transform:translateY(-6px);
+}
+
+.rank-card img{
+    width:70px;
+    height:70px;
+    object-fit:cover;
+    border-radius:16px;
+    margin:10px auto;
+    border:3px solid #fff;
+}
+
+.rank-card h3{
+    font-size:14px;
+    margin:6px 0;
+    font-weight:700;
+}
+
+.rank-card p{
+    font-size:11px;
+    margin:3px 0;
+}
+
+.badge{
+    position:absolute;
+    top:8px;
+    left:50%;
+    transform:translateX(-50%);
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    background:#fff;
+    color:#111;
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:3px solid gold;
+}
+
+.rank1{
+    background:linear-gradient(180deg,#FFD54F,#FF9800);
+    color:#111;
+    transform:scale(1.08);
+}
+
+.rank2{
+    background:linear-gradient(180deg,#8E24AA,#5E35B1);
+    color:#fff;
+}
+
+.rank3{
+    background:linear-gradient(180deg,#CD7F32,#8D5524);
+    color:#fff;
+}
+
+.rank1 .download-btn,
+.rank2 .download-btn,
+.rank3 .download-btn{
+    display:block;
+    margin-top:8px;
+    padding:8px;
+    border-radius:10px;
+    background:#00C853;
+    color:#fff;
+    font-size:12px;
+    font-weight:700;
+}
+
+@media(max-width:768px){
+
+.top3{
+    gap:8px;
+}
+
+.rank-card{
+    max-width:110px;
+}
+
+.rank-card img{
+    width:60px;
+    height:60px;
+}
+
+.rank-card h3{
+    font-size:13px;
+}
+
+.rank-card p{
+    font-size:10px;
+}
+
+.rank1{
+    transform:scale(1.05);
+}
+
+}
+/* =========================
+   GAMES GRID
+========================= */
+
+.games-section{
+    padding:10px 15px 20px;
+}
+
+.games-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+}
+
+.game-card{
+    background:#1e293b;
+    border-radius:14px;
+    overflow:hidden;
+    transition:.3s;
+    box-shadow:0 4px 12px rgba(0,0,0,.25);
+}
+
+.game-card:hover{
+    transform:translateY(-4px);
+}
+
+.game-card img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+}
+
+.game-info{
+    padding:8px;
+    text-align:center;
+}
+
+.game-info h3{
+    font-size:13px;
+    font-weight:600;
+    color:#fff;
+    margin-bottom:5px;
+}
+
+.game-info p{
+    font-size:10px;
+    color:#cbd5e1;
+    margin-bottom:3px;
+}
+
+.download-btn{
+    display:block;
+    width:100%;
+    margin-top:8px;
+    padding:8px;
+    background:#16a34a;
+    color:#fff;
+    font-size:12px;
+    font-weight:700;
+    text-align:center;
+    border-radius:8px;
+}
+
+.download-btn:hover{
+    background:#15803d;
+}
+
+@media (max-width:768px){
+
+.games-grid{
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
+}
+
+.game-card{
+    border-radius:10px;
+}
+
+.game-info{
+    padding:6px;
+}
+
+.game-info h3{
+    font-size:11px;
+}
+
+.game-info p{
+    font-size:9px;
+}
+
+.download-btn{
+    font-size:10px;
+    padding:6px;
+}
+
+}
+/* ===========================
+   BOTTOM NAVIGATION
+=========================== */
+
+.bottom-nav{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:65px;
+    background:#111827;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    box-shadow:0 -2px 15px rgba(0,0,0,.35);
+    z-index:999;
+}
+
+.bottom-nav a{
+    color:#cbd5e1;
+    text-decoration:none;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    font-size:11px;
+    transition:.3s;
+}
+
+.bottom-nav a i{
+    font-size:20px;
+    margin-bottom:4px;
+}
+
+.bottom-nav a.active,
+.bottom-nav a:hover{
+    color:#16a34a;
+}
+
+/* ===========================
+   FLOAT BUTTONS
+=========================== */
+
+.telegram-float,
+.whatsapp-float{
+
+    position:fixed;
+    right:15px;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    font-size:26px;
+    z-index:999;
+    box-shadow:0 5px 15px rgba(0,0,0,.35);
+
+}
+
+.telegram-float{
+
+    bottom:150px;
+    background:#229ED9;
+
+}
+
+.whatsapp-float{
+
+    bottom:85px;
+    background:#25D366;
+
+}
+
+/* ===========================
+   SCROLL TO TOP
+=========================== */
+
+.scroll-top{
+
+    position:fixed;
+    left:15px;
+    bottom:85px;
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#16a34a;
+    color:#fff;
+    font-size:22px;
+    display:none;
+    cursor:pointer;
+    z-index:999;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.footer{
+
+    text-align:center;
+    padding:25px 15px 90px;
+    color:#94a3b8;
+    font-size:13px;
+
+}
+
+.footer p{
+
+    margin:5px 0;
+
+}
+/* ===========================
+   LOADER
+=========================== */
+
+#loader{
+    position:fixed;
+    inset:0;
+    background:#0f172a;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    transition:.5s;
+}
+
+.loader-circle{
+    width:60px;
+    height:60px;
+    border:6px solid rgba(255,255,255,.2);
+    border-top:6px solid #16a34a;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+#loader p{
+    margin-top:15px;
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+}
+
+@keyframes spin{
+
+0%{
+transform:rotate(0deg);
+}
+
+100%{
+transform:rotate(360deg);
+}
+
+}
+
+/* ===========================
+   CARD ANIMATION
+=========================== */
+
+.game-card,
+.rank-card{
+
+    opacity:0;
+    transform:translateY(30px);
+    transition:.5s;
+
+}
+
+.game-card.show,
+.rank-card.show{
+
+    opacity:1;
+    transform:translateY(0);
+
+}
+
+.game-card:hover{
+
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+
+}
+
+.rank-card:hover{
+
+    transform:translateY(-8px) scale(1.05);
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+.header{
+
+padding:10px;
+
+}
+
+.logo{
+
+width:45px;
+height:45px;
+
+}
+
+.logo-box h1{
+
+font-size:18px;
+
+}
+
+.section-title{
+
+font-size:20px;
+
+}
+
+.search-section{
+
+padding:10px;
+
+}
+
+.search-section input{
+
+height:45px;
+font-size:14px;
+
+}
+
+.search-section button{
+
+width:45px;
+height:45px;
+
+}
+
+.games-grid{
+
+grid-template-columns:repeat(3,1fr);
+gap:8px;
+
+}
+
+.game-card img{
+
+height:95px;
+
+}
+
+.bottom-nav{
+
+height:60px;
+
+}
+
+.bottom-nav a{
+
+font-size:10px;
+
+}
+
+.bottom-nav i{
+
+font-size:18px;
+
+}
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+width:6px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#16a34a;
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#111827;
+
+}
+
+/* ===========================
+   END
+=========================== */
