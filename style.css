@@ -1,0 +1,759 @@
+/* ==========================
+   ALL YONO GAMES
+   PREMIUM CSS
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#0f172a;
+
+    color:#ffffff;
+
+    overflow-x:hidden;
+
+}
+
+/* Container */
+
+.container{
+
+    width:95%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111827;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#2563eb;
+
+    border-radius:20px;
+
+}
+
+/* Header */
+
+.header{
+
+    position:sticky;
+
+    top:0;
+
+    left:0;
+
+    z-index:999;
+
+    background:rgba(15,23,42,.95);
+
+    backdrop-filter:blur(10px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.header .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 0;
+
+}
+
+/* Logo */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.logo img{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:12px;
+
+}
+
+.logo span{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#fff;
+
+}
+
+/* Navigation */
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:20px;
+
+}
+
+nav ul li a{
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+    color:#38bdf8;
+
+}
+
+/* Hero */
+
+.hero{
+
+    padding:70px 20px;
+
+    text-align:center;
+
+    background:linear-gradient(135deg,#2563eb,#1d4ed8,#7c3aed);
+
+    border-radius:0 0 30px 30px;
+
+}
+
+.hero h1{
+
+    font-size:38px;
+
+    margin-bottom:15px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+    color:#f8fafc;
+
+}
+
+.hero-btn{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:15px 35px;
+
+    background:#22c55e;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.hero-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:#16a34a;
+
+}
+/* ==========================
+   SEARCH SECTION
+========================== */
+
+.search-section{
+    padding:25px 0;
+}
+
+#searchBox{
+    width:100%;
+    padding:16px 20px;
+    border:none;
+    outline:none;
+    border-radius:15px;
+    background:#1e293b;
+    color:#fff;
+    font-size:16px;
+    border:2px solid transparent;
+    transition:.3s;
+}
+
+#searchBox:focus{
+    border-color:#3b82f6;
+    box-shadow:0 0 15px rgba(59,130,246,.35);
+}
+
+/* ==========================
+   GAMES SECTION
+========================== */
+
+.games{
+    padding:35px 0 60px;
+}
+
+.games h2{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:30px;
+    font-weight:700;
+}
+
+/* ==========================
+   GAME GRID
+========================== */
+
+.game-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+    gap:20px;
+}
+
+/* ==========================
+   GAME CARD
+========================== */
+
+.game-card{
+
+    position:relative;
+
+    background:linear-gradient(180deg,#1e293b,#111827);
+
+    border-radius:20px;
+
+    padding:18px;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.game-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.45);
+
+}
+
+/* Image */
+
+.game-card img{
+
+    width:90px;
+
+    height:90px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    margin-bottom:15px;
+
+    background:#fff;
+
+}
+
+/* Title */
+
+.game-card h3{
+
+    font-size:18px;
+
+    margin-bottom:8px;
+
+}
+
+/* Rating */
+
+.rating{
+
+    color:#facc15;
+
+    font-size:15px;
+
+    margin-bottom:10px;
+
+}
+
+/* Bonus */
+
+.game-card p{
+
+    color:#cbd5e1;
+
+    font-size:14px;
+
+    margin-bottom:15px;
+
+}
+
+/* Download Button */
+
+.download-btn{
+
+    display:block;
+
+    width:100%;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    font-weight:700;
+
+    background:linear-gradient(135deg,#22c55e,#16a34a);
+
+    transition:.3s;
+
+}
+
+.download-btn:hover{
+
+    transform:scale(1.05);
+
+    background:linear-gradient(135deg,#16a34a,#15803d);
+
+}
+
+/* ==========================
+   HOT / NEW BADGE
+========================== */
+
+.badge{
+
+    position:absolute;
+
+    top:12px;
+
+    right:12px;
+
+    padding:5px 10px;
+
+    border-radius:30px;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    color:#fff;
+
+}
+
+.hot{
+
+    background:#ef4444;
+
+}
+
+.new{
+
+    background:#2563eb;
+
+}
+/* ==========================
+   COMMUNITY SECTION
+========================== */
+
+.community-section{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.community-section h2{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.community-section p{
+    color:#cbd5e1;
+    margin-bottom:30px;
+}
+
+.community-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.telegram-btn,
+.whatsapp-btn{
+
+    display:inline-block;
+
+    padding:15px 28px;
+
+    border-radius:12px;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.telegram-btn{
+
+    background:#229ED9;
+
+}
+
+.whatsapp-btn{
+
+    background:#25D366;
+
+}
+
+.telegram-btn:hover,
+.whatsapp-btn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+
+    background:#020617;
+
+    padding:50px 20px;
+
+    text-align:center;
+
+    margin-top:60px;
+
+}
+
+footer h3{
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+}
+
+footer p{
+
+    color:#94a3b8;
+
+    margin-bottom:15px;
+
+}
+
+.footer-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin:20px 0;
+
+}
+
+.footer-links a{
+
+    color:#fff;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    color:#38bdf8;
+
+}
+
+.copyright{
+
+    font-size:14px;
+
+    color:#64748b;
+
+}
+
+/* ==========================
+   FLOATING BUTTONS
+========================== */
+
+.floating-whatsapp,
+.floating-telegram{
+
+    position:fixed;
+
+    right:20px;
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    font-size:24px;
+
+    text-decoration:none;
+
+    z-index:999;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.4);
+
+}
+
+.floating-whatsapp{
+
+    bottom:20px;
+
+    background:#25D366;
+
+}
+
+.floating-telegram{
+
+    bottom:90px;
+
+    background:#229ED9;
+
+}
+
+/* ==========================
+   BACK TO TOP
+========================== */
+
+#topBtn{
+
+    position:fixed;
+
+    left:20px;
+
+    bottom:20px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    color:#fff;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    display:none;
+
+    z-index:999;
+
+}
+
+#topBtn:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* ==========================
+   MOBILE RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+.header .container{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.hero{
+
+padding:50px 20px;
+
+}
+
+.hero h1{
+
+font-size:28px;
+
+}
+
+.games h2{
+
+font-size:26px;
+
+}
+
+.game-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:15px;
+
+}
+
+.game-card{
+
+padding:15px;
+
+}
+
+.game-card img{
+
+width:75px;
+
+height:75px;
+
+}
+
+.logo span{
+
+font-size:18px;
+
+}
+
+.community-buttons{
+
+flex-direction:column;
+
+}
+
+.telegram-btn,
+.whatsapp-btn{
+
+width:100%;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.game-grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+.hero h1{
+
+font-size:24px;
+
+}
+
+.hero p{
+
+font-size:15px;
+
+}
+
+#searchBox{
+
+font-size:15px;
+
+}
+
+.download-btn{
+
+font-size:14px;
+
+padding:10px;
+
+}
+
+}
