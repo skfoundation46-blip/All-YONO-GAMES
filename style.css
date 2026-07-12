@@ -757,3 +757,48 @@ padding:10px;
 }
 
 }
+.pulse-btn{
+position:relative;
+display:inline-block;
+padding:18px 45px;
+font-size:20px;
+font-weight:700;
+color:#fff;
+text-decoration:none;
+border-radius:60px;
+background:linear-gradient(90deg,#00c853,#00e676,#00c853);
+background-size:300% 300%;
+animation:gradientMove 3s linear infinite,pulse 1.5s infinite;
+overflow:hidden;
+}
+
+.pulse-btn::before{
+content:"";
+position:absolute;
+top:-4px;
+left:-4px;
+right:-4px;
+bottom:-4px;
+border-radius:65px;
+padding:3px;
+background:linear-gradient(0deg,#ff0000,#ffff00,#00ff00,#00ffff,#0000ff,#ff00ff,#ff0000);
+background-size:400% 400%;
+animation:borderRotate 4s linear infinite;
+z-index:-1;
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+100%{background-position:100% 50%;}
+}
+
+@keyframes borderRotate{
+0%{background-position:0% 50%;}
+100%{background-position:400% 50%;}
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.08);}
+100%{transform:scale(1);}
+}
