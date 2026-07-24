@@ -1,588 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All YONO Games - Latest Gaming Apps</title>
 
-<title>All YONO Games | Download Latest Rummy, Slots & Casino Apps</title>
+    <meta name="description" content="Explore the latest gaming apps, rummy games and entertainment platforms in one place.">
 
-<meta name="description" content="Download Latest YONO Games, Rummy Apps, Slots, Teen Patti, Casino Games with Welcome Bonus and Official Referral Links.">
+    <link rel="icon" href="images/yonogames.png">
 
-<meta name="keywords" content="YONO Games,YONO Apps,Rummy,Teen Patti,Slots,Casino,Game Download,YONO VIP,Spin101">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<meta name="author" content="Rudra Digital">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-<meta name="robots" content="index,follow">
-
-<meta name="theme-color" content="#08111f">
-
-<link rel="icon" href="images/yonogames.png">
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <!-- HEADER -->
 
-<header class="header">
+<header class="top-header">
 
-<div class="container">
+    <button class="menu-btn" id="menuBtn">
+        ☰
+    </button>
 
-<a href="index.html" class="logo">
+    <a href="#" class="brand">
+        <img src="images/yonogames.png" alt="All YONO Games">
+        <div>
+            <strong>ALL <span>YONO</span></strong>
+            <small>GAMES HUB</small>
+        </div>
+    </a>
 
-<img src="images/yonogames.png" alt="All YONO Games Logo">
+    <button class="search-icon" onclick="focusSearch()">
+        🔍
+    </button>
 
-<span>ALL YONO GAMES</span>
+</header>
 
-</a>
 
-<nav>
+<!-- MOBILE MENU -->
 
-<ul>
+<div class="mobile-menu" id="mobileMenu">
 
-<li><a href="#">Home</a></li>
+    <button class="close-menu" id="closeMenu">×</button>
 
-<li><a href="#games">Games</a></li>
+    <div class="menu-logo">
+        <img src="images/yonogames.png">
+        <h2>ALL YONO GAMES</h2>
+    </div>
 
-<li><a href="#bonus">Bonus</a></li>
-
-<li><a href="#faq">FAQ</a></li>
-
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-</nav>
+    <a href="#home">🏠 Home</a>
+    <a href="#games">🎮 All Games</a>
+    <a href="#bonus">🎁 Offers</a>
+    <a href="#community">💬 Community</a>
 
 </div>
 
-</header>
+
+<main id="home">
 
 <!-- HERO -->
 
 <section class="hero">
 
-<div class="hero-overlay"></div>
+    <div class="hero-content">
 
-<div class="container hero-content">
+        <div class="hero-badge">
+            ⚡ NEXT-GEN GAME HUB
+        </div>
 
-<h1>
+        <h1>
+            Your Next<br>
+            <span>Game Is Waiting.</span>
+        </h1>
 
-Download Latest YONO Games, Rummy Apps & Slots
+        <p>
+            Discover the latest gaming apps, exciting platforms and new experiences — all in one place.
+        </p>
 
-</h1>
+        <a href="#games" class="hero-btn">
+            Explore Games
+            <span>→</span>
+        </a>
 
-<p>
+    </div>
 
-Get ₹500 - ₹1500 Welcome Bonus, Referral Rewards, Daily Cashback and Latest APK Updates.
-
-</p>
-
-<div class="hero-buttons">
-
-<a href="#games" class="explore-btn">
-
-🎮 Explore Games
-
-</a>
-
-<a href="#bonus" class="bonus-btn">
-
-🎁 Welcome Bonus
-
-</a>
-
-</div>
-
-</div>
+    <div class="hero-orb orb-one"></div>
+    <div class="hero-orb orb-two"></div>
 
 </section>
+
+
+<!-- QUICK FEATURES -->
+
+<section class="quick-features">
+
+    <div class="feature-box">
+        <div>🎁</div>
+        <span>Special<br>Offers</span>
+    </div>
+
+    <div class="feature-box">
+        <div>⚡</div>
+        <span>Latest<br>Updates</span>
+    </div>
+
+    <div class="feature-box">
+        <div>🎮</div>
+        <span>50+<br>Games</span>
+    </div>
+
+    <div class="feature-box">
+        <div>📱</div>
+        <span>Mobile<br>Friendly</span>
+    </div>
+
+</section>
+
 
 <!-- SEARCH -->
 
-<section class="search-section">
+<section class="search-area">
 
-<div class="container">
+    <div class="search-box">
 
-<input
+        <span>🔍</span>
 
-type="text"
+        <input
+            type="text"
+            id="searchBox"
+            placeholder="Search your favorite game..."
+        >
 
-id="searchBox"
+        <button onclick="clearSearch()">×</button>
 
-placeholder="Search Your Favorite Game..."
-
->
-
-</div>
-
-</section>
-
-<!-- BONUS -->
-
-<section class="bonus-strip" id="bonus">
-
-<div class="container">
-
-<div class="bonus-box">
-
-🎉 NEW USER BONUS ₹500 - ₹1500 |
-
-🔥 DAILY CASHBACK |
-
-💰 REFER & EARN |
-
-⚡ FAST WITHDRAWAL |
-
-🎮 40+ LATEST GAMES AVAILABLE
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!-- GAME SECTION -->
 
-<section class="games">
+<!-- FEATURED -->
 
-<div class="container">
+<section class="featured-section">
 
-<h2 id="games">
+    <div class="section-heading">
 
-🔥 Latest YONO Games
+        <div>
+            <small>HANDPICKED FOR YOU</small>
+            <h2>🔥 Featured Games</h2>
+        </div>
 
-</h2>
+        <span class="live-dot">● LIVE</span>
 
-<div class="game-grid">
-  <!-- Game Card 1 -->
-<div class="game-card">
-<img src="images/gamerummy.png" alt="Game Rummy">
-<h3>Game Rummy</h3>
-<div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
-<p>₹500 Welcome Bonus</p>
-<a href="gamerummy.html" class="download-btn">Download</a>
-</div>
+    </div>
 
-<!-- Game Card 2 -->
-<div class="game-card">
-<img src="images/gospin.png" alt="Go Spin">
-<h3>Go Spin</h3>
-<div class="rating">⭐⭐⭐⭐⭐ 4.8</div>
-<p>₹700 Welcome Bonus</p>
-<a href="gospin.html" class="download-btn">Download</a>
-</div>
 
-<!-- Game Card 3 -->
-<div class="game-card">
-<img src="images/Hindi777.png" alt="Hindi777">
-<h3>Hindi 777</h3>
-<div class="rating">⭐⭐⭐⭐⭐ 4.8</div>
-<p>₹800 Welcome Bonus</p>
-<a href="hindi777.html" class="download-btn">Download</a>
-</div>
+    <div class="featured-scroll">
 
-<!-- Game Card 4 -->
-<div class="game-card">
-<img src="images/HiRummy.png" alt="Hi Rummy">
-<h3>Hi Rummy</h3>
-<div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
-<p>₹1000 Welcome Bonus</p>
-<a href="hirummy.html" class="download-btn">Download</a>
-</div>
+        <div class="featured-card">
 
-<!-- Game Card 5 -->
-<div class="game-card">
-<img src="images/indclub.png" alt="Ind Club">
-<h3>Ind Club</h3>
-<div class="rating">⭐⭐⭐⭐⭐ 4.8</div>
-<p>₹500 Bonus</p>
-<a href="indclub.html" class="download-btn">Download</a>
-</div>
+            <img src="images/yonorummy.png">
 
-<!-- Game Card 6 -->
-<div class="game-card">
-<img src="images/indslots.png" alt="Ind Slots">
-<h3>Ind Slots</h3>
-<div class="rating">⭐⭐⭐⭐⭐ 4.8</div>
-<p>₹700 Bonus</p>
-<a href="indslots.html" class="download-btn">Download</a>
-</div>
+            <div class="featured-info">
 
-<!-- Game Card 7 -->
-<div class="game-card">
-<img src="images/mqmbet.png" alt="MQM Bet">
-<h3>MQM Bet</h3>
-<div class="rating">⭐⭐⭐⭐⭐ 4.8</div>
-<p>₹1200 Bonus</p>
-<a href="mqmbet.html" class="download-btn">Download</a>
-</div>
+                <span class="tag">TOP PICK</span>
 
-<!-- Game Card 8 -->
-<div class="game-card">
-<img src="images/inrrummy.png" alt="INR Rummy">
-<h3>INR Rummy</h3>
-<div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
-<p>₹1000 Bonus</p>
-<a href="inrrummy.html" class="download-btn">Download</a>
-</div>
+                <h3>YONO Rummy</h3>
 
-<!-- Game Card 9 -->
-<div class="game-card">
-<img src="images/jaihoarcade.png" alt="Jaiho Arcade">
-<h3>Jaiho Arcade</h3>
-<div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
-<p>₹1500 Bonus</p>
-<a href="jaihoarcade.html" class="download-btn">Download</a>
-</div>
+                <p>⭐ 4.9 Rating</p>
 
-<!-- Game Card 10 -->
-<div class="game-card">
-<img src="images/jaihoslots.png" alt="Jaiho Slots">
-<h3>Jaiho Slots</h3>
-<div class="rating">⭐⭐⭐⭐⭐ 4.8</div>
-<p>₹1000 Bonus</p>
-<a href="jaihoslots.html" class="download-btn">Download</a>
-</div>
+                <a href="https://yonorummy047.com/?code=VIPYHS8XTPY&t=1783047280" target="_blank">
+                    OPEN GAME →
+                </a>
 
-<!-- Game Card 11 -->
-<div class="game-card">
-<img src="images/jaihospin.png" alt="Jaiho Spin">
-<h3>Jaiho Spin</h3>
-<div class="rating">⭐⭐⭐⭐⭐ 4.8</div>
-<p>₹700 Bonus</p>
-<a href="jaihospin.html" class="download-btn">Download</a>
-</div>
+            </div>
 
-<!-- Game Card 12 -->
-<div class="game-card">
-<img src="images/jaihowin.png" alt="Jaiho Win">
-<h3>Jaiho Win</h3>
-<div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
-<p>₹1200 Bonus</p>
-<a href="jaihowin.html" class="download-btn">Download</a>
-</div>
+        </div>
 
-<!-- Game Card 13 -->
-<div class="game-card">
-<img src="images/jaiho777.png" alt="Jaiho777">
-<h3>Jaiho 777</h3>
-<div class="rating">⭐⭐⭐⭐⭐ 5.0</div>
-<p>₹999 Bonus</p>
-<a href="jaiho777.html" class="download-btn">Download</a>
-</div>
 
-<!-- Game Card 14 -->
-<div class="game-card">
-<img src="images/91jaiho.png" alt="91 Jaiho">
-<h3>91 Jaiho</h3>
-<div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
-<p>₹888 Bonus</p>
-<a href="91jaiho.html" class="download-btn">Download</a>
-</div>
+        <div class="featured-card">
 
-<!-- Game Card 15 -->
-<div class="game-card">
-<img src="images/joyrummy.png" alt="Joy Rummy">
-<h3>Joy Rummy</h3>
-<div class="rating">⭐⭐⭐⭐⭐ 4.8</div>
-<p>₹1000 Bonus</p>
-<a href="joyrummy.html" class="download-btn">Download</a>
-</div>
+            <img src="images/inrrummy.png">
 
-<!-- Game Card 16 -->
-<div class="game-card">
-<img src="images/loverummy.png" alt="Love Rummy">
-<h3>Love Rummy</h3>
-<div class="rating">⭐⭐⭐⭐⭐ 4.8</div>
-<p>₹500 Bonus</p>
-<a href="loverummy.html" class="download-btn">Download</a>
-</div>
+            <div class="featured-info">
 
-<!-- Game Card 17 -->
-<div class="game-card">
-<img src="images/mahagames.png" alt="Maha Games">
-<h3>Maha Games</h3>
-<div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
-<p>₹1500 Bonus</p>
-<a href="mahagames.html" class="download-btn">Download</a>
-</div>
+                <span class="tag">TRENDING</span>
 
-<!-- Game Card 18 -->
-<div class="game-card">
-<img src="images/mbmbet.png" alt="MBM Bet">
-<h3>MBM Bet</h3>
-<div class="rating">⭐⭐⭐⭐⭐ 4.8</div>
-<p>₹1200 Bonus</p>
-<a href="mbmbet.html" class="download-btn">Download</a>
-</div>
+                <h3>INR Rummy</h3>
 
-<!-- Game Card 19 -->
-<div class="game-card">
-<img src="images/789jackpots.png" alt="789 Jackpots">
-<h3>789 Jackpots</h3>
-<div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
-<p>₹999 Bonus</p>
-<a href="789jackpots.html" class="download-btn">Download</a>
-</div>
+                <p>⭐ 4.8 Rating</p>
 
-<!-- Game Card 20 -->
-<div class="game-card">
-<img src="images/777okok.png" alt="777 OKOK">
-<h3>777 OKOK</h3>
-<div class="rating">⭐⭐⭐⭐⭐ 4.8</div>
-<p>₹800 Bonus</p>
-<a href="777okok.html" class="download-btn">Download</a>
-</div>
+                <a href="https://inrrummysvip2.net/?code=JMQKAVX7KWE&t=1783046109" target="_blank">
+                    OPEN GAME →
+                </a>
 
-<!-- Game Card 21 -->
-<div class="game-card">
-<img src="images/567slots.png" alt="567 Slots">
-<h3>567 Slots</h3>
-<div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
-<p>₹1000 Bonus</p>
-<a href="567slots.html" class="download-btn">Download</a>
-</div>
+            </div>
 
-<!-- Game Card 22 -->
-<div class="game-card">
-<img src="images/yono777hub.png" alt="YONO777 Hub">
-<h3>YONO 777 Hub</h3>
-<div class="rating">⭐⭐⭐⭐⭐ 5.0</div>
-<p>₹1500 Bonus</p>
-<a href="yono777hub.html" class="download-btn">Download</a>
-</div>
+        </div>
 
-<!-- Game Card 23 -->
-<div class="game-card">
-<img src="images/yonovip.png" alt="YONO VIP">
-<h3>YONO VIP</h3>
-<div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
-<p>₹1200 Bonus</p>
-<a href="yonovip.html" class="download-btn">Download</a>
-</div>
 
-<!-- Game Card 24 -->
-<div class="game-card">
-<img src="images/yonoslots.png" alt="YONO Slots">
-<h3>YONO Slots</h3>
-<div class="rating">⭐⭐⭐⭐⭐ 4.8</div>
-<p>₹1000 Bonus</p>
-<a href="yonoslots.html" class="download-btn">Download</a>
-</div>
+        <div class="featured-card">
 
-<!-- Game Card 25 -->
-<div class="game-card">
-<img src="images/yonorummy.png" alt="YONO Rummy">
-<h3>YONO Rummy</h3>
-<div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
-<p>₹1500 Welcome Bonus</p>
-<a href="yonorummy.html" class="download-btn">Download</a>
-</div>
-<!-- Game Card 26 -->
-<div class="game-card">
-    <img src="images/yonogames.png" alt="YONO Games">
-    <h3>YONO Games</h3>
-    <div class="rating">⭐⭐⭐⭐⭐ 4.8</div>
-    <p>₹1200 Welcome Bonus</p>
-    <a href="yonogames.html" class="download-btn">Download</a>
-</div>
+            <img src="images/spin101.png">
 
-<!-- Game Card 27 -->
-<div class="game-card">
-    <img src="images/yonoofficial.png" alt="YONO Official">
-    <h3>YONO Official</h3>
-    <div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
-    <p>₹999 Bonus</p>
-    <a href="yonoofficial.html" class="download-btn">Download</a>
-</div>
+            <div class="featured-info">
 
-<!-- Game Card 28 -->
-<div class="game-card">
-    <img src="images/yesspin.png" alt="Yes Spin">
-    <h3>Yes Spin</h3>
-    <div class="rating">⭐⭐⭐⭐⭐ 4.8</div>
-    <p>₹700 Bonus</p>
-    <a href="yesspin.html" class="download-btn">Download</a>
-</div>
+                <span class="tag">POPULAR</span>
 
-<!-- Game Card 29 -->
-<div class="game-card">
-    <img src="images/toprummy.png" alt="Top Rummy">
-    <h3>Top Rummy</h3>
-    <div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
-    <p>₹1000 Bonus</p>
-    <a href="toprummy.html" class="download-btn">Download</a>
-</div>
+                <h3>Spin 101</h3>
 
-<!-- Game Card 30 -->
-<div class="game-card">
-    <img src="images/spin101.png" alt="Spin101">
-    <h3>Spin101</h3>
-    <div class="rating">⭐⭐⭐⭐⭐ 5.0</div>
-    <p>₹1500 Bonus</p>
-    <a href="spin101.html" class="download-btn">Download</a>
-</div>
+                <p>⭐ 4.9 Rating</p>
 
-<!-- Game Card 31 -->
-<div class="game-card">
-    <img src="images/spin777.png" alt="Spin777">
-    <h3>Spin777</h3>
-    <div class="rating">⭐⭐⭐⭐⭐ 4.8</div>
-    <p>₹1200 Bonus</p>
-    <a href="spin777.html" class="download-btn">Download</a>
-</div>
+                <a href="https://spin101-c.net/?code=3X2GPDXYBEN&t=1783047712" target="_blank">
+                    OPEN GAME →
+                </a>
 
-<!-- Game Card 32 -->
-<div class="game-card">
-    <img src="images/spinwinner.png" alt="Spin Winner">
-    <h3>Spin Winner</h3>
-    <div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
-    <p>₹1000 Bonus</p>
-    <a href="spinwinner.html" class="download-btn">Download</a>
-</div>
+            </div>
 
-<!-- Game Card 33 -->
-<div class="game-card">
-    <img src="images/safeearn.png" alt="Safe
-      <!-- Community Section -->
+        </div>
 
-</div>
-</div>
+    </div>
+
 </section>
 
-<section class="community-section">
 
-<div class="container">
+<!-- ALL GAMES -->
 
-<h2>Join Our Community</h2>
+<section class="games-section" id="games">
 
-<p>Get Latest YONO Games, Welcome Bonus, Referral Offers and Daily Updates.</p>
+    <div class="section-heading">
 
-<div class="community-buttons">
+        <div>
+            <small>EXPLORE COLLECTION</small>
+            <h2>🎮 Latest Games</h2>
+        </div>
+
+        <span id="gameCount">50+ Games</span>
+
+    </div>
+
+
+    <div class="games-list" id="gamesList"></div>
+
+
+    <div id="noResults" class="no-results">
+
+        😕 Game Not Found
+
+    </div>
+
+</section>
+
+
+<!-- COMMUNITY -->
+
+<section class="community" id="community">
+
+    <div class="community-icon">
+        💬
+    </div>
+
+    <h2>Join Our Community</h2>
+
+    <p>
+        Get latest game updates and new platform information.
+    </p>
+
+    <div class="community-buttons">
+
+        <a href="https://t.me/+4GqtEx1EywhiNTQ1" target="_blank">
+            📢 Telegram
+        </a>
+
+        <a href="https://whatsapp.com/channel/0029VbCsKBlAe5Vnj2VbpO3Z" target="_blank">
+            💬 WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- DISCLAIMER -->
+
+<section class="disclaimer">
+
+    <h3>⚠️ Important Information</h3>
+
+    <p>
+        This website is an informational directory. Users should check the applicable laws and regulations in their location before accessing any third-party platform. Please use online services responsibly and only if you meet the applicable age requirements.
+    </p>
+
+</section>
+
+</main>
+
+
+<!-- FLOATING BUTTONS -->
 
 <a href="https://t.me/+4GqtEx1EywhiNTQ1"
-class="telegram-btn"
-target="_blank">
-
-📢 Join Telegram
-
+   target="_blank"
+   class="floating telegram">
+    ✈️
 </a>
 
-<a href="https://whatsapp.com/channel/0029Vb6ncxAEQIaoxcCLVo1Z"
-class="whatsapp-btn"
-target="_blank">
-
-💬 Join WhatsApp
-
+<a href="https://whatsapp.com/channel/0029VbCsKBlAe5Vnj2VbpO3Z"
+   target="_blank"
+   class="floating whatsapp">
+    💬
 </a>
 
-</div>
 
-</div>
+<!-- BOTTOM NAVIGATION -->
 
-</section>
+<nav class="bottom-nav">
 
-<!-- SEO CONTENT -->
+    <a href="#home" class="active">
+        <span>⌂</span>
+        Home
+    </a>
 
-<section class="seo-content" id="faq">
+    <a href="#games">
+        <span>🎮</span>
+        Games
+    </a>
 
-<h2>All YONO Games Download</h2>
+    <a href="#community">
+        <span>🎁</span>
+        Offers
+    </a>
 
-<p>
-All YONO Games is one of the best places to discover the latest YONO Rummy Apps, Slots Games, Casino Apps, Teen Patti Games and many other popular gaming applications. Our website provides updated game information, welcome bonus details, referral offers and download links in one place. Whether you are looking for the latest APK or information about a particular game, you can easily browse and find it here.
-</p>
+    <a href="#community">
+        <span>💬</span>
+        Contact
+    </a>
 
-<h2>Popular Games</h2>
+</nav>
 
-<p>
-Our collection includes Game Rummy, Go Spin, Hindi777, Hi Rummy, IndClub, IndSlots, MQM Bet, INR Rummy, Jaiho Arcade, Jaiho Slots, Jaiho Spin, Jaiho Win, Jaiho 777, Joy Rummy, Love Rummy, Maha Games, MBM Bet, YONO VIP, YONO Slots, YONO Rummy, Spin101, Spin777, Teen Patti, Saga Slots and many more.
-</p>
-
-<h2>Frequently Asked Questions</h2>
-
-<h3>How do I download a game?</h3>
-
-<p>
-Click the Download button below your selected game. You will be redirected to the official registration or download page.
-</p>
-
-<h3>Is the website mobile friendly?</h3>
-
-<p>
-Yes. The website is fully optimized for Android phones, tablets and desktop devices.
-</p>
-
-<h3>How do I receive a welcome bonus?</h3>
-
-<p>
-Bonus offers depend on the respective game platform. Check the current offer after registration.
-</p>
-
-<h3>Can I invite my friends?</h3>
-
-<p>
-Many apps provide referral rewards where eligible users can invite friends according to the app's rules.
-</p>
-
-</section>
-
-<!-- Footer -->
-
-<footer id="contact">
-
-<div class="container">
-
-<h3>ALL YONO GAMES</h3>
-
-<p>
-
-Latest YONO Games Download | Rummy | Slots | Teen Patti | Casino Apps
-
-</p>
-
-<p>
-
-© 2026 Rudra Digital. All Rights Reserved.
-
-</p>
-
-</div>
-
-</footer>
-
-<a href="https://t.me/+4GqtEx1EywhiNTQ1"
-target="_blank"
-class="floating-telegram">
-
-📢
-
-</a>
-
-<a href="https://whatsapp.com/channel/0029Vb6ncxAEQIaoxcCLVo1Z"
-target="_blank"
-class="floating-whatsapp">
-
-💬
-
-</a>
-
-<button id="topBtn">
-
-⬆
-
-</button>
 
 <script src="script.js"></script>
 
