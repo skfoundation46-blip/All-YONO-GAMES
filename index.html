@@ -1,1138 +1,930 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>All YONO Games New | Latest Rummy, Slots & Gaming Apps</title>
+<title>All YONO Games – Latest Rummy, Slots & Gaming Apps</title>
 
-<meta name="description" content="Discover the latest All YONO Games, Rummy Apps, Slots, Teen Patti and popular gaming apps with direct download options.">
+<meta name="description" content="Explore popular YONO Games, Rummy, Slots, Teen Patti and gaming apps with referral offers and latest game information.">
 
-<meta name="keywords" content="All YONO Games, YONO Games New, YONO Rummy, Rummy Apps, Slots Games, Teen Patti, Gaming Apps">
+<meta name="keywords" content="YONO Games, YONO Rummy, Rummy Apps, Slots Games, Teen Patti, YONO Games Download">
 
-<meta name="robots" content="index, follow">
-
-<meta name="author" content="All YONO Games">
-
-<meta name="theme-color" content="#070b16">
+<meta name="robots" content="index,follow">
 
 <link rel="icon" href="images/yonogames.png">
 
-<link rel="stylesheet" href="style.css">
+<style>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+/* =========================
+   RESET
+========================= */
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f6f9;
+    color:#111827;
+}
 
+/* =========================
+   TOP BAR
+========================= */
+
+.top-bar{
+    height:38px;
+    background:#111827;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    white-space:nowrap;
+    font-size:13px;
+}
+
+.top-track{
+    display:inline-block;
+    padding-left:100%;
+    animation:scrollText 22s linear infinite;
+}
+
+@keyframes scrollText{
+    0%{
+        transform:translateX(0);
+    }
+    100%{
+        transform:translateX(-100%);
+    }
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header{
+    background:#ffffff;
+    border-bottom:1px solid #e5e7eb;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.header-inner{
+    max-width:1200px;
+    margin:auto;
+    min-height:68px;
+    padding:10px 16px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    color:#111827;
+}
+
+.brand img{
+    width:42px;
+    height:42px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.brand-text{
+    font-weight:800;
+    font-size:17px;
+    letter-spacing:.3px;
+}
+
+.brand-text span{
+    display:block;
+    font-size:10px;
+    color:#6b7280;
+    font-weight:500;
+    margin-top:2px;
+}
+
+.header-btn{
+    text-decoration:none;
+    background:#111827;
+    color:#fff;
+    padding:10px 15px;
+    border-radius:8px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro{
+    max-width:1200px;
+    margin:auto;
+    padding:20px 16px 12px;
+}
+
+.intro h1{
+    font-size:24px;
+    line-height:1.3;
+    margin-bottom:7px;
+}
+
+.intro p{
+    color:#6b7280;
+    font-size:14px;
+    line-height:1.6;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-box{
+    max-width:1200px;
+    margin:auto;
+    padding:8px 16px 18px;
+}
+
+.search-box input{
+    width:100%;
+    border:1px solid #d1d5db;
+    border-radius:10px;
+    padding:14px 16px;
+    font-size:14px;
+    outline:none;
+    background:#fff;
+}
+
+.search-box input:focus{
+    border-color:#111827;
+}
+
+/* =========================
+   GAME GRID
+========================= */
+
+.game-grid{
+    max-width:1200px;
+    margin:auto;
+    padding:0 16px 25px;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+}
+
+/* =========================
+   GAME CARD
+========================= */
+
+.game-card{
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:12px;
+    padding:12px;
+    transition:.2s;
+}
+
+.game-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.game-top{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.game-icon{
+    width:64px;
+    height:64px;
+    border-radius:12px;
+    object-fit:cover;
+    flex-shrink:0;
+}
+
+.game-info{
+    min-width:0;
+}
+
+.game-name{
+    font-size:15px;
+    font-weight:800;
+    margin-bottom:5px;
+}
+
+.rating{
+    font-size:12px;
+    color:#f59e0b;
+}
+
+.rating span{
+    color:#6b7280;
+    margin-left:3px;
+}
+
+.game-meta{
+    display:flex;
+    justify-content:space-between;
+    gap:5px;
+    margin:11px 0;
+    font-size:11px;
+    color:#6b7280;
+}
+
+.bonus{
+    font-weight:bold;
+    color:#111827;
+}
+
+.trusted{
+    color:#15803d;
+    font-weight:bold;
+}
+
+.download-btn{
+    width:100%;
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    background:#111827;
+    color:#fff;
+    padding:10px 8px;
+    border-radius:8px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.download-btn:hover{
+    background:#374151;
+}
+
+/* =========================
+   HASHTAGS
+========================= */
+
+.hashtags{
+    max-width:1200px;
+    margin:auto;
+    padding:12px 16px 35px;
+    text-align:center;
+}
+
+.hashtags h2{
+    font-size:18px;
+    margin-bottom:12px;
+}
+
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:7px;
+}
+
+.tags span{
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:20px;
+    padding:7px 10px;
+    font-size:11px;
+    color:#4b5563;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#111827;
+    color:#fff;
+    text-align:center;
+    padding:25px 15px;
+}
+
+footer h3{
+    font-size:17px;
+    margin-bottom:7px;
+}
+
+footer p{
+    color:#9ca3af;
+    font-size:12px;
+    line-height:1.6;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:800px){
+
+    .game-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+        padding-left:10px;
+        padding-right:10px;
+    }
+
+    .intro{
+        padding-left:12px;
+        padding-right:12px;
+    }
+
+    .search-box{
+        padding-left:10px;
+        padding-right:10px;
+    }
+
+    .game-card{
+        padding:9px;
+    }
+
+    .game-icon{
+        width:54px;
+        height:54px;
+        border-radius:10px;
+    }
+
+    .game-name{
+        font-size:13px;
+    }
+
+    .rating{
+        font-size:10px;
+    }
+
+    .game-meta{
+        font-size:10px;
+    }
+
+    .download-btn{
+        font-size:12px;
+        padding:9px 5px;
+    }
+
+    .brand-text{
+        font-size:15px;
+    }
+
+    .header-btn{
+        padding:8px 10px;
+        font-size:11px;
+    }
+
+    .intro h1{
+        font-size:20px;
+    }
+}
+
+@media(max-width:360px){
+
+    .game-grid{
+        gap:7px;
+    }
+
+    .game-card{
+        padding:7px;
+    }
+
+    .game-icon{
+        width:48px;
+        height:48px;
+    }
+
+    .game-name{
+        font-size:12px;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
-<!-- RUNNING TOP BAR -->
+<!-- TOP MOVING BAR -->
 
-<div class="top-running-bar">
-
-<div class="running-text">
-
-⚡ ALL YONO GAMES • NEW • LATEST GAME UPDATES • RUMMY • SLOTS • 18+ ONLY • PLAY RESPONSIBLY ⚡
-
+<div class="top-bar">
+    <div class="top-track">
+        🔞 18+ | ALL YONO GAMES NEW | Play Responsibly | Check Game Rules Before Playing | Latest Gaming Apps & Updates
+    </div>
 </div>
-
-</div>
-
 
 <!-- HEADER -->
 
 <header class="header">
 
-<div class="header-inner">
+    <div class="header-inner">
 
-<div class="menu-icon">
+        <a href="index.html" class="brand">
 
-☰
+            <img src="images/yonogames.png" alt="All YONO Games">
 
-</div>
+            <div class="brand-text">
+                ALL YONO GAMES
+                <span>Latest Gaming Apps & Updates</span>
+            </div>
 
-<div class="brand">
+        </a>
 
-<img src="images/yonogames.png" alt="All YONO Games">
+        <a href="#games" class="header-btn">
+            VIEW GAMES
+        </a>
 
-<div>
-
-<h1>ALL <span>YONO</span></h1>
-
-<small>GAMES HUB</small>
-
-</div>
-
-</div>
-
-<div class="search-icon">
-
-🔍
-
-</div>
-
-</div>
+    </div>
 
 </header>
 
+<!-- INTRO -->
 
-<!-- AGE WARNING -->
+<section class="intro">
 
-<div class="age-warning">
+    <h1>Latest YONO Games & Popular Gaming Apps</h1>
 
-🔞 18+ ONLY • ENTERTAINMENT PURPOSE ONLY • PLAY RESPONSIBLY
+    <p>
+        Explore popular Rummy, Slots, Teen Patti and other gaming apps in one place.
+        Select your favorite game and check the available registration or referral option.
+    </p>
 
-</div>
-
-
-<!-- GAME SECTION -->
-
-<main class="games-container">
-
-<div class="section-title">
-
-<span>🎮</span>
-
-<div>
-
-<h2>All YONO Games</h2>
-
-<p>Latest Games • New Updates • Direct Download</p>
-
-</div>
-
-</div>
-
+</section>
 
 <!-- SEARCH -->
 
 <div class="search-box">
 
-<input type="text" id="searchBox" placeholder="🔍 Search games...">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search your favorite game..."
+    >
 
 </div>
 
+<!-- GAMES -->
 
-<div class="game-list" id="gameList">
+<main id="games">
 
+<div class="game-grid">
 
 <!-- 1 -->
 
 <div class="game-card">
-
-<img src="images/gamerummy.png">
-
+<div class="game-top">
+<img src="images/gamerummy.png" class="game-icon">
 <div class="game-info">
-
-<h3>Game Rummy</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
+<div class="game-name">Game Rummy</div>
+<div class="rating">★★★★★ <span>4.9</span></div>
 </div>
-
-<a href="gamerummy.html" class="download-btn">Download</a>
-
 </div>
-
+<div class="game-meta">
+<span class="bonus">Bonus ₹50-500</span>
+<span class="trusted">✓ Trusted</span>
+</div>
+<a href="https://gamerummyc.com/?code=Q6WD4YVGSKG&t=1783045708" class="download-btn" target="_blank">DOWNLOAD</a>
+</div>
 
 <!-- 2 -->
 
 <div class="game-card">
-
-<img src="images/gospin.png">
-
+<div class="game-top">
+<img src="images/gospin.png" class="game-icon">
 <div class="game-info">
-
-<h3>Go Spin</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
+<div class="game-name">Go Spin</div>
+<div class="rating">★★★★★ <span>4.8</span></div>
 </div>
-
-<a href="gospin.html" class="download-btn">Download</a>
-
 </div>
-
+<div class="game-meta">
+<span class="bonus">Bonus ₹100-500</span>
+<span class="trusted">✓ Trusted</span>
+</div>
+<a href="https://www.gospin.bet/?code=498S6EMARN5&t=1783045757" class="download-btn" target="_blank">DOWNLOAD</a>
+</div>
 
 <!-- 3 -->
 
 <div class="game-card">
-
-<img src="images/Hindi777.png">
-
+<div class="game-top">
+<img src="images/Hindi777.png" class="game-icon">
 <div class="game-info">
-
-<h3>Hindi 777</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
+<div class="game-name">Hindi 777</div>
+<div class="rating">★★★★★ <span>4.8</span></div>
 </div>
-
-<a href="hindi777.html" class="download-btn">Download</a>
-
 </div>
-
+<div class="game-meta">
+<span class="bonus">Bonus ₹100-500</span>
+<span class="trusted">✓ Trusted</span>
+</div>
+<a href="https://www.hindi777agent5.com/?code=7LFCL9PJ516&t=1783045793" class="download-btn" target="_blank">DOWNLOAD</a>
+</div>
 
 <!-- 4 -->
 
 <div class="game-card">
-
-<img src="images/HiRummy.png">
-
+<div class="game-top">
+<img src="images/HiRummy.png" class="game-icon">
 <div class="game-info">
-
-<h3>Hi Rummy</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
+<div class="game-name">Hi Rummy</div>
+<div class="rating">★★★★★ <span>4.9</span></div>
 </div>
-
-<a href="hirummy.html" class="download-btn">Download</a>
-
 </div>
-
+<div class="game-meta">
+<span class="bonus">Bonus ₹100-500</span>
+<span class="trusted">✓ Trusted</span>
+</div>
+<a href="https://joinhirummy.cc/?code=RX3HPNUFL1W&t=1783045895" class="download-btn" target="_blank">DOWNLOAD</a>
+</div>
 
 <!-- 5 -->
 
 <div class="game-card">
-
-<img src="images/indclub.png">
-
+<div class="game-top">
+<img src="images/indclub.png" class="game-icon">
 <div class="game-info">
-
-<h3>Ind Club</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
+<div class="game-name">Ind Club</div>
+<div class="rating">★★★★★ <span>4.8</span></div>
 </div>
-
-<a href="indclub.html" class="download-btn">Download</a>
-
 </div>
-
+<div class="game-meta">
+<span class="bonus">Bonus ₹50-300</span>
+<span class="trusted">✓ Trusted</span>
+</div>
+<a href="https://indclub36.com/?code=34UGAHJAEGU&t=1783045944" class="download-btn" target="_blank">DOWNLOAD</a>
+</div>
 
 <!-- 6 -->
 
 <div class="game-card">
-
-<img src="images/indslots.png">
-
+<div class="game-top">
+<img src="images/indslots.png" class="game-icon">
 <div class="game-info">
-
-<h3>Ind Slots</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
+<div class="game-name">Ind Slots</div>
+<div class="rating">★★★★★ <span>4.8</span></div>
 </div>
-
-<a href="indslots.html" class="download-btn">Download</a>
-
 </div>
-
+<div class="game-meta">
+<span class="bonus">Bonus ₹100-500</span>
+<span class="trusted">✓ Trusted</span>
+</div>
+<a href="https://www.indslotsgame.com/?code=T2Q18VEZGLG&t=1783045984" class="download-btn" target="_blank">DOWNLOAD</a>
+</div>
 
 <!-- 7 -->
 
 <div class="game-card">
-
-<img src="images/mqmbet.png">
-
+<div class="game-top">
+<img src="images/mqmbet.png" class="game-icon">
 <div class="game-info">
-
-<h3>MQM Bet</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
+<div class="game-name">MQM Bet</div>
+<div class="rating">★★★★★ <span>4.7</span></div>
 </div>
-
-<a href="mqmbet.html" class="download-btn">Download</a>
-
 </div>
-
+<div class="game-meta">
+<span class="bonus">Bonus ₹100-500</span>
+<span class="trusted">✓ Trusted</span>
+</div>
+<a href="https://6mqmshare.vip?pid=337905532&channel=2030000&pkg=com.mqmbet3001.app" class="download-btn" target="_blank">DOWNLOAD</a>
+</div>
 
 <!-- 8 -->
 
 <div class="game-card">
-
-<img src="images/inrrummy.png">
-
+<div class="game-top">
+<img src="images/inrrummy.png" class="game-icon">
 <div class="game-info">
-
-<h3>INR Rummy</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
+<div class="game-name">INR Rummy</div>
+<div class="rating">★★★★★ <span>4.9</span></div>
 </div>
-
-<a href="inrrummy.html" class="download-btn">Download</a>
-
 </div>
-
+<div class="game-meta">
+<span class="bonus">Bonus ₹100-500</span>
+<span class="trusted">✓ Trusted</span>
+</div>
+<a href="https://inrrummysvip2.net/?code=JMQKAVX7KWE&t=1783046109" class="download-btn" target="_blank">DOWNLOAD</a>
+</div>
 
 <!-- 9 -->
 
 <div class="game-card">
-
-<img src="images/jaihoarcade.png">
-
+<div class="game-top">
+<img src="images/jaihoarcade.png" class="game-icon">
 <div class="game-info">
-
-<h3>Jaiho Arcade</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
+<div class="game-name">Jaiho Arcade</div>
+<div class="rating">★★★★★ <span>4.9</span></div>
 </div>
-
-<a href="jaihoarcade.html" class="download-btn">Download</a>
-
 </div>
-
+<div class="game-meta">
+<span class="bonus">Bonus ₹100-500</span>
+<span class="trusted">✓ Trusted</span>
+</div>
+<a href="https://www.jaihoarcade34.com/?code=AZDCZKW7BNV&t=1783046145" class="download-btn" target="_blank">DOWNLOAD</a>
+</div>
 
 <!-- 10 -->
 
 <div class="game-card">
-
-<img src="images/jaihoslots.png">
-
+<div class="game-top">
+<img src="images/jaihoslots.png" class="game-icon">
 <div class="game-info">
-
-<h3>Jaiho Slots</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
+<div class="game-name">Jaiho Slots</div>
+<div class="rating">★★★★★ <span>4.8</span></div>
 </div>
-
-<a href="jaihoslots.html" class="download-btn">Download</a>
-
 </div>
-
+<div class="game-meta">
+<span class="bonus">Bonus ₹100-500</span>
+<span class="trusted">✓ Trusted</span>
+</div>
+<a href="https://www.jaihoslots18.com/?code=EGP7RY4XTDY&t=1783046174" class="download-btn" target="_blank">DOWNLOAD</a>
+</div>
 
 <!-- 11 -->
 
 <div class="game-card">
-
-<img src="images/jaihospin.png">
-
+<div class="game-top">
+<img src="images/jaihospin.png" class="game-icon">
 <div class="game-info">
-
-<h3>Jaiho Spin</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
+<div class="game-name">Jaiho Spin</div>
+<div class="rating">★★★★★ <span>4.8</span></div>
 </div>
-
-<a href="jaihospin.html" class="download-btn">Download</a>
-
 </div>
-
+<div class="game-meta">
+<span class="bonus">Bonus ₹50-300</span>
+<span class="trusted">✓ Trusted</span>
+</div>
+<a href="https://1jaihospinslot.com/?code=7TA6DT11LF3&t=1783046216" class="download-btn" target="_blank">DOWNLOAD</a>
+</div>
 
 <!-- 12 -->
 
 <div class="game-card">
-
-<img src="images/jaihowin.png">
-
+<div class="game-top">
+<img src="images/jaihowin.png" class="game-icon">
 <div class="game-info">
-
-<h3>Jaiho Win</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
+<div class="game-name">Jaiho Win</div>
+<div class="rating">★★★★★ <span>4.9</span></div>
 </div>
-
-<a href="jaihowin.html" class="download-btn">Download</a>
-
 </div>
-
+<div class="game-meta">
+<span class="bonus">Bonus ₹100-500</span>
+<span class="trusted">✓ Trusted</span>
+</div>
+<a href="https://www.jaihowin16.com/?code=1XN5PLDRBGJ&t=1783046440" class="download-btn" target="_blank">DOWNLOAD</a>
+</div>
 
 <!-- 13 -->
 
 <div class="game-card">
-
-<img src="images/jaiho777.png">
-
+<div class="game-top">
+<img src="images/jaiho777.png" class="game-icon">
 <div class="game-info">
-
-<h3>Jaiho 777</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
+<div class="game-name">Jaiho 777</div>
+<div class="rating">★★★★★ <span>4.9</span></div>
 </div>
-
-<a href="jaiho777.html" class="download-btn">Download</a>
-
 </div>
-
+<div class="game-meta">
+<span class="bonus">Bonus ₹100-500</span>
+<span class="trusted">✓ Trusted</span>
+</div>
+<a href="https://jaiho77792.com/?code=GC2PL1RSXZD&t=1783046484" class="download-btn" target="_blank">DOWNLOAD</a>
+</div>
 
 <!-- 14 -->
 
 <div class="game-card">
-
-<img src="images/91jaiho.png">
-
+<div class="game-top">
+<img src="images/91jaiho.png" class="game-icon">
 <div class="game-info">
-
-<h3>91 Jaiho</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
+<div class="game-name">91 Jaiho</div>
+<div class="rating">★★★★★ <span>4.9</span></div>
 </div>
-
-<a href="91jaiho.html" class="download-btn">Download</a>
-
 </div>
-
+<div class="game-meta">
+<span class="bonus">Bonus ₹50-500</span>
+<span class="trusted">✓ Trusted</span>
+</div>
+<a href="https://91jaihoapp.com/?code=C422BB6Y941&t=1783046532" class="download-btn" target="_blank">DOWNLOAD</a>
+</div>
 
 <!-- 15 -->
 
 <div class="game-card">
-
-<img src="images/joyrummy.png">
-
+<div class="game-top">
+<img src="images/joyrummy.png" class="game-icon">
 <div class="game-info">
-
-<h3>Joy Rummy</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
+<div class="game-name">Joy Rummy</div>
+<div class="rating">★★★★★ <span>4.8</span></div>
 </div>
-
-<a href="joyrummy.html" class="download-btn">Download</a>
-
 </div>
-
+<div class="game-meta">
+<span class="bonus">Bonus ₹100-500</span>
+<span class="trusted">✓ Trusted</span>
+</div>
+<a href="https://www.joyrummylux.com/?code=J5KY29TE89Q&t=1783046573" class="download-btn" target="_blank">DOWNLOAD</a>
+</div>
 
 <!-- 16 -->
 
 <div class="game-card">
-
-<img src="images/loverummy.png">
-
+<div class="game-top">
+<img src="images/loverummy.png" class="game-icon">
 <div class="game-info">
-
-<h3>Love Rummy</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
+<div class="game-name">Love Rummy</div>
+<div class="rating">★★★★★ <span>4.8</span></div>
 </div>
-
-<a href="loverummy.html" class="download-btn">Download</a>
-
 </div>
-
+<div class="game-meta">
+<span class="bonus">Bonus ₹50-300</span>
+<span class="trusted">✓ Trusted</span>
+</div>
+<a href="https://www.loverummy1.com/?code=AFCJ9HGB44A&t=1783046624" class="download-btn" target="_blank">DOWNLOAD</a>
+</div>
 
 <!-- 17 -->
 
 <div class="game-card">
-
-<img src="images/mahagames.png">
-
+<div class="game-top">
+<img src="images/mahagames.png" class="game-icon">
 <div class="game-info">
-
-<h3>Maha Games</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
+<div class="game-name">Maha Games</div>
+<div class="rating">★★★★★ <span>4.9</span></div>
 </div>
-
-<a href="mahagames.html" class="download-btn">Download</a>
-
 </div>
-
+<div class="game-meta">
+<span class="bonus">Bonus ₹100-500</span>
+<span class="trusted">✓ Trusted</span>
+</div>
+<a href="https://on-mahagames.com/?code=J24LM8HUX75&t=1783046672" class="download-btn" target="_blank">DOWNLOAD</a>
+</div>
 
 <!-- 18 -->
 
 <div class="game-card">
-
-<img src="images/mbmbet.png">
-
+<div class="game-top">
+<img src="images/mbmbet.png" class="game-icon">
 <div class="game-info">
-
-<h3>MBM Bet</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
+<div class="game-name">MBM Bet</div>
+<div class="rating">★★★★★ <span>4.8</span></div>
 </div>
-
-<a href="mbmbet.html" class="download-btn">Download</a>
-
 </div>
-
+<div class="game-meta">
+<span class="bonus">Bonus ₹100-500</span>
+<span class="trusted">✓ Trusted</span>
+</div>
+<a href="https://www.mbmbet28.com/?code=UPH8J9BHY9Q&t=1783046724" class="download-btn" target="_blank">DOWNLOAD</a>
+</div>
 
 <!-- 19 -->
 
 <div class="game-card">
-
-<img src="images/789jackpots.png">
-
+<div class="game-top">
+<img src="images/789jackpots.png" class="game-icon">
 <div class="game-info">
-
-<h3>789 Jackpots</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
+<div class="game-name">789 Jackpots</div>
+<div class="rating">★★★★★ <span>4.9</span></div>
 </div>
-
-<a href="789jackpots.html" class="download-btn">Download</a>
-
 </div>
-
+<div class="game-meta">
+<span class="bonus">Bonus ₹100-500</span>
+<span class="trusted">✓ Trusted</span>
+</div>
+<a href="https://join789jackpots1.com/?code=J7ZRKV1ELHS&t=1783046769" class="download-btn" target="_blank">DOWNLOAD</a>
+</div>
 
 <!-- 20 -->
 
 <div class="game-card">
-
-<img src="images/777okok.png">
-
+<div class="game-top">
+<img src="images/777okok.png" class="game-icon">
 <div class="game-info">
-
-<h3>777 OKOK</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
+<div class="game-name">777 OKOK</div>
+<div class="rating">★★★★★ <span>4.8</span></div>
 </div>
-
-<a href="777okok.html" class="download-btn">Download</a>
-
 </div>
-
+<div class="game-meta">
+<span class="bonus">Bonus ₹100-500</span>
+<span class="trusted">✓ Trusted</span>
+</div>
+<a href="https://www.777okok.com/?code=H53V3D3M674&t=1783046815" class="download-btn" target="_blank">DOWNLOAD</a>
+</div>
 
 <!-- 21 -->
 
 <div class="game-card">
-
-<img src="images/567slots.png">
-
+<div class="game-top">
+<img src="images/567slots.png" class="game-icon">
 <div class="game-info">
-
-<h3>567 Slots</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
+<div class="game-name">567 Slots</div>
+<div class="rating">★★★★★ <span>4.9</span></div>
 </div>
-
-<a href="567slots.html" class="download-btn">Download</a>
-
 </div>
-
+<div class="game-meta">
+<span class="bonus">Bonus ₹100-500</span>
+<span class="trusted">✓ Trusted</span>
+</div>
+<a href="https://join567slots1.cc/?code=4NYYNGE217D&t=1783046875" class="download-btn" target="_blank">DOWNLOAD</a>
+</div>
 
 <!-- 22 -->
 
 <div class="game-card">
-
-<img src="images/yono777hub.png">
-
+<div class="game-top">
+<img src="images/yono777hub.png" class="game-icon">
 <div class="game-info">
-
-<h3>YONO 777 Hub</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
+<div class="game-name">YONO 777 Hub</div>
+<div class="rating">★★★★★ <span>5.0</span></div>
 </div>
-
-<a href="yono777hub.html" class="download-btn">Download</a>
-
 </div>
-
+<div class="game-meta">
+<span class="bonus">Bonus ₹100-500</span>
+<span class="trusted">✓ Trusted</span>
+</div>
+<a href="https://yono777hub.online/?code=F9MJTEWN4UX&t=1783047076" class="download-btn" target="_blank">DOWNLOAD</a>
+</div>
 
 <!-- 23 -->
 
 <div class="game-card">
-
-<img src="images/yonovip.png">
-
+<div class="game-top">
+<img src="images/yonovip.png" class="game-icon">
 <div class="game-info">
-
-<h3>YONO VIP</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
+<div class="game-name">YONO VIP</div>
+<div class="rating">★★★★★ <span>4.9</span></div>
 </div>
-
-<a href="yonovip.html" class="download-btn">Download</a>
-
 </div>
-
+<div class="game-meta">
+<span class="bonus">Bonus ₹100-500</span>
+<span class="trusted">✓ Trusted</span>
+</div>
+<a href="https://uonovipfast.com/?code=3CRW27JYQQ9&t=1783047147" class="download-btn" target="_blank">DOWNLOAD</a>
+</div>
 
 <!-- 24 -->
 
 <div class="game-card">
-
-<img src="images/yonoslots.png">
-
+<div class="game-top">
+<img src="images/yonoslots.png" class="game-icon">
 <div class="game-info">
-
-<h3>YONO Slots</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
+<div class="game-name">YONO Slots</div>
+<div class="rating">★★★★★ <span>4.8</span></div>
 </div>
-
-<a href="yonoslots.html" class="download-btn">Download</a>
-
 </div>
-
+<div class="game-meta">
+<span class="bonus">Bonus ₹100-500</span>
+<span class="trusted">✓ Trusted</span>
+</div>
+<a href="https://www.uonoslots.com/?code=59YKJDMVEZG&t=1783047209" class="download-btn" target="_blank">DOWNLOAD</a>
+</div>
 
 <!-- 25 -->
 
 <div class="game-card">
-
-<img src="images/yonorummy.png">
-
+<div class="game-top">
+<img src="images/yonorummy.png" class="game-icon">
 <div class="game-info">
-
-<h3>YONO Rummy</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
+<div class="game-name">YONO Rummy</div>
+<div class="rating">★★★★★ <span>4.9</span></div>
 </div>
-
-<a href="yonorummy.html" class="download-btn">Download</a>
-
 </div>
-
+<div class="game-meta">
+<span class="bonus">Bonus ₹100-500</span>
+<span class="trusted">✓ Trusted</span>
+</div>
+<a href="https://yonorummy047.com/?code=VIPYHS8XTPY&t=1783047280" class="download-btn" target="_blank">DOWNLOAD</a>
+</div>
 
 <!-- 26 -->
 
 <div class="game-card">
-
-<img src="images/yonogames.png">
-
+<div class="game-top">
+<img src="images/yonogames.png" class="game-icon">
 <div class="game-info">
-
-<h3>YONO Games</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
+<div class="game-name">YONO Games</div>
+<div class="rating">★★★★★ <span>4.8</span></div>
 </div>
-
-<a href="yonogames.html" class="download-btn">Download</a>
-
 </div>
-
+<div class="game-meta">
+<span class="bonus">Bonus ₹50-500</span>
+<span class="trusted">✓ Trusted</span>
+</div>
+<a href="https://youonogamespromocode.com/?code=TC4QC28JKLM&t=1783047332" class="download-btn" target="_blank">DOWNLOAD</a>
+</div>
 
 <!-- 27 -->
 
 <div class="game-card">
-
-<img src="images/yonoofficial.png">
-
+<div class="game-top">
+<img src="images/yonoofficial.png" class="game-icon">
 <div class="game-info">
-
-<h3>YONO Official</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
-</div>
-
-<a href="yonoofficial.html" class="download-btn">Download</a>
-
-</div>
-
-
-<!-- 28 -->
-
-<div class="game-card">
-
-<img src="images/yesspin.png">
-
-<div class="game-info">
-
-<h3>Yes Spin</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
-</div>
-
-<a href="yesspin.html" class="download-btn">Download</a>
-
-</div>
-
-
-<!-- 29 -->
-
-<div class="game-card">
-
-<img src="images/toprummy.png">
-
-<div class="game-info">
-
-<h3>Top Rummy</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
-</div>
-
-<a href="toprummy.html" class="download-btn">Download</a>
-
-</div>
-
-
-<!-- 30 -->
-
-<div class="game-card">
-
-<img src="images/spin101.png">
-
-<div class="game-info">
-
-<h3>Spin 101</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
-</div>
-
-<a href="spin101.html" class="download-btn">Download</a>
-
-</div>
-
-
-<!-- 31 -->
-
-<div class="game-card">
-
-<img src="images/spin777.png">
-
-<div class="game-info">
-
-<h3>Spin 777</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
-</div>
-
-<a href="spin777.html" class="download-btn">Download</a>
-
-</div>
-
-
-<!-- 32 -->
-
-<div class="game-card">
-
-<img src="images/spinwinner.png">
-
-<div class="game-info">
-
-<h3>Spin Winner</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
-</div>
-
-<a href="spinwinner.html" class="download-btn">Download</a>
-
-</div>
-
-
-<!-- 33 -->
-
-<div class="game-card">
-
-<img src="images/safeearn.png">
-
-<div class="game-info">
-
-<h3>Safe Earn</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
-</div>
-
-<a href="safeearn.html" class="download-btn">Download</a>
-
-</div>
-
-
-<!-- 34 -->
-
-<div class="game-card">
-
-<img src="images/slotsspin.png">
-
-<div class="game-info">
-
-<h3>Slots Spin</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
-</div>
-
-<a href="slotsspin.html" class="download-btn">Download</a>
-
-</div>
-
-
-<!-- 35 -->
-
-<div class="game-card">
-
-<img src="images/share477.png">
-
-<div class="game-info">
-
-<h3>Share 477</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
-</div>
-
-<a href="share477.html" class="download-btn">Download</a>
-
-</div>
-
-
-<!-- 36 -->
-
-<div class="game-card">
-
-<img src="images/rumblerummy.png">
-
-<div class="game-info">
-
-<h3>Rumble Rummy</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
-</div>
-
-<a href="rumblerummy.html" class="download-btn">Download</a>
-
-</div>
-
-
-<!-- 37 -->
-
-<div class="game-card">
-
-<img src="images/okrummy.png">
-
-<div class="game-info">
-
-<h3>OK Rummy</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
-</div>
-
-<a href="okrummy.html" class="download-btn">Download</a>
-
-</div>
-
-
-<!-- 38 -->
-
-<div class="game-card">
-
-<img src="images/rummy77.png">
-
-<div class="game-info">
-
-<h3>Rummy 77</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
-</div>
-
-<a href="rummy77.html" class="download-btn">Download</a>
-
-</div>
-
-
-<!-- 39 -->
-
-<div class="game-card">
-
-<img src="images/rummy888vip.png">
-
-<div class="game-info">
-
-<h3>Rummy 888 VIP</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
-</div>
-
-<a href="rummy888vip.html" class="download-btn">Download</a>
-
-</div>
-
-
-<!-- 40 -->
-
-<div class="game-card">
-
-<img src="images/rumludo.png">
-
-<div class="game-info">
-
-<h3>Rum Ludo</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
-</div>
-
-<a href="rumludo.html" class="download-btn">Download</a>
-
-</div>
-
-
-<!-- 41 -->
-
-<div class="game-card">
-
-<img src="images/rummy91.png">
-
-<div class="game-info">
-
-<h3>Rummy 91</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
-</div>
-
-<a href="rummy91.html" class="download-btn">Download</a>
-
-</div>
-
-
-<!-- 42 -->
-
-<div class="game-card">
-
-<img src="images/sagaslots.png">
-
-<div class="game-info">
-
-<h3>Saga Slots</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
-</div>
-
-<a href="sagaslots.html" class="download-btn">Download</a>
-
-</div>
-
-
-<!-- 43 -->
-
-<div class="game-card">
-
-<img src="images/teenpatti.png">
-
-<div class="game-info">
-
-<h3>Teen Patti</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
-</div>
-
-<a href="teenpatti.html" class="download-btn">Download</a>
-
-</div>
-
-
-<!-- 44 -->
-
-<div class="game-card">
-
-<img src="images/spingold.png">
-
-<div class="game-info">
-
-<h3>Spin Gold</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
-</div>
-
-<a href="spingold.html" class="download-btn">Download</a>
-
-</div>
-
-
-<!-- 45 -->
-
-<div class="game-card">
-
-<img src="images/77game.png">
-
-<div class="game-info">
-
-<h3>77 Game</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
-</div>
-
-<a href="77game.html" class="download-btn">Download</a>
-
-</div>
-
-
-<!-- 46 -->
-
-<div class="game-card">
-
-<img src="images/goodslots.png">
-
-<div class="game-info">
-
-<h3>Good Slots</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
-</div>
-
-<a href="goodslots.html" class="download-btn">Download</a>
-
-</div>
-
-
-<!-- 47 -->
-
-<div class="game-card">
-
-<img src="images/diwaslots.png">
-
-<div class="game-info">
-
-<h3>Diwa Slots</h3>
-
-<p>🎁 Welcome Bonus • Latest Update</p>
-
-</div>
-
-<a href="diwaslots.html" class="download-btn">Download</a>
-
-</div>
-
-
-</div>
-
-</main>
-
-
-<!-- SEO HASHTAGS -->
-
-<section class="hashtags">
-
-<h2>Popular Searches</h2>
-
-<p>
-
-#AllYONOGames
-
-#YONOGames
-
-#YONOGamesNew
-
-#YONORummy
-
-#YONOVIP
-
-#YONOSlots
-
-#GameRummy
-
-#GoSpin
-
-#Hindi777
-
-#HiRummy
-
-#IndClub
-
-#IndSlots
-
-#INRRummy
-
-#JaihoArcade
-
-#JaihoSlots
-
-#JaihoSpin
-
-#JaihoWin
-
-#Jaiho777
-
-#JoyRummy
-
-#LoveRummy
-
-#MahaGames
-
-#MBMBet
-
-#789Jackpots
-
-#777OKOK
-
-#567Slots
-
-#Spin101
-
-#Spin777
-
-#SpinWinner
-
-#SafeEarn
-
-#SlotsSpin
-
-#Share477
-
-#RumbleRummy
-
-#OKRummy
-
-#Rummy77
-
-#Rummy888VIP
-
-#RumLudo
-
-#Rummy91
-
-#SagaSlots
-
-#TeenPatti
-
-#SpinGold
-
-#77Game
-
-#GoodSlots
-
-#DiwaSlots
-
-</p>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-<p>© 2026 All YONO Games</p>
-
-<p>🔞 18+ | Play Responsibly</p>
-
-</footer>
-
-
-<script src="script.js"></script>
-
-</body>
-
-    </html>
+<div class="game-name">YONO Official</div>
+<div class="rating">★★★★★
