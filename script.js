@@ -1,13 +1,5 @@
 const games = [
-
-{
-name:"Max Rummy",
-image:"gamerummy.png",
-bonus:"Welcome Bonus ₹500",
-rating:"4.9",
-link:"https://www.maxrummy123.com/?code=QUMLDFCQZCC&t=1784950478"
-},
-
+    
 {
 name:"Game Rummy",
 image:"gamerummy.png",
