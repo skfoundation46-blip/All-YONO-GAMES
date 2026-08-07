@@ -3,90 +3,388 @@
     "id": "gamerummy",
     "name": "Game Rummy",
     "logo": "images/gamerummy.png",
-    "category": "Rummy",
-    "rating": 4.9,
-    "bonus": "₹300",
-    "download": "https://www.gamerummyc.com/?code=Q6WD4YVGSKG&t=1783045708"
+    "download": "https://gamerummyc.com/?code=Q6WD4YVGSKG&t=1783045708",
+    "rating": "4.9",
+    "bonus": "₹300 Welcome Bonus"
   },
   {
     "id": "gospin",
     "name": "Go Spin",
     "logo": "images/gospin.png",
-    "category": "Slots",
-    "rating": 4.8,
-    "bonus": "₹200",
-    "download": "https://www.gospin.bet/?code=498S6EMARN5&t=1783045757"
+    "download": "https://www.gospin.bet/?code=498S6EMARN5&t=1783045757",
+    "rating": "4.8",
+    "bonus": "₹400 Welcome Bonus"
   },
   {
     "id": "hindi777",
-    "name": "Hindi 777",
+    "name": "Hindi777",
     "logo": "images/Hindi777.png",
-    "category": "Casino",
-    "rating": 4.7,
-    "bonus": "₹150",
-    "download": "https://www.hindi777agent5.com/?code=7LFCL9PJ516&t=1783045793"
+    "download": "https://www.hindi777agent5.com/?code=7LFCL9PJ516&t=1783045793",
+    "rating": "4.9",
+    "bonus": "₹500 Welcome Bonus"
   },
   {
     "id": "hirummy",
     "name": "Hi Rummy",
     "logo": "images/HiRummy.png",
-    "category": "Rummy",
-    "rating": 4.8,
-    "bonus": "₹250",
-    "download": "https://joinhirummy.cc/?code=RX3HPNUFL1W&t=1783045895"
+    "download": "https://joinhirummy.cc/?code=RX3HPNUFL1W&t=1783045895",
+    "rating": "4.9",
+    "bonus": "₹500 Welcome Bonus"
   },
   {
     "id": "indclub",
-    "name": "IND Club",
+    "name": "Ind Club",
     "logo": "images/indclub.png",
-    "category": "Club",
-    "rating": 4.6,
-    "bonus": "₹100",
-    "download": "https://indclub36.com/?code=34UGAHJAEGU&t=1783045944"
+    "download": "https://indclub36.com/?code=34UGAHJAEGU&t=1783045944",
+    "rating": "4.8",
+    "bonus": "₹250 Welcome Bonus"
   },
   {
     "id": "indslots",
-    "name": "IND Slots",
+    "name": "Ind Slots",
     "logo": "images/indslots.png",
-    "category": "Slots",
-    "rating": 4.9,
-    "bonus": "₹500",
-    "download": "https://www.indslotsgame.com/?code=T2Q18VEZGLG&t=1783045984"
+    "download": "https://www.indslotsgame.com/?code=T2Q18VEZGLG&t=1783045984",
+    "rating": "4.8",
+    "bonus": "₹400 Welcome Bonus"
   },
   {
     "id": "mqmbet",
     "name": "MQM Bet",
     "logo": "images/mqmbet.png",
-    "category": "Casino",
-    "rating": 4.7,
-    "bonus": "₹350",
-    "download": "https://6mqmshare.vip?pid=337905532&channel=2030000&pkg=com.mqmbet3001.app"
+    "download": "https://6mqmshare.vip?pid=337905532&channel=2030000&pkg=com.mqmbet3001.app",
+    "rating": "4.7",
+    "bonus": "₹500 Welcome Bonus"
   },
   {
     "id": "inrrummy",
     "name": "INR Rummy",
     "logo": "images/inrrummy.png",
-    "category": "Rummy",
-    "rating": 4.8,
-    "bonus": "₹200",
-    "download": "https://inrrummysvip2.net/?code=JMQKAVX7KWE&t=1783046109"
+    "download": "https://inrrummysvip2.net/?code=JMQKAVX7KWE&t=1783046109",
+    "rating": "4.9",
+    "bonus": "₹500 Welcome Bonus"
   },
   {
     "id": "jaihoarcade",
     "name": "Jaiho Arcade",
     "logo": "images/jaihoarcade.png",
-    "category": "Arcade",
-    "rating": 4.7,
-    "bonus": "₹300",
-    "download": "https://www.jaihoarcade34.com/?code=AZDCZKW7BNV&t=1783046145"
+    "download": "https://www.jaihoarcade34.com/?code=AZDCZKW7BNV&t=1783046145",
+    "rating": "4.8",
+    "bonus": "₹350 Welcome Bonus"
   },
   {
     "id": "jaihoslots",
     "name": "Jaiho Slots",
     "logo": "images/jaihoslots.png",
-    "category": "Slots",
-    "rating": 4.8,
-    "bonus": "₹400",
-    "download": "https://www.jaihoslots18.com/?code=EGP7RY4XTDY&t=1783046174"
+    "download": "https://www.jaihoslots18.com/?code=EGP7RY4XTDY&t=1783046174",
+    "rating": "4.8",
+    "bonus": "₹450 Welcome Bonus"
+  }
+  ,
+  {
+    "id": "jaihospin",
+    "name": "Jaiho Spin",
+    "logo": "images/jaihospin.png",
+    "download": "https://1jaihospinslot.com/?code=7TA6DT11LF3&t=1783046216",
+    "rating": "4.8",
+    "bonus": "₹400 Welcome Bonus"
+  },
+  {
+    "id": "jaihowin",
+    "name": "Jaiho Win",
+    "logo": "images/jaihowin.png",
+    "download": "https://www.jaihowin16.com/?code=1XN5PLDRBGJ&t=1783046440",
+    "rating": "4.9",
+    "bonus": "₹500 Welcome Bonus"
+  },
+  {
+    "id": "jaiho777",
+    "name": "Jaiho777",
+    "logo": "images/jaiho777.png",
+    "download": "https://jaiho77792.com/?code=GC2PL1RSXZD&t=1783046484",
+    "rating": "4.8",
+    "bonus": "₹300 Welcome Bonus"
+  },
+  {
+    "id": "91jaiho",
+    "name": "91 Jaiho",
+    "logo": "images/91jaiho.png",
+    "download": "https://91jaihoapp.com/?code=C422BB6Y941&t=1783046532",
+    "rating": "4.8",
+    "bonus": "₹350 Welcome Bonus"
+  },
+  {
+    "id": "joyrummy",
+    "name": "Joy Rummy",
+    "logo": "images/joyrummy.png",
+    "download": "https://www.joyrummylux.com/?code=J5KY29TE89Q&t=1783046573",
+    "rating": "4.8",
+    "bonus": "₹400 Welcome Bonus"
+  },
+  {
+    "id": "loverummy",
+    "name": "Love Rummy",
+    "logo": "images/loverummy.png",
+    "download": "https://www.loverummy1.com/?code=AFCJ9HGB44A&t=1783046624",
+    "rating": "4.7",
+    "bonus": "₹300 Welcome Bonus"
+  },
+  {
+    "id": "mahagames",
+    "name": "Maha Games",
+    "logo": "images/mahagames.png",
+    "download": "https://on-mahagames.com/?code=J24LM8HUX75&t=1783046672",
+    "rating": "4.9",
+    "bonus": "₹500 Welcome Bonus"
+  },
+  {
+    "id": "mbmbet",
+    "name": "MBM Bet",
+    "logo": "images/mbmbet.png",
+    "download": "https://www.mbmbet28.com/?code=UPH8J9BHY9Q&t=1783046724",
+    "rating": "4.8",
+    "bonus": "₹450 Welcome Bonus"
+  },
+  {
+    "id": "789jackpots",
+    "name": "789 Jackpots",
+    "logo": "images/789jackpots.png",
+    "download": "https://join789jackpots1.com/?code=J7ZRKV1ELHS&t=1783046769",
+    "rating": "4.9",
+    "bonus": "₹500 Welcome Bonus"
+  },
+  {
+    "id": "777okok",
+    "name": "777 OKOK",
+    "logo": "images/777okok.png",
+    "download": "https://www.777okok.com/?code=H53V3D3M674&t=1783046815",
+    "rating": "4.8",
+    "bonus": "₹350 Welcome Bonus"
+  }
+  ,
+  {
+    "id": "567slots",
+    "name": "567 Slots",
+    "logo": "images/567slots.png",
+    "download": "https://join567slots1.cc/?code=4NYYNGE217D&t=1783046875",
+    "rating": "4.8",
+    "bonus": "₹400 Welcome Bonus"
+  },
+  {
+    "id": "yono777hub",
+    "name": "YONO777 Hub",
+    "logo": "images/yono777hub.png",
+    "download": "https://yono777hub.online/?code=F9MJTEWN4UX&t=1783047076",
+    "rating": "4.9",
+    "bonus": "₹500 Welcome Bonus"
+  },
+  {
+    "id": "yonovip",
+    "name": "YONO VIP",
+    "logo": "images/yonovip.png",
+    "download": "https://uonovipfast.com/?code=3CRW27JYQQ9&t=1783047147",
+    "rating": "4.8",
+    "bonus": "₹450 Welcome Bonus"
+  },
+  {
+    "id": "yonoslots",
+    "name": "YONO Slots",
+    "logo": "images/yonoslots.png",
+    "download": "https://www.uonoslots.com/?code=59YKJDMVEZG&t=1783047209",
+    "rating": "4.8",
+    "bonus": "₹350 Welcome Bonus"
+  },
+  {
+    "id": "yonorummy",
+    "name": "YONO Rummy",
+    "logo": "images/yonorummy.png",
+    "download": "https://yonorummy047.com/?code=VIPYHS8XTPY&t=1783047280",
+    "rating": "4.9",
+    "bonus": "₹500 Welcome Bonus"
+  },
+  {
+    "id": "yonogames",
+    "name": "YONO Games",
+    "logo": "images/yonogames.png",
+    "download": "https://youonogamespromocode.com/?code=TC4QC28JKLM&t=1783047332",
+    "rating": "4.8",
+    "bonus": "₹300 Welcome Bonus"
+  },
+  {
+    "id": "yonoofficial",
+    "name": "YONO Official",
+    "logo": "images/yonoofficial.png",
+    "download": "https://yonoofficial3.com/?code=GTSRBZZ32Z9&t=1783047379",
+    "rating": "4.8",
+    "bonus": "₹400 Welcome Bonus"
+  },
+  {
+    "id": "yesspin",
+    "name": "Yes Spin",
+    "logo": "images/yesspin.png",
+    "download": "https://www.yesspinnow.com/?code=47TP7UQQ1PZ&t=1783047472",
+    "rating": "4.8",
+    "bonus": "₹350 Welcome Bonus"
+  },
+  {
+    "id": "toprummy",
+    "name": "Top Rummy",
+    "logo": "images/toprummy.png",
+    "download": "https://www.toprummy.cc/?code=7K9LY1QFUJ5&t=1783047569",
+    "rating": "4.9",
+    "bonus": "₹500 Welcome Bonus"
+  },
+  {
+    "id": "spin101",
+    "name": "Spin101",
+    "logo": "images/spin101.png",
+    "download": "https://spin101-c.net/?code=3X2GPDXYBEN&t=1783047712",
+    "rating": "4.8",
+    "bonus": "₹400 Welcome Bonus"
+  }
+  ,
+  {
+    "id": "spin777",
+    "name": "Spin777",
+    "logo": "images/spin777.png",
+    "download": "https://spin777dd.com/?code=7V9SH1ZGF27&t=1783047786",
+    "rating": "4.8",
+    "bonus": "₹450 Welcome Bonus"
+  },
+  {
+    "id": "spinwinner",
+    "name": "Spin Winner",
+    "logo": "images/spinwinner.png",
+    "download": "https://spinwinner-g.com/?code=SDN6ZMNDX1U&t=1783047844",
+    "rating": "4.9",
+    "bonus": "₹500 Welcome Bonus"
+  },
+  {
+    "id": "safeearn",
+    "name": "Safe Earn",
+    "logo": "images/safeearn.png",
+    "download": "https://bkfadsegtgs.safelyearnmillionsbysharingonepersonaqfxzqyj8.com/?code=ADEV1QHDXSF&t=1783047900",
+    "rating": "4.7",
+    "bonus": "₹250 Welcome Bonus"
+  },
+  {
+    "id": "slotsspin",
+    "name": "Slots Spin",
+    "logo": "images/slotsspin.png",
+    "download": "https://slotsspinl.com/?code=XJBM7Y8QQQH&t=1783047986",
+    "rating": "4.8",
+    "bonus": "₹350 Welcome Bonus"
+  },
+  {
+    "id": "share477",
+    "name": "Share477",
+    "logo": "images/share477.png",
+    "download": "https://share477.com/?code=YAZKHB26CGT&t=1783048024",
+    "rating": "4.8",
+    "bonus": "₹300 Welcome Bonus"
+  },
+  {
+    "id": "rumblerummy",
+    "name": "Rumble Rummy",
+    "logo": "images/rumblerummy.png",
+    "download": "https://www.rumblerummy333.net/?code=UC0SU9FD5QX&t=1783048070",
+    "rating": "4.8",
+    "bonus": "₹400 Welcome Bonus"
+  },
+  {
+    "id": "okrummy",
+    "name": "OK Rummy",
+    "logo": "images/okrummy.png",
+    "download": "https://www.okrummy41.com/?code=H2GU19KMB2W&t=1783048126",
+    "rating": "4.8",
+    "bonus": "₹350 Welcome Bonus"
+  },
+  {
+    "id": "rummy77",
+    "name": "Rummy77",
+    "logo": "images/rummy77.png",
+    "download": "https://rummy77bonus.net/?code=F3VJQX8LLY7&t=1783048174",
+    "rating": "4.9",
+    "bonus": "₹500 Welcome Bonus"
+  },
+  {
+    "id": "rummy888vip",
+    "name": "Rummy888 VIP",
+    "logo": "images/rummy888vip.png",
+    "download": "https://rummy888vip38.com/?code=TPUQEBHBDCU&t=1783048215",
+    "rating": "4.9",
+    "bonus": "₹500 Welcome Bonus"
+  },
+  {
+    "id": "rumludo",
+    "name": "Rum Ludo",
+    "logo": "images/rumludo.png",
+    "download": "https://rummludo.com/?code=UWPWVG4MR7Y&t=1783048276",
+    "rating": "4.8",
+    "bonus": "₹300 Welcome Bonus"
+  }
+  ,
+  {
+    "id": "rummy91",
+    "name": "Rummy91",
+    "logo": "images/rummy91.png",
+    "download": "https://www.rummy91r.bet/?code=CEELB9T658N&t=1783048317",
+    "rating": "4.8",
+    "bonus": "₹400 Welcome Bonus"
+  },
+  {
+    "id": "sagaslots",
+    "name": "Saga Slots",
+    "logo": "images/sagaslots.png",
+    "download": "https://www.sagaslots5.com/?code=41LV9QCX16B&t=1783048379",
+    "rating": "4.8",
+    "bonus": "₹350 Welcome Bonus"
+  },
+  {
+    "id": "teenpatti",
+    "name": "Teen Patti",
+    "logo": "images/teenpatti.png",
+    "download": "https://www.earntp.com/m/14043",
+    "rating": "4.9",
+    "bonus": "₹300 Welcome Bonus"
+  },
+  {
+    "id": "spingold",
+    "name": "Spin Gold",
+    "logo": "images/spingold.png",
+    "download": "https://spingold4.com/?code=HLTSA9JQW5H&t=1783048464",
+    "rating": "4.8",
+    "bonus": "₹400 Welcome Bonus"
+  },
+  {
+    "id": "77game",
+    "name": "77 Game",
+    "logo": "images/77game.png",
+    "download": "https://77game.plus/?code=QGTT8ZS",
+    "rating": "4.7",
+    "bonus": "₹250 Welcome Bonus"
+  },
+  {
+    "id": "goodslots",
+    "name": "Good Slots",
+    "logo": "images/goodslots.png",
+    "download": "https://4sharegoodslots.vip?pid=531453132&channel=2030111&pkg=com.goodslots111.com",
+    "rating": "4.9",
+    "bonus": "₹500 Welcome Bonus"
+  },
+  {
+    "id": "diwaslots",
+    "name": "Diwa Slots",
+    "logo": "images/diwaslots.png",
+    "download": "https://sharediwaslots3.vip?pid=450275843&channel=2030101&pkg=com.diwaslot101.app",
+    "rating": "4.8",
+    "bonus": "₹350 Welcome Bonus"
+  },
+  {
+    "id": "maxrummy",
+    "name": "Max Rummy",
+    "logo": "images/gamerummy.png",
+    "download": "https://www.maxrummy123.com/?code=QUMLDFCQZCC&t=1784950478",
+    "rating": "4.9",
+    "bonus": "₹500 Welcome Bonus"
   }
 ]
