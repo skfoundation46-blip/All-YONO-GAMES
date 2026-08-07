@@ -1,1 +1,92 @@
-[]
+[
+  {
+    "id": "gamerummy",
+    "name": "Game Rummy",
+    "logo": "images/gamerummy.png",
+    "category": "Rummy",
+    "rating": 4.9,
+    "bonus": "₹300",
+    "download": "https://www.gamerummyc.com/?code=Q6WD4YVGSKG&t=1783045708"
+  },
+  {
+    "id": "gospin",
+    "name": "Go Spin",
+    "logo": "images/gospin.png",
+    "category": "Slots",
+    "rating": 4.8,
+    "bonus": "₹200",
+    "download": "https://www.gospin.bet/?code=498S6EMARN5&t=1783045757"
+  },
+  {
+    "id": "hindi777",
+    "name": "Hindi 777",
+    "logo": "images/Hindi777.png",
+    "category": "Casino",
+    "rating": 4.7,
+    "bonus": "₹150",
+    "download": "https://www.hindi777agent5.com/?code=7LFCL9PJ516&t=1783045793"
+  },
+  {
+    "id": "hirummy",
+    "name": "Hi Rummy",
+    "logo": "images/HiRummy.png",
+    "category": "Rummy",
+    "rating": 4.8,
+    "bonus": "₹250",
+    "download": "https://joinhirummy.cc/?code=RX3HPNUFL1W&t=1783045895"
+  },
+  {
+    "id": "indclub",
+    "name": "IND Club",
+    "logo": "images/indclub.png",
+    "category": "Club",
+    "rating": 4.6,
+    "bonus": "₹100",
+    "download": "https://indclub36.com/?code=34UGAHJAEGU&t=1783045944"
+  },
+  {
+    "id": "indslots",
+    "name": "IND Slots",
+    "logo": "images/indslots.png",
+    "category": "Slots",
+    "rating": 4.9,
+    "bonus": "₹500",
+    "download": "https://www.indslotsgame.com/?code=T2Q18VEZGLG&t=1783045984"
+  },
+  {
+    "id": "mqmbet",
+    "name": "MQM Bet",
+    "logo": "images/mqmbet.png",
+    "category": "Casino",
+    "rating": 4.7,
+    "bonus": "₹350",
+    "download": "https://6mqmshare.vip?pid=337905532&channel=2030000&pkg=com.mqmbet3001.app"
+  },
+  {
+    "id": "inrrummy",
+    "name": "INR Rummy",
+    "logo": "images/inrrummy.png",
+    "category": "Rummy",
+    "rating": 4.8,
+    "bonus": "₹200",
+    "download": "https://inrrummysvip2.net/?code=JMQKAVX7KWE&t=1783046109"
+  },
+  {
+    "id": "jaihoarcade",
+    "name": "Jaiho Arcade",
+    "logo": "images/jaihoarcade.png",
+    "category": "Arcade",
+    "rating": 4.7,
+    "bonus": "₹300",
+    "download": "https://www.jaihoarcade34.com/?code=AZDCZKW7BNV&t=1783046145"
+  },
+  {
+    "id": "jaihoslots",
+    "name": "Jaiho Slots",
+    "logo": "images/jaihoslots.png",
+    "category": "Slots",
+    "rating": 4.8,
+    "bonus": "₹400",
+    "download": "https://www.jaihoslots18.com/?code=EGP7RY4XTDY&t=1783046174"
+  }
+]
