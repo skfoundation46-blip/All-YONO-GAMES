@@ -13,7 +13,6 @@ name:"Game Rummy",
 image:"gamerummy.png",
 bonus:"Welcome Bonus ₹300",
 rating:"4.8",
-link:"https://gamerummyc.com/?code=Q6WD4YVGSKG&t=1783045708"
 },
 
 {
