@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Game Rummy",
+    "image": "gamerummy.png",
+    "bonus": "Welcome Offer",
+    "rating": "4.9",
+    "downloads": "10M+",
+    "trusted": false,
+    "link": "gamerummy.html"
+  },
+  {
+    "name": "Go Spin",
+    "image": "gospin.png",
+    "bonus": "Welcome Offer",
+    "rating": "4.8",
+    "downloads": "8M+",
+    "trusted": false,
+    "link": "gospin.html"
+  },
+  {
+    "name": "Hindi777",
+    "image": "Hindi777.png",
+    "bonus": "Welcome Offer",
+    "rating": "4.9",
+    "downloads": "12M+",
+    "trusted": false,
+    "link": "hindi777.html"
+  },
+  {
+    "name": "Hi Rummy",
+    "image": "HiRummy.png",
+    "bonus": "Welcome Offer",
+    "rating": "4.9",
+    "downloads": "9M+",
+    "trusted": false,
+    "link": "hirummy.html"
+  },
+  {
+    "name": "Ind Club",
+    "image": "indclub.png",
+    "bonus": "Welcome Offer",
+    "rating": "4.8",
+    "downloads": "7M+",
+    "trusted": false,
+    "link": "indclub.html"
+  },
+  {
+    "name": "Ind Slots",
+    "image": "indslots.png",
+    "bonus": "Welcome Offer",
+    "rating": "4.8",
+    "downloads": "6M+",
+    "trusted": false,
+    "link": "indslots.html"
+  },
+  {
+    "name": "MQM Bet",
+    "image": "mqmbet.png",
+    "bonus": "Welcome Offer",
+    "rating": "4.7",
+    "downloads": "5M+",
+    "trusted": false,
+    "link": "mqmbet.html"
+  },
+  {
+    "name": "INR Rummy",
+    "image": "inrrummy.png",
+    "bonus": "Welcome Offer",
+    "rating": "4.9",
+    "downloads": "11M+",
+    "trusted": false,
+    "link": "inrrummy.html"
+  },
+  {
+    "name": "Jaiho Arcade",
+    "image": "jaihoarcade.png",
+    "bonus": "Welcome Offer",
+    "rating": "4.8",
+    "downloads": "7M+",
+    "trusted": false,
+    "link": "jaihoarcade.html"
+  },
+  {
+    "name": "Jaiho Slots",
+    "image": "jaihoslots.png",
+    "bonus": "Welcome Offer",
+    "rating": "4.8",
+    "downloads": "6M+",
+    "trusted": false,
+    "link": "jaihoslots.html"
+  }
+]
