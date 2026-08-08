@@ -1,92 +1,456 @@
 [
   {
     "name": "Game Rummy",
-    "image": "gamerummy.png",
-    "bonus": "Game Information",
+    "image": "images/gamerummy.png",
     "rating": "4.9",
-    "downloads": "10M+",
-    "category": "rummy",
-    "link": "games/gamerummy.html"
+    "players": "10M+",
+    "trusted": true,
+    "bonus": "Welcome Bonus ₹300",
+    "url": "games/gamerummy.html"
   },
   {
     "name": "Go Spin",
-    "image": "gospin.png",
-    "bonus": "Game Information",
+    "image": "images/gospin.png",
     "rating": "4.8",
-    "downloads": "8M+",
-    "category": "slots",
-    "link": "games/gospin.html"
+    "players": "8M+",
+    "trusted": true,
+    "bonus": "Welcome Bonus ₹400",
+    "url": "games/gospin.html"
   },
   {
     "name": "Hindi777",
-    "image": "Hindi777.png",
-    "bonus": "Game Information",
+    "image": "images/Hindi777.png",
     "rating": "4.9",
-    "downloads": "12M+",
-    "category": "other",
-    "link": "games/hindi777.html"
+    "players": "12M+",
+    "trusted": true,
+    "bonus": "Welcome Bonus ₹500",
+    "url": "games/hindi777.html"
   },
   {
     "name": "Hi Rummy",
-    "image": "HiRummy.png",
-    "bonus": "Game Information",
+    "image": "images/HiRummy.png",
     "rating": "4.9",
-    "downloads": "9M+",
-    "category": "rummy",
-    "link": "games/hirummy.html"
+    "players": "9M+",
+    "trusted": true,
+    "bonus": "Welcome Bonus ₹500",
+    "url": "games/hirummy.html"
   },
   {
     "name": "Ind Club",
-    "image": "indclub.png",
-    "bonus": "Game Information",
+    "image": "images/indclub.png",
     "rating": "4.8",
-    "downloads": "7M+",
-    "category": "other",
-    "link": "games/indclub.html"
+    "players": "7M+",
+    "trusted": true,
+    "bonus": "Welcome Bonus ₹250",
+    "url": "games/indclub.html"
   },
   {
     "name": "Ind Slots",
-    "image": "indslots.png",
-    "bonus": "Game Information",
+    "image": "images/indslots.png",
     "rating": "4.8",
-    "downloads": "6M+",
-    "category": "slots",
-    "link": "games/indslots.html"
+    "players": "6M+",
+    "trusted": true,
+    "bonus": "Welcome Bonus ₹400",
+    "url": "games/indslots.html"
   },
   {
     "name": "MQM Bet",
-    "image": "mqmbet.png",
-    "bonus": "Game Information",
+    "image": "images/mqmbet.png",
     "rating": "4.7",
-    "downloads": "5M+",
-    "category": "other",
-    "link": "games/mqmbet.html"
+    "players": "5M+",
+    "trusted": true,
+    "bonus": "Welcome Bonus ₹500",
+    "url": "games/mqmbet.html"
   },
   {
     "name": "INR Rummy",
-    "image": "inrrummy.png",
-    "bonus": "Game Information",
+    "image": "images/inrrummy.png",
     "rating": "4.9",
-    "downloads": "11M+",
-    "category": "rummy",
-    "link": "games/inrrummy.html"
+    "players": "11M+",
+    "trusted": true,
+    "bonus": "Welcome Bonus ₹500",
+    "url": "games/inrrummy.html"
   },
   {
     "name": "Jaiho Arcade",
-    "image": "jaihoarcade.png",
-    "bonus": "Game Information",
+    "image": "images/jaihoarcade.png",
     "rating": "4.8",
-    "downloads": "7M+",
-    "category": "other",
-    "link": "games/jaihoarcade.html"
+    "players": "7M+",
+    "trusted": true,
+    "bonus": "Welcome Bonus ₹350",
+    "url": "games/jaihoarcade.html"
   },
   {
     "name": "Jaiho Slots",
-    "image": "jaihoslots.png",
-    "bonus": "Game Information",
+    "image": "images/jaihoslots.png",
     "rating": "4.8",
-    "downloads": "6M+",
-    "category": "slots",
-    "link": "games/jaihoslots.html"
+    "players": "6M+",
+    "trusted": true,
+    "bonus": "Welcome Bonus ₹450",
+    "url": "games/jaihoslots.html"
   }
+  ,
+{
+  "name": "Jaiho Spin",
+  "image": "images/jaihospin.png",
+  "rating": "4.8",
+  "players": "6M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹400",
+  "url": "games/jaihospin.html"
+},
+{
+  "name": "Jaiho Win",
+  "image": "images/jaihowin.png",
+  "rating": "4.9",
+  "players": "8M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹500",
+  "url": "games/jaihowin.html"
+},
+{
+  "name": "Jaiho777",
+  "image": "images/jaiho777.png",
+  "rating": "4.8",
+  "players": "5M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹300",
+  "url": "games/jaiho777.html"
+},
+{
+  "name": "91 Jaiho",
+  "image": "images/91jaiho.png",
+  "rating": "4.8",
+  "players": "5M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹350",
+  "url": "games/91jaiho.html"
+},
+{
+  "name": "Joy Rummy",
+  "image": "images/joyrummy.png",
+  "rating": "4.8",
+  "players": "6M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹400",
+  "url": "games/joyrummy.html"
+},
+{
+  "name": "Love Rummy",
+  "image": "images/loverummy.png",
+  "rating": "4.7",
+  "players": "4M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹300",
+  "url": "games/loverummy.html"
+},
+{
+  "name": "Maha Games",
+  "image": "images/mahagames.png",
+  "rating": "4.9",
+  "players": "7M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹500",
+  "url": "games/mahagames.html"
+},
+{
+  "name": "MBM Bet",
+  "image": "images/mbmbet.png",
+  "rating": "4.8",
+  "players": "5M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹450",
+  "url": "games/mbmbet.html"
+},
+{
+  "name": "789 Jackpots",
+  "image": "images/789jackpots.png",
+  "rating": "4.9",
+  "players": "8M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹500",
+  "url": "games/789jackpots.html"
+},
+{
+  "name": "777 OKOK",
+  "image": "images/777okok.png",
+  "rating": "4.8",
+  "players": "6M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹350",
+  "url": "games/777okok.html"
+}
+  ,
+{
+  "name": "567 Slots",
+  "image": "images/567slots.png",
+  "rating": "4.8",
+  "players": "6M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹400",
+  "url": "games/567slots.html"
+},
+{
+  "name": "YONO777 Hub",
+  "image": "images/yono777hub.png",
+  "rating": "4.9",
+  "players": "9M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹500",
+  "url": "games/yono777hub.html"
+},
+{
+  "name": "YONO VIP",
+  "image": "images/yonovip.png",
+  "rating": "4.8",
+  "players": "7M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹450",
+  "url": "games/yonovip.html"
+},
+{
+  "name": "YONO Slots",
+  "image": "images/yonoslots.png",
+  "rating": "4.8",
+  "players": "6M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹350",
+  "url": "games/yonoslots.html"
+},
+{
+  "name": "YONO Rummy",
+  "image": "images/yonorummy.png",
+  "rating": "4.9",
+  "players": "10M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹500",
+  "url": "games/yonorummy.html"
+},
+{
+  "name": "YONO Games",
+  "image": "images/yonogames.png",
+  "rating": "4.8",
+  "players": "5M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹300",
+  "url": "games/yonogames.html"
+},
+{
+  "name": "YONO Official",
+  "image": "images/yonoofficial.png",
+  "rating": "4.8",
+  "players": "6M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹400",
+  "url": "games/yonoofficial.html"
+},
+{
+  "name": "Yes Spin",
+  "image": "images/yesspin.png",
+  "rating": "4.8",
+  "players": "5M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹350",
+  "url": "games/yesspin.html"
+},
+{
+  "name": "Top Rummy",
+  "image": "images/toprummy.png",
+  "rating": "4.9",
+  "players": "9M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹500",
+  "url": "games/toprummy.html"
+},
+{
+  "name": "Spin101",
+  "image": "images/spin101.png",
+  "rating": "4.8",
+  "players": "7M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹400",
+  "url": "games/spin101.html"
+}
+  ,
+{
+  "name": "Spin777",
+  "image": "images/spin777.png",
+  "rating": "4.8",
+  "players": "6M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹450",
+  "url": "games/spin777.html"
+},
+{
+  "name": "Spin Winner",
+  "image": "images/spinwinner.png",
+  "rating": "4.9",
+  "players": "8M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹500",
+  "url": "games/spinwinner.html"
+},
+{
+  "name": "Safe Earn",
+  "image": "images/safeearn.png",
+  "rating": "4.7",
+  "players": "4M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹250",
+  "url": "games/safeearn.html"
+},
+{
+  "name": "Slots Spin",
+  "image": "images/slotsspin.png",
+  "rating": "4.8",
+  "players": "5M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹350",
+  "url": "games/slotsspin.html"
+},
+{
+  "name": "Share477",
+  "image": "images/share477.png",
+  "rating": "4.8",
+  "players": "5M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹300",
+  "url": "games/share477.html"
+},
+{
+  "name": "Rumble Rummy",
+  "image": "images/rumblerummy.png",
+  "rating": "4.8",
+  "players": "6M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹400",
+  "url": "games/rumblerummy.html"
+},
+{
+  "name": "OK Rummy",
+  "image": "images/okrummy.png",
+  "rating": "4.8",
+  "players": "5M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹350",
+  "url": "games/okrummy.html"
+},
+{
+  "name": "Rummy77",
+  "image": "images/rummy77.png",
+  "rating": "4.9",
+  "players": "9M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹500",
+  "url": "games/rummy77.html"
+},
+{
+  "name": "Rummy888 VIP",
+  "image": "images/rummy888vip.png",
+  "rating": "4.9",
+  "players": "8M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹500",
+  "url": "games/rummy888vip.html"
+},
+{
+  "name": "Rum Ludo",
+  "image": "images/rumludo.png",
+  "rating": "4.8",
+  "players": "5M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹300",
+  "url": "games/rumludo.html"
+}
+  ,
+{
+  "name": "Rummy91",
+  "image": "images/rummy91.png",
+  "rating": "4.8",
+  "players": "6M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹400",
+  "url": "games/rummy91.html"
+},
+{
+  "name": "Saga Slots",
+  "image": "images/sagaslots.png",
+  "rating": "4.8",
+  "players": "5M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹350",
+  "url": "games/sagaslots.html"
+},
+{
+  "name": "Teen Patti",
+  "image": "images/teenpatti.png",
+  "rating": "4.8",
+  "players": "9M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹300",
+  "url": "games/teenpatti.html"
+},
+{
+  "name": "Spin Gold",
+  "image": "images/spingold.png",
+  "rating": "4.8",
+  "players": "6M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹400",
+  "url": "games/spingold.html"
+},
+{
+  "name": "77 Game",
+  "image": "images/77game.png",
+  "rating": "4.7",
+  "players": "5M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹250",
+  "url": "games/77game.html"
+},
+{
+  "name": "Good Slots",
+  "image": "images/goodslots.png",
+  "rating": "4.9",
+  "players": "8M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹500",
+  "url": "games/goodslots.html"
+},
+{
+  "name": "Diwa777",
+  "image": "images/diwaslots.png",
+  "rating": "4.8",
+  "players": "6M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹400",
+  "url": "games/diwa777.html"
+},
+{
+  "name": "Diwa Slots",
+  "image": "images/diwaslots.png",
+  "rating": "4.8",
+  "players": "5M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹350",
+  "url": "games/diwaslots.html"
+},
+{
+  "name": "Max Rummy",
+  "image": "images/gamerummy.png",
+  "rating": "4.9",
+  "players": "10M+",
+  "trusted": true,
+  "bonus": "Welcome Bonus ₹500",
+  "url": "games/maxrummy.html"
+},
+{
+  "name": "All YONO Games New",
+  "image": "images/allyonogamesnew.png",
+  "rating": "5.0",
+  "players": "50M+",
+  "trusted": true,
+  "bonus": "Latest Games Collection",
+  "url": "index.html"
+}
 ]
