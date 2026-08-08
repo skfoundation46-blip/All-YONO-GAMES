@@ -1,165 +1,514 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>All YONO Games New | Latest Rummy, Slots & Gaming Apps</title>
+  <title>Yono Games - Game Directory</title>
 
-<meta name="description" content="All YONO Games New – Discover the latest YONO Games, Rummy Apps, Slots, Teen Patti and popular gaming apps in one place. Find game information and visit the respective platform.">
+  <meta
+    name="description"
+    content="Explore the latest gaming platforms and game information in one place."
+  >
 
-<meta name="keywords" content="All YONO Games New, YONO Games, YONO Rummy, Rummy Apps, Slots Games, Teen Patti, Spin Games, Gaming Apps">
+  <meta name="robots" content="index, follow">
 
-<meta name="robots" content="index, follow">
-<meta name="author" content="All YONO Games New">
-
-<link rel="icon" href="images/allyonogamesnew.png">
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- TOP MOVING BAR -->
-<div class="top-bar">
-    <div class="moving-text">
-        🔥 ALL YONO GAMES NEW &nbsp; • &nbsp;
-        LATEST GAME UPDATES &nbsp; • &nbsp;
-        RUMMY &nbsp; • &nbsp;
-        SLOTS &nbsp; • &nbsp;
-        TEEN PATTI &nbsp; • &nbsp;
-        18+ &nbsp; • &nbsp;
-        PLAY RESPONSIBLY
-    </div>
-</div>
+  <!-- ================= HEADER ================= -->
 
-<!-- HEADER -->
-<header class="header">
-    <img src="images/allyonogamesnew.png" alt="All YONO Games New">
-    <div>
-        <h1>ALL YONO GAMES NEW</h1>
-        <p>Latest Gaming Apps & Updates</p>
-    </div>
-</header>
+  <header class="site-header">
 
-<!-- SEARCH -->
-<div class="search-box">
-    <input type="search" id="searchInput" placeholder="🔍 Search your game...">
-</div>
+    <div class="header-inner">
 
-<!-- GAMES -->
-<main class="container">
+      <a href="index.html" class="logo">
+        <img
+          src="images/logo.png"
+          alt="Yono Games"
+          onerror="this.style.display='none'"
+        >
 
-    <div class="section-title">
-        <h2>🔥 Latest YONO Games</h2>
-        <span>50+ Games</span>
+        <span>Yono Games</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open menu"
+      >
+        ☰
+      </button>
+
     </div>
 
-    <div id="gameList" class="game-grid"></div>
+  </header>
 
-</main>
 
-<!-- SOCIAL BUTTONS -->
-<section class="social-section">
+  <!-- ================= NAVIGATION ================= -->
 
-    <h2>📢 Join Our Community</h2>
+  <nav class="main-nav" id="mainNav">
 
-    <div class="social-buttons">
+    <a href="index.html">Home</a>
 
-        <a href="https://t.me/+u76rnCJJoLU1N2M1"
-           target="_blank"
-           class="telegram">
-           📢 Telegram
+    <a href="#about">About</a>
+
+    <a href="#games">Games</a>
+
+    <a href="#contact">Contact</a>
+
+    <a href="#disclaimer">Disclaimer</a>
+
+  </nav>
+
+
+  <!-- ================= HERO ================= -->
+
+  <main>
+
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <span class="hero-label">
+          🎮 GAME DIRECTORY
+        </span>
+
+        <h1>
+          All Yono
+          <span>Games</span>
+        </h1>
+
+        <p>
+          Explore game information, screenshots, ratings and
+          available gaming platforms in one place.
+        </p>
+
+        <div class="hero-actions">
+
+          <a href="#games" class="hero-btn primary">
+            Explore Games →
+          </a>
+
+          <a href="#games" class="hero-btn secondary">
+            View Collection
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= STATS ================= -->
+
+    <section class="stats-section">
+
+      <div class="stat-card">
+
+        <strong id="totalGames">
+          0+
+        </strong>
+
+        <span>Games</span>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <strong>
+          25K+
+        </strong>
+
+        <span>Players</span>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <strong>
+          50+
+        </strong>
+
+        <span>Platforms</span>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= COMMUNITY ================= -->
+
+    <section class="community">
+
+      <div>
+
+        <span class="small-title">
+          STAY UPDATED
+        </span>
+
+        <h2>
+          Join Our Community
+        </h2>
+
+        <p>
+          Follow the community for website updates and announcements.
+        </p>
+
+      </div>
+
+
+      <div class="community-actions">
+
+        <a
+          href="https://t.me/+ZX_fECfi_SY2MGI1"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="telegram-community"
+        >
+          ✈ Telegram
         </a>
 
-        <a href="https://whatsapp.com/channel/0029VbCsKBlAe5Vnj2VbpO3Z"
-           target="_blank"
-           class="whatsapp">
-           💬 WhatsApp
+        <a
+          href="https://whatsapp.com/channel/0029Vb6ncxAEQIaoxcCLVo1Z"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="whatsapp-community"
+        >
+          WhatsApp
         </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= GAMES ================= -->
+
+    <section
+      class="games-section"
+      id="games"
+    >
+
+      <div class="section-top">
+
+        <div>
+
+          <span class="small-title">
+            GAME COLLECTION
+          </span>
+
+          <h2>
+            Latest Games
+          </h2>
+
+          <p>
+            Browse the available games below.
+          </p>
+
+        </div>
+
+        <div
+          class="game-counter"
+          id="gameCounter"
+        >
+          0 Games
+        </div>
+
+      </div>
+
+
+      <!-- SEARCH -->
+
+      <div class="search-wrapper">
+
+        <span class="search-icon">
+          🔍
+        </span>
+
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search games..."
+          autocomplete="off"
+        >
+
+      </div>
+
+
+      <!-- FILTER TABS -->
+
+      <div class="game-tabs">
+
+        <button
+          type="button"
+          class="game-tab active"
+          data-category="all"
+        >
+          All Games
+        </button>
+
+        <button
+          type="button"
+          class="game-tab"
+          data-category="rummy"
+        >
+          Rummy
+        </button>
+
+        <button
+          type="button"
+          class="game-tab"
+          data-category="slots"
+        >
+          Slots
+        </button>
+
+        <button
+          type="button"
+          class="game-tab"
+          data-category="other"
+        >
+          Other
+        </button>
+
+      </div>
+
+
+      <!-- GAME LIST -->
+
+      <div
+        id="gameList"
+        class="game-list"
+      >
+
+        <div class="loading-card">
+
+          <div class="loading-spinner"></div>
+
+          <p>
+            Loading games...
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- NO RESULTS -->
+
+      <div
+        id="noResults"
+        class="no-results"
+        hidden
+      >
+
+        <div class="no-results-icon">
+          🎮
+        </div>
+
+        <h3>
+          No games found
+        </h3>
+
+        <p>
+          Try searching with another game name.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section
+      class="content-section"
+      id="about"
+    >
+
+      <span class="small-title">
+        ABOUT US
+      </span>
+
+      <h2>
+        About Yono Games
+      </h2>
+
+      <p>
+        Yono Games is an informational game directory designed
+        to make it easier to discover different gaming platforms
+        and their available information.
+      </p>
+
+      <p>
+        Each game entry can include its name, image, rating,
+        available information and a link to its dedicated page.
+      </p>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section
+      class="content-section"
+      id="contact"
+    >
+
+      <span class="small-title">
+        CONTACT
+      </span>
+
+      <h2>
+        Contact & Updates
+      </h2>
+
+      <p>
+        For website updates and announcements, follow our
+        community channels.
+      </p>
+
+      <div class="contact-buttons">
+
+        <a
+          href="https://t.me/+ZX_fECfi_SY2MGI1"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ✈ Join Telegram
+        </a>
+
+        <a
+          href="https://whatsapp.com/channel/0029Vb6ncxAEQIaoxcCLVo1Z"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WhatsApp Channel
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= DISCLAIMER ================= -->
+
+    <section
+      class="content-section disclaimer"
+      id="disclaimer"
+    >
+
+      <span class="small-title">
+        IMPORTANT
+      </span>
+
+      <h2>
+        Disclaimer
+      </h2>
+
+      <p>
+        This website is an informational directory. Information
+        about third-party platforms may change over time.
+        Users should independently verify the availability,
+        terms, age requirements and applicable laws before
+        accessing any third-party service.
+      </p>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="site-footer">
+
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+
+        <h3>
+          Yono Games
+        </h3>
+
+        <p>
+          Game information and platform directory.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#games">
+          Games
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
+        <a href="#disclaimer">
+          Disclaimer
+        </a>
+
+      </div>
 
     </div>
 
-</section>
 
-<!-- SEO HASHTAGS -->
-<section class="hashtags">
+    <div class="copyright">
 
-<h2>Popular YONO Games Searches</h2>
+      © 2026 Yono Games. All Rights Reserved.
 
-<div class="tag-list">
+    </div>
 
-<span>#YONOGames</span>
-<span>#AllYONOGames</span>
-<span>#YONOGamesNew</span>
-<span>#YONORummy</span>
-<span>#YONOVIP</span>
-<span>#YONOSlots</span>
-<span>#YONOOfficial</span>
-<span>#GameRummy</span>
-<span>#GoSpin</span>
-<span>#Hindi777</span>
-<span>#HiRummy</span>
-<span>#IndClub</span>
-<span>#IndSlots</span>
-<span>#MQMBet</span>
-<span>#INRRummy</span>
-<span>#JaihoArcade</span>
-<span>#JaihoSlots</span>
-<span>#JaihoSpin</span>
-<span>#JaihoWin</span>
-<span>#Jaiho777</span>
-<span>#91Jaiho</span>
-<span>#JoyRummy</span>
-<span>#LoveRummy</span>
-<span>#MahaGames</span>
-<span>#MBMBet</span>
-<span>#789Jackpots</span>
-<span>#777OKOK</span>
-<span>#567Slots</span>
-<span>#YONO777Hub</span>
-<span>#YesSpin</span>
-<span>#TopRummy</span>
-<span>#Spin101</span>
-<span>#Spin777</span>
-<span>#SpinWinner</span>
-<span>#SafeEarn</span>
-<span>#SlotsSpin</span>
-<span>#Share477</span>
-<span>#RumbleRummy</span>
-<span>#OKRummy</span>
-<span>#Rummy77</span>
-<span>#Rummy888VIP</span>
-<span>#RumLudo</span>
-<span>#Rummy91</span>
-<span>#SagaSlots</span>
-<span>#TeenPatti</span>
-<span>#SpinGold</span>
-<span>#77Game</span>
-<span>#GoodSlots</span>
-<span>#DiwaSlots</span>
+  </footer>
 
-</div>
 
-</section>
+  <!-- ================= TELEGRAM FLOATING BUTTON ================= -->
 
-<!-- FOOTER -->
-<footer>
+  <a
+    href="https://t.me/+ZX_fECfi_SY2MGI1"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="telegram-float"
+    aria-label="Join Telegram"
+  >
+    <span>✈</span>
+  </a>
 
-<h3>ALL YONO GAMES NEW</h3>
 
-<p>
-Latest gaming apps, Rummy, Slots and popular gaming platform information.
-</p>
+  <!-- ================= BACK TO TOP ================= -->
 
-<p class="warning">
-18+ | Play Responsibly | Terms may vary by platform.
-</p>
+  <button
+    type="button"
+    id="backToTop"
+    class="back-to-top"
+    aria-label="Back to top"
+  >
+    ↑
+  </button>
 
-<p>© 2026 All YONO Games New. All Rights Reserved.</p>
 
-</footer>
+  <!-- ================= SCRIPT ================= -->
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 
 </body>
 </html>
