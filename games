@@ -1,1 +1,1556 @@
-()
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Game Rummy – Game Information, Features & Download</title>
+
+  <meta name="description"
+        content="Explore Game Rummy information, features, mobile experience, registration details and the latest platform information. Read the complete guide before visiting Game Rummy.">
+
+  <meta name="robots"
+        content="index, follow">
+
+  <meta name="author"
+        content="All YONO Games New">
+
+  <link rel="canonical"
+        href="https://www.maxrummy123.com/games/gamerummy.html">
+
+  <link rel="icon"
+        href="../images/gamerummy.png">
+
+  <link rel="stylesheet"
+        href="../style.css">
+
+  <style>
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      font-family:Arial,Helvetica,sans-serif;
+      background:#f5f7fb;
+      color:#172033;
+      line-height:1.7;
+    }
+
+    .page{
+      max-width:1100px;
+      margin:auto;
+      padding:0 16px;
+    }
+
+    /* TOP BAR */
+
+    .top-strip{
+      background:#101828;
+      color:#fff;
+      text-align:center;
+      padding:9px 12px;
+      font-size:13px;
+      letter-spacing:.3px;
+    }
+
+    /* HEADER */
+
+    .site-header{
+      background:#fff;
+      border-bottom:1px solid #e5e7eb;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .header-inner{
+      max-width:1100px;
+      margin:auto;
+      min-height:72px;
+      padding:10px 16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:15px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      text-decoration:none;
+      color:#111827;
+      font-weight:800;
+    }
+
+    .brand img{
+      width:45px;
+      height:45px;
+      object-fit:cover;
+      border-radius:12px;
+    }
+
+    .brand span{
+      font-size:18px;
+    }
+
+    .home-link{
+      text-decoration:none;
+      color:#475467;
+      font-weight:700;
+      font-size:14px;
+    }
+
+    /* BREADCRUMB */
+
+    .breadcrumb{
+      max-width:1100px;
+      margin:18px auto 0;
+      padding:0 16px;
+      color:#667085;
+      font-size:13px;
+    }
+
+    .breadcrumb a{
+      color:#2563eb;
+      text-decoration:none;
+    }
+
+    /* HERO */
+
+    .hero{
+      margin-top:18px;
+      background:linear-gradient(
+        135deg,
+        #111827,
+        #1e293b
+      );
+      border-radius:24px;
+      padding:28px;
+      color:#fff;
+      overflow:hidden;
+      position:relative;
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      width:220px;
+      height:220px;
+      right:-90px;
+      top:-90px;
+      background:rgba(255,255,255,.06);
+      border-radius:50%;
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:150px 1fr;
+      gap:25px;
+      align-items:center;
+    }
+
+    .game-logo{
+      width:150px;
+      height:150px;
+      object-fit:cover;
+      border-radius:28px;
+      background:#fff;
+      padding:5px;
+      box-shadow:0 15px 40px rgba(0,0,0,.25);
+    }
+
+    .eyebrow{
+      color:#a7f3d0;
+      font-size:13px;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:1px;
+    }
+
+    .hero h1{
+      font-size:42px;
+      line-height:1.15;
+      margin:7px 0 10px;
+    }
+
+    .hero-description{
+      color:#d0d5dd;
+      max-width:680px;
+      font-size:16px;
+    }
+
+    /* BADGES */
+
+    .badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+      margin-top:18px;
+    }
+
+    .badge{
+      padding:7px 12px;
+      border-radius:50px;
+      font-size:13px;
+      font-weight:800;
+      background:rgba(255,255,255,.1);
+      border:1px solid rgba(255,255,255,.12);
+    }
+
+    .badge.trusted{
+      color:#a7f3d0;
+    }
+
+    .badge.bonus{
+      color:#fde68a;
+    }
+
+    .badge.rating{
+      color:#bfdbfe;
+    }
+
+    /* CTA */
+
+    .cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:22px;
+    }
+
+    .download-btn{
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      min-height:52px;
+      padding:0 25px;
+      border-radius:13px;
+      background:#16a34a;
+      color:#fff;
+      text-decoration:none;
+      font-weight:900;
+      box-shadow:0 8px 25px rgba(22,163,74,.3);
+      transition:.2s;
+    }
+
+    .download-btn:hover{
+      transform:translateY(-2px);
+    }
+
+    .telegram-btn{
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      min-height:52px;
+      padding:0 22px;
+      border-radius:13px;
+      background:#2563eb;
+      color:#fff;
+      text-decoration:none;
+      font-weight:800;
+    }
+
+    /* QUICK INFO */
+
+    .quick-info{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:15px;
+      margin-top:18px;
+    }
+
+    .info-box{
+      background:#fff;
+      border:1px solid #e4e7ec;
+      border-radius:18px;
+      padding:20px;
+      box-shadow:0 4px 15px rgba(16,24,40,.04);
+    }
+
+    .info-label{
+      display:block;
+      color:#667085;
+      font-size:12px;
+      font-weight:700;
+      text-transform:uppercase;
+    }
+
+    .info-value{
+      display:block;
+      margin-top:5px;
+      font-size:18px;
+      font-weight:900;
+      color:#101828;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:700px){
+
+      .header-inner{
+        min-height:62px;
+      }
+
+      .brand span{
+        font-size:15px;
+      }
+
+      .home-link{
+        font-size:12px;
+      }
+
+      .hero{
+        border-radius:20px;
+        padding:22px 18px;
+      }
+
+      .hero-content{
+        grid-template-columns:1fr;
+        text-align:center;
+      }
+
+      .game-logo{
+        width:115px;
+        height:115px;
+        margin:auto;
+        border-radius:23px;
+      }
+
+      .hero h1{
+        font-size:30px;
+      }
+
+      .hero-description{
+        font-size:14px;
+      }
+
+      .badges{
+        justify-content:center;
+      }
+
+      .cta-row{
+        flex-direction:column;
+      }
+
+      .download-btn,
+      .telegram-btn{
+        width:100%;
+      }
+
+      .quick-info{
+        grid-template-columns:1fr;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="top-strip">
+    18+ • Read the information carefully • Play responsibly
+  </div>
+
+  <header class="site-header">
+
+    <div class="header-inner">
+
+      <a href="../index.html" class="brand">
+        <img
+          src="../images/allyonogamesnew.png"
+          alt="All YONO Games New">
+        <span>All YONO Games New</span>
+      </a>
+
+      <a href="../index.html" class="home-link">
+        ← All Games
+      </a>
+
+    </div>
+
+  </header>
+
+  <div class="breadcrumb">
+
+    <a href="../index.html">Home</a>
+    <span> / </span>
+    <span>Games</span>
+    <span> / </span>
+    <strong>Game Rummy</strong>
+
+  </div>
+
+  <main class="page">
+
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <img
+          class="game-logo"
+          src="../images/gamerummy.png"
+          alt="Game Rummy">
+
+        <div>
+
+          <div class="eyebrow">
+            Game Information
+          </div>
+
+          <h1>Game Rummy</h1>
+
+          <p class="hero-description">
+            Explore Game Rummy information, features,
+            mobile experience and important details before
+            visiting the platform.
+          </p>
+
+          <div class="badges">
+
+            <span class="badge trusted">
+              ✓ Trusted Listing
+            </span>
+
+            <span class="badge bonus">
+              🎁 Welcome Bonus
+            </span>
+
+            <span class="badge rating">
+              ⭐ 4.9 / 5
+            </span>
+
+          </div>
+
+          <div class="cta-row">
+
+            <a
+              href="https://gamerummyc.com/?code=Q6WD4YVGSKG&t=1783045708"
+              target="_blank"
+              rel="nofollow sponsored noopener"
+              class="download-btn">
+
+              📥 Visit / Download Game Rummy
+
+            </a>
+
+            <a
+              href="https://t.me/+ZX_fECfi_SY2MGI1"
+              target="_blank"
+              rel="noopener"
+              class="telegram-btn">
+
+              📢 Join Telegram
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="quick-info">
+
+      <div class="info-box">
+        <span class="info-label">Game</span>
+        <span class="info-value">Game Rummy</span>
+      </div>
+
+      <div class="info-box">
+        <span class="info-label">Category</span>
+        <span class="info-value">Rummy & Gaming</span>
+      </div>
+
+      <div class="info-box">
+        <span class="info-label">Experience</span>
+        <span class="info-value">Mobile Friendly</span>
+      </div>
+
+    </section>
+
+    <!-- -->
+    <section class="content-area">
+
+  <article class="main-article">
+
+    <div class="section-heading">
+      <span class="section-kicker">GAME GUIDE</span>
+      <h2>Game Rummy – Complete Guide and Information</h2>
+    </div>
+
+    <p>
+      Game Rummy is presented as an online gaming platform for users looking
+      for rummy and related gaming information. This page provides a detailed
+      overview of the platform, its mobile experience, general features,
+      account considerations, promotional information, and important points
+      to review before visiting the external platform.
+    </p>
+
+    <p>
+      The purpose of this guide is to give visitors useful information in one
+      organized location. Instead of relying only on a download button, users
+      can review the available information first and then decide whether they
+      want to visit the external platform. Information, offers, availability,
+      eligibility requirements, and platform policies can change over time,
+      so users should always review the latest information on the destination
+      website.
+    </p>
+
+    <h2>What Is Game Rummy?</h2>
+
+    <p>
+      Game Rummy is a name associated with an online gaming platform. Visitors
+      searching for Game Rummy may be interested in learning about its
+      interface, accessibility, available gaming sections, account process,
+      and general platform experience.
+    </p>
+
+    <p>
+      When evaluating any online gaming service, it is useful to look beyond
+      the name or promotional message. Users should consider the website
+      domain, terms and conditions, privacy information, eligibility rules,
+      customer support options, and any restrictions that may apply to their
+      location.
+    </p>
+
+    <p>
+      This page does not promise winnings or guaranteed returns. Gaming
+      outcomes can vary, and users should understand the risks associated
+      with any activity before participating.
+    </p>
+
+    <h2>Game Rummy Mobile Experience</h2>
+
+    <p>
+      Mobile accessibility is an important part of the modern online gaming
+      experience. A good mobile interface should make important information
+      easy to read, navigation simple, and interactive buttons comfortable
+      to use on smaller screens.
+    </p>
+
+    <p>
+      Game Rummy can be accessed through a mobile-oriented browsing
+      experience depending on the current platform setup. Visitors using a
+      smartphone should make sure their browser is updated and that they are
+      visiting the intended website before entering any personal information.
+    </p>
+
+    <p>
+      A responsive design also makes it easier to move between information
+      sections, review available options, and locate important links without
+      excessive scrolling or zooming. Mobile users should also use a stable
+      internet connection when accessing external gaming platforms.
+    </p>
+
+    <h2>Key Game Rummy Features</h2>
+
+    <div class="feature-grid">
+
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <h3>Mobile Friendly</h3>
+        <p>
+          The information page is designed with smartphone visitors in mind,
+          making the main sections easy to read and navigate.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🎮</div>
+        <h3>Gaming Information</h3>
+        <p>
+          Visitors can review general information about the Game Rummy
+          platform before deciding whether to continue.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Simple Navigation</h3>
+        <p>
+          Important sections are organized clearly so visitors can find
+          relevant information without unnecessary navigation.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🔐</div>
+        <h3>Account Awareness</h3>
+        <p>
+          Users should review account, privacy, verification, and security
+          requirements before providing personal information.
+        </p>
+      </div>
+
+    </div>
+
+    <h2>Game Rummy Registration Information</h2>
+
+    <p>
+      Registration requirements can vary depending on the current platform
+      configuration. Before creating an account, visitors should carefully
+      review the registration instructions displayed on the destination
+      website.
+    </p>
+
+    <p>
+      If the platform requests a mobile number, verification code, password,
+      or other account information, users should make sure they are entering
+      details only on the intended website. Login credentials and one-time
+      passwords should never be shared with another person.
+    </p>
+
+    <p>
+      Age restrictions and location-based requirements may also apply.
+      Visitors should check the current eligibility rules before registering.
+      If online gaming is restricted in a particular location, users should
+      not attempt to bypass those restrictions.
+    </p>
+
+    <h2>Game Rummy Bonus Information</h2>
+
+    <p>
+      Promotional offers may be displayed by gaming platforms from time to
+      time. A bonus or welcome offer should not automatically be interpreted
+      as guaranteed cash or guaranteed earnings.
+    </p>
+
+    <p>
+      Before using any promotional offer, users should read the complete
+      conditions. These may include eligibility requirements, minimum
+      activity requirements, validity periods, withdrawal conditions, or
+      other restrictions.
+    </p>
+
+    <p>
+      Promotional terms can change without notice. For that reason, the
+      current terms shown on the destination platform should always take
+      priority over information displayed on a third-party listing page.
+    </p>
+
+    <h2>Game Rummy User Experience</h2>
+
+    <p>
+      A well-organized gaming website should allow visitors to understand
+      the available options without confusion. Clear navigation, readable
+      typography, responsive layouts, and accessible buttons can make the
+      overall browsing experience more convenient.
+    </p>
+
+    <p>
+      For mobile users, the most important areas are usually the main game
+      information, account-related instructions, promotional details,
+      support information, and the primary visit button. Keeping these
+      sections clearly separated helps users make informed decisions.
+    </p>
+
+    <h2>Things to Check Before Using Game Rummy</h2>
+
+    <ul class="info-list">
+
+      <li>
+        Check the website address carefully before entering personal
+        information.
+      </li>
+
+      <li>
+        Read the current terms and conditions before creating an account.
+      </li>
+
+      <li>
+        Review the privacy policy and understand how account information is
+        handled.
+      </li>
+
+      <li>
+        Check age, location, and eligibility requirements.
+      </li>
+
+      <li>
+        Read all bonus and promotional conditions before accepting an offer.
+      </li>
+
+      <li>
+        Keep passwords, OTPs, and account credentials private.
+      </li>
+
+      <li>
+        Never assume that a promotional offer guarantees winnings.
+      </li>
+
+      <li>
+        Follow all applicable laws and regulations in your location.
+      </li>
+
+    </ul>
+
+    <h2>Why Users Look for Game Rummy Information</h2>
+
+    <p>
+      People searching for a gaming platform often want more than a direct
+      download link. They may want to understand what the platform offers,
+      whether the website works well on mobile devices, how the account
+      process works, and what information should be checked before
+      continuing.
+    </p>
+
+    <p>
+      A dedicated information page can make this process easier by placing
+      the main details in one location. It also gives visitors an opportunity
+      to review the platform information before opening an external website.
+    </p>
+
+    <h2>Mobile Safety and Account Security</h2>
+
+    <p>
+      Account security should remain a priority when using any online service.
+      Users should create strong passwords where supported and avoid using
+      the same password across multiple websites.
+    </p>
+
+    <p>
+      Never provide an OTP, password, banking PIN, or other confidential
+      authentication information to someone claiming to represent a gaming
+      platform through an unofficial channel. If something appears unusual,
+      leave the page and verify the information through the platform's
+      available official support resources.
+    </p>
+
+    <h2>Responsible Gaming</h2>
+
+    <p>
+      Gaming should be approached responsibly. If a platform involves
+      deposits, entry fees, or other financial activity, users should
+      understand that money can be lost and should never spend more than
+      they can comfortably afford to lose.
+    </p>
+
+    <p>
+      Do not treat gaming as a guaranteed income source. Avoid chasing losses
+      and take breaks when necessary. Users should also respect applicable
+      age restrictions and local regulations.
+    </p>
+
+    <div class="notice-box">
+
+      <strong>Important Notice</strong>
+
+      <p>
+        18+ only where legally applicable. This page provides general
+        information and does not guarantee winnings, income, bonuses, or
+        platform availability. Gaming may involve financial risk. Review the
+        destination platform's current terms and your local laws before
+        participating.
+      </p>
+
+    </div>
+
+  </article>
+
+</section>
+
+<style>
+
+  .content-area{
+    margin-top:22px;
+  }
+
+  .main-article{
+    background:#fff;
+    border:1px solid #e4e7ec;
+    border-radius:22px;
+    padding:30px;
+    box-shadow:0 5px 25px rgba(16,24,40,.05);
+  }
+
+  .section-heading{
+    margin-bottom:20px;
+  }
+
+  .section-kicker{
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:1.2px;
+    color:#2563eb;
+  }
+
+  .section-heading h2{
+    margin-top:5px;
+  }
+
+  .main-article h2{
+    font-size:26px;
+    line-height:1.3;
+    margin:30px 0 12px;
+    color:#101828;
+  }
+
+  .main-article p{
+    color:#475467;
+    margin-bottom:16px;
+    font-size:16px;
+  }
+
+  .feature-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+    margin-top:20px;
+  }
+
+  .feature-card{
+    border:1px solid #e4e7ec;
+    border-radius:18px;
+    padding:20px;
+    background:#fafbfc;
+  }
+
+  .feature-icon{
+    font-size:27px;
+    margin-bottom:8px;
+  }
+
+  .feature-card h3{
+    margin-bottom:5px;
+    color:#101828;
+  }
+
+  .feature-card p{
+    font-size:14px;
+    margin:0;
+  }
+
+  .info-list{
+    padding-left:22px;
+    color:#475467;
+  }
+
+  .info-list li{
+    margin-bottom:10px;
+    padding-left:5px;
+  }
+
+  .notice-box{
+    margin-top:30px;
+    padding:20px;
+    border-left:4px solid #f59e0b;
+    background:#fffbeb;
+    border-radius:12px;
+  }
+
+  .notice-box strong{
+    color:#92400e;
+  }
+
+  .notice-box p{
+    margin:7px 0 0;
+    font-size:14px;
+  }
+
+  @media(max-width:700px){
+
+    .main-article{
+      padding:21px 17px;
+      border-radius:18px;
+    }
+
+    .main-article h2{
+      font-size:22px;
+    }
+
+    .main-article p{
+      font-size:15px;
+    }
+
+    .feature-grid{
+      grid-template-columns:1fr;
+    }
+
+  }
+
+</style>
+<!-- =========================
+     PART 3 – FAQ + SOCIAL + MORE GAMES
+========================= -->
+
+<section class="faq-section">
+
+  <div class="section-heading">
+    <span class="section-kicker">FAQ</span>
+    <h2>Frequently Asked Questions About Game Rummy</h2>
+  </div>
+
+  <div class="faq-list">
+
+    <details class="faq-item">
+      <summary>
+        What is Game Rummy?
+        <span>+</span>
+      </summary>
+
+      <div class="faq-answer">
+        <p>
+          Game Rummy is an online gaming platform name that users may search
+          for when looking for rummy and related gaming options. Before using
+          any external gaming platform, users should review its current
+          terms, eligibility requirements, privacy information and applicable
+          rules.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        Is Game Rummy available on mobile devices?
+        <span>+</span>
+      </summary>
+
+      <div class="faq-answer">
+        <p>
+          The Game Rummy information page is designed to be mobile friendly.
+          Availability of the external platform and its specific mobile
+          features can depend on the current platform setup, device and
+          location. Always check the destination website for the latest
+          information.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        How can I visit Game Rummy?
+        <span>+</span>
+      </summary>
+
+      <div class="faq-answer">
+        <p>
+          You can use the main Visit / Download button on this page to open
+          the provided Game Rummy destination. Before entering personal
+          information, verify that the destination address is the website
+          you intended to visit and review its current terms and policies.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>
+        Does Game Rummy guarantee winnings?
+        <span>+</span>
+      </summary>
+
+      <div class="faq-answer">
+        <p>
+          No gaming platform should be treated as a guaranteed source of
+          winnings or income. Results can vary and financial risk may apply.
+          Users should participate responsibly, understand the applicable
+          rules and never spend more than they can afford to lose.
+        </p>
+      </div>
+    </details>
+
+  </div>
+
+</section>
+
+
+<!-- SOCIAL COMMUNITY -->
+
+<section class="community-section">
+
+  <div class="community-card">
+
+    <div>
+      <span class="section-kicker">STAY UPDATED</span>
+
+      <h2>Join Our Gaming Community</h2>
+
+      <p>
+        Follow our community channels for gaming updates and new platform
+        information.
+      </p>
+    </div>
+
+    <div class="community-buttons">
+
+      <a
+        href="https://t.me/+ZX_fECfi_SY2MGI1"
+        target="_blank"
+        rel="noopener"
+        class="community-btn telegram">
+
+        📢 Join Telegram
+
+      </a>
+
+      <a
+        href="https://whatsapp.com/channel/0029Vb6ncxAEQIaoxcCLVo1Z"
+        target="_blank"
+        rel="noopener"
+        class="community-btn whatsapp">
+
+        💬 Join WhatsApp
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- MORE GAMES -->
+
+<section class="more-games-section">
+
+  <div class="section-heading">
+
+    <span class="section-kicker">
+      EXPLORE MORE
+    </span>
+
+    <h2>More Games</h2>
+
+    <p class="section-subtitle">
+      Explore more gaming platforms from our collection.
+    </p>
+
+  </div>
+
+  <div
+    id="moreGames"
+    class="more-games-grid">
+
+    <div class="loading-games">
+      Loading more games...
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="game-footer">
+
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+
+      <img
+        src="../images/allyonogamesnew.png"
+        alt="All YONO Games New">
+
+      <h3>All YONO Games New</h3>
+
+      <p>
+        Gaming information, platform guides and mobile-friendly game pages
+        in one place.
+      </p>
+
+    </div>
+
+    <div class="footer-links">
+
+      <a href="../index.html">
+        Home
+      </a>
+
+      <a href="../index.html">
+        All Games
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+
+    <p>
+      18+ | Play Responsibly | Review applicable rules before participating.
+    </p>
+
+    <p>
+      © 2026 All YONO Games New. All Rights Reserved.
+    </p>
+
+  </div>
+
+</footer>
+
+
+<style>
+
+  /* FAQ */
+
+  .faq-section{
+    margin-top:25px;
+    background:#fff;
+    border:1px solid #e4e7ec;
+    border-radius:22px;
+    padding:30px;
+    box-shadow:0 5px 25px rgba(16,24,40,.05);
+  }
+
+  .faq-list{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-top:20px;
+  }
+
+  .faq-item{
+    border:1px solid #e4e7ec;
+    border-radius:15px;
+    overflow:hidden;
+    background:#fff;
+  }
+
+  .faq-item summary{
+    list-style:none;
+    cursor:pointer;
+    padding:18px 20px;
+    font-size:16px;
+    font-weight:800;
+    color:#101828;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+  }
+
+  .faq-item summary::-webkit-details-marker{
+    display:none;
+  }
+
+  .faq-item summary span{
+    font-size:22px;
+    color:#2563eb;
+    transition:.2s;
+  }
+
+  .faq-item[open] summary span{
+    transform:rotate(45deg);
+  }
+
+  .faq-answer{
+    padding:0 20px 18px;
+  }
+
+  .faq-answer p{
+    color:#475467;
+    font-size:15px;
+    margin:0;
+  }
+
+
+  /* COMMUNITY */
+
+  .community-section{
+    margin-top:25px;
+  }
+
+  .community-card{
+    border-radius:22px;
+    padding:28px;
+    background:linear-gradient(
+      135deg,
+      #172033,
+      #26364d
+    );
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:25px;
+  }
+
+  .community-card h2{
+    margin:6px 0;
+    font-size:25px;
+  }
+
+  .community-card p{
+    color:#d0d5dd;
+    margin:0;
+  }
+
+  .community-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  .community-btn{
+    min-height:48px;
+    padding:0 18px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:12px;
+    color:#fff;
+    text-decoration:none;
+    font-weight:800;
+    white-space:nowrap;
+  }
+
+  .telegram{
+    background:#229ed9;
+  }
+
+  .whatsapp{
+    background:#16a34a;
+  }
+
+
+  /* MORE GAMES */
+
+  .more-games-section{
+    margin-top:28px;
+  }
+
+  .section-subtitle{
+    color:#667085;
+    margin-top:5px;
+  }
+
+  .more-games-grid{
+    display:grid;
+    grid-template-columns:
+      repeat(4,minmax(0,1fr));
+    gap:15px;
+    margin-top:20px;
+  }
+
+  .more-game-card{
+    background:#fff;
+    border:1px solid #e4e7ec;
+    border-radius:18px;
+    padding:15px;
+    box-shadow:0 4px 15px rgba(16,24,40,.04);
+    transition:.2s;
+  }
+
+  .more-game-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(16,24,40,.09);
+  }
+
+  .more-game-card img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius:14px;
+  }
+
+  .more-game-card h3{
+    font-size:16px;
+    margin:10px 0 4px;
+    color:#101828;
+  }
+
+  .more-game-rating{
+    font-size:13px;
+    color:#667085;
+    margin-bottom:10px;
+  }
+
+  .more-game-btn{
+    display:block;
+    text-align:center;
+    padding:10px;
+    border-radius:10px;
+    background:#111827;
+    color:#fff;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:800;
+  }
+
+  .loading-games{
+    grid-column:1/-1;
+    background:#fff;
+    border:1px solid #e4e7ec;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+    color:#667085;
+  }
+
+
+  /* FOOTER */
+
+  .game-footer{
+    margin-top:35px;
+    background:#101828;
+    color:#fff;
+  }
+
+  .footer-inner{
+    max-width:1100px;
+    margin:auto;
+    padding:35px 16px;
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+  }
+
+  .footer-brand{
+    max-width:520px;
+  }
+
+  .footer-brand img{
+    width:45px;
+    height:45px;
+    border-radius:12px;
+    object-fit:cover;
+  }
+
+  .footer-brand h3{
+    margin:10px 0 5px;
+  }
+
+  .footer-brand p{
+    color:#98a2b3;
+    font-size:14px;
+  }
+
+  .footer-links{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .footer-links a{
+    color:#d0d5dd;
+    text-decoration:none;
+    font-weight:700;
+  }
+
+  .footer-bottom{
+    border-top:1px solid #253047;
+    max-width:1100px;
+    margin:auto;
+    padding:18px 16px;
+    text-align:center;
+    color:#98a2b3;
+    font-size:12px;
+  }
+
+
+  /* MOBILE */
+
+  @media(max-width:800px){
+
+    .community-card{
+      flex-direction:column;
+      align-items:flex-start;
+    }
+
+    .community-buttons{
+      width:100%;
+      flex-direction:column;
+    }
+
+    .community-btn{
+      width:100%;
+    }
+
+    .more-games-grid{
+      grid-template-columns:
+        repeat(2,minmax(0,1fr));
+    }
+
+    .footer-inner{
+      flex-direction:column;
+    }
+
+  }
+
+  @media(max-width:450px){
+
+    .faq-section{
+      padding:20px 15px;
+    }
+
+    .faq-item summary{
+      font-size:14px;
+      padding:16px;
+    }
+
+    .faq-answer{
+      padding:0 16px 16px;
+    }
+
+    .more-games-grid{
+      gap:10px;
+    }
+
+    .more-game-card{
+      padding:10px;
+      border-radius:14px;
+    }
+
+    .more-game-card h3{
+      font-size:14px;
+    }
+
+  }
+
+</style>
+
+
+<!-- =========================
+     FAQ STRUCTURED DATA
+========================= -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Game Rummy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Game Rummy is an online gaming platform name associated with rummy and related gaming options. Users should review the current platform terms, eligibility requirements and applicable rules before participating."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Game Rummy available on mobile devices?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Game Rummy information page is designed for mobile users. Availability and specific features of the external platform may depend on the current platform setup, device and location."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I visit Game Rummy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Users can use the main Visit or Download button on the Game Rummy information page to open the provided destination. Users should verify the destination address before entering personal information."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Game Rummy guarantee winnings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No gaming platform should be treated as a guaranteed source of winnings or income. Users should understand the risks, follow applicable rules and participate responsibly."
+      }
+    }
+  ]
+}
+</script>
+
+
+<!-- =========================
+     MORE GAMES LOADER
+========================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+  const container =
+    document.getElementById("moreGames");
+
+  if(!container) return;
+
+  fetch("../games.json")
+    .then(response => {
+
+      if(!response.ok){
+        throw new Error("games.json could not be loaded");
+      }
+
+      return response.json();
+
+    })
+    .then(games => {
+
+      const currentPage =
+        window.location.pathname
+          .split("/")
+          .pop();
+
+      const otherGames =
+        games
+          .filter(game => {
+
+            if(!game.link) return false;
+
+            return game.link
+              .split("/")
+              .pop()
+              !== currentPage;
+
+          })
+          .slice(0, 8);
+
+      if(otherGames.length === 0){
+
+        container.innerHTML =
+          '<div class="loading-games">More games will be available soon.</div>';
+
+        return;
+      }
+
+      container.innerHTML =
+        otherGames.map(game => `
+
+          <div class="more-game-card">
+
+            <img
+              src="../images/${game.image}"
+              alt="${game.name}"
+              loading="lazy">
+
+            <h3>${game.name}</h3>
+
+            <div class="more-game-rating">
+              ⭐ ${game.rating || "—"}
+            </div>
+
+            <a
+              href="../${game.link}"
+              class="more-game-btn">
+
+              View Game
+
+            </a>
+
+          </div>
+
+        `).join("");
+
+    })
+    .catch(error => {
+
+      console.error(error);
+
+      container.innerHTML = `
+        <div class="loading-games">
+          More games could not be loaded right now.
+        </div>
+      `;
+
+    });
+
+});
+
+</script>
