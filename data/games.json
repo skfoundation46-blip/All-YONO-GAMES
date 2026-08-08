@@ -89,7 +89,6 @@
     "bonus": "Welcome Bonus ₹450",
     "url": "games/jaihoslots.html"
   }
-  ,
 {
   "name": "Jaiho Spin",
   "image": "images/jaihospin.png",
@@ -180,7 +179,6 @@
   "bonus": "Welcome Bonus ₹350",
   "url": "games/777okok.html"
 }
-  ,
 {
   "name": "567 Slots",
   "image": "images/567slots.png",
@@ -271,7 +269,6 @@
   "bonus": "Welcome Bonus ₹400",
   "url": "games/spin101.html"
 }
-  ,
 {
   "name": "Spin777",
   "image": "images/spin777.png",
@@ -452,5 +449,5 @@
   "trusted": true,
   "bonus": "Latest Games Collection",
   "url": "index.html"
-}
+
 ]
