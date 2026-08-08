@@ -429,6 +429,74 @@ A well-designed gaming platform should provide clear navigation, readable text, 
     </div>
     <a href="hirummy.html" class="download-btn">Download</a>
   </article></div><div class="notice-box"><strong>Important Notice</strong>
+    .games-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+  margin-top:20px;
+}
+
+.game-card{
+  background:#fff;
+  border:1px solid #e4e7ec;
+  border-radius:16px;
+  padding:12px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.game-image{
+  width:70px;
+  height:70px;
+  object-fit:cover;
+  border-radius:14px;
+  flex-shrink:0;
+}
+
+.game-content{
+  flex:1;
+}
+
+.game-name{
+  font-size:16px;
+  font-weight:800;
+}
+
+.players{
+  font-size:11px;
+  color:#667085;
+}
+
+.rating{
+  font-size:12px;
+  color:#f59e0b;
+}
+
+.bonus{
+  font-size:11px;
+  color:#16a34a;
+}
+
+.download-btn{
+  background:#6527d8;
+  color:#fff;
+  padding:10px 14px;
+  border-radius:10px;
+  font-size:12px;
+  font-weight:800;
+}
+
+@media (max-width:700px){
+  .games-grid{
+    grid-template-columns:1fr;
+  }
+
+  .game-image{
+    width:64px;
+    height:64px;
+  }
+}
 
   <p>
     18+ only where legally applicable. This page provides general information and does not guarantee winnings, income, bonuses, or platform availability. Gaming may involve financial risk. Review the destination platform's current terms and your local laws before participating.
