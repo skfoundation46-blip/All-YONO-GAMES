@@ -1130,5 +1130,76 @@ input {
   * {
     transition: none !important;
   }
+   /* ===== Premium Telegram Floating Button ===== */
+.telegram-float {
+  position: fixed;
+  right: 16px;
+  bottom: 18px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2AABEE, #1689d7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 9999;
+  box-shadow: 0 8px 22px rgba(42, 171, 238, .35);
+  animation: telegramPulse 2.4s infinite;
+}
 
+.telegram-float svg {
+  width: 25px;
+  height: 25px;
+  fill: #fff;
+}
+
+/* Small floating motion */
+.telegram-float:hover {
+  transform: scale(1.08);
+}
+
+.telegram-float::after {
+  content: "Telegram";
+  position: absolute;
+  right: 58px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #172033;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 7px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: .2s ease;
+}
+
+.telegram-float:hover::after {
+  opacity: 1;
+}
+
+@keyframes telegramPulse {
+  0%, 100% {
+    box-shadow: 0 8px 22px rgba(42,171,238,.35);
   }
+
+  50% {
+    box-shadow: 0 8px 28px rgba(42,171,238,.65);
+  }
+}
+
+@media (max-width: 600px) {
+  .telegram-float {
+    width: 44px;
+    height: 44px;
+    right: 13px;
+    bottom: 14px;
+  }
+
+  .telegram-float svg {
+    width: 23px;
+    height: 23px;
+  }
+}
