@@ -2,91 +2,91 @@
   {
     "name": "Game Rummy",
     "image": "gamerummy.png",
-    "bonus": "Welcome Offer",
+    "bonus": "Game Information",
     "rating": "4.9",
     "downloads": "10M+",
-    "trusted": false,
-    "link": "gamerummy.html"
+    "category": "rummy",
+    "link": "games/gamerummy.html"
   },
   {
     "name": "Go Spin",
     "image": "gospin.png",
-    "bonus": "Welcome Offer",
+    "bonus": "Game Information",
     "rating": "4.8",
     "downloads": "8M+",
-    "trusted": false,
-    "link": "gospin.html"
+    "category": "slots",
+    "link": "games/gospin.html"
   },
   {
     "name": "Hindi777",
     "image": "Hindi777.png",
-    "bonus": "Welcome Offer",
+    "bonus": "Game Information",
     "rating": "4.9",
     "downloads": "12M+",
-    "trusted": false,
-    "link": "hindi777.html"
+    "category": "other",
+    "link": "games/hindi777.html"
   },
   {
     "name": "Hi Rummy",
     "image": "HiRummy.png",
-    "bonus": "Welcome Offer",
+    "bonus": "Game Information",
     "rating": "4.9",
     "downloads": "9M+",
-    "trusted": false,
-    "link": "hirummy.html"
+    "category": "rummy",
+    "link": "games/hirummy.html"
   },
   {
     "name": "Ind Club",
     "image": "indclub.png",
-    "bonus": "Welcome Offer",
+    "bonus": "Game Information",
     "rating": "4.8",
     "downloads": "7M+",
-    "trusted": false,
-    "link": "indclub.html"
+    "category": "other",
+    "link": "games/indclub.html"
   },
   {
     "name": "Ind Slots",
     "image": "indslots.png",
-    "bonus": "Welcome Offer",
+    "bonus": "Game Information",
     "rating": "4.8",
     "downloads": "6M+",
-    "trusted": false,
-    "link": "indslots.html"
+    "category": "slots",
+    "link": "games/indslots.html"
   },
   {
     "name": "MQM Bet",
     "image": "mqmbet.png",
-    "bonus": "Welcome Offer",
+    "bonus": "Game Information",
     "rating": "4.7",
     "downloads": "5M+",
-    "trusted": false,
-    "link": "mqmbet.html"
+    "category": "other",
+    "link": "games/mqmbet.html"
   },
   {
     "name": "INR Rummy",
     "image": "inrrummy.png",
-    "bonus": "Welcome Offer",
+    "bonus": "Game Information",
     "rating": "4.9",
     "downloads": "11M+",
-    "trusted": false,
-    "link": "inrrummy.html"
+    "category": "rummy",
+    "link": "games/inrrummy.html"
   },
   {
     "name": "Jaiho Arcade",
     "image": "jaihoarcade.png",
-    "bonus": "Welcome Offer",
+    "bonus": "Game Information",
     "rating": "4.8",
     "downloads": "7M+",
-    "trusted": false,
-    "link": "jaihoarcade.html"
+    "category": "other",
+    "link": "games/jaihoarcade.html"
   },
   {
     "name": "Jaiho Slots",
     "image": "jaihoslots.png",
-    "bonus": "Welcome Offer",
+    "bonus": "Game Information",
     "rating": "4.8",
     "downloads": "6M+",
-    "trusted": false,
-    "link": "jaihoslots.html"
+    "category": "slots",
+    "link": "games/jaihoslots.html"
   }
 ]
