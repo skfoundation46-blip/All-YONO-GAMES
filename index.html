@@ -1596,7 +1596,12 @@
 <div class="panel">
   <h2>Contact &amp; <span class="r">Telegram</span></h2>
   <p>Need a link refresh or a new app added? Telegram is the fastest way to reach us.</p>
-  <a class="cta" href="https://t.me/+ZX_fECfi_SY2MGI1" target="_blank" rel="noopener">✈ Join Telegram – All Yono Games</a>
+  <a class="cta" href="https://t.me/+ZX_fECfi_SY2MGI1" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:10px">
+  <span style="width:28px;height:28px;border-radius:50%;background:#fff;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0">
+    <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><path fill="#229ED9" d="M9.78 14.65l-.2 2.8c.28 0 .4-.12.55-.26l1.32-1.26 2.74 2.02c.5.28.86.13 1-.47l1.8-8.46h.01c.16-.74-.27-1.03-.75-.85L4.1 11.2c-.7.27-.69.66-.12.83l3.43 1.07 7.96-5.02c.38-.23.72-.1.44.15L9.78 14.65z"/></svg>
+  </span>
+  Join Telegram – All Yono Games
+</a>
 </div>
 
 <p class="soft">
@@ -1773,27 +1778,40 @@
 </script>
 
 
-<!-- floating telegram -->
+
+<!-- floating telegram button -->
 <style>
 #fab-tg{
-  position:fixed;right:16px;bottom:22px;z-index:99990;
-  width:60px;height:60px;border-radius:50%;
-  background:linear-gradient(145deg,#2AABEE 0%,#229ED9 55%,#1a8bc7 100%);
-  box-shadow:0 8px 24px rgba(34,158,217,.55),0 2px 6px rgba(0,0,0,.15),inset 0 2px 4px rgba(255,255,255,.25);
-  display:flex;align-items:center;justify-content:center;
-  text-decoration:none;
-  animation:fabPulse 2.2s ease-in-out infinite;
+  position:fixed !important;
+  right:16px !important;
+  bottom:24px !important;
+  z-index:2147483646 !important;
+  width:64px !important;
+  height:64px !important;
+  border-radius:50% !important;
+  background:#229ED9 !important;
+  background:linear-gradient(145deg,#42c0f5 0%,#229ED9 45%,#1a8fc4 100%) !important;
+  box-shadow:0 6px 0 #1578a8, 0 12px 28px rgba(34,158,217,.55) !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  text-decoration:none !important;
+  border:0 !important;
+  animation:fabBob 2s ease-in-out infinite !important;
 }
-#fab-tg:active{transform:scale(.94)}
-#fab-tg svg{width:32px;height:32px;filter:drop-shadow(0 2px 2px rgba(0,0,0,.15))}
-@keyframes fabPulse{
-  0%,100%{box-shadow:0 8px 24px rgba(34,158,217,.5),0 2px 6px rgba(0,0,0,.12)}
-  50%{box-shadow:0 10px 28px rgba(34,158,217,.75),0 4px 10px rgba(0,0,0,.18);transform:translateY(-2px)}
+#fab-tg:active{
+  transform:translateY(3px) !important;
+  box-shadow:0 2px 0 #1578a8, 0 6px 14px rgba(34,158,217,.4) !important;
+}
+#fab-tg svg{width:34px;height:34px;display:block}
+@keyframes fabBob{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-5px)}
 }
 </style>
-<a id="fab-tg" href="https://t.me/+ZX_fECfi_SY2MGI1" target="_blank" rel="noopener" aria-label="Join Telegram">
+<a id="fab-tg" href="https://t.me/+ZX_fECfi_SY2MGI1" target="_blank" rel="noopener" aria-label="Telegram">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path fill="#fff" d="M9.78 14.65l-.2 2.8c.28 0 .4-.12.55-.26l1.32-1.26 2.74 2.02c.5.28.86.13 1-.47l1.8-8.46h.01c.16-.74-.27-1.03-.75-.85L4.1 11.2c-.7.27-.69.66-.12.83l3.43 1.07 7.96-5.02c.38-.23.72-.1.44.15L9.78 14.65z"/>
+    <path fill="#ffffff" d="M21.5 3.3L2.7 10.8c-1.3.5-1.3 1.2-.2 1.5l4.8 1.5 1.9 5.8c.2.7.7.7 1.2.4l2.7-2.5 5.3 3.9c.6.3 1.1.1 1.2-.6L22.9 4.5c.3-.9-.3-1.4-1.4-1.2zM9.4 14.6l-.3 3.1 1.5-1.4 6.4-5.9c.3-.2 0-.4-.3-.2L9.4 14.6z"/>
   </svg>
 </a>
 
