@@ -276,13 +276,11 @@
 </head>
 <body>
 
-<div class="top-bar"><strong>18+ Only · Play Responsibly · Gambling involves risk · Read Disclaimer</strong> · Play Responsibly · Gambling involves risk · Read <a href="disclaimer.html" style="color:#fde68a;text-decoration:underline">Disclaimer</a> &amp; <a href="privacy.html" style="color:#fde68a;text-decoration:underline">Privacy</a></div>
-
 <header class="header">
   <div class="header-inner">
     <a href="index.html" class="brand">
       <img src="images/allyonogamesnew.png" alt="All Yono Games">
-      <span>Add All Yono Games to your home screen for quick access</span>
+      <span>All Yono Games</span>
     </a>
     <a href="https://t.me/+ZX_fECfi_SY2MGI1" class="tg-btn" target="_blank" rel="noopener">
       <span class="tg-icon" aria-hidden="true" style="background:transparent;box-shadow:none;width:20px;height:20px"><svg viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#fff"/><path d="M5.5 11.8l11.2-4.4c.5-.2 1 .1.8.9l-1.9 9c-.1.6-.5.7-1 .5l-2.7-2-1.3 1.3c-.1.1-.3.2-.5.1l.2-2.8 5.1-4.6c.2-.2 0-.3-.3-.1l-6.3 4-2.7-.8c-.6-.2-.6-.6.1-.8z" fill="#229ED9"/></svg></span>
@@ -1781,51 +1779,39 @@
 
 
 
-<!-- Native-style PWA install banner (2s) -->
+
+<!-- Native-style PWA install banner (2s) — swipe to dismiss -->
 <style>
 #pwa-native{
   position:fixed;left:0;right:0;top:0;z-index:99999;
-  display:flex;justify-content:center;padding:0;
+  display:flex;justify-content:center;
   transform:translateY(-110%);
-  transition:transform .35s cubic-bezier(.2,.85,.25,1);
+  transition:transform .35s cubic-bezier(.2,.85,.25,1), opacity .25s ease;
   pointer-events:none;
   font-family:Roboto,system-ui,-apple-system,sans-serif;
+  touch-action:pan-y;
 }
 #pwa-native.show{transform:translateY(0);pointer-events:auto}
+#pwa-native.hide-left{transform:translateX(-110%);opacity:0;pointer-events:none}
+#pwa-native.hide-right{transform:translateX(110%);opacity:0;pointer-events:none}
 #pwa-native .card{
-  width:100%;
-  max-width:480px;
-  margin:0;
-  background:#fff;
+  width:100%;max-width:480px;margin:0;background:#fff;
   border-radius:0 0 16px 16px;
   box-shadow:0 8px 24px rgba(0,0,0,.18);
   display:flex;align-items:center;gap:12px;
   padding:12px 14px 14px;
-  position:relative;
-  border-left:5px solid #e53935;
-  border-right:5px solid #e53935;
+  border-left:5px solid #e53935;border-right:5px solid #e53935;
+  user-select:none;-webkit-user-select:none;
 }
-#pwa-native img{
-  width:44px;height:44px;border-radius:10px;
-  object-fit:cover;background:#f1f5f9;flex-shrink:0;
-}
+#pwa-native img{width:44px;height:44px;border-radius:10px;object-fit:cover;background:#f1f5f9;flex-shrink:0}
 #pwa-native .meta{flex:1;min-width:0}
-#pwa-native .meta b{
-  display:block;font-size:14px;font-weight:700;color:#202124;
-  line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
-}
-#pwa-native .meta span{
-  display:block;font-size:12px;color:#5f6368;margin-top:2px;
-}
-#pwa-native .inst{
-  flex-shrink:0;background:transparent;border:0;
-  color:#1a73e8;font-weight:700;font-size:14px;
-  padding:8px 6px;cursor:pointer;
-}
-#pwa-native .inst:active{opacity:.7}
+#pwa-native .meta b{display:block;font-size:14px;font-weight:700;color:#202124;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#pwa-native .meta span{display:block;font-size:12px;color:#5f6368;margin-top:2px}
+#pwa-native .inst{flex-shrink:0;background:transparent;border:0;color:#1a73e8;font-weight:700;font-size:14px;padding:8px 6px;cursor:pointer}
+#pwa-native .hint{position:absolute;bottom:2px;left:0;right:0;text-align:center;font-size:10px;color:#94a3b8;pointer-events:none}
 </style>
 <div id="pwa-native" role="dialog" aria-label="Install app">
-  <div class="card">
+  <div class="card" id="pwa-card">
     <img src="/images/allyonogamesnew.png" alt="" width="44" height="44">
     <div class="meta">
       <b>Install All Yono Games</b>
@@ -1837,43 +1823,67 @@
 <script>
 (function(){
   if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone) return;
+  if (sessionStorage.getItem('pwa_swipe_hide') === '1') return;
 
   var deferredPrompt = null;
   window.addEventListener('beforeinstallprompt', function(e){
     e.preventDefault();
     deferredPrompt = e;
   });
-
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function(){
       navigator.serviceWorker.register('/sw.js').catch(function(){});
     });
   }
 
-  setTimeout(function(){
-    var el = document.getElementById('pwa-native');
-    if (el) el.classList.add('show');
-  }, 2000);
+  var el = document.getElementById('pwa-native');
+  var card = document.getElementById('pwa-card');
+  setTimeout(function(){ if (el) el.classList.add('show'); }, 2000);
 
   document.getElementById('pwa-go').addEventListener('click', function(){
     if (deferredPrompt) {
       deferredPrompt.prompt();
       deferredPrompt.userChoice.finally(function(){
         deferredPrompt = null;
-        var el = document.getElementById('pwa-native');
-        if (el) el.classList.remove('show');
+        dismiss('left');
       });
       return;
     }
     var ua = navigator.userAgent || '';
-    if (/iPad|iPhone|iPod/.test(ua)) {
-      alert('Tap Share → Add to Home Screen');
-    } else if (/Android/i.test(ua)) {
-      alert('Chrome menu (⋮) → Install app / Add to Home screen');
-    } else {
-      alert('Use browser menu → Install app');
-    }
+    if (/iPad|iPhone|iPod/.test(ua)) alert('Tap Share → Add to Home Screen');
+    else if (/Android/i.test(ua)) alert('Chrome menu (⋮) → Install app / Add to Home screen');
+    else alert('Use browser menu → Install app');
   });
+
+  function dismiss(dir){
+    if (!el) return;
+    el.classList.remove('show');
+    el.classList.add(dir === 'right' ? 'hide-right' : 'hide-left');
+    sessionStorage.setItem('pwa_swipe_hide', '1');
+  }
+
+  /* swipe left/right to dismiss */
+  var startX = 0, startY = 0, tracking = false;
+  function onStart(x, y){ startX = x; startY = y; tracking = true; }
+  function onMove(x, y){
+    if (!tracking || !el) return;
+    var dx = x - startX, dy = y - startY;
+    if (Math.abs(dx) < Math.abs(dy)) return;
+    el.style.transition = 'none';
+    el.style.transform = 'translateX(' + dx + 'px)';
+  }
+  function onEnd(x){
+    if (!tracking || !el) return;
+    tracking = false;
+    el.style.transition = '';
+    var dx = x - startX;
+    if (dx > 80) dismiss('right');
+    else if (dx < -80) dismiss('left');
+    else { el.style.transform = ''; el.classList.add('show'); }
+  }
+  el.addEventListener('touchstart', function(e){ onStart(e.touches[0].clientX, e.touches[0].clientY); }, {passive:true});
+  el.addEventListener('touchmove', function(e){ onMove(e.touches[0].clientX, e.touches[0].clientY); }, {passive:true});
+  el.addEventListener('touchend', function(e){ onEnd(e.changedTouches[0].clientX); }, {passive:true});
 })();
 </script>
 
