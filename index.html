@@ -282,7 +282,7 @@
   <div class="header-inner">
     <a href="index.html" class="brand">
       <img src="images/allyonogamesnew.png" alt="All Yono Games">
-      <span>All Yono Games</span>
+      <span>Add All Yono Games to your home screen for quick access</span>
     </a>
     <a href="https://t.me/+ZX_fECfi_SY2MGI1" class="tg-btn" target="_blank" rel="noopener">
       <span class="tg-icon" aria-hidden="true" style="background:transparent;box-shadow:none;width:20px;height:20px"><svg viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#fff"/><path d="M5.5 11.8l11.2-4.4c.5-.2 1 .1.8.9l-1.9 9c-.1.6-.5.7-1 .5l-2.7-2-1.3 1.3c-.1.1-.3.2-.5.1l.2-2.8 5.1-4.6c.2-.2 0-.3-.3-.1l-6.3 4-2.7-.8c-.6-.2-.6-.6.1-.8z" fill="#229ED9"/></svg></span>
@@ -1778,55 +1778,68 @@
 
 
 
-<!-- PWA top install popup after 3s -->
+
+<!-- PWA top install popup after 2s - attention grab -->
 <style>
 #pwa-top{
   position:fixed;left:0;right:0;top:0;z-index:9999;
-  transform:translateY(-120%);
-  transition:transform .35s ease;
+  transform:translateY(-130%);
+  transition:transform .4s cubic-bezier(.2,.9,.2,1);
   font-family:system-ui,-apple-system,sans-serif;
+  pointer-events:none;
 }
-#pwa-top.show{transform:translateY(0)}
+#pwa-top.show{transform:translateY(0);pointer-events:auto}
 #pwa-top .inner{
-  margin:10px 10px 0;
-  background:linear-gradient(135deg,#e11d48,#9f1239);
+  margin:8px 8px 0;
+  background:linear-gradient(135deg,#dc2626 0%,#9f1239 55%,#7f1d1d 100%);
   color:#fff;
-  border-radius:14px;
-  padding:12px 12px 12px 12px;
-  box-shadow:0 10px 28px rgba(190,18,60,.45);
-  display:flex;gap:10px;align-items:center;
+  border-radius:16px;
+  padding:14px 12px;
+  box-shadow:0 12px 32px rgba(185,28,28,.55),0 0 0 2px rgba(255,255,255,.15);
+  display:flex;gap:12px;align-items:center;
+  animation:pwaPulse 1.4s ease-in-out infinite;
 }
-#pwa-top img{width:44px;height:44px;border-radius:11px;background:#fff;object-fit:cover;flex-shrink:0}
+@keyframes pwaPulse{
+  0%,100%{box-shadow:0 12px 32px rgba(185,28,28,.55),0 0 0 2px rgba(255,255,255,.12);transform:scale(1)}
+  50%{box-shadow:0 14px 36px rgba(220,38,38,.7),0 0 0 3px rgba(255,255,255,.28);transform:scale(1.015)}
+}
+#pwa-top img{
+  width:48px;height:48px;border-radius:12px;background:#fff;object-fit:cover;flex-shrink:0;
+  animation:pwaIcon 1.2s ease-in-out infinite;
+}
+@keyframes pwaIcon{
+  0%,100%{transform:rotate(0) scale(1)}
+  30%{transform:rotate(-8deg) scale(1.08)}
+  60%{transform:rotate(8deg) scale(1.08)}
+}
 #pwa-top .txt{flex:1;min-width:0}
-#pwa-top .txt b{display:block;font-size:14px;font-weight:800}
-#pwa-top .txt span{display:block;font-size:11.5px;opacity:.92;margin-top:2px;line-height:1.3}
-#pwa-top .actions{display:flex;flex-direction:column;gap:6px;flex-shrink:0}
+#pwa-top .txt b{display:block;font-size:15px;font-weight:900;letter-spacing:.2px}
+#pwa-top .txt span{display:block;font-size:12px;opacity:.95;margin-top:3px;line-height:1.35}
 #pwa-top .go{
-  background:#fff;color:#be123c;border:0;font-weight:800;font-size:12.5px;
-  padding:8px 12px;border-radius:9px;cursor:pointer;
+  flex-shrink:0;
+  background:#fff;color:#b91c1c;border:0;font-weight:900;font-size:14px;
+  padding:12px 16px;border-radius:12px;cursor:pointer;
+  box-shadow:0 4px 12px rgba(0,0,0,.2);
+  animation:pwaBtn 1s ease-in-out infinite;
 }
-#pwa-top .x{
-  background:transparent;border:0;color:#fff;font-size:18px;line-height:1;
-  padding:0 4px;cursor:pointer;opacity:.9;align-self:flex-end;
+@keyframes pwaBtn{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.06)}
 }
 </style>
 <div id="pwa-top" role="dialog" aria-label="Install app">
   <div class="inner">
-    <img src="/images/allyonogamesnew.png" alt="All Yono Games" width="44" height="44">
+    <img src="/images/allyonogamesnew.png" alt="All Yono Games" width="48" height="48">
     <div class="txt">
-      <b>એપ ઇન્સ્ટોલ કરો</b>
-      <span>All Yono Games હોમ સ્ક્રીન પર મૂકો · ઝડપી ઍક્સેસ</span>
+      <b>⚡ Install App Now</b>
+      <span>Add All Yono Games to Home Screen · Fast access</span>
     </div>
-    <div class="actions">
-      <button type="button" class="x" id="pwa-close" aria-label="Close">×</button>
-      <button type="button" class="go" id="pwa-go">Install</button>
-    </div>
+    <button type="button" class="go" id="pwa-go">INSTALL</button>
   </div>
 </div>
 <script>
 (function(){
   if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone) return;
-  if (sessionStorage.getItem('pwa_hide') === '1') return;
 
   var deferredPrompt = null;
   window.addEventListener('beforeinstallprompt', function(e){
@@ -1844,28 +1857,22 @@
     var el = document.getElementById('pwa-top');
     if (el) el.classList.add('show');
   }
-  function hide(){
-    var el = document.getElementById('pwa-top');
-    if (el) el.classList.remove('show');
-    sessionStorage.setItem('pwa_hide','1');
-  }
 
-  setTimeout(show, 3000);
+  setTimeout(show, 2000);
 
-  document.getElementById('pwa-close').addEventListener('click', hide);
   document.getElementById('pwa-go').addEventListener('click', function(){
     if (deferredPrompt) {
       deferredPrompt.prompt();
-      deferredPrompt.userChoice.finally(function(){ deferredPrompt = null; hide(); });
+      deferredPrompt.userChoice.finally(function(){ deferredPrompt = null; });
       return;
     }
     var ua = navigator.userAgent || '';
     if (/iPad|iPhone|iPod/.test(ua)) {
-      alert('iPhone: Share બટન (□↑) → "Add to Home Screen" પસંદ કરો.');
+      alert('iPhone: Tap Share (□↑) → Add to Home Screen');
     } else if (/Android/i.test(ua)) {
-      alert('Chrome મેનુ (⋮) → "Install app" અથવા "Add to Home screen" દબાવો.');
+      alert('Chrome menu (⋮) → Install app or Add to Home screen');
     } else {
-      alert('એડ્રેસ બાર પાસે Install આઇકન જુઓ, અથવા મેનુ → Install app.');
+      alert('Look for Install icon near address bar, or menu → Install app');
     }
   });
 })();
