@@ -1776,34 +1776,100 @@
 </script>
 
 
-<!-- PWA install -->
-<button id="pwa-install" type="button" onclick="installPWA()"
-style="display:none;position:fixed;left:12px;right:12px;bottom:80px;z-index:45;background:linear-gradient(180deg,#e11d48,#be123c);color:#fff;font-weight:800;font-size:15px;padding:14px;border:0;border-radius:12px;box-shadow:0 8px 20px rgba(190,18,60,.35);">
-⬇ Install All Yono Games App
-</button>
+
+
+<!-- PWA top install popup after 3s -->
+<style>
+#pwa-top{
+  position:fixed;left:0;right:0;top:0;z-index:9999;
+  transform:translateY(-120%);
+  transition:transform .35s ease;
+  font-family:system-ui,-apple-system,sans-serif;
+}
+#pwa-top.show{transform:translateY(0)}
+#pwa-top .inner{
+  margin:10px 10px 0;
+  background:linear-gradient(135deg,#e11d48,#9f1239);
+  color:#fff;
+  border-radius:14px;
+  padding:12px 12px 12px 12px;
+  box-shadow:0 10px 28px rgba(190,18,60,.45);
+  display:flex;gap:10px;align-items:center;
+}
+#pwa-top img{width:44px;height:44px;border-radius:11px;background:#fff;object-fit:cover;flex-shrink:0}
+#pwa-top .txt{flex:1;min-width:0}
+#pwa-top .txt b{display:block;font-size:14px;font-weight:800}
+#pwa-top .txt span{display:block;font-size:11.5px;opacity:.92;margin-top:2px;line-height:1.3}
+#pwa-top .actions{display:flex;flex-direction:column;gap:6px;flex-shrink:0}
+#pwa-top .go{
+  background:#fff;color:#be123c;border:0;font-weight:800;font-size:12.5px;
+  padding:8px 12px;border-radius:9px;cursor:pointer;
+}
+#pwa-top .x{
+  background:transparent;border:0;color:#fff;font-size:18px;line-height:1;
+  padding:0 4px;cursor:pointer;opacity:.9;align-self:flex-end;
+}
+</style>
+<div id="pwa-top" role="dialog" aria-label="Install app">
+  <div class="inner">
+    <img src="/images/allyonogamesnew.png" alt="All Yono Games" width="44" height="44">
+    <div class="txt">
+      <b>એપ ઇન્સ્ટોલ કરો</b>
+      <span>All Yono Games હોમ સ્ક્રીન પર મૂકો · ઝડપી ઍક્સેસ</span>
+    </div>
+    <div class="actions">
+      <button type="button" class="x" id="pwa-close" aria-label="Close">×</button>
+      <button type="button" class="go" id="pwa-go">Install</button>
+    </div>
+  </div>
+</div>
 <script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js').catch(function () {});
+(function(){
+  if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone) return;
+  if (sessionStorage.getItem('pwa_hide') === '1') return;
+
+  var deferredPrompt = null;
+  window.addEventListener('beforeinstallprompt', function(e){
+    e.preventDefault();
+    deferredPrompt = e;
   });
-}
-var deferredPrompt = null;
-window.addEventListener('beforeinstallprompt', function (e) {
-  e.preventDefault();
-  deferredPrompt = e;
-  var btn = document.getElementById('pwa-install');
-  if (btn) btn.style.display = 'block';
-});
-window.addEventListener('appinstalled', function () {
-  var btn = document.getElementById('pwa-install');
-  if (btn) btn.style.display = 'none';
-  deferredPrompt = null;
-});
-function installPWA() {
-  if (!deferredPrompt) return;
-  deferredPrompt.prompt();
-  deferredPrompt.userChoice.finally(function () { deferredPrompt = null; });
-}
+
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function(){
+      navigator.serviceWorker.register('/sw.js').catch(function(){});
+    });
+  }
+
+  function show(){
+    var el = document.getElementById('pwa-top');
+    if (el) el.classList.add('show');
+  }
+  function hide(){
+    var el = document.getElementById('pwa-top');
+    if (el) el.classList.remove('show');
+    sessionStorage.setItem('pwa_hide','1');
+  }
+
+  setTimeout(show, 3000);
+
+  document.getElementById('pwa-close').addEventListener('click', hide);
+  document.getElementById('pwa-go').addEventListener('click', function(){
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.finally(function(){ deferredPrompt = null; hide(); });
+      return;
+    }
+    var ua = navigator.userAgent || '';
+    if (/iPad|iPhone|iPod/.test(ua)) {
+      alert('iPhone: Share બટન (□↑) → "Add to Home Screen" પસંદ કરો.');
+    } else if (/Android/i.test(ua)) {
+      alert('Chrome મેનુ (⋮) → "Install app" અથવા "Add to Home screen" દબાવો.');
+    } else {
+      alert('એડ્રેસ બાર પાસે Install આઇકન જુઓ, અથવા મેનુ → Install app.');
+    }
+  });
+})();
 </script>
+
 </body>
 </html>
