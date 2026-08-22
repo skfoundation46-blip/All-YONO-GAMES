@@ -1,0 +1,31 @@
+{
+  "name": "All Yono Games",
+  "short_name": "Yono Games",
+  "description": "Download All Yono Games, Rummy, Slots & real cash apps. Bonus offers & min withdraw ₹100.",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#e11d48",
+  "theme_color": "#e11d48",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/images/allyonogamesnew.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/allyonogamesnew.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "games",
+    "entertainment"
+  ],
+  "prefer_related_applications": false
+}
