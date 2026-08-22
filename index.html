@@ -1779,62 +1779,59 @@
 
 
 
-<!-- PWA top install popup after 2s - attention grab -->
+
+
+<!-- Native-style PWA install banner (2s) -->
 <style>
-#pwa-top{
-  position:fixed;left:0;right:0;top:0;z-index:9999;
-  transform:translateY(-130%);
-  transition:transform .4s cubic-bezier(.2,.9,.2,1);
-  font-family:system-ui,-apple-system,sans-serif;
+#pwa-native{
+  position:fixed;left:0;right:0;top:0;z-index:99999;
+  display:flex;justify-content:center;padding:0;
+  transform:translateY(-110%);
+  transition:transform .35s cubic-bezier(.2,.85,.25,1);
   pointer-events:none;
+  font-family:Roboto,system-ui,-apple-system,sans-serif;
 }
-#pwa-top.show{transform:translateY(0);pointer-events:auto}
-#pwa-top .inner{
-  margin:8px 8px 0;
-  background:linear-gradient(135deg,#dc2626 0%,#9f1239 55%,#7f1d1d 100%);
-  color:#fff;
-  border-radius:16px;
-  padding:14px 12px;
-  box-shadow:0 12px 32px rgba(185,28,28,.55),0 0 0 2px rgba(255,255,255,.15);
-  display:flex;gap:12px;align-items:center;
-  animation:pwaPulse 1.4s ease-in-out infinite;
+#pwa-native.show{transform:translateY(0);pointer-events:auto}
+#pwa-native .card{
+  width:100%;
+  max-width:480px;
+  margin:0;
+  background:#fff;
+  border-radius:0 0 16px 16px;
+  box-shadow:0 8px 24px rgba(0,0,0,.18);
+  display:flex;align-items:center;gap:12px;
+  padding:12px 14px 14px;
+  position:relative;
+  border-left:5px solid #e53935;
+  border-right:5px solid #e53935;
 }
-@keyframes pwaPulse{
-  0%,100%{box-shadow:0 12px 32px rgba(185,28,28,.55),0 0 0 2px rgba(255,255,255,.12);transform:scale(1)}
-  50%{box-shadow:0 14px 36px rgba(220,38,38,.7),0 0 0 3px rgba(255,255,255,.28);transform:scale(1.015)}
+#pwa-native img{
+  width:44px;height:44px;border-radius:10px;
+  object-fit:cover;background:#f1f5f9;flex-shrink:0;
 }
-#pwa-top img{
-  width:48px;height:48px;border-radius:12px;background:#fff;object-fit:cover;flex-shrink:0;
-  animation:pwaIcon 1.2s ease-in-out infinite;
+#pwa-native .meta{flex:1;min-width:0}
+#pwa-native .meta b{
+  display:block;font-size:14px;font-weight:700;color:#202124;
+  line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
 }
-@keyframes pwaIcon{
-  0%,100%{transform:rotate(0) scale(1)}
-  30%{transform:rotate(-8deg) scale(1.08)}
-  60%{transform:rotate(8deg) scale(1.08)}
+#pwa-native .meta span{
+  display:block;font-size:12px;color:#5f6368;margin-top:2px;
 }
-#pwa-top .txt{flex:1;min-width:0}
-#pwa-top .txt b{display:block;font-size:15px;font-weight:900;letter-spacing:.2px}
-#pwa-top .txt span{display:block;font-size:12px;opacity:.95;margin-top:3px;line-height:1.35}
-#pwa-top .go{
-  flex-shrink:0;
-  background:#fff;color:#b91c1c;border:0;font-weight:900;font-size:14px;
-  padding:12px 16px;border-radius:12px;cursor:pointer;
-  box-shadow:0 4px 12px rgba(0,0,0,.2);
-  animation:pwaBtn 1s ease-in-out infinite;
+#pwa-native .inst{
+  flex-shrink:0;background:transparent;border:0;
+  color:#1a73e8;font-weight:700;font-size:14px;
+  padding:8px 6px;cursor:pointer;
 }
-@keyframes pwaBtn{
-  0%,100%{transform:scale(1)}
-  50%{transform:scale(1.06)}
-}
+#pwa-native .inst:active{opacity:.7}
 </style>
-<div id="pwa-top" role="dialog" aria-label="Install app">
-  <div class="inner">
-    <img src="/images/allyonogamesnew.png" alt="All Yono Games" width="48" height="48">
-    <div class="txt">
-      <b>⚡ Install App Now</b>
-      <span>Add All Yono Games to Home Screen · Fast access</span>
+<div id="pwa-native" role="dialog" aria-label="Install app">
+  <div class="card">
+    <img src="/images/allyonogamesnew.png" alt="" width="44" height="44">
+    <div class="meta">
+      <b>Install All Yono Games</b>
+      <span>allyonogamesplayy.com</span>
     </div>
-    <button type="button" class="go" id="pwa-go">INSTALL</button>
+    <button type="button" class="inst" id="pwa-go">Install</button>
   </div>
 </div>
 <script>
@@ -1853,26 +1850,28 @@
     });
   }
 
-  function show(){
-    var el = document.getElementById('pwa-top');
+  setTimeout(function(){
+    var el = document.getElementById('pwa-native');
     if (el) el.classList.add('show');
-  }
-
-  setTimeout(show, 2000);
+  }, 2000);
 
   document.getElementById('pwa-go').addEventListener('click', function(){
     if (deferredPrompt) {
       deferredPrompt.prompt();
-      deferredPrompt.userChoice.finally(function(){ deferredPrompt = null; });
+      deferredPrompt.userChoice.finally(function(){
+        deferredPrompt = null;
+        var el = document.getElementById('pwa-native');
+        if (el) el.classList.remove('show');
+      });
       return;
     }
     var ua = navigator.userAgent || '';
     if (/iPad|iPhone|iPod/.test(ua)) {
-      alert('iPhone: Tap Share (□↑) → Add to Home Screen');
+      alert('Tap Share → Add to Home Screen');
     } else if (/Android/i.test(ua)) {
-      alert('Chrome menu (⋮) → Install app or Add to Home screen');
+      alert('Chrome menu (⋮) → Install app / Add to Home screen');
     } else {
-      alert('Look for Install icon near address bar, or menu → Install app');
+      alert('Use browser menu → Install app');
     }
   });
 })();
