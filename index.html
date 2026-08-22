@@ -199,7 +199,13 @@
       .tg-btn{padding:9px 13px;font-size:12px}
       .nav a{padding:10px 11px;font-size:12px}
     }
-  </style>
+  
+.filter-bar{max-width:1100px;margin:8px auto 16px;padding:0 16px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.filter-bar button{border:1px solid #c4b5fd;background:#fff;color:#4c1d95;font-weight:800;font-size:13px;padding:10px 16px;border-radius:999px;cursor:pointer}
+.filter-bar button.active,.filter-bar button:hover{background:#4c1d95;color:#fff;border-color:#4c1d95}
+.game-card.hide-filter{display:none !important}
+
+</style>
 
 <script type="application/ld+json">
 {
@@ -316,11 +322,26 @@
   <strong>18+ only.</strong> This website is an informational directory with referral links. We do not operate any game. Play responsibly. Read our <a href="disclaimer.html" style="color:#9a3412;font-weight:700;text-decoration:underline">Disclaimer</a> and <a href="privacy.html" style="color:#9a3412;font-weight:700;text-decoration:underline">Privacy Policy</a>.
 </div>
 
+
+<div class="filter-bar" id="gameFilterBar">
+  <button type="button" class="active" data-filter="all">All Games</button>
+  <button type="button" data-filter="rummy">Rummy</button>
+  <button type="button" data-filter="slots">Slots & Spin</button>
+  <button type="button" data-filter="multi">Multi / Other</button>
+</div>
+
+<p style="text-align:center;font-size:13px;margin:0 16px 12px;color:#64748b">
+  Browse by type:
+  <a href="rummy-games.html" style="color:#4c1d95;font-weight:800;margin:0 6px">Rummy Games</a> ·
+  <a href="slots-games.html" style="color:#4c1d95;font-weight:800;margin:0 6px">Slots &amp; Spin</a> ·
+  <a href="about.html" style="color:#4c1d95;font-weight:800;margin:0 6px">About</a>
+</p>
+
 <div class="games-grid">
 
 
 
-<article class="game-card">
+<article class="game-card" data-category="multi">
       <img src="images/raja7.png" alt="RAJA7" class="game-image">
       <div class="game-content">
         <div class="game-name">RAJA7</div>
@@ -332,7 +353,7 @@
       <a href="games/raja7.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="multi">
       <img src="images/benz.png" alt="Benz" class="game-image">
       <div class="game-content">
         <div class="game-name">Benz</div>
@@ -344,7 +365,7 @@
       <a href="games/benz.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="rummy">
 
       <img
         src="images/goldrummy.png"
@@ -386,7 +407,7 @@
 
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="rummy">
 
       <img
         src="images/gamerummy.png"
@@ -428,7 +449,7 @@
 
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="slots">
 
       <img
         src="images/gospin.png"
@@ -468,7 +489,7 @@
 
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="slots">
 
       <img
         src="images/Hindi777.png"
@@ -508,7 +529,7 @@
 
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="rummy">
 
       <img
         src="images/HiRummy.png"
@@ -548,7 +569,7 @@
 
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="multi">
 
       <img
         src="images/indclub.png"
@@ -588,7 +609,7 @@
 
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="slots">
 
       <img
         src="images/indslots.png"
@@ -628,7 +649,7 @@
 
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="multi">
 
       <img
         src="images/mqmbet.png"
@@ -668,7 +689,7 @@
 
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="rummy">
 
       <img
         src="images/inrrummy.png"
@@ -708,7 +729,7 @@
 
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="slots">
 
       <img
         src="images/jaihoarcade.png"
@@ -748,7 +769,7 @@
 
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="slots">
 
       <img
         src="images/jaihoslots.png"
@@ -788,7 +809,7 @@
 
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="slots">
       <img src="images/jaihospin.png" alt="Jaiho Spin" class="game-image">
       <div class="game-content">
         <div class="game-name">Jaiho Spin</div>
@@ -800,7 +821,7 @@
       <a href="games/jaihospin.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="multi">
       <img src="images/jaihowin.png" alt="Jaiho Win" class="game-image">
       <div class="game-content">
         <div class="game-name">Jaiho Win</div>
@@ -812,7 +833,7 @@
       <a href="games/jaihowin.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="slots">
       <img src="images/jaiho777.png" alt="Jaiho777" class="game-image">
       <div class="game-content">
         <div class="game-name">Jaiho777</div>
@@ -824,7 +845,7 @@
       <a href="games/jaiho777.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="multi">
       <img src="images/91jaiho.png" alt="91 Jaiho" class="game-image">
       <div class="game-content">
         <div class="game-name">91 Jaiho</div>
@@ -836,7 +857,7 @@
       <a href="games/91jaiho.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="rummy">
       <img src="images/joyrummy.png" alt="Joy Rummy" class="game-image">
       <div class="game-content">
         <div class="game-name">Joy Rummy</div>
@@ -848,7 +869,7 @@
       <a href="games/joyrummy.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="rummy">
       <img src="images/loverummy.png" alt="Love Rummy" class="game-image">
       <div class="game-content">
         <div class="game-name">Love Rummy</div>
@@ -860,7 +881,7 @@
       <a href="games/loverummy.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="multi">
       <img src="images/mahagames.png" alt="Maha Games" class="game-image">
       <div class="game-content">
         <div class="game-name">Maha Games</div>
@@ -872,7 +893,7 @@
       <a href="games/mahagames.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="multi">
       <img src="images/mbmbet.png" alt="MBM Bet" class="game-image">
       <div class="game-content">
         <div class="game-name">MBM Bet</div>
@@ -884,7 +905,7 @@
       <a href="games/mbmbet.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="slots">
       <img src="images/789jackpots.png" alt="789 Jackpots" class="game-image">
       <div class="game-content">
         <div class="game-name">789 Jackpots</div>
@@ -896,7 +917,7 @@
       <a href="games/789jackpots.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="slots">
       <img src="images/777okok.png" alt="777 OKOK" class="game-image">
       <div class="game-content">
         <div class="game-name">777 OKOK</div>
@@ -908,7 +929,7 @@
       <a href="games/777okok.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="slots">
       <img src="images/567slots.png" alt="567 Slots" class="game-image">
       <div class="game-content">
         <div class="game-name">567 Slots</div>
@@ -920,7 +941,7 @@
       <a href="games/567slots.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="slots">
       <img src="images/yono777hub.png" alt="YONO777 Hub" class="game-image">
       <div class="game-content">
         <div class="game-name">YONO777 Hub</div>
@@ -932,7 +953,7 @@
       <a href="games/yono777hub.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="multi">
       <img src="images/yonovip.png" alt="YONO VIP" class="game-image">
       <div class="game-content">
         <div class="game-name">YONO VIP</div>
@@ -944,7 +965,7 @@
       <a href="games/yonovip.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="slots">
       <img src="images/yonoslots.png" alt="YONO Slots" class="game-image">
       <div class="game-content">
         <div class="game-name">YONO Slots</div>
@@ -956,7 +977,7 @@
       <a href="games/yonoslots.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="rummy">
       <img src="images/yonorummy.png" alt="YONO Rummy" class="game-image">
       <div class="game-content">
         <div class="game-name">YONO Rummy</div>
@@ -968,7 +989,7 @@
       <a href="games/yonorummy.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="multi">
       <img src="images/yonogames.png" alt="YONO Games" class="game-image">
       <div class="game-content">
         <div class="game-name">YONO Games</div>
@@ -980,7 +1001,7 @@
       <a href="games/yonogames.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="slots">
       <img src="images/yonoofficial.png" alt="Yono Arcade" class="game-image">
       <div class="game-content">
         <div class="game-name">Yono Arcade</div>
@@ -992,7 +1013,7 @@
       <a href="games/yonoofficial.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="slots">
       <img src="images/yesspin.png" alt="Yes Spin" class="game-image">
       <div class="game-content">
         <div class="game-name">Yes Spin</div>
@@ -1004,7 +1025,7 @@
       <a href="games/yesspin.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="rummy">
       <img src="images/toprummy.png" alt="Top Rummy" class="game-image">
       <div class="game-content">
         <div class="game-name">Top Rummy</div>
@@ -1016,7 +1037,7 @@
       <a href="games/toprummy.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="slots">
       <img src="images/spin101.png" alt="Spin101" class="game-image">
       <div class="game-content">
         <div class="game-name">Spin101</div>
@@ -1028,7 +1049,7 @@
       <a href="games/spin101.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="slots">
       <img src="images/spin777.png" alt="Spin777" class="game-image">
       <div class="game-content">
         <div class="game-name">Spin777</div>
@@ -1040,7 +1061,7 @@
       <a href="games/spin777.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="slots">
       <img src="images/spinwinner.png" alt="Spin Winner" class="game-image">
       <div class="game-content">
         <div class="game-name">Spin Winner</div>
@@ -1052,7 +1073,7 @@
       <a href="games/spinwinner.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="slots">
       <img src="images/safeearn.png" alt="Spin Crush" class="game-image">
       <div class="game-content">
         <div class="game-name">Spin Crush</div>
@@ -1064,7 +1085,7 @@
       <a href="games/safeearn.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="slots">
       <img src="images/slotsspin.png" alt="Slots Spin" class="game-image">
       <div class="game-content">
         <div class="game-name">Slots Spin</div>
@@ -1076,7 +1097,7 @@
       <a href="games/slotsspin.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="slots">
       <img src="images/share477.png" alt="Share Slots" class="game-image">
       <div class="game-content">
         <div class="game-name">Share Slots</div>
@@ -1088,7 +1109,7 @@
       <a href="games/share477.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="rummy">
       <img src="images/rumblerummy.png" alt="Rumble Rummy" class="game-image">
       <div class="game-content">
         <div class="game-name">Rumble Rummy</div>
@@ -1100,7 +1121,7 @@
       <a href="games/rumblerummy.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="rummy">
       <img src="images/okrummy.png" alt="OK Rummy" class="game-image">
       <div class="game-content">
         <div class="game-name">OK Rummy</div>
@@ -1112,7 +1133,7 @@
       <a href="games/okrummy.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="rummy">
       <img src="images/rummy77.png" alt="Rummy77" class="game-image">
       <div class="game-content">
         <div class="game-name">Rummy77</div>
@@ -1124,7 +1145,7 @@
       <a href="games/rummy77.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="rummy">
       <img src="images/rummy888vip.png" alt="Rummy888 VIP" class="game-image">
       <div class="game-content">
         <div class="game-name">Rummy888 VIP</div>
@@ -1136,7 +1157,7 @@
       <a href="games/rummy888vip.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="rummy">
       <img src="images/rumludo.png" alt="Rummy Ludo" class="game-image">
       <div class="game-content">
         <div class="game-name">Rummy Ludo</div>
@@ -1148,7 +1169,7 @@
       <a href="games/rumludo.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="rummy">
       <img src="images/rummy91.png" alt="Rummy91" class="game-image">
       <div class="game-content">
         <div class="game-name">Rummy91</div>
@@ -1160,7 +1181,7 @@
       <a href="games/rummy91.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="slots">
       <img src="images/sagaslots.png" alt="Saga Slots" class="game-image">
       <div class="game-content">
         <div class="game-name">Saga Slots</div>
@@ -1172,7 +1193,7 @@
       <a href="games/sagaslots.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="rummy">
       <img src="images/teenpatti.png" alt="Teen Patti Master" class="game-image">
       <div class="game-content">
         <div class="game-name">Teen Patti Master</div>
@@ -1184,7 +1205,7 @@
       <a href="games/teenpatti.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="slots">
       <img src="images/spingold.png" alt="Spin Gold" class="game-image">
       <div class="game-content">
         <div class="game-name">Spin Gold</div>
@@ -1196,7 +1217,7 @@
       <a href="games/spingold.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="multi">
       <img src="images/77game.png" alt="77 Game" class="game-image">
       <div class="game-content">
         <div class="game-name">77 Game</div>
@@ -1208,7 +1229,7 @@
       <a href="games/77game.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="slots">
       <img src="images/goodslots.png" alt="Good Slots" class="game-image">
       <div class="game-content">
         <div class="game-name">Good Slots</div>
@@ -1220,7 +1241,7 @@
       <a href="games/goodslots.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="slots">
       <img src="images/diwa777.png" alt="Diwa777" class="game-image">
       <div class="game-content">
         <div class="game-name">Diwa777</div>
@@ -1232,7 +1253,7 @@
       <a href="games/diwa777.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="slots">
       <img src="images/diwaslots.png" alt="Diwa Slots" class="game-image">
       <div class="game-content">
         <div class="game-name">Diwa Slots</div>
@@ -1244,7 +1265,7 @@
       <a href="games/diwaslots.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="rummy">
       <img src="images/maxrummy.png" alt="Max Rummy" class="game-image">
       <div class="game-content">
         <div class="game-name">Max Rummy</div>
@@ -1256,7 +1277,7 @@
       <a href="games/maxrummy.html" class="download-btn">Download</a>
     </article>
 
-<article class="game-card">
+<article class="game-card" data-category="multi">
       <img src="images/allyonogamesnew.png" alt="All YONO Games New" class="game-image">
       <div class="game-content">
         <div class="game-name">All YONO Games New</div>
@@ -1769,6 +1790,26 @@
     </p>
   </div>
 </footer>
+
+
+<script>
+(function(){
+  var bar=document.getElementById('gameFilterBar');
+  if(!bar) return;
+  var cards=document.querySelectorAll('.game-card[data-category]');
+  bar.addEventListener('click', function(e){
+    var btn=e.target.closest('button[data-filter]');
+    if(!btn) return;
+    var f=btn.getAttribute('data-filter');
+    bar.querySelectorAll('button').forEach(function(b){b.classList.toggle('active', b===btn);});
+    cards.forEach(function(c){
+      var cat=c.getAttribute('data-category');
+      var show = (f==='all') || (cat===f);
+      c.classList.toggle('hide-filter', !show);
+    });
+  });
+})();
+</script>
 
 </body>
 </html>
