@@ -53,9 +53,15 @@ h1{font-size:1.28rem;line-height:1.3;margin-bottom:6px}
 .panel h2{font-size:16px;color:#111827;margin-bottom:8px}
 .panel ol{padding-left:18px}
 .panel li{margin:6px 0}
-.faq details{border-top:1px solid #f3f4f6;padding:10px 0}
-.faq summary{font-weight:700;cursor:pointer;color:#111827}
-.faq p{margin-top:6px;font-size:13.5px;color:#4b5563}
+.faq details{border:0;margin:0;padding:0}
+.faq-list{display:flex;flex-direction:column;gap:12px;margin-top:10px}
+.faq-item{background:#f8fafc;border-radius:16px;border:1px solid #e5e7eb;overflow:hidden}
+.faq-item summary{display:flex;align-items:flex-start;gap:12px;padding:16px 14px;font-weight:700;cursor:pointer;color:#111827;list-style:none;position:relative}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-num{flex-shrink:0;width:32px;height:32px;border-radius:50%;background:#22c55e;color:#fff;font-size:13px;font-weight:800;display:grid;place-items:center}
+.faq-item summary::after{content:"+";position:absolute;right:16px;top:16px;width:28px;height:28px;border-radius:50%;background:#ecfdf5;color:#16a34a;font-size:18px;font-weight:700;display:grid;place-items:center;line-height:1}
+.faq-item[open] summary::after{content:"−"}
+.faq-item p{margin:0;padding:0 14px 16px 58px;font-size:13.5px;color:#4b5563;line-height:1.6}
 .kws{font-size:12.5px;color:#6b7280;line-height:1.7}
 .grid{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
 .grid a{font-size:11px;font-weight:700;background:#f3f4f6;color:#374151;padding:6px 9px;border-radius:999px}
@@ -174,30 +180,33 @@ h1{font-size:1.28rem;line-height:1.3;margin-bottom:6px}
 
 <section class="panel faq">
 <h2>FAQ – Rummy Ludo 2026</h2>
-<details open>
-<summary>How do I download the Rummy Ludo APK safely in 2026?</summary>
+<p style="font-size:13.5px;color:#6b7280;margin-bottom:6px">Clear answers about Rummy Ludo download, bonus, withdrawals and account security.</p>
+<div class="faq-list">
+<details class="faq-item" open>
+<summary><span class="faq-num">01</span> How do I download the Rummy Ludo APK safely in 2026?</summary>
 <p>Use the green <strong>Download Rummy Ludo APK</strong> button on this page. It leads to the referral install path. On Android, allow the source only for this session, install the package, then open the app and finish mobile OTP registration. Never share the OTP.</p>
 </details>
-<details>
-<summary>What is the ₹279 signup bonus and how does it actually work?</summary>
+<details class="faq-item">
+<summary><span class="faq-num">02</span> What is the ₹279 signup bonus and how does it actually work?</summary>
 <p>This listing shows a ₹279 signup bonus as a directory snapshot. After OTP, open the app and check the live offer. Bonuses typically require wagering, may need a deposit, and can expire. The exact amount and rules are controlled by the operator and can change.</p>
 </details>
-<details>
-<summary>How does withdrawal work and what is the minimum?</summary>
+<details class="faq-item">
+<summary><span class="faq-num">03</span> How does withdrawal work and what is the minimum?</summary>
 <p>Minimum is commonly ₹100+ via UPI or bank. Add your own payment details, complete any KYC the app requests, then request withdrawal. Processing time is set by the operator and is not guaranteed. Test with a small amount first.</p>
 </details>
-<details>
-<summary>What games can I play on Rummy Ludo?</summary>
+<details class="faq-item">
+<summary><span class="faq-num">04</span> What games can I play on Rummy Ludo?</summary>
 <p>The app focuses on 13-card Rummy (points/pool/deals) and Ludo cash matches. Many versions also include Teen Patti, Andar Bahar, and other Indian multiplayer or slots-style games. The exact lobby appears after you log in.</p>
 </details>
-<details>
-<summary>Does this website operate Rummy Ludo or hold my money?</summary>
+<details class="faq-item">
+<summary><span class="faq-num">05</span> Does this website operate Rummy Ludo or hold my money?</summary>
 <p>No. All Yono Games is an independent 18+ directory. We do not run the app, process payments, or hold wallets. All financial activity happens inside the official app after you install via the referral button.</p>
 </details>
-<details>
-<summary>Is Rummy Ludo only for players 18+?</summary>
+<details class="faq-item">
+<summary><span class="faq-num">06</span> Is Rummy Ludo only for players 18+?</summary>
 <p>Yes. Real-money games are strictly for adults. Confirm local laws in your state before playing and only use money you can afford to lose.</p>
 </details>
+</div>
 </section>
 
 <section class="panel">
