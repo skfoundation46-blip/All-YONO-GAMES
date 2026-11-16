@@ -56,7 +56,7 @@ h1{font-size:1.35rem;letter-spacing:-.03em;margin:2px 0 4px}
 .filters button{flex:0 0 auto;border:0;background:#fff;border-radius:999px;padding:8px 14px;font-size:12.5px;font-weight:800;color:#374151;box-shadow:0 1px 2px rgba(0,0,0,.04)}
 .filters button.on{background:#111827;color:#fff}
 .list{display:flex;flex-direction:column;gap:10px}
-.card{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:11px;align-items:center;background:linear-gradient(135deg,#fff 0%,#fffdf6 58%,#f0fdf4 100%);border:1px solid #f1e5c8;border-radius:20px;padding:13px;box-shadow:0 8px 22px rgba(15,23,42,.065),inset 0 1px 0 rgba(255,255,255,.9);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.card{display:grid;grid-template-columns:64px 1fr auto !important;gap:11px;align-items:center;background:linear-gradient(135deg,#fff 0%,#fffdf6 58%,#f0fdf4 100%);border:1px solid #f1e5c8;border-radius:20px;padding:13px;box-shadow:0 8px 22px rgba(15,23,42,.065),inset 0 1px 0 rgba(255,255,255,.9);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
 .card:hover{transform:translateY(-2px);border-color:#e7c76c;box-shadow:0 13px 28px rgba(15,23,42,.10)}
 .card.hide{display:none!important}
 .icon{width:64px;height:64px;border-radius:16px;object-fit:cover;background:#f3f4f6}
@@ -111,8 +111,6 @@ h1{font-size:1.35rem;letter-spacing:-.03em;margin:2px 0 4px}
 
 /* Premium bonus + withdrawal presentation */
 .card .icon{border:1px solid #e5e7eb;box-shadow:0 4px 10px rgba(15,23,42,.08)}
-@media(max-width:390px){
- .card{grid-template-columns:54px minmax(0,1fr);gap:9px;padding:11px}
  .icon{width:54px;height:54px;border-radius:14px}
  .card .btn{grid-column:2;justify-self:start;min-height:39px;min-width:112px;margin-top:1px}
  .chips{gap:5px}
@@ -120,7 +118,7 @@ h1{font-size:1.35rem;letter-spacing:-.03em;margin:2px 0 4px}
  .name{font-size:15px}
 }
 
-</style>
+</style><style>.card{grid-template-columns:64px 1fr auto !important}.card .btn{grid-column:3 !important;grid-row:1/-1 !important;align-self:center !important;justify-self:end !important;margin-top:0 !important}</style>
 <meta content="Browse 90 individual game listings on All Yono Games Play. Find app names, open each game information page, and check current bonus, withdrawal and installation terms before taking action. Adults only." property="og:description"/><style>
 /* Natural editorial directory section */
 .seo-premium{margin:22px 0 16px;background:#fff;border:1px solid #e7eaf0;border-radius:22px;overflow:hidden;box-shadow:0 14px 38px rgba(15,23,42,.055)}
@@ -138,7 +136,7 @@ h1{font-size:1.35rem;letter-spacing:-.03em;margin:2px 0 4px}
 .seo-faq{padding:18px 0 4px}.seo-faq h3{font-size:18px;margin-bottom:12px}.seo-faq details{border:1px solid #e8edf3;border-radius:12px;margin:8px 0;background:#fff;padding:11px 12px}.seo-faq summary{font-size:12.5px;font-weight:800;color:#243044;cursor:pointer;line-height:1.5}.seo-faq details p{font-size:12px;color:#64748b;line-height:1.7;margin:9px 0 0}.seo-endnote{margin-top:14px;padding:13px;border-radius:13px;background:#fff7ed;border:1px solid #fed7aa;color:#7c2d12;font-size:11.5px;line-height:1.65}
 @media(min-width:700px){.seo-premium{max-width:100%;}.seo-inner{padding:24px 26px 28px}.seo-hero{padding:28px 26px}.seo-hero h2{font-size:27px}.seo-section p{font-size:14px}.seo-section h3{font-size:19px}.seo-namegrid{columns:3}}
 @media(max-width:380px){.seo-toc ul{grid-template-columns:1fr}.seo-namegrid{columns:1}.seo-statrow{gap:5px}.seo-stat{padding:9px 6px}}
-</style>
+</style><style>.card{grid-template-columns:64px 1fr auto !important}.card .btn{grid-column:3 !important;grid-row:1/-1 !important;align-self:center !important;justify-self:end !important;margin-top:0 !important}</style>
 <style id="seo-premium-editorial-overrides">
 /* Premium editorial styling — intentionally scoped to SEO copy only */
 .seo-premium{margin:26px 0 18px!important;border:1px solid #eadfc9!important;border-radius:24px!important;background:#fffdfa!important;box-shadow:0 18px 46px rgba(48,24,34,.09),0 3px 10px rgba(48,24,34,.035)!important;overflow:hidden}
@@ -448,7 +446,7 @@ h1{font-size:1.35rem;letter-spacing:-.03em;margin:2px 0 4px}
   .seo-premium .seo-section{padding:22px 0 26px!important;}
   .seo-premium .seo-section h3{font-size:18px!important;}
 }
-</style>
+</style><style>.card{grid-template-columns:64px 1fr auto !important}.card .btn{grid-column:3 !important;grid-row:1/-1 !important;align-self:center !important;justify-self:end !important;margin-top:0 !important}</style>
 </head>
 <body>
 <header class="top">
